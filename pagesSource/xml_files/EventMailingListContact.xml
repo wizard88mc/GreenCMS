@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TableEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="databaseDefinition/EventMailingListContact.xsd">
+
+<Event language="it">
+	<ID>3</ID>
+	<Title>Vehicular Congestion Detection and Short-Term Forecasting: A New Model with Results</Title>
+	<Date>2010-12-02</Date>
+	<Time>16:00:00</Time>
+	<Place>Torre Archimede,  Aula 1BC/50</Place>
+	<Speaker>Gustavo Marfia</Speaker>
+	<From>Università degli Studi di Bologna</From>
+	<SpeakerCV>Gustavo Marfia received the Laurea degree in Telecommunications engineering from
+the University of Pisa, Italy, in 2003, and the Ph.D. degree in computer science
+from the University of California, Los Angeles, in 2009. Between 2002 and 2004
+he worked for the applied research laboratories of Siemens Mobile
+Communications. While at UCLA he also had the opportunity to collaborate and
+spend active research periods at the Los Alamos National Labs, Microsoft
+Research UK and at the Istituto Superiore Mario Boella in Turin. He has
+co-authored one european patent and more than 20 publications. In 2009 he
+joined the University of Bologna, where he is currently a Postdoctoral Research
+Fellow at the Computer Science Department. His current research interests
+include vehicular and biomedical networks and new technologies for computer
+entertainment.</SpeakerCV>
+	<Abstract>While vehicular congestion is very often defined in terms of aggregate
+parameters such as traffic volumes and lane occupancies, based on recent
+findings the interpretation that receives most credit is that of a state of a
+road where traversing vehicles experience a delay exceeding the maximum value
+typically incurred under light or free-flow traffic conditions. We here propose
+a new definition, according to which a road is in a congested state (be it high
+or low) only when the likelihood of finding it in the same congested state is
+high in the near future. Based on this new definition, we devised an algorithm
+which, exploiting probe vehicles, for any given road: (a) identifies if it is
+congested or not, and; (b) provides the estimation that a current congested
+state will last for at least a given time interval. Unlike any other existing
+approach, an important advantage of ours is that it can be generally applied to
+any type of road, as it neither needs any a-priori knowledge nor require to
+estimate any road parameter (e.g., number of lanes, traffic light cycle, etc.).
+Further, it allows to perform short term traffic congestion forecasting for any
+given road. We present several field trials gathered on different urban roads
+whose empirical results confirm the validity of our approach.</Abstract>
+</Event><Event language="it">
+	<ID>2</ID>
+	<Title>Informatica Pediatrica per interventi riabilitativi precoci</Title>
+	<Date>2010-11-22</Date>
+	<Time>14:30:00</Time>
+	<Place>Dipartimento di Psicologia dell'Università di Padova - aula 2C</Place>
+	<Speaker>Roberto Mancin</Speaker>
+	<From>Dipartimento di Pediatria - Università di Padova</From>
+	<SpeakerCV/>
+	<Abstract>L'Informatica Pediatrica è la branca delle scienze informatiche che si occupa di massimizzare il livello di maturazione e di sviluppo di OGNI persona in età evolutiva tramite opportune tecnologie digitali. Queste, se utilizzate precocemente, prevengono comportamenti disadattivi e favoriscono i processi riabilitativi.</Abstract>
+</Event></TableEvents>

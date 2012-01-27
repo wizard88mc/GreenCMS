@@ -1,0 +1,45 @@
+<div id="contents-right">
+
+<div id="contentsLong">
+<breadcrumb/>
+
+<h1>Laurea Magistrale</h1>
+<span class="mobile"><a href="#beginContent">Jump second level menu</a></span>
+<secondLevelMenu/>
+<h2 id="beginContent"><pageTitleContent/></h2>
+
+        <p>Aderendo alla protesta nazionale contro il DDL Gelmini, la larga
+maggioranza dei docenti si dichiara indisponibile a ricoprire gli incarichi
+didattici non obbligatori per legge. Pertanto il CCS ritiene di non essere
+in grado di proporre la copertura dell'assetto didattico per l'anno accademico 2010/2011 <em>(fonte: Verbale del CCS del 27/04/2010)</em>.</p>
+           <p class="tornaSu"><a href="#contentsLong">Torna su &#9650;</a></p> \
+^M
+</div>^M
+^M
+
+
+
+
+
+
+-uu-:---F1  corsimagistrale.html   All L12    (HTML)----------------------------
+gaggi@informatica:/etc/apache2/informatica_dev/pagesSource/laureamagistrale/sour
+ce$ emacs corsimagistraleen.html 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    
+	   <p class="tornaSu"><a href="#contentsLong">Move up &#9650;</a></p> 
+</div>
+

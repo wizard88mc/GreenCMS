@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<secondLevelMenu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../globalDetails/secondLevelMenu.xsd">
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>News</linkMenuEntryText>
+		<linkMenuEntryName>news</linkMenuEntryName>
+		<linkMenuEntryPageTarget>/cgi-bin/News.cgi</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>News</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Seminari</linkMenuEntryText>
+		<linkMenuEntryName>seminari</linkMenuEntryName>
+		<linkMenuEntryPageTarget>/cgi-bin/Seminari.cgi</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Seminari</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+</secondLevelMenu>

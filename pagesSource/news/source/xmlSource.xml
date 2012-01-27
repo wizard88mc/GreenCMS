@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pagesDetails xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../globalDetails/PagesDetailsSchema.xsd" firstLevelMenuNotSelected="news">
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - News</title>
+			<description>Pagina contenente le news all'interno del sito internet</description>
+			<keywords>
+				<keyword>News</keyword>
+				<keyword>attive</keyword>
+				<keyword>scadute</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>News</pageTitle>
+		<secondLevelMenuNotSelected>news</secondLevelMenuNotSelected>
+		<contentsPageFileName>news.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Leggi News</title>
+			<description>Pagina con la news completa di titolo, data, autore e testo</description>
+			<keywords>
+				<keyword>"nomeNews"</keyword>
+				<keyword>leggi</keyword>
+				<keyword>news</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>"nomeNews"</pageTitle>
+		<otherParent>News/News.cgi</otherParent>
+		<contentsPageFileName>readnews.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Eventi e seminari</title>
+			<description>Pagina contenente l'elenco dei seminari organizzati presso il Dipartimento</description>
+			<keywords>
+				<keyword>seminari</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Seminari</pageTitle>
+		<secondLevelMenuNotSelected>seminari</secondLevelMenuNotSelected>
+		<contentsPageFileName>seminari.html</contentsPageFileName>
+	</pageDetails>
+</pagesDetails>

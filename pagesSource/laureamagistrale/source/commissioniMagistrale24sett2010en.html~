@@ -1,0 +1,31 @@
+<div id="contents-right">
+
+
+
+<div id="contentsLong">
+
+<breadcrumb/>
+
+
+
+<h1>Laurea Magistrale in Informatica</h1>
+<span class="mobile"><a href="#beginContent">Salta il menu di secondo livello</a></span>
+<secondLevelMenu/>
+    
+<h2><pageTitleContent/></h2>
+
+    <dl id="beginContent">
+    <dt>Discussione e Proclamazione Laurea Magistrale in Informatica </dt>
+    <dd><strong>Luogo:</strong> Aula 1C150, Torre Archimede</dd>
+    <dd><strong>Orario inizio:</strong> 24 Settembre, 14.30 </dd>
+    <dd><strong>Presidente:</strong> Filè Gilberto</dd>
+    <dd><strong>Commissione:</strong> Aiolli Fabio, Gaggi Ombretta, Marchiori Massimo, Sperduti Alessandro (Supplenti: Colussi Livio, Vardanega Tullio)  </dd>
+    <dd><strong>Candidati:</strong> Dalla Pozza Giorgio, Navarin Nicolò, Rigato Stefano, Venturin Federico
+    </dd>
+    </dl>
+    <p class="tornaSu withBorderBottom"><a href="#contentsLong">Torna su &#9650;</a></p>
+    
+</div>
+
+
+

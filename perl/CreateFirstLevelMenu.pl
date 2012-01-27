@@ -1,0 +1,70 @@
+#!/usr/bin/perl
+
+use utf8;
+
+binmode STDIN, ":utf8";
+binmode STDOUT, ":utf8";
+binmode STDERR, ":utf8";
+
+require "ExtractXML.pl";
+
+#parametri:
+#    $_[0] - nome del link del menu di primo livello che non deve essere selezionato
+#    $_[1] - booleano che indica se il menu di primo livello appartiene o meno all'home page
+#    $_[2] - nome della pagina che sto generando
+#    $_[3] - discriminante italiano - inglese
+
+sub createFirstLevelMenu() {
+	
+	my $linkNotSelected = $_[0];
+	my $isHomePage = $_[1];
+	my $pageName = $_[2];
+	my $linkPath = "/" . $folderBase;
+	#if ($isHomePage) {  #se e' home page elimino ../ dal path dei vari link
+	#	$linkPath = "";
+	#}
+	my $en = $_[3];
+	
+	#estraggo le informazioni riguardo il menu di primo livello
+	my $fileXMLMenu = &extractXML("../pagesSource/globalDetails/FirstLevelMenu$en.xml"); 
+	
+	my $textFirstLevelMenu = "
+	<div id=\"navigation\">
+		<ul>";
+	
+	#per ogni entry del menu di privo livello
+	foreach $linkMenu ($fileXMLMenu->findnodes('firstLevelMenuEntry')->get_nodelist) {
+		
+		#se il menu entry che sto considerando è quello che non deve essere selezionato
+		if (($linkMenu->findvalue('linkMenuEntryName') eq $linkNotSelected) && ($pageName eq "index.html" || $pageName eq "indexen.html")) {
+			
+			$textFirstLevelMenu .= "<li id=\"navigation-current\">" . $linkMenu->findvalue('linkMenuEntryText') ."</li>";
+		}
+		else {
+			 #estraggo la pagina target del link. essa contiene sia la cartella che il nome del file
+			my $linkMenuEntryPageTarget = $linkMenu->findvalue('linkMenuEntryPageTarget'); 
+			my $link;
+			
+			#differenziazione se il link punta ad un cgi oppure ad una pagina html
+			if (index($linkMenuEntryPageTarget, ".cgi") == -1) {
+				$link = $linkPath . $linkMenuEntryPageTarget;  #costruisco il path completo del link	
+			}
+			else {
+				$link = "/cgi-bin/$linkMenuEntryPageTarget";
+			}
+			
+			$textFirstLevelMenu .= "<li><a href=\"$link\" title=\"" . $linkMenu->findvalue('linkMenuEntryAlt') ."\">" . $linkMenu->findvalue('linkMenuEntryText') ."</a></li>";
+			
+		}
+		
+	}
+	
+	$textFirstLevelMenu .= "
+		</ul>
+	</div>";
+	
+	return $textFirstLevelMenu;
+	
+}
+
+1;

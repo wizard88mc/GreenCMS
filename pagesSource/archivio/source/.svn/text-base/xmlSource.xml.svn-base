@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pagesDetails xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../globalDetails/PagesDetailsSchema.xsd" firstLevelMenuNotSelected="archivio" parentPathName="Archivo" parentPathLink="index.html" >
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio</title>
+			<description>Pagina principale dell'archivio del sito</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>anni passati</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Archivio</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>index.html</contentsPageFileName>
+	</pageDetails>
+</pagesDetails>

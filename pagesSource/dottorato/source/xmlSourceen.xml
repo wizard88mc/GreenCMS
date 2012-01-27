@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pagesDetails xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../globalDetails/PagesDetailsSchema.xsd" firstLevelMenuNotSelected="dottorato">
+	<pageDetails>
+		<metaTags>
+			<title>Laurea in Informatica - PHD</title>
+			<description>Page of the PHD Degree</description>
+			<keywords>
+				<keyword>PHD</keyword>
+				<keyword>High Formation</keyword>
+				<keyword>bologna</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Dottorato di Ricerca in Informatica</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>indexen.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails />
+</pagesDetails>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TableArchiveThesis xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="databaseDefinition/ArchiveThesis.xsd">
+
+<ArchiveThesis MonthSession="09" Year="2010">
+	</ArchiveThesis><ArchiveThesis MonthSession="11" Year="2018">
+	<Thesis lang="it">
+		<Name>Ombretta </Name>
+		<Surname>Gaggi</Surname>
+		<Matricola>123456</Matricola>
+		<Title>Prova</Title>
+		<Abstract>Questo è il mio abstract</Abstract></Thesis>
+	<Thesis lang="it">
+		<Name>Matteoàà</Name>
+		<Surname>Cimanùùù</Surname>
+		<Matricola>580716</Matricola>
+		<Title>Chi prima arriva vincèè</Title>
+		<Abstract>Piccola gara tra docente e studenti su chi carica prima èèèèèèè &amp;&amp;</Abstract></Thesis>
+	<Thesis lang="it">
+		<Name>utente</Name>
+		<Surname>prova</Surname>
+		<Matricola>123477</Matricola>
+		<Title>titolo</Title>
+		<Abstract>questo è il mio abstract</Abstract></Thesis>
+	<Thesis lang="it">
+		<Name>Altro nuovo</Name>
+		<Surname>Utente</Surname>
+		<Matricola>678901</Matricola>
+		<Title>Prova con "virgolette"</Title>
+		<Abstract>Questo è il mio abstract</Abstract></Thesis>
+	<Thesis lang="it">
+		<Name>primo</Name>
+		<Surname>secondo</Surname>
+		<Matricola>234566</Matricola>
+		<Title>questo e' il mio titolo</Title>
+		<Abstract>abstract senza accenti</Abstract></Thesis>
+	<Thesis lang="it">
+		<Name>primo</Name>
+		<Surname>secondo</Surname>
+		<Matricola>123333</Matricola>
+		<Title>questo e' il mio titolo</Title>
+		<Abstract>abstract con accenti àèà</Abstract></Thesis>
+	<Thesis lang="it">
+		<Name>primo</Name>
+		<Surname>secondo</Surname>
+		<Matricola>123334</Matricola>
+		<Title>questo e' il mio titolo</Title>
+		<Abstract>abstract con accenti àèà</Abstract></Thesis>
+	<Thesis lang="it">
+		<Name>primo</Name>
+		<Surname>secondo</Surname>
+		<Matricola>123335</Matricola>
+		<Title>questo è  il mio titolo</Title>
+		<Abstract>òàèè
+
+This paper presents XTemplate, an XML language for the reuse of hypermedia structures.
+I was one of the referee of the version for the SAC Symposium, and, even if the paper has been  extended, I guess if the description is enough detailed for a journal publication.
+
+This paper seems to describe a work in progress research, especially for what relates the provided tools that are little more than prototypes (they do not provide any graphical interface, drag and drop operations, etc). Even the authors said in the conclusions that the wizard  is not user friendly, and this is not a mere problem of user interface implementation, because a suitable metaphor must be thought and designed.
+
+Moreover, a section describing NCL MUST be added, otherwise the XTemplate language is very difficult to understand. I think that this section should be placed between sections 3 and 4.
+
+The paper address issue very similar to this paper that I read some times ago. Please consider to add it to the related work:
+
+A. Celentano, O. Gaggi. Template-based Generation of Multimedia Presentations. International Journal of Software Engeneering and Knowledge Engineering, vol. 13 n. 4, pages 419-445, 2003.
+
+please, provide a better explanation for the sentence on page 9, lines 9-14.
+
+Section 4.1 on page 10: please describe each element with a list item, which help to better understand each item in the element.</Abstract></Thesis>
+	<Thesis lang="it">
+		<Name>Pinco</Name>
+		<Surname>Pallino</Surname>
+		<Matricola>640328</Matricola>
+		<Title>Proviamo con ie sbagliando</Title>
+		<Abstract>èèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèè</Abstract></Thesis>
+	<Thesis lang="it">
+		<Name>Matteo</Name>
+		<Surname>Ciman</Surname>
+		<Matricola>831023</Matricola>
+		<Title>èèèèèèèèè</Title>
+		<Abstract>èèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèè&amp;&amp;&amp;&amp;</Abstract></Thesis>
+	<Thesis lang="it">
+		<Name>Trallallì</Name>
+		<Surname>Trallallà</Surname>
+		<Matricola>439210</Matricola>
+		<Title>Tesi di prova con safaììììì</Title>
+		<Abstract>èèèèèèèèèèèèèèèèèèèèèè</Abstract></Thesis>
+	</ArchiveThesis><ArchiveThesis MonthSession="07" Year="2010">
+		<Thesis lang="en">
+		<Name>Armir</Name>
+		<Surname>Bujari</Surname>
+		<Matricola>586980</Matricola>
+		<Title>A Delay Tolerant Solution for P2P file sharing in MANETs</Title>
+		<Abstract>Mobile phones have already evolved from simple voice communication means into a powerful device able to handle multimedia documents, personal productivity applications, and all sort of connections to the Internet. Due to their low cost, they are growing in popularity and might eventually become the dominant mode by which users interconnect; e.g. by establishing opportunistic P2P ad-hoc connections exchanging information of interest just passing by each other. It is hence expected to see a popular application such as file sharing to become widely utilized even in this context. Despite this, P2P applications for Mobile Ad-hoc Networks (MANETs) in contrast to the wired Internet counterparts are still in their infancy. Due to the low density of mobile nodes or their limit in wireless radio range, continuous network connectivity cannot be sustained between wireless mobile phones, thus embodying a delay/disruption tolerant network (DTN). Indeed DTNs are used in supporting communications in situations with intermittent connectivity, long or variable delay, and high error rates - characteristics that common them with the wireless mobile world. They use (i) an asynchronous communication model (modeled after email) rather than rely on end-to-end communication and (ii) message replication techniques in order to maximize the probability of data delivery to destination. In this context, we have created M2MShare a P2P file sharing application for local ad-hoc disconnected networks. Our approach is based on an application layer overlay network where overlay routes are set up on demand by the search algorithm, closely matching network topology and transparently aggregating redundant transfer paths on a per-file basis. Moreover, M2MShare adopts the idea of a DTN into the mobile world addressing node density issue by providing means for an asynchronous information exchange similar to that of DTNs. It models the idea of a DTN in an infrastructure less environment where both source of the request and destination of the data are the same entities and intermediary nodes (servants) store-delegate-and-forward back the requested data. This forwarding path is dynamically established, each individual node locally selects the next best suited hop based on a metric defined at the protocol level and this process is entirely user-transparent. Mobility is not seen as an obstacle instead, we leverage user-device mobility to address the node density problem.</Abstract></Thesis>
+		<Thesis lang="it">
+		<Name>Francesco</Name>
+		<Surname>Zarpellon</Surname>
+		<Matricola>565832</Matricola>
+		<Title>Integrazione di informazioni a priori per classificazione di dati da microarray  </Title>
+		<Abstract>Oggetto della tesi è lo studio delle tecniche informatiche, in specifico quelle di machine learning, applicate al campo dell’analisi dei dati provenienti da esperimenti scientifici ottenuti utilizzando la tecnologia dei microarray, e l’applicazione pratica di alcune tecniche di classificazione supervisionata a dati reali, con l’ideazione di una tecnica per integrare informazioni a priori sui dati per migliorare le prestazioni di classificazione di uno specifico algoritmo, SVM. Il lavoro si inserisce nel contesto di un progetto di ricerca interfacoltà dell’Università degli studi di Padova, che coinvolge il Dipartimento di Matematica Pura e Applicata, il Dipartimento di Ingegneria dell’Informazione e il Dipartimento di Biologia, al quale questo elaborato ha contribuito.
+</Abstract></Thesis>
+		<Thesis lang="en">
+		<Name>Fabio</Name>
+		<Surname>Pezzoni</Surname>
+		<Matricola>587055</Matricola>
+		<Title>Sensor Data Gathering in Urban Vehicular Networks </Title>
+		<Abstract>Inter-vehicle Communication (IVC) is emerging in research prominence relying on direct communication between vehicles to satisfy the communication needs of a large class of applications. In this work we propose a solution for application based on data-gathering, that is the collection of information within a geographic region making use of vehicles as data sources and using IVC systems for the transmission of collected data. Two protocols have been designed: PAGUS, an abiding geocast protocol that geocast the query within the region of interest and VDG that actually collect data and forward it toward a fixed base station. Proposed solution aims to achieve the goal of gathering data optimizing the bandwidth consumption.
+</Abstract></Thesis>
+	</ArchiveThesis></TableArchiveThesis>

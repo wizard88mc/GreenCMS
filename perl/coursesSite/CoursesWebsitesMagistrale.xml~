@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CoursesWebsites xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CoursesWebsites.xsd">
+<CourseWebsite>
+	<Course>Sistemi ipermediali</Course>
+	<Website>http://docenti.math.unipd.it/gaggi</Website>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Computabilità e algoritmi (Mod. A)</Course>
+	<Website>http://www.math.unipd.it/~baldan/Computabilita</Website>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Apprendimento automatico</Course>
+	<Website>http://www.math.unipd.it/~sperduti/ml.html</Website>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Intelligenza artificiale</Course>
+	<Website>http://www.math.unipd.it/~sperduti/intelligenza-artificiale.html</Website>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Reti wireless</Course>
+	<Website>http://www.math.unipd.it/~cpalazzi/retiwireless.html</Website>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Bioinformatica</Course>
+	<Website>http://protein.bio.unipd.it/</Website>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Analisi numerica</Course>
+	<Website>http://www.math.unipd.it/~alvise/didattica.html</Website>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Tecnologie web 2</Course>
+	<Website>http://www.math.unipd.it/~tecweb2/</Website>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Crittografia</Course>
+	<Website>http://www.math.unipd.it/~languasc/Corso-Crittografia0910Ita.html</Website>
+</CourseWebsite>
+</CoursesWebsites>
+
+
+

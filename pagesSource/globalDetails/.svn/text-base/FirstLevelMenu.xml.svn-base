@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<siteMenu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="firstLevelMenu.xsd">
+	<firstLevelMenuEntry>
+		<linkMenuEntryText>Laurea in Informatica</linkMenuEntryText>
+		<linkMenuEntryName>laureaInformatica</linkMenuEntryName>
+		<linkMenuEntryPageTarget>laurea/laurea.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Laurea</linkMenuEntryAlt>
+	</firstLevelMenuEntry>
+	<firstLevelMenuEntry>
+		<linkMenuEntryText>Laurea Magistrale in Informatica</linkMenuEntryText>
+		<linkMenuEntryName>LaureaMagistrale</linkMenuEntryName>
+		<linkMenuEntryPageTarget>laureamagistrale/laureamagistrale.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Laurea Magistrale Informatica</linkMenuEntryAlt>
+	</firstLevelMenuEntry>
+	<firstLevelMenuEntry>
+		<linkMenuEntryText>Dottorato di Ricerca in Informatica</linkMenuEntryText>
+		<linkMenuEntryName>dottorato</linkMenuEntryName>
+		<linkMenuEntryPageTarget>dottorato/dottorato.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Dottorato Ricerca Informatica</linkMenuEntryAlt>
+	</firstLevelMenuEntry>
+	<firstLevelMenuEntry>
+		<linkMenuEntryText>Organizzazione</linkMenuEntryText>
+		<linkMenuEntryName>organizzazione</linkMenuEntryName>
+		<linkMenuEntryPageTarget>organizzazione/organizzazione.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Organizzazione</linkMenuEntryAlt>
+	</firstLevelMenuEntry>
+	<firstLevelMenuEntry>
+		<linkMenuEntryText>News, eventi e seminari</linkMenuEntryText>
+		<linkMenuEntryName>news</linkMenuEntryName>
+		<linkMenuEntryPageTarget>#</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>News, Eventi</linkMenuEntryAlt>
+	</firstLevelMenuEntry>
+	<firstLevelMenuEntry>
+		<linkMenuEntryText>Servizi</linkMenuEntryText>
+		<linkMenuEntryName>servizi</linkMenuEntryName>
+		<linkMenuEntryPageTarget>#</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Servizi</linkMenuEntryAlt>
+	</firstLevelMenuEntry>
+	<firstLevelMenuEntry>
+		<linkMenuEntryText>Strutture</linkMenuEntryText>
+		<linkMenuEntryName>strutture</linkMenuEntryName>
+		<linkMenuEntryPageTarget>#</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Strutture</linkMenuEntryAlt>
+	</firstLevelMenuEntry>
+</siteMenu>

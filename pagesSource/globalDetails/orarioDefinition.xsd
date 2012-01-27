@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="orarioLezioni" type="TOrarioLezioni"/>
+	<xs:complexType name="TOrarioLezioni">
+		<xs:sequence maxOccurs="3">
+			<xs:element name="orarioAnno" type="TOrarioAnno"/>
+		</xs:sequence>
+		<xs:attribute name="corsoStudi" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="TOrarioAnno">
+		<xs:sequence minOccurs="5" maxOccurs="5">
+			<xs:element name="giorno" type="TGiorno"/>
+		</xs:sequence>
+		<xs:attribute name="annoCorso" type="xs:integer"/>
+	</xs:complexType>
+	<xs:complexType name="TGiorno">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="fasciaOraria" type="TFasciaOraria"/>
+		</xs:sequence>
+		<xs:attribute name="nomeGiorno" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="TFasciaOraria">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="corso" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="oraFascia" type="xs:string"/>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,33 @@
+<div id="contents-right">
+
+<div id="contentsLong">
+<breadCrumb>
+
+<h2>Laurea Magistrale</h2>
+<secondLevelMenu>
+<h4><pageTitleContent> - <numCFU> CFU</h4>
+<h5>Professore</h5>
+<p><teacher></p>
+
+<h5>Periodo</h5>
+<p><anno> - <trimestre> | <inizio> - <fine></p>
+
+<p id="curriculum"><strong>Curriculum: </strong><curriculum></p>
+<p id="oreCorso"><strong>Ore: </strong><oreFrontali> Frontali, <oreLaboratorio> Laboratorio, <oreEsercizi> Esercizi</p>
+
+<h4 id="programmaCorso">Programma del Corso</h4>
+<p><programmaCorso></p>
+
+<p><strong>Prerequisiti: </strong>
+<prerequisiti></p>
+
+<p><strong>Propedeuticit&agrave;: </strong>
+<propedeuticita></p>
+
+<p><strong>Ausili Didattici: </strong>
+<ausiliDidattici></p>
+
+<p><strong>Testi di Riferimento: </strong>
+<testiRiferimento></p>
+</div>
+

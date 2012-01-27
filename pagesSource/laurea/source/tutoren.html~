@@ -1,0 +1,40 @@
+<div id="contents-right">
+
+
+
+<div id="contentsLong">
+
+<breadcrumb/>
+
+
+
+<h1>Laurea in Informatica</h1>
+<span class="mobile"><a href="#beginContent">Jump second level menu</a></span>
+<secondLevelMenu/>
+
+<h2 id="beginContent"><pageTitleContent/></h2>
+
+		<h3>The Tutors</h3>
+		<p>If you need to contact the Tutors, please write to these addresses:</p>
+		<ul>
+		    <li>Stefano Bonetta: <span class="aiutoxVisualizzazione">whqotoofol</span><span class="nonCambia">stefano.bonetta</span><span class="aiutoxVisualizzazione">bgvsamvoyy</span><span class="nonCambia">@</span><span class="aiutoxVisualizzazione">dmsokthdmh</span><span class="nonCambia">studenti.unipd.it</span><span class="aiutoxVisualizzazione">ruriozltuy</span> (for <span xml:lang="it">Architettura degli elaboratori</span> and general issues about your studies)</li>
+		    <li>Matteo Ciman: <span class="aiutoxVisualizzazione">whqotoofol</span><span class="nonCambia">matteo.ciman</span><span class="aiutoxVisualizzazione">bgvsamvoyy</span><span class="nonCambia">@</span><span class="aiutoxVisualizzazione">dmsokthdmh</span><span class="nonCambia">studenti.unipd.it</span><span class="aiutoxVisualizzazione">ruriozltuy</span> (for <span xml:lang="it">Architettura degli elaboratori</span> and general issues about your studies)</li>
+		    <li>Alessandro Paolini: <span class="aiutoxVisualizzazione">whqotoofol</span><span class="nonCambia">alessandro.paolini.1</span><span class="aiutoxVisualizzazione">bgvsamvoyy</span><span class="nonCambia">@</span><span class="aiutoxVisualizzazione">dmsokthdmh</span><span class="nonCambia">studenti.unipd.it</span><span class="aiutoxVisualizzazione">ruriozltuy</span> (only for <span xml:lang="it">Algebra e Geometria</span>)</li>
+		</ul>
+		<h3>Next meetings</h3>
+		<ul>
+			<li class="appuntamentoPassato">Monday 17/10/2011 from 11:30 am to 1:30 pm only for <span xml:lang="it">Architettura degli Elaboratori</span></li>
+			<li class="appuntamentoPassato">Friday, 21 October 2011 from 11:30 am to 01:30 pm for <span xml:lang="it">Algebra</span> and <span xml:lang="it">Architettura</span></li>
+			<li class="appuntamentoPassato">Friday, 28 October 2011 from 9:30 am to 01:30 pm for <span xml:lang="it">Algebra e Geometria</span>, from 11:30 am to 01:30 pm for <span xml:lang="it">Architettura degli Elaboratori</span></li>
+			<li class="appuntamentoPassato">Friday, 04 November 2011 from 11:30 am to 01:30 pm for <span xml:lang="it">Architettura degli Elaboratori</span>, from 01:30 pm to 03:30 pm for <span xml:lang="it">Algebra e Geometria</span></li>
+			<li class="appuntamentoPassato">Friday, 11 November 2011 from 11:30 am to 01:30 pm for <span xml:lang="it">Algebra</span> and <span xml:lang="it">Architettura</span></li>
+			<li>Friday, 18 November 2011 from 11:30 am to 01:30 pm for <span xml:lang="it">Algebra</span> and <span xml:lang="it">Architettura</span></li>
+		</ul>
+		<h3 id="startingDocuments">Extra exercises</h3>
+		<p id="noCourses">At this time we do not provide extra material.</p>
+
+        <p class="tornaSu"><a href="#contentsLong">Move up &#9650;</a></p> 
+</div>
+
+
+

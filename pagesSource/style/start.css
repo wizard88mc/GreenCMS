@@ -1,0 +1,173 @@
+html {
+    color: #000;
+    background: white url('../img/css1-bkg.gif') repeat-x top left;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, address {
+    margin: 0;
+    padding: 0;
+}
+fieldset, img {
+    border: 0;
+}
+address, caption, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+li {
+    list-style: none;
+}
+caption, th {
+    text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+q:before, q:after {
+    content: '';
+}
+abbr, acronym {
+    border: 0;
+    font-variant: normal;
+}
+sup {
+    vertical-align: text-top;
+}
+sub {
+    vertical-align: text-bottom;
+}
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+legend {
+    color: #000;
+}
+body {
+    font-family: sans-serif;
+}
+pre, code, kbd, samp, tt {
+    font-family: monospace;
+    line-height: 100%;
+}
+body {
+    font-family:"Droid Sans", Verdana, "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+    color: #333;
+    font-size: 80%;
+}
+em {
+    font-style: italic;
+}
+strong {
+    font-weight: bold;
+}
+a:link, a:visited, a:hover {
+    text-decoration: none;
+}
+#header {
+    margin:0 2% 0 2%;
+}
+p {
+    line-height:1.8em;
+}
+
+label.block {
+    display:block;
+}
+.fullWidth {
+    width: 70%;
+}
+.right {
+    float: right;
+}
+.left {
+    float: left;
+}
+.styleNone {
+    border:none;
+    font-style:normal;
+    text-decoration:none;
+}
+#message {
+    text-align:center;
+    margin:0.8em auto 0.8em auto;
+    padding:0.4em;
+    border-width: 1px;
+    border-style:dashed;
+    border-color: black;
+    font-weight:bold;
+}
+#stampa {
+    display:none;
+}
+#insegnante {
+    float:left;
+    margin-right:10%;
+}
+.mobile, .hidden {
+    display:none;
+}
+
+.aural {
+	visibility: hidden;
+}
+	
+#footnote {
+    margin-top:3em;
+    font-size:80%;
+}
+#approvazione {
+    color:red;
+    font-weight:bold;
+    font-style:italic;
+}
+address {
+    display:inline;
+}
+.tornaSu {
+    text-align:right;
+    width:100%;
+    font-size:80%;
+}
+table {
+   width:100%;
+}
+
+.alternate td{
+    background-color:#f7f7f7;
+}
+
+/* parte dell'indirizzo email che verrà visualizzato nel browser */
+.nonCambia {}
+
+/* parte aggiunga contro spybot che deve essere cancellata dalla visualizzazione */
+.aiutoxVisualizzazione {
+	display: none;
+}
+
+form fieldset div.notes {
+	float: right;
+	width: 20%;
+	height: auto;
+	margin: 0 0 2.0em 2.0em;
+	padding: 0.5em;
+	border: 1px solid #666666;
+	background-color: #ffffe1;
+	color: #666666;
+	font-size: 88%;
+	overflow: hidden;
+}
+
+form fieldset div.notes h4 {
+	padding: 3px 0 3px 27px;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	border-color: #666666;
+	color: #666666;
+	font-size: 110%;
+}
+
+#preloader {
+	display: none;
+}

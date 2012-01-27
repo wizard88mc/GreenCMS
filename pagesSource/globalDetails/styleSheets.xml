@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleSheets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="styleSheets.xsd">
+	<styleSheet>
+		<fileName>base</fileName>
+		<media>handheld, screen</media>
+	</styleSheet>
+	<styleSheet>
+		<fileName>small</fileName>
+		<media>handheld, screen and (max-width:480px), only screen and (max-device-width:480px)</media>
+	</styleSheet>
+	<styleSheet>
+		<fileName>print</fileName>
+		<media>print</media>
+	</styleSheet>
+	<styleSheet>
+		<fileName>aural</fileName>
+		<media>aural</media>
+	</styleSheet>
+</styleSheets>

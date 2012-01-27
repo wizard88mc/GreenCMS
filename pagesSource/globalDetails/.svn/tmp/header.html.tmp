@@ -1,0 +1,30 @@
+<div id="header">
+<<<<<<< .mine
+  <img src="../img/logo_unipd.png" id="headImg" alt="logo Università Padova" />
+  <div id="headerText">
+	<div id="headerUtility">
+	  <span id="accessibility"><a href="#">English version</a> | <a href="../reservedzone/login.html">Area riservata</a></span>
+	  <br/>
+	  <form action="#">
+		<fieldset>
+		  <input type="text" id="textInput" /><input type="submit" value="Cerca" />
+		</fieldset>
+	  </form>
+	</div><h1>Corsi di laurea in informatica</h1>
+	<h2>Sito dedicato ai corsi di laurea in informatica</h2>
+  </div>
+</div>=======
+      <a href="http://www.unipd.it" target="_blank"><img src="../img/logo_unipd.png" id="headImg" alt="logo Università Padova" /></a>
+      <div id="headerText">
+        <div id="headerUtility">
+          <span id="accessibility"><a href="#" lang="en">English version</a> | <a href="#">Area riservata</a>
+          <br/>
+          <form action="#">
+            <fieldset>
+              <input type="text" id="textInput" /><input type="submit" value="Cerca" />
+            </fieldset>
+          </form>
+        </div><h1>Corsi di laurea in informatica</h1>
+        <h2>Sito dedicato ai corsi di laurea in informatica</h2>
+      </div>
+    </div>>>>>>>> .r97

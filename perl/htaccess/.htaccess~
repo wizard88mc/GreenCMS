@@ -1,0 +1,7 @@
+AuthUserFile /var/www/develop/perl/.htpasswd
+AuthType Basic
+AuthName "Password Required"
+Require valid-user
+
+
+

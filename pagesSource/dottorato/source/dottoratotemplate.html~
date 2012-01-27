@@ -1,0 +1,38 @@
+<div id="contents-right">
+
+<div id="contentsLong">
+<breadcrumb/>
+
+<h1>Dottorato di Ricerca in Informatica</h1>
+<secondLevelMenu/>
+<h2><pageTitleContent/></h2>	
+
+<p>Il Dottorato di Ricerca è il titolo accademico più avanzato del sistema universitario, che si ottiene dopo un periodo di formazione
+ alla ricerca in ambito internazionale.</p>
+ 
+<p>Il Dottorato di Ricerca in Informatica dell'Universita' di Padova
+ e' in collaborazione con l'Universita' di Bologna, che e' sede
+ amministrativa, e
+ fa parte della Scuola di dottorato in Scienze e Ingegneria
+ dell'Informazione.
+ Maggiori informazioni su questa scuola di dottorato si possono trovare
+ all'URL
+ <a href="http://www.cs.unibo.it/grad/">http://www.cs.unibo.it/grad/</a></p>
+ 
+<p>Nel collegio dei docenti del dottorato in informatica
+ sono presenti i seguenti docenti dell'Universita' di Padova:</p>
+<ul>
+	<li><abbr title="Professor">Prof.</abbr> Paolo Baldan</li>
+	<li><abbr title="Professor">Prof.</abbr> Francesco Ranzato</li>
+	<li><abbr title="Professoressa">Prof.ssa</abbr> Francesca Rossi</li>
+	<li><abbr title="Professor">Prof.</abbr> Alessandro Sperduti</li>
+	<li><abbr title="Professor">Prof.</abbr> Tullio Vardanega</li>
+ </ul>
+<p>Attualmente i seguenti studenti di questo corso di dottorato svolgono
+ la loro attività
+ presso l'Universit&agrave; di Padova: </p>
+
+<listPHDStudents/>
+		
+</div>
+

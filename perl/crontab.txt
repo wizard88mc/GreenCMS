@@ -1,0 +1,2 @@
+MAILTO=gaggi@math.unipd.it
+15 0 * * * /etc/apache2/informatica_dev/perl/cronjobs.pl

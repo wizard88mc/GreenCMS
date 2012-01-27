@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TableEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="databaseDefinition/EventMailingListContact.xsd">
+
+<Event language="it">
+	<ID>1</ID>
+	<Title>Nuovo Seminari</Title>
+	<Date>2010-11-29</Date>
+	<Time>20:30:00</Time>
+	<Place>Casa mia</Place>
+	<Speaker>Matteo</Speaker>
+	<From/>
+	<SpeakerCV/>
+	<Abstract>Gestione dei seminari v 2.0 :)</Abstract>
+</Event></TableEvents>

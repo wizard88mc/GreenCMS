@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TableEventMailingListContact xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="databaseDefinition/EventMailingListContact.xsd">
+	<TableEvent>
+	
+	
+	</TableEvent>
+	<TableMailingList>
+		<MailingList>
+			<ID>1</ID>
+			<Name>MailingList Prova</Name>
+		</MailingList>
+			
+		
+		
+		
+	<MailingList>
+		<ID>2</ID>
+		<Name>Informatici Padova</Name></MailingList></TableMailingList>
+	<TableUserMailingList>	
+		<UserMailingList>
+			<IDMailingList>1</IDMailingList>
+			<IDContact>4</IDContact></UserMailingList><UserMailingList>
+	<IDMailingList>1</IDMailingList>
+	<IDContact>5</IDContact></UserMailingList><UserMailingList>
+	<IDMailingList>2</IDMailingList>
+	<IDContact>5</IDContact></UserMailingList><UserMailingList>
+	<IDMailingList>2</IDMailingList>
+	<IDContact>6</IDContact></UserMailingList><UserMailingList>
+	<IDMailingList>2</IDMailingList>
+	<IDContact>7</IDContact></UserMailingList></TableUserMailingList>
+	<TableContact>
+	<Contact>
+	<ID>4</ID>
+	<Name>Matteo</Name>
+	<Surname>Ciman</Surname>
+	<Email>mciman@studenti.math.unipd.it</Email></Contact>
+	<Contact>
+	<ID>5</ID>
+	<Name>Ombretta</Name>
+	<Surname>Gaggi</Surname>
+	<Email>gaggi@math.unipd.it</Email></Contact><Contact>
+	<ID>6</ID>
+	<Name>Silvia</Name>
+	<Surname>Crafa</Surname>
+	<Email>crafa@math.unipd.it</Email></Contact><Contact>
+	<ID>7</ID>
+	<Name>Claudio Enrico</Name>
+	<Surname>Palazzi</Surname>
+	<Email>cpalazzi@math.unipd.it</Email></Contact></TableContact>
+</TableEventMailingListContact>

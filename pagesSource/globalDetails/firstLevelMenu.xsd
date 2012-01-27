@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="siteMenu" type="TSiteMenu">
+	</xs:element>
+	
+	<xs:complexType name="TSiteMenu">
+		<xs:sequence minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="firstLevelMenuEntry" type="TFirstLevelMenuEntry" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="TFirstLevelMenuEntry">
+		<xs:sequence>
+			<xs:element name="linkMenuEntryText" type="xs:string" />
+			<xs:element name="linkMenuEntryName" type="xs:string" />
+			<xs:element name="linkMenuEntryPageTarget" type="xs:string" />
+			<xs:element name="linkMenuEntryAlt" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	
+</xs:schema>

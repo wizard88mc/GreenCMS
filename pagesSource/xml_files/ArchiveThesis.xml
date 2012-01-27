@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TableArchiveThesis xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="databaseDefinition/ArchiveThesis.xsd">
+
+<ArchiveThesis MonthSession="09" Year="2010">
+	<Thesis lang="en">
+		<Name>Giorgio</Name>
+		<Surname>Dalla Pozza</Surname>
+		<Matricola>602752</Matricola>
+		<Title>Aggregating compactly represented preferences</Title>
+		<Abstract>We consider a scenario where several agents express their preferences over a common set of variable assignments, by means of a soft constraint problem for each agent, and we propose a procedure to compute a variable assignment which satisfies the agents’ preferences at best. Such a procedure considers one variable at a time and, at each step, asks all agents to express its preferences over the domain of that variable. Based on such preferences, a voting rule is used to decide on which value is the best for that variable. At the end, the values chosen constitute the returned variable assignment. We study several properties of this procedure and we show that the use of soft constraints allows for a great flexibility on the preferences of the agents, compared to similar work in setting where agents model their
+preferences via CP - nets, where several restrictions on the agents’ preferences need to be imposed to obtain similar properties. We also provide an experimental study that shows for several voting rules that applying them sequentially yields a considerable saving in time while providing winners that satisfy the voters as much as the solutions that would have been chosen by applying the rule directly on the induced ordering.</Abstract></Thesis>
+	<Thesis lang="it">
+		<Name>Stefano</Name>
+		<Surname>Rigato</Surname>
+		<Matricola>546844</Matricola>
+		<Title>La certificazione storica del web: il progetto History Mark</Title>
+		<Abstract>History Mark consiste in un servizio (o applicazione) web che offre la possibilità ai suoi utenti di effettuare delle certificazioni sulle proprie pagine web. Tali certificazioni hanno l’obbiettivo di fornire una garanzia di esistenza non solo dei contenuti testuali ma anche della struttura stessa della pagina web in un preciso istante di tempo. Questi propositi sono raggiunti attraverso la creazione di certificati temporali, che effettuano una sorta di marchio digitale inoppugnabile della pagina, garantito da History Mark stesso. </Abstract></Thesis>
+	<Thesis lang="it">
+		<Name>Nicolò</Name>
+		<Surname>Navarin</Surname>
+		<Matricola>603685</Matricola>
+		<Title>Kernel per grafi: nuovo approccio basato su DAG</Title>
+		<Abstract>Questa tesi di machine learning propone un contributo nel contesto dei metodi kernel, in particolare dei kernel per grafi . Viene infatti definito un nuovo kernel basato su un invariante per grafi, anch'esso definito in questa tesi.
+Inoltre vengono definiti alcuni kernel su DAG, un particolare tipo di grafo aciclico, che sono impiegati nella definizione del kernel per grafi.
+</Abstract></Thesis>
+	<Thesis lang="it">
+		<Name>Federico</Name>
+		<Surname>Venturin</Surname>
+		<Matricola>566336</Matricola>
+		<Title>Studio ed implementazione di un approccio collaborativo per il recupero semantico in un sistema per l'analisi di documenti paleografici</Title>
+		<Abstract>La mancanza di certezze nell'ambiente paleografico ha portato alla nascita del progetto SPI. L'idea alla base di tale progetto non è di sostituire il paleografo e la sua opera, ma bensì di apportare uno strumento ulteriore di analisi; uno strumento che non sia legato alla soggettività del paleografo o di una corrente di pensiero, ma che sia basato esclusivamente su tecniche statistiche e quindi per loro natura oggettive.
+Questa tesi si colloca nell'ambito del progetto SPI ed ha avuto come obiettivo lo studio e la successiva implementazione di un approccio collaborativo per il recupero semantico delle risorse paleografiche in tale sistema. L'intenzione è quella di permettere ad una comunità di utenti di condividere in modo collaborativo, non solo le risorse paleografiche, ma anche i risultati delle analisi effettuate su di esse ed i metadati (generati dagli utenti stessi) che le descrivono. Questa conoscenza potrà poi essere sfruttata per il recupero ed il successivo ordinamento di risorse paleografiche presenti nel sistema come risposta a query di tipo semantico.</Abstract></Thesis>
+	</ArchiveThesis><ArchiveThesis MonthSession="07" Year="2010">
+	<Thesis lang="en">
+	<Name>Armir</Name>
+	<Surname>Bujari</Surname>
+	<Matricola>586980</Matricola>
+	<Title>A Delay Tolerant Solution for P2P file sharing in MANETs</Title>
+	<Abstract>Mobile phones have already evolved from simple voice communication means into a powerful device able to handle multimedia documents, personal productivity applications, and all sort of connections to the Internet. Due to their low cost, they are growing in popularity and might eventually become the dominant mode by which users interconnect; e.g. by establishing opportunistic P2P ad-hoc connections exchanging information of interest just passing by each other. It is hence expected to see a popular application such as file sharing to become widely utilized even in this context. Despite this, P2P applications for Mobile Ad-hoc Networks (MANETs) in contrast to the wired Internet counterparts are still in their infancy. Due to the low density of mobile nodes or their limit in wireless radio range, continuous network connectivity cannot be sustained between wireless mobile phones, thus embodying a delay/disruption tolerant network (DTN). Indeed DTNs are used in supporting communications in situations with intermittent connectivity, long or variable delay, and high error rates - characteristics that common them with the wireless mobile world. They use (i) an asynchronous communication model (modeled after email) rather than rely on end-to-end communication and (ii) message replication techniques in order to maximize the probability of data delivery to destination. In this context, we have created M2MShare a P2P file sharing application for local ad-hoc disconnected networks. Our approach is based on an application layer overlay network where overlay routes are set up on demand by the search algorithm, closely matching network topology and transparently aggregating redundant transfer paths on a per-file basis. Moreover, M2MShare adopts the idea of a DTN into the mobile world addressing node density issue by providing means for an asynchronous information exchange similar to that of DTNs. It models the idea of a DTN in an infrastructure less environment where both source of the request and destination of the data are the same entities and intermediary nodes (servants) store-delegate-and-forward back the requested data. This forwarding path is dynamically established, each individual node locally selects the next best suited hop based on a metric defined at the protocol level and this process is entirely user-transparent. Mobility is not seen as an obstacle instead, we leverage user-device mobility to address the node density problem.</Abstract></Thesis>
+	<Thesis lang="it">
+	<Name>Francesco</Name>
+	<Surname>Zarpellon</Surname>
+	<Matricola>565832</Matricola>
+	<Title>Integrazione di informazioni a priori per classificazione di dati da microarray  </Title>
+	<Abstract>Oggetto della tesi è lo studio delle tecniche informatiche, in specifico quelle di machine learning, applicate al campo dell’analisi dei dati provenienti da esperimenti scientifici ottenuti utilizzando la tecnologia dei microarray, e l’applicazione pratica di alcune tecniche di classificazione supervisionata a dati reali, con l’ideazione di una tecnica per integrare informazioni a priori sui dati per migliorare le prestazioni di classificazione di uno specifico algoritmo, SVM. Il lavoro si inserisce nel contesto di un progetto di ricerca interfacoltà dell’Università degli studi di Padova, che coinvolge il Dipartimento di Matematica Pura e Applicata, il Dipartimento di Ingegneria dell’Informazione e il Dipartimento di Biologia, al quale questo elaborato ha contribuito.
+</Abstract></Thesis>
+	<Thesis lang="en">
+	<Name>Fabio</Name>
+	<Surname>Pezzoni</Surname>
+	<Matricola>587055</Matricola>
+	<Title>Sensor Data Gathering in Urban Vehicular Networks </Title>
+	<Abstract>Inter-vehicle Communication (IVC) is emerging in research prominence relying on direct communication between vehicles to satisfy the communication needs of a large class of applications. In this work we propose a solution for application based on data-gathering, that is the collection of information within a geographic region making use of vehicles as data sources and using IVC systems for the transmission of collected data. Two protocols have been designed: PAGUS, an abiding geocast protocol that geocast the query within the region of interest and VDG that actually collect data and forward it toward a fixed base station. Proposed solution aims to achieve the goal of gathering data optimizing the bandwidth consumption.
+</Abstract></Thesis>
+	</ArchiveThesis></TableArchiveThesis>

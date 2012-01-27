@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pagesDetails xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../globalDetails/PagesDetailsSchema.xsd" firstLevelMenuNotSelected="organizzazione" parentPathName="Organizzazione" parentPathLink="organizzazione.html">
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Organizzazione - Organizzazione delle Lauree</title>
+			<description>Pagina iniziale contenente le principali informazione sull'organizzazione dei corsi</description>
+			<keywords>
+				<keyword>Organizzazione</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Organizzazione</pageTitle>
+		<secondLevelMenuNotSelected />
+		<contentsPageFileName>organizzazione.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Organizzazione - Consiglio di Corsi di Studio</title>
+			<description>Pagina contenente i verbali del Consiglio di Corsi di Studio</description>
+			<keywords>
+				<keyword>Laurea</keyword>
+				<keyword>Informatica</keyword>
+				<keyword>Padova</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Consiglio di Corsi di Studio</pageTitle>
+		<secondLevelMenuNotSelected>CCS</secondLevelMenuNotSelected>
+		<contentsPageFileName>ccs.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Organizzazione - Docenti</title>
+			<description>Pagina contenente l'elenco dei docenti dei due corsi di Laurea</description>
+			<keywords>
+				<keyword>Laurea</keyword>
+				<keyword>Informatica</keyword>
+				<keyword>Padova</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Docenti</pageTitle>
+		<secondLevelMenuNotSelected>docenti</secondLevelMenuNotSelected>
+		<contentsPageFileName>docenti.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Organizzazione - Personale Tecnico</title>
+			<description>Pagina con l'elenco dei nominativi del personale tecnico del dipartimento</description>
+			<keywords>
+				<keyword>Laurea</keyword>
+				<keyword>Informatica</keyword>
+				<keyword>Padova</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Personale Tecnico</pageTitle>
+		<secondLevelMenuNotSelected>personaleTecnico</secondLevelMenuNotSelected>
+		<contentsPageFileName>personaletecnico.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Organizzazione - Rappresentanti degli Studenti</title>
+			<description>Pagina con l'elenco dei rappresentanti degli studenti ed i relativi contatti</description>
+			<keywords>
+				<keyword>Laurea</keyword>
+				<keyword>Informatica</keyword>
+				<keyword>Padova</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Rappresentanti degli Studenti</pageTitle>
+		<secondLevelMenuNotSelected>rappresentantiStudenti</secondLevelMenuNotSelected>
+		<contentsPageFileName>rappresentantistudenti.html</contentsPageFileName>
+	</pageDetails>
+</pagesDetails>

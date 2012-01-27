@@ -1,0 +1,1299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pagesDetails xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../globalDetails/PagesDetailsSchema.xsd" firstLevelMenuNotSelected="archivio" parentPathName="Archivo" parentPathLink="index.html">
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio</title>
+			<description>Pagina principale dell'archivio del sito</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>anni passati</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Archivio</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>index.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio Anni Passati</title>
+			<description>Pagina con l'archivio degli anni precedenti al 2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>anni passati</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Archivio Anni Passati</pageTitle>
+		<secondLevelMenuNotSelected>passato</secondLevelMenuNotSelected>
+		<contentsPageFileName>passato.html</contentsPageFileName>
+	</pageDetails>
+<pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio 2009/2010</title>
+			<description>Pagina iniziale archivio 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Archivio 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected>2009/2010</secondLevelMenuNotSelected>
+		<contentsPageFileName>archivio20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Algebra e geometria - 2009/2010</title>
+			<description>Pagina di archivio Algebra e geometria - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Algebra e geometria - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>algebraegeometria20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Architettura degli elaboratori - 2009/2010</title>
+			<description>Pagina di archivio Architettura degli elaboratori - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Architettura degli elaboratori - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>architetturadeglielaboratori20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Analisi matematica - 2009/2010</title>
+			<description>Pagina di archivio Analisi matematica - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Analisi matematica - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>analisimatematica20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Programmazione - 2009/2010</title>
+			<description>Pagina di archivio Programmazione - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Programmazione - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>programmazione20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Matematica discreta e probabilitÃ  - 2009/2010</title>
+			<description>Pagina di archivio Matematica discreta e probabilitÃ  - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Matematica discreta e probabilitÃ  - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>matematicadiscretaeprobabilita20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Logica - 2009/2010</title>
+			<description>Pagina di archivio Logica - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Logica - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>logica20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Sistemi operativi - 2009/2010</title>
+			<description>Pagina di archivio Sistemi operativi - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Sistemi operativi - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>sistemioperativi20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Programmazione ad oggetti - 2009/2010</title>
+			<description>Pagina di archivio Programmazione ad oggetti - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Programmazione ad oggetti - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>programmazioneadoggetti20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Algoritmi e strutture dati - 2009/2010</title>
+			<description>Pagina di archivio Algoritmi e strutture dati - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Algoritmi e strutture dati - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>algoritmiestrutturedati20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Automi e linguaggi formali - 2009/2010</title>
+			<description>Pagina di archivio Automi e linguaggi formali - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Automi e linguaggi formali - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>automielinguaggiformali20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Reti e sicurezza - 2009/2010</title>
+			<description>Pagina di archivio Reti e sicurezza - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Reti e sicurezza - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>retiesicurezza20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Fisica - 2009/2010</title>
+			<description>Pagina di archivio Fisica - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Fisica - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>fisica20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Calcolo Numerico - 2009/2010</title>
+			<description>Pagina di archivio Calcolo Numerico - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Calcolo Numerico - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>calcolonumerico20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Basi di dati - 2009/2010</title>
+			<description>Pagina di archivio Basi di dati - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Basi di dati - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>basididati20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Ingegneria del Software (Mod. B) - 2009/2010</title>
+			<description>Pagina di archivio Ingegneria del Software (Mod. B) - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Ingegneria del Software (Mod. B) - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>ingegneriadelsoftware(mod.b)20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Ingegneria del Software (Mod. A) - 2009/2010</title>
+			<description>Pagina di archivio Ingegneria del Software (Mod. A) - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Ingegneria del Software (Mod. A) - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>ingegneriadelsoftware(mod.a)20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Ricerca Operativa - 2009/2010</title>
+			<description>Pagina di archivio Ricerca Operativa - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Ricerca Operativa - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>ricercaoperativa20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Programmazione concorrente e distribuita - 2009/2010</title>
+			<description>Pagina di archivio Programmazione concorrente e distribuita - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Programmazione concorrente e distribuita - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>programmazioneconcorrenteedistribuita20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Tecnologie web - 2009/2010</title>
+			<description>Pagina di archivio Tecnologie web - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Tecnologie web - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>tecnologieweb20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Informatica grafica e multimedialitÃ  - 2009/2010</title>
+			<description>Pagina di archivio Informatica grafica e multimedialitÃ  - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Informatica grafica e multimedialitÃ  - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>informaticagraficaemultimedialita20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Gestione di imprese informatiche - 2009/2010</title>
+			<description>Pagina di archivio Gestione di imprese informatiche - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Gestione di imprese informatiche - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>gestionediimpreseinformatiche20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Sviluppo e gestione di progetti - 2009/2010</title>
+			<description>Pagina di archivio Sviluppo e gestione di progetti - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Sviluppo e gestione di progetti - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>sviluppoegestionediprogetti20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Lingua inglese - 2009/2010</title>
+			<description>Pagina di archivio Lingua inglese - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Lingua inglese - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>linguainglese20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Linguaggi di programmazione - 2009/2010</title>
+			<description>Pagina di archivio Linguaggi di programmazione - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Linguaggi di programmazione - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>linguaggidiprogrammazione20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - ComputabilitÃ  e algoritmi (Mod. A) - 2009/2010</title>
+			<description>Pagina di archivio ComputabilitÃ  e algoritmi (Mod. A) - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>ComputabilitÃ  e algoritmi (Mod. A) - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>computabilitaealgoritmi(mod.a)20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - ComputabilitÃ  e algoritmi (Mod. B) - 2009/2010</title>
+			<description>Pagina di archivio ComputabilitÃ  e algoritmi (Mod. B) - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>ComputabilitÃ  e algoritmi (Mod. B) - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>computabilitaealgoritmi(mod.b)20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Semantica dei linguaggi di programmazione - 2009/2010</title>
+			<description>Pagina di archivio Semantica dei linguaggi di programmazione - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Semantica dei linguaggi di programmazione - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>semanticadeilinguaggidiprogrammazione20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Intelligenza artificiale - 2009/2010</title>
+			<description>Pagina di archivio Intelligenza artificiale - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Intelligenza artificiale - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>intelligenzaartificiale20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Sistemi concorrenti e distribuiti - 2009/2010</title>
+			<description>Pagina di archivio Sistemi concorrenti e distribuiti - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Sistemi concorrenti e distribuiti - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>sistemiconcorrentiedistribuiti20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Amministrazione di sistema - 2009/2010</title>
+			<description>Pagina di archivio Amministrazione di sistema - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Amministrazione di sistema - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>amministrazionedisistema20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Metodi formali per la concorrenza - 2009/2010</title>
+			<description>Pagina di archivio Metodi formali per la concorrenza - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Metodi formali per la concorrenza - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>metodiformaliperlaconcorrenza20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Sistemi con vincoli - 2009/2010</title>
+			<description>Pagina di archivio Sistemi con vincoli - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Sistemi con vincoli - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>sistemiconvincoli20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Tecnologie open-source - 2009/2010</title>
+			<description>Pagina di archivio Tecnologie open-source - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Tecnologie open-source - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>tecnologieopen-source20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Tecnologie web 2 - 2009/2010</title>
+			<description>Pagina di archivio Tecnologie web 2 - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Tecnologie web 2 - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>tecnologieweb220092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Data mining - 2009/2010</title>
+			<description>Pagina di archivio Data mining - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Data mining - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>datamining20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Reti wireless - 2009/2010</title>
+			<description>Pagina di archivio Reti wireless - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Reti wireless - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>retiwireless20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Elaborazione delle immagini - 2009/2010</title>
+			<description>Pagina di archivio Elaborazione delle immagini - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Elaborazione delle immagini - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>elaborazionedelleimmagini20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Analisi statica e verifica automatica - 2009/2010</title>
+			<description>Pagina di archivio Analisi statica e verifica automatica - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Analisi statica e verifica automatica - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>analisistaticaeverificaautomatica20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Apprendimento automatico - 2009/2010</title>
+			<description>Pagina di archivio Apprendimento automatico - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Apprendimento automatico - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>apprendimentoautomatico20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Algoritmi di approssimazione - 2009/2010</title>
+			<description>Pagina di archivio Algoritmi di approssimazione - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Algoritmi di approssimazione - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>algoritmidiapprossimazione20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Information retrieval - 2009/2010</title>
+			<description>Pagina di archivio Information retrieval - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Information retrieval - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>informationretrieval20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Sicurezza - 2009/2010</title>
+			<description>Pagina di archivio Sicurezza - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Sicurezza - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>sicurezza20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Sistemi real-time - 2009/2010</title>
+			<description>Pagina di archivio Sistemi real-time - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Sistemi real-time - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>sistemireal-time20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Ragionamento temporale - 2009/2010</title>
+			<description>Pagina di archivio Ragionamento temporale - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Ragionamento temporale - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>ragionamentotemporale20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Sistemi ipermediali - 2009/2010</title>
+			<description>Pagina di archivio Sistemi ipermediali - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Sistemi ipermediali - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>sistemiipermediali20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Sistemi per la gestione del territorio - 2009/2010</title>
+			<description>Pagina di archivio Sistemi per la gestione del territorio - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Sistemi per la gestione del territorio - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>sistemiperlagestionedelterritorio20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Logica 2 - 2009/2010</title>
+			<description>Pagina di archivio Logica 2 - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Logica 2 - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>logica220092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Analisi numerica - 2009/2010</title>
+			<description>Pagina di archivio Analisi numerica - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Analisi numerica - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>analisinumerica20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Bioinformatica - 2009/2010</title>
+			<description>Pagina di archivio Bioinformatica - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Bioinformatica - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>bioinformatica20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Metodi e modelli per l'ottimizzazione combinatoria - 2009/2010</title>
+			<description>Pagina di archivio Metodi e modelli per l'ottimizzazione combinatoria - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Metodi e modelli per l'ottimizzazione combinatoria - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>metodiemodelliperlottimizzazionecombinatoria20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Fondamenti logici dei linguaggi funzionali - 2009/2010</title>
+			<description>Pagina di archivio Fondamenti logici dei linguaggi funzionali - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Fondamenti logici dei linguaggi funzionali - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>fondamentilogicideilinguaggifunzionali20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Crittografia - 2009/2010</title>
+			<description>Pagina di archivio Crittografia - 2009/2010</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2009/2010</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Crittografia - 2009/2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2009/archivio20092010.html</otherParent>
+		<contentsPageFileName>crittografia20092010.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio 2010/2011</title>
+			<description>Pagina iniziale archivio 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Archivio 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected>2010/2011</secondLevelMenuNotSelected>
+		<contentsPageFileName>archivio20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Algebra e geometria - 2010/2011</title>
+			<description>Pagina di archivio Algebra e geometria - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Algebra e geometria - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>algebraegeometria20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Architettura degli elaboratori - 2010/2011</title>
+			<description>Pagina di archivio Architettura degli elaboratori - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Architettura degli elaboratori - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>architetturadeglielaboratori20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Analisi matematica - 2010/2011</title>
+			<description>Pagina di archivio Analisi matematica - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Analisi matematica - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>analisimatematica20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Programmazione - 2010/2011</title>
+			<description>Pagina di archivio Programmazione - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Programmazione - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>programmazione20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Matematica discreta e probabilità - 2010/2011</title>
+			<description>Pagina di archivio Matematica discreta e probabilità - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Matematica discreta e probabilità - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>matematicadiscretaeprobabilita20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Logica - 2010/2011</title>
+			<description>Pagina di archivio Logica - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Logica - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>logica20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Sistemi operativi - 2010/2011</title>
+			<description>Pagina di archivio Sistemi operativi - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Sistemi operativi - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>sistemioperativi20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Automi e linguaggi formali - 2010/2011</title>
+			<description>Pagina di archivio Automi e linguaggi formali - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Automi e linguaggi formali - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>automielinguaggiformali20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Algoritmi e strutture dati - 2010/2011</title>
+			<description>Pagina di archivio Algoritmi e strutture dati - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Algoritmi e strutture dati - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>algoritmiestrutturedati20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Programmazione ad oggetti - 2010/2011</title>
+			<description>Pagina di archivio Programmazione ad oggetti - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Programmazione ad oggetti - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>programmazioneadoggetti20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Reti e sicurezza - 2010/2011</title>
+			<description>Pagina di archivio Reti e sicurezza - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Reti e sicurezza - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>retiesicurezza20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Fisica - 2010/2011</title>
+			<description>Pagina di archivio Fisica - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Fisica - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>fisica20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Calcolo Numerico - 2010/2011</title>
+			<description>Pagina di archivio Calcolo Numerico - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Calcolo Numerico - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>calcolonumerico20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Basi di dati - 2010/2011</title>
+			<description>Pagina di archivio Basi di dati - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Basi di dati - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>basididati20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Ingegneria del Software (Mod. B) - 2010/2011</title>
+			<description>Pagina di archivio Ingegneria del Software (Mod. B) - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Ingegneria del Software (Mod. B) - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>ingegneriadelsoftware(mod.b)20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Ingegneria del Software (Mod. A) - 2010/2011</title>
+			<description>Pagina di archivio Ingegneria del Software (Mod. A) - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Ingegneria del Software (Mod. A) - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>ingegneriadelsoftware(mod.a)20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Ricerca Operativa - 2010/2011</title>
+			<description>Pagina di archivio Ricerca Operativa - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Ricerca Operativa - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>ricercaoperativa20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Programmazione concorrente e distribuita - 2010/2011</title>
+			<description>Pagina di archivio Programmazione concorrente e distribuita - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Programmazione concorrente e distribuita - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>programmazioneconcorrenteedistribuita20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Tecnologie web - 2010/2011</title>
+			<description>Pagina di archivio Tecnologie web - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Tecnologie web - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>tecnologieweb20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Sviluppo e gestione di progetti - 2010/2011</title>
+			<description>Pagina di archivio Sviluppo e gestione di progetti - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Sviluppo e gestione di progetti - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>sviluppoegestionediprogetti20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Informatica grafica e multimedialità - 2010/2011</title>
+			<description>Pagina di archivio Informatica grafica e multimedialità - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Informatica grafica e multimedialità - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>informaticagraficaemultimedialita20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Gestione di imprese informatiche - 2010/2011</title>
+			<description>Pagina di archivio Gestione di imprese informatiche - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Gestione di imprese informatiche - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>gestionediimpreseinformatiche20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Lingua inglese - 2010/2011</title>
+			<description>Pagina di archivio Lingua inglese - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Lingua inglese - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>linguainglese20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Linguaggi di programmazione - 2010/2011</title>
+			<description>Pagina di archivio Linguaggi di programmazione - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Linguaggi di programmazione - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>linguaggidiprogrammazione20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Computabilità e algoritmi (Mod. A) - 2010/2011</title>
+			<description>Pagina di archivio Computabilità e algoritmi (Mod. A) - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Computabilità e algoritmi (Mod. A) - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>computabilitaealgoritmi(mod.a)20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Computabilità e algoritmi (Mod. B) - 2010/2011</title>
+			<description>Pagina di archivio Computabilità e algoritmi (Mod. B) - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Computabilità e algoritmi (Mod. B) - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>computabilitaealgoritmi(mod.b)20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Sistemi concorrenti e distribuiti - 2010/2011</title>
+			<description>Pagina di archivio Sistemi concorrenti e distribuiti - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Sistemi concorrenti e distribuiti - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>sistemiconcorrentiedistribuiti20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Analisi statica e verifica del software - 2010/2011</title>
+			<description>Pagina di archivio Analisi statica e verifica del software - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Analisi statica e verifica del software - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>analisistaticaeverificadelsoftware20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Intelligenza artificiale - 2010/2011</title>
+			<description>Pagina di archivio Intelligenza artificiale - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Intelligenza artificiale - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>intelligenzaartificiale20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Sistemi con vincoli - 2010/2011</title>
+			<description>Pagina di archivio Sistemi con vincoli - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Sistemi con vincoli - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>sistemiconvincoli20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Tecnologie open-source - 2010/2011</title>
+			<description>Pagina di archivio Tecnologie open-source - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Tecnologie open-source - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>tecnologieopen-source20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Reti wireless - 2010/2011</title>
+			<description>Pagina di archivio Reti wireless - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Reti wireless - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>retiwireless20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Elaborazione delle immagini - 2010/2011</title>
+			<description>Pagina di archivio Elaborazione delle immagini - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Elaborazione delle immagini - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>elaborazionedelleimmagini20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Sistemi ipermediali - 2010/2011</title>
+			<description>Pagina di archivio Sistemi ipermediali - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Sistemi ipermediali - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>sistemiipermediali20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Linguaggi di programmazione avanzati - 2010/2011</title>
+			<description>Pagina di archivio Linguaggi di programmazione avanzati - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Linguaggi di programmazione avanzati - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>linguaggidiprogrammazioneavanzati20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Tecnologie web 2 - 2010/2011</title>
+			<description>Pagina di archivio Tecnologie web 2 - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Tecnologie web 2 - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>tecnologieweb220102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Apprendimento automatico - 2010/2011</title>
+			<description>Pagina di archivio Apprendimento automatico - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Apprendimento automatico - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>apprendimentoautomatico20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Information retrieval - 2010/2011</title>
+			<description>Pagina di archivio Information retrieval - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Information retrieval - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>informationretrieval20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Amministrazione di sistema - 2010/2011</title>
+			<description>Pagina di archivio Amministrazione di sistema - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Amministrazione di sistema - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>amministrazionedisistema20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Sicurezza - 2010/2011</title>
+			<description>Pagina di archivio Sicurezza - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Sicurezza - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>sicurezza20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Algoritmi di approssimazione - 2010/2011</title>
+			<description>Pagina di archivio Algoritmi di approssimazione - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Algoritmi di approssimazione - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>algoritmidiapprossimazione20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Sistemi real-time - 2010/2011</title>
+			<description>Pagina di archivio Sistemi real-time - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Sistemi real-time - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>sistemireal-time20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Ragionamento temporale - 2010/2011</title>
+			<description>Pagina di archivio Ragionamento temporale - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Ragionamento temporale - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>ragionamentotemporale20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Data mining - 2010/2011</title>
+			<description>Pagina di archivio Data mining - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Data mining - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>datamining20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Linguaggi e modelli per il global computing - 2010/2011</title>
+			<description>Pagina di archivio Linguaggi e modelli per il global computing - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Linguaggi e modelli per il global computing - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>linguaggiemodelliperilglobalcomputing20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Sistemi per la gestione del territorio - 2010/2011</title>
+			<description>Pagina di archivio Sistemi per la gestione del territorio - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Sistemi per la gestione del territorio - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>sistemiperlagestionedelterritorio20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Logica 2 - 2010/2011</title>
+			<description>Pagina di archivio Logica 2 - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Logica 2 - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>logica220102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Analisi numerica - 2010/2011</title>
+			<description>Pagina di archivio Analisi numerica - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Analisi numerica - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>analisinumerica20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Bioinformatica - 2010/2011</title>
+			<description>Pagina di archivio Bioinformatica - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Bioinformatica - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>bioinformatica20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Metodi e modelli per l'ottimizzazione combinatoria - 2010/2011</title>
+			<description>Pagina di archivio Metodi e modelli per l'ottimizzazione combinatoria - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Metodi e modelli per l'ottimizzazione combinatoria - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>metodiemodelliperlottimizzazionecombinatoria20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Fondamenti logici dei linguaggi funzionali - 2010/2011</title>
+			<description>Pagina di archivio Fondamenti logici dei linguaggi funzionali - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Fondamenti logici dei linguaggi funzionali - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>fondamentilogicideilinguaggifunzionali20102011.html</contentsPageFileName></pageDetails><pageDetails isStatic="T">
+		<metaTags>
+			<title>Archivio - Crittografia - 2010/2011</title>
+			<description>Pagina di archivio Crittografia - 2010/2011</description>
+			<keywords>
+				<keyword>archivio</keyword>
+				<keyword>2010/2011</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Crittografia - 2010/2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Archvio 2010/archivio20102011.html</otherParent>
+		<contentsPageFileName>crittografia20102011.html</contentsPageFileName></pageDetails></pagesDetails>

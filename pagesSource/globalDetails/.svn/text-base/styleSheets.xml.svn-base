@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleSheets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="D:\Hogwarts\Università\Stage\Repository\stage\WebContent\globalDetails\styleSheets.xsd">
+	<styleSheet>
+		<fileName>base</fileName>
+		<media>all</media>
+	</styleSheet>
+</styleSheets>

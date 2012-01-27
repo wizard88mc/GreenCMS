@@ -1,0 +1,26 @@
+SELECT af_descri.descr_ita as insegnamento,personale.cognome as cognomeDocente, personale.nome as nomeDocente, SUM(tasc.cfu) as cfu,anni.descr as anno, periodi.descr as trimestre, calendari.inizio_periodo as inizio, calendari.fine_periodo as fine,  af.propedeuticita, af.prerequisiti, testi.testididattici, testi.ausilididattici, testi.programmacorso, corsi.normativa as ordinamento, tipologie.descr as tipologia, ambiti.descr as ambito, GROUP_CONCAT(ssd.sigla) as ssd
+FROM personale, carichi, corsi, af, aa, af_descri, calendari, periodi, af_periodi, anni, testi, tasc, ambiti, tipologie, tasc_ssd, ssd
+WHERE carichi.af_id = af.id
+and periodi.id = calendari.periodo_id
+and aa.id = calendari.aa_id
+and af_periodi.af_id = af.id
+and af_periodi.periodo_id = periodi.id
+and af_periodi.anno_id = anni.id
+AND carichi.personale_id = personale.id
+AND carichi.responsabile = 1
+AND aa.id = corsi.aa_id 
+AND aa.corrente = 1 
+AND corsi.tipocorso = "L"
+AND corsi.descr = "INFORMATICA"
+AND corsi.id = af.corso_id
+AND af.af_descri_id = af_descri.id
+and testi.af_id = af.id 
+and testi.aa_id = aa.id
+and testi.lingua_id = 1
+and tasc.af_id = af.id
+and tasc.ambito_id = ambiti.id
+and tasc.tipologia_id = tipologie.id
+and tasc.id = tasc_ssd.tasc_id
+and tasc_ssd.ssd_id = ssd.id
+GROUP BY af.id
+ORDER BY anni.descr, periodi.descr;

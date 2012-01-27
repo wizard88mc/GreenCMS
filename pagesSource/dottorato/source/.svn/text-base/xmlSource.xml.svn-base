@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pagesDetails xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../globalDetails/PagesDetailsSchema.xsd" firstLevelMenuNotSelected="dottorato">
+	<pageDetails>
+		<metaTags>
+			<title>Laurea in Informatica - Dottorato di Ricerca in Informatica</title>
+			<description>Pagina descrittiva del dottorato di ricerca in Informatica presso l'Universita' di Padova</description>
+			<keywords>
+				<keyword>Dottorato di Ricerca</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Dottorato di Ricerca in Informatica</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>dottorato.html</contentsPageFileName>
+	</pageDetails>
+</pagesDetails>

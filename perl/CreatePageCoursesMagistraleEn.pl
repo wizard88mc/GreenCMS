@@ -1,0 +1,159 @@
+#!/usr/bin/perl
+
+use DBI;
+use DBD::mysql;
+use HTML::Entities;
+use utf8;
+
+require "ConnectDatabase.pl";
+require "WorkWithFiles.pl";
+require "GlobalVariables.pl";
+require "CreateCourseDetailsPageMagistrale.pl";
+require "GetCoursesIDByCurriculum.pl";
+require "GetCourseDescription.pl";
+require "GetCourseTeacher.pl";
+require "GetCourseCFU.pl";
+require "GetCourseTimeInfo.pl";
+require "GetCourseHours.pl";
+require "GetCourseInformations.pl";
+
+
+sub createPageCoursesMagistraleEn() {
+	
+	#array contenente l'elenco dei corsi che non devono essere linkati ad una pagina di dettaglio
+	my @courseNotLink = ("Tirocinio", "Prova finale");
+
+	#creo connessione al database
+	my $DBIConnection = &connectDatabase();  
+
+	#parametri per l'esecuzione della query per ottenere gli ID dei corsi della Magistrale
+	my $descr = 'INFORMATICA%2009';
+	my $tipocorso = "LM";
+	
+	#ottengo l'elenco degli ID dei corsi
+	my $queryHandle = &getCoursesIDbyCurriculum($DBIConnection, $tipocorso, $descr);
+	
+	#inizio la tabella dei corsi
+	my $tableCourses = "<table summary=\"Nella tabella vengono presentati i corsi della Laurea, specificando, oltre al nome, 
+	il docente titolare del corso ed il periodo di erogazione del corso. Infine per ogni corso e' presente un link alla pagina di dettaglio, con informazioni piu' dettagliate.\">\n";
+	$tableCourses .= "<caption>Esami del Corso di Laurea</caption>\n";
+	$tableCourses .= 
+	"<thead>
+		<tr id=\"thLink\">
+		<th id=\"c1\" abbr=\"Course\" scope=\"col\"><a href=\"../cgi-bin/ordinaen.cgi?colonna=corsi\">Course</a></th>
+		<th id=\"c2\" abbr=\"Teacher\" scope=\"col\"><a href=\"../cgi-bin/ordinaen.cgi?colonna=docenti\">Teacher</a></th>
+		<th id=\"c3\" abbr=\"Period\" scope=\"col\"><a href=\"../cgi-bin/ordinaen.cgi?colonna=trimestre\">Period</a></th>
+		<th id=\"c4\" abbr=\"Year\" scope=\"col\"><a href=\"../cgi-bin/ordinaen.cgi?colonna=anno\">Year</a></th>
+		</tr>
+	</thead>
+	<tbody>";
+	
+	my $i = 0;
+	
+	#per ogni ID di corso che mi viene restituito dalla query
+	while (my $course = $queryHandle->fetchrow_hashref()) {  
+		
+		#prendo l'id del corso che considero
+		my $courseID = $course->{'id'};
+		
+		#hash dove mettero' tutte le informazioni del corso
+		my %courseDetails = ();
+		
+		#riempio l'hash
+		$courseDetails{"teachingName"} = &getCourseDescription($DBIConnection, $courseID);
+		$courseDetails{"teacher"} = &getCourseTeacher($DBIConnection, $courseID);
+		$courseDetails{"CFU"} = &getCourseCFU($DBIConnection, $courseID);
+		$courseDetails{"period"} = &getTimeInfo($DBIConnection, $courseID);
+		$courseDetails{"hours"} = &getCourseHours($DBIConnection, $courseID);
+		$courseDetails{"informations"} = &getInformationsCourse($DBIConnection, $courseID, 2);
+		
+		#recupero trimestre e anno del corso
+		my %periodInformations = %{$courseDetails{"period"}};
+		my $period = $periodInformations{"trimestre"};
+		my $year = $periodInformations{"anno"};
+		
+		my %informations = %{$courseDetails{"informations"}};
+		my $curriculum = $informations{"nr_esame"};
+		#creo pagina del corso, mi viene restituito il nome del file a cui far linkare il collegamento
+		my $linkFileName = &createCourseDetailsPageMagistrale(\%courseDetails, "en");
+
+		#controllo se il corso che sto aggiungendo è un corso da linkare oppure no (linkare significa che ha pagina 
+		#con i dettagli (i corsi da non linkare sono specifcati all'inizio della funzione)
+		my $notToLink = 0;
+		foreach my $course (@courseNotLink) {
+			if ($courseDetails{"teachingName"} eq $course) {
+				$notToLink = 1;
+			}
+		}
+		
+		my $stringEntry;
+
+		#eventualmente classe alternate per alternare colori di sfondo della riga
+		if ($i % 2 == 0) {
+			$stringEntry = "
+			<tr>";
+		}
+		else {
+			$stringEntry = "
+			<tr class=\"alternate\">";
+		}
+		
+		if ($notToLink) {
+			$stringEntry .= "
+			<td headers=\"c1\">$courseDetails{'teachingName'}</td>";
+		}
+		else {
+		$stringEntry .= "
+			<td headers=\"c1\"><a href=\"$linkFileName\" xml:lang=\"it\">" . $courseDetails{"teachingName"} . "</a></td>";
+		}
+		
+		#aggiungo tag <abbr>
+		my $tytle = substr($courseDetails{"teacher"}, 0, index($courseDetails{"teacher"}, " "));
+		if ($tytle eq "Prof.") {
+			$tytle = "<abbr title=\"Professor\">$tytle</abbr>";
+		}
+		if ($tytle eq "Prof.ssa") {
+			$tytle = "<abbr title=\"Professoressa\">$tytle</abbr>";
+		}
+		if ($tytle eq "Dott.") {
+			$tytle = "<abbr title=\"Dottor\">$tytle</abbr>";
+		}
+		if ($tytle eq "Dott.ssa") {
+			$tytle = "<abbr title=\"Dottoressa\">$tytle</abbr>";
+		}
+		my $teacher = $tytle . substr($courseDetails{"teacher"}, index($courseDetails{"teacher"}, " "));
+
+		#aggiungo docente del corso e periodo di svolgimento
+		$stringEntry .= "
+			<td headers=\"c2\" xml:lang=\"it\">" . $teacher . "</td>";
+		$stringEntry .= "
+			<td headers=\"c3\" xml:lang=\"it\">$period</td><td headers=\"c4\" xml:lang=\"it\">$year</td>\n";
+		
+		$stringEntry .= "
+		</tr>\n";
+		
+		#aggiungo alla tabella in costruzione la nuova riga
+		$tableCourses .= $stringEntry;
+	
+		$i = $i + 1;
+	}
+	
+	#chiudo tabella creata
+	$tableCourses .= "
+	</tbody>	
+	</table>";
+	
+	utf8::encode($tableCourses);
+	
+	#mi disconnetto dal database
+	$DBIConnection->disconnect();
+	
+	my $pageCoursesMagistrale = &openFile($sitePath . "laureamagistrale/corsimagistraleen.html"); 
+	#sostituisco, nella pagina corsilaurea.html, il tag <courseTable> la tabella appena creata
+	$pageCoursesMagistrale =~ s/<courseTable\/>/$tableCourses/g;
+	
+	&createFile($sitePath . "laureamagistrale/corsimagistraleen.html", $pageCoursesMagistrale);
+
+}
+
+1;

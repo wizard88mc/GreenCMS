@@ -1,0 +1,13 @@
+<div id="contents-right">
+
+<div id="contentsLong">
+<breadcrumb/>
+
+<h1>Laurea in Informatica</h1>
+<span class="mobile"><a href="#beginContent">Salta il menu di secondo livello</a></span>
+	<secondLevelMenu/>
+	<h2 id="beginContent"><pageTitleContent/></h2>
+	<courseTable/>
+	<p class="tornaSu"><a href="#contentsLong">Torna su &#9650;</a></p> 
+</div>
+

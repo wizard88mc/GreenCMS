@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pagesDetails xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../..//globalDetails/PagesDetailsSchema.xsd">
+	<pageDetails>
+		<metaTags>
+			<title>Home Page - Corsi di Laurea in Informatica Universita' di Padova</title>
+			<description>Home Page del sito delle Lauree in Informatica dell'Universita' di Padova</description>
+			<keywords>
+				<keyword>index</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Lauree Informatica</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>index.html</contentsPageFileName>
+	</pageDetails>
+</pagesDetails>

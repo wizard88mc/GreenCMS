@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pagesDetails xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../globalDetails/PagesDetailsSchema.xsd" firstLevelMenuNotSelected="estero">
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Studiare all'estero</title>
+			<description>Pagina contenente le informazioni riguardo i percorsi di studio
+             all'estero per le Lauree in Informatica dell'Universita di Padova</description>
+			<keywords>
+				<keyword>Laurea</keyword>
+				<keyword>informazioni</keyword>
+				<keyword>studiare all'estero</keyword>
+				<keyword>Programma Erasmus</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Studiare all'estero</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>indexen.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails/>
+</pagesDetails>

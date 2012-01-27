@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="pagesDetails" type="TPagesDetails"/>
+	<xs:complexType name="TPagesDetails">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="pageDetails" type="TPageDetails"/>
+		</xs:sequence>
+		<xs:attribute name="firstLevelMenuNotSelected" type="xs:string"/>
+		<xs:attribute name="parentPathName" type="xs:string" />
+		<xs:attribute name="parentPathLink" type="xs:string" />
+	</xs:complexType>
+	<xs:complexType name="TPageDetails">
+		<xs:sequence>
+			<xs:element name="metaTags" type="TMetaTags"/>
+			<xs:choice minOccurs="0">
+				<xs:element name="additionalStylesheet" type="TStyleSheet"/>
+				<xs:element name="javascript" type="TJavascript"/>
+			</xs:choice>
+			<xs:element name="pageTitle" type="xs:string"/>
+			<xs:element name="secondLevelMenuNotSelected" type="xs:string"/>
+			<xs:choice minOccurs="0">
+				<xs:element name="otherParent" type="xs:string"/>
+			</xs:choice>
+			<xs:element name="contentsPageFileName" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="isStatic" type="xs:string" default="T" />
+	</xs:complexType>
+	<xs:complexType name="TMetaTags">
+		<xs:sequence>
+			<xs:element name="title" type="xs:string"/>
+			<xs:element name="description" type="xs:string"/>
+			<xs:element name="keywords" type="TKeywords"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TKeywords">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="keyword" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TStyleSheet">
+		<xs:sequence>
+			<xs:element name="fileName" type="xs:string"/>
+			<xs:element name="media" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TJavascript">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="javascriptFileName" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

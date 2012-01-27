@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pagesDetails xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../globalDetails/PagesDetailsSchema.xsd" firstLevelMenuNotSelected="laureaInformatica" parentPathName="Laurea in Informatica" parentPathLink="index.html" >
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Home Page</title>
+			<description>Pagina descrittiva del corso di Laurea in Informatica dell'Universita di Padova</description>
+			<keywords>
+				<keyword>Laurea</keyword>
+				<keyword>informazioni</keyword>
+				<keyword>percorso studi</keyword>
+			</keywords>
+		</metaTags>
+		<javascript>prepareLaurea</javascript>
+		<pageTitle>Laurea in Informatica</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>index.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="F">
+		<metaTags>
+			<title>Laurea in Informatica - Corsi</title>
+			<description>Pagina con l'elenco dei corsi del Corso di Laurea</description>
+			<keywords>
+				<keyword>elenco corsi</keyword>
+				<keyword>corso</keyword>
+				<keyword>docenti</keyword>
+				<keyword>periodo</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Corsi</pageTitle>
+		<secondLevelMenuNotSelected>corsi</secondLevelMenuNotSelected>
+		<contentsPageFileName>corsilaurea.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="F">
+		<metaTags>
+			<title>"nomeCorso"</title>
+			<description>Pagina con la descrizione dettagliata del corso "nomeCorso"</description>
+			<keywords>
+				<keyword>"nomeCorso"</keyword>
+				<keyword>informazioni dettagliate</keyword>
+				<keyword>prerequisiti</keyword>
+				<keyword>propedeuticità</keyword>
+				<keyword>testi</keyword>
+				<keyword>ausili didattici</keyword>
+				<keyword>programma</keyword>
+				<keyword>ore</keyword>
+				<keyword>anno</keyword>
+				<keyword>trimestre</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>"nomeCorso"</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Corsi/corsilaurea.html</otherParent>
+		<contentsPageFileName>corsitemplate.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="F">
+		<metaTags>
+			<title>Laurea in Informatica - Appelli d'Esame</title>
+			<description>Pagina contenente le informazioni riguardanti gli appelli d'esame</description>
+			<keywords>
+				<keyword>esami</keyword>
+				<keyword>laurea</keyword>
+				<keyword>giorno</keyword>
+				<keyword>ora</keyword>
+				<keyword>aula</keyword>
+			</keywords>
+		</metaTags>
+		<javascript>exams</javascript>
+		<pageTitle>Appelli Esame</pageTitle>
+		<secondLevelMenuNotSelected>esami</secondLevelMenuNotSelected>
+		<contentsPageFileName>esamilaurea.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Stage</title>
+			<description>Pagina con le informazioni riguardo l'attivita di stage a conclusione del percorso di studi</description>
+			<keywords>
+				<keyword>stage</keyword>
+				<keyword>laurea</keyword>
+				<keyword>regole</keyword>
+				<keyword>esami</keyword>
+				<keyword>requisiti</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Stage</pageTitle>
+		<secondLevelMenuNotSelected>stage</secondLevelMenuNotSelected>
+		<contentsPageFileName>stagelaurea.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - StageIT</title>
+			<description>Pagina con le informazioni riguardo l'incontro aziende - studenti StageIT per le attivita' di stage</description>
+			<keywords>
+				<keyword>stage</keyword>
+				<keyword>stageIT</keyword>
+				<keyword>incontro</keyword>
+				<keyword>aziende</keyword>
+				<keyword>studenti</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>StageIT</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Stage/stagelaurea.html</otherParent>
+		<contentsPageFileName>stageit.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Piano di Studi</title>
+			<description>Pagina con le informazioni riguardanti la compilazione e la presentazione del piano di studi</description>
+			<keywords>
+				<keyword>piano di studi</keyword>
+				<keyword>regole</keyword>
+				<keyword>scadenze</keyword>
+				<keyword>template</keyword>
+				<keyword>codici esami</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Piano di Studi</pageTitle>
+		<secondLevelMenuNotSelected>pianoStudi</secondLevelMenuNotSelected>
+		<contentsPageFileName>pianostudilaurea.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Appelli di Laurea</title>
+			<description>Pagina contenente informazioni riguardo gli Appelli di Laurea</description>
+			<keywords>
+				<keyword>appelli</keyword>
+				<keyword>laurea</keyword>
+				<keyword>giorno</keyword>
+				<keyword>ora</keyword>
+				<keyword>data</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Appelli di Laurea</pageTitle>
+		<secondLevelMenuNotSelected>appelliLaurea</secondLevelMenuNotSelected>
+		<contentsPageFileName>appellilaurea.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Referenti</title>
+			<description>Pagina contenente i contatti dei referenti per il corso di Laurea</description>
+			<keywords>
+				<keyword>referenti</keyword>
+				<keyword>contatti</keyword>
+				<keyword>email</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Referenti</pageTitle>
+		<secondLevelMenuNotSelected>referenti</secondLevelMenuNotSelected>
+		<contentsPageFileName>referentilaurea.html</contentsPageFileName>
+	</pageDetails>
+<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Orario</title>
+			<description>Pagina contenente l'orario delle lezioni per il corso di Laurea</description>
+			<keywords>
+				<keyword>orario</keyword>
+				<keyword>orari</keyword>
+				<keyword>lezioni</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Orario</pageTitle>
+		<secondLevelMenuNotSelected>orario</secondLevelMenuNotSelected>
+		<contentsPageFileName>orario.html</contentsPageFileName>
+	</pageDetails>
+</pagesDetails>

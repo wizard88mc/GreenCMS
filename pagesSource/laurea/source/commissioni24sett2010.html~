@@ -1,0 +1,67 @@
+<div id="contents-right">
+
+
+
+<div id="contentsLong">
+
+<breadcrumb/>
+
+
+
+<h1>Laurea in Informatica</h1>
+<span class="mobile"><a href="#beginContent">Salta il menu di secondo livello</a></span>
+<secondLevelMenu/>
+    <p class="left" id="beginContent">In questa pagina:</p>
+    <ul id="onThisPage">
+        <li><a href="#commissione1">Prima commissione Laurea in Informatica</a></li>
+        <li><a href="#commissione2">Seconda commissione Laurea in Informatica</a></li>
+        <li><a href="#commissione3">Terza commissione Laurea in Informatica</a></li>
+        <li><a href="#proclamazioneLaurea">Commissione proclamazione Laurea in Informatica</a></li>
+    </ul>
+    
+<h2><pageTitleContent/></h2>
+
+    <dl id="commissione1">
+    <dt>Prima commissione Laurea in Informatica (Aula 1C150) </dt>
+    <dd><strong>Orario inizio:</strong> 23 Settembre, ore 9.30 </dd>
+    <dd><strong>Presidente:</strong> Livio Colussi</dd>
+    <dd><strong>Commissione:</strong> Gaggi Ombretta, Ranzato Francesco, Crafa Silvia (Supplente)</dd>
+    <dd><strong>Candidati:</strong> Ciman Matteo, Sbrignadello Marco, De Nadai Mattia, Levarato Marco, Pretto Mirco, Scarpa Davide, Sforzin Alessandro, Soprana Cesare, Vettori Sabrina </dd>
+    </dl>
+    <p class="tornaSu withBorderBottom"><a href="#contentsLong">Torna su &#9650;</a></p>
+    
+    <dl id="commissione2">
+    <dt>Seconda commissione Laurea in Informatica (Aula 1C150) </dt>
+    <dd><strong>Orario inizio:</strong> 23 Settembre, 14.40 </dd>
+    <dd><strong>Presidente:</strong> Vardanega Tullio</dd>
+    <dd><strong>Commissione:</strong> Aiolli Fabio, Crafa Silvia, Ranzato Francesco (Supplente)  </dd>
+    <dd><strong>Candidati:</strong> Arrascue Ayala Victor Anthony, Bello Nicola, Ferri Giuseppe,
+    Gharaba Amir, Lavezzo Alessandro, Loreggia Andrea, Pagnin Michele, Sacco Filippo, Scanagatta Mauro </dd>
+    </dl>
+    <p class="tornaSu withBorderBottom"><a href="#contentsLong">Torna su &#9650;</a></p>
+    
+    <dl id="commissione3">
+    <dt>Terza commissione Laurea in Informatica (Aula 1A150) </dt>
+    <dd><strong>Orario inizio:</strong> 24 Settembre, 9.30 </dd>
+    <dd><strong>Presidente:</strong> Baldan Paolo</dd>
+    <dd><strong>Commissione:</strong> Marchiori Massimo, Venable Kristen Brent, Sperduti Alessandro (Supplente)  </dd>
+    <dd><strong>Candidati:</strong> Catellani Sebastiano, Chinellato Oscar, Dal Santo Elia, Gazzola Silvia,
+    Gottardo Sebastiano, Miraglies Alfonso, Volpin Jacopo, Zen Alex</dd>
+    </dl>
+    <p class="tornaSu withBorderBottom"><a href="#contentsLong">Torna su &#9650;</a></p>
+    
+    <dl id="proclamazioneLaurea">
+    <dt>Proclamazione Laurea in Informatica </dt>
+    <dd><strong>Luogo:</strong> Piazza dei Signori, Padova (in caso di maltempo le proclamazioni avverranno nella Loggia della Gran Guardia)</dd>
+    <dd><strong>Orario inizio:</strong> 24 Settembre, 18.30 </dd>
+    <dd><strong>Presidente:</strong> Filè Gilberto</dd>
+    <dd><strong>Commissione:</strong> Aiolli Fabio, Gaggi Ombretta, Marchiori Massimo, Sperduti Alessandro (Supplenti: Colussi Livio, Vardanega Tullio)  </dd>
+    <dd><strong>Candidati:</strong> Arrascue Ayala Victor Anthony, Bello Nicola, Catellani Sebastiano, Chinellato Oscar, Ciman Matteo, Dal Santo Elia, De Nadai Mattia, Ferri Giuseppe, Gazzola Silvia, Gharaba Amir, Gottardo Sebastiano, Lavezzo Alessandro, Levarato Marco, Loreggia Andrea, Miraglies Alfonso, Pagnin Michele, Pretto Mirco, Sacco Filippo, Sbrignadello Marco, Scanagatta Mauro, Scarpa Davide, Sforzin Alessandro, Soprana Cesare, Vettori Sabrina, Volpin Jacopo, Zen Alex
+    </dd>
+    </dl>
+    <p class="tornaSu withBorderBottom"><a href="#contentsLong">Torna su &#9650;</a></p>
+    
+</div>
+
+
+

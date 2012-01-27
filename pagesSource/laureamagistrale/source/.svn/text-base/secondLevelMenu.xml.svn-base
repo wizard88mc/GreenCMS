@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<secondLevelMenu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Documents%20and%20Settings/Aerithy/Desktop/Matteo/Repository/stage/WebContent/globalDetails/secondLevelMenu.xsd">
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Indirizzi</linkMenuEntryText>
+		<linkMenuEntryName>percorsi</linkMenuEntryName>
+		<linkMenuEntryPageTarget>indirizzimagistrale.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Indirizzi</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Orari</linkMenuEntryText>
+		<linkMenuEntryName>orari</linkMenuEntryName>
+		<linkMenuEntryPageTarget>#</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Orari</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Corsi</linkMenuEntryText>
+		<linkMenuEntryName>corsi</linkMenuEntryName>
+		<linkMenuEntryPageTarget>corsimagistrale.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Corsi</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Appelli d'Esame</linkMenuEntryText>
+		<linkMenuEntryName>esami</linkMenuEntryName>
+		<linkMenuEntryPageTarget>esamimagistrale.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Appelli Esame</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Piano di Studi</linkMenuEntryText>
+		<linkMenuEntryName>pianoStudi</linkMenuEntryName>
+		<linkMenuEntryPageTarget>pianostudimagistrale.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Piano di Studi</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+		<secondLevelMenuEntry>
+		<linkMenuEntryText>Tesi</linkMenuEntryText>
+		<linkMenuEntryName>tesi</linkMenuEntryName>
+		<linkMenuEntryPageTarget>tesimagistrale.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Tesi</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Appelli di Laurea</linkMenuEntryText>
+		<linkMenuEntryName>appelliLaureaMagistrale</linkMenuEntryName>
+		<linkMenuEntryPageTarget>appellilaureamagistrale.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Appelli di Laurea</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Referenti</linkMenuEntryText>
+		<linkMenuEntryName>referenti</linkMenuEntryName>
+		<linkMenuEntryPageTarget>referentimagistrale.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Referenti</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+</secondLevelMenu>

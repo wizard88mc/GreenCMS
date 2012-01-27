@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CoursesWebsites xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CoursesWebsites.xsd">
+<CourseWebsite>
+	<Course>Sistemi ipermediali</Course>
+	<LinkDescription>
+		<Link>http://docenti.math.unipd.it/gaggi</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Computabilità e algoritmi (Mod. A)</Course>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~baldan/Computabilita</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Apprendimento automatico</Course>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~sperduti/ml.html</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Intelligenza artificiale</Course>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~sperduti/intelligenza-artificiale.html</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Reti wireless</Course>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~cpalazzi/retiwireless.html</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Bioinformatica</Course>
+	<LinkDescription>
+		<Link>http://protein.bio.unipd.it/</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Analisi numerica</Course>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~alvise/didattica.html</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Tecnologie web 2</Course>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~tecweb2/</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Crittografia</Course>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~languasc/Corso-Crittografia0910Ita.html</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+</CoursesWebsites>
+
+
+

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pagesDetails xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../globalDetails/PagesDetailsSchema.xsd" firstLevelMenuNotSelected="laureaInformatica" parentPathName="Laurea in Informatica" parentPathLink="indexen.html" >
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Home Page</title>
+			<description>Pagina descrittiva del corso di Laurea in Informatica dell'Universita di Padova</description>
+			<keywords>
+				<keyword>Laurea</keyword>
+				<keyword>informazioni</keyword>
+				<keyword>percorso studi</keyword>
+			</keywords>
+		</metaTags>
+		<javascript>prepareLaurea</javascript>
+		<pageTitle>Laurea in Informatica</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>indexen.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="F">
+		<metaTags>
+			<title>Laurea in Informatica - Corsi</title>
+			<description>Pagina con l'elenco dei corsi del Corso di Laurea</description>
+			<keywords>
+				<keyword>elenco corsi</keyword>
+				<keyword>corso</keyword>
+				<keyword>docenti</keyword>
+				<keyword>periodo</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Courses</pageTitle>
+		<secondLevelMenuNotSelected>courses</secondLevelMenuNotSelected>
+		<contentsPageFileName>corsilaureaen.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="F">
+		<metaTags>
+			<title>"nomeCorso"</title>
+			<description>Pagina con la descrizione dettagliata del corso "nomeCorso"</description>
+			<keywords>
+				<keyword>"nomeCorso"</keyword>
+				<keyword>informazioni dettagliate</keyword>
+				<keyword>prerequisiti</keyword>
+				<keyword>propedeuticità</keyword>
+				<keyword>testi</keyword>
+				<keyword>ausili didattici</keyword>
+				<keyword>programma</keyword>
+				<keyword>ore</keyword>
+				<keyword>anno</keyword>
+				<keyword>trimestre</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>"nomeCorso"</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Courses/corsilaureaen.html</otherParent>
+		<contentsPageFileName>corsitemplateen.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Appelli d'Esame</title>
+			<description>Page with the exams' date</description>
+			<keywords>
+				<keyword>esami</keyword>
+				<keyword>laurea</keyword>
+				<keyword>giorno</keyword>
+				<keyword>ora</keyword>
+				<keyword>aula</keyword>
+			</keywords>
+		</metaTags>
+		<javascript>exams</javascript>
+		<pageTitle>Exams</pageTitle>
+		<secondLevelMenuNotSelected>exams</secondLevelMenuNotSelected>
+		<contentsPageFileName>esamilaureaen.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Stage</title>
+			<description>Pagina con le informazioni riguardo l'attivita di stage a conclusione del percorso di studi</description>
+			<keywords>
+				<keyword>stage</keyword>
+				<keyword>laurea</keyword>
+				<keyword>regole</keyword>
+				<keyword>esami</keyword>
+				<keyword>requisiti</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Stage</pageTitle>
+		<secondLevelMenuNotSelected>stage</secondLevelMenuNotSelected>
+		<contentsPageFileName>stagelaureaen.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Stage</title>
+			<description>Pagina con le informazioni riguardo l'attivita di stage a conclusione del percorso di studi</description>
+			<keywords>
+				<keyword>stage</keyword>
+				<keyword>laurea</keyword>
+				<keyword>regole</keyword>
+				<keyword>esami</keyword>
+				<keyword>requisiti</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Stage</pageTitle>
+		<secondLevelMenuNotSelected>stage</secondLevelMenuNotSelected>
+		<contentsPageFileName>stagelaureaen.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - StageIT - 2010</title>
+			<description>Pagina con le informazioni riguardo l'incontro aziende - studenti StageIT per le attivita' di stage</description>
+			<keywords>
+				<keyword>stage</keyword>
+				<keyword>stageIT</keyword>
+				<keyword>incontro</keyword>
+				<keyword>aziende</keyword>
+				<keyword>studenti</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>StageIT</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Stage/stagelaurea.html</otherParent>
+		<contentsPageFileName>stageiten2010.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Piano di Studi</title>
+			<description>Pagina con le informazioni riguardanti la compilazione e la presentazione del piano di studi</description>
+			<keywords>
+				<keyword>piano di studi</keyword>
+				<keyword>regole</keyword>
+				<keyword>scadenze</keyword>
+				<keyword>template</keyword>
+				<keyword>codici esami</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Study Plane</pageTitle>
+		<secondLevelMenuNotSelected>studyplane</secondLevelMenuNotSelected>
+		<contentsPageFileName>pianostudilaureaen.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Appelli di Laurea</title>
+			<description>Pagina contenente informazioni riguardo gli Appelli di Laurea</description>
+			<keywords>
+				<keyword>appelli</keyword>
+				<keyword>laurea</keyword>
+				<keyword>giorno</keyword>
+				<keyword>ora</keyword>
+				<keyword>data</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Laurea's Dates</pageTitle>
+		<secondLevelMenuNotSelected>laureasdates</secondLevelMenuNotSelected>
+		<contentsPageFileName>appellilaureaen.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Tutor</title>
+			<description>Page with informations about Tutors and extra material</description>
+			<keywords>
+				<keyword>tutor</keyword>
+				<keyword>timetable</keyword>
+				<keyword>calendar</keyword>
+				<keyword>material</keyword>
+				<keyword>exercises</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Tutor</pageTitle>
+		<secondLevelMenuNotSelected>tutor</secondLevelMenuNotSelected>
+		<contentsPageFileName>tutoren.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Referenti</title>
+			<description>Pagina contenente i contatti dei referenti per il corso di Laurea</description>
+			<keywords>
+				<keyword>referenti</keyword>
+				<keyword>contatti</keyword>
+				<keyword>email</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Contacts</pageTitle>
+		<secondLevelMenuNotSelected>contacts</secondLevelMenuNotSelected>
+		<contentsPageFileName>referentilaureaen.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Orario</title>
+			<description>Pagina contenente l'orario delle lezioni per il corso di Laurea</description>
+			<keywords>
+				<keyword>orario</keyword>
+				<keyword>orari</keyword>
+				<keyword>lezioni</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Timetable</pageTitle>
+		<secondLevelMenuNotSelected>timetable</secondLevelMenuNotSelected>
+		<contentsPageFileName>orarioen.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Commissioni di laurea, 23-24 Settembre 2010</title>
+			<description>Pagina che contiene le commissioni di laurea del 23-24 settembre 2010</description>
+			<keywords>
+				<keyword>Laurea</keyword>
+				<keyword>Commissioni</keyword>
+				<keyword>tesi</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Commissioni di Laurea, 23-24 settembre 2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>commissioni24sett2010en.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea  in Informatica - Commissioni di laurea, 17 Dicembre 2010</title>
+			<description>Pagina che contiene le commissioni di laurea del 17 Dicembre  2010</description>
+			<keywords>
+				<keyword>Commissioni</keyword>
+				<keyword>laurea</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Commissioni di Laurea, 17 Dicembre  2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>commissioniMagistrale17dic2010en.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea  in Informatica - Commissioni di laurea, 28 Aprile 2011</title>
+			<description>Pagina che contiene le commissioni di laurea del 28 Aprile 2011</description>
+			<keywords>
+				<keyword>Commissioni</keyword>
+				<keyword>laurea</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Commissioni di Laurea, 28 Aprile 2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>commissioni28apr2011en.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea  in Informatica - Commissioni di laurea, 21 Luglio 2011</title>
+			<description>Pagina che contiene le commissioni di laurea del 21 Luglio 2011</description>
+			<keywords>
+				<keyword>Commissioni</keyword>
+				<keyword>laurea</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Commissioni di Laurea, 21 Luglio 2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>commissioni21lug2011en.html</contentsPageFileName>
+	</pageDetails>
+</pagesDetails>

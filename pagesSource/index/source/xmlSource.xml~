@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pagesDetails xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../globalDetails/PagesDetailsSchema.xsd" firstLevelMenuNotSelected="home">
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Pagina di Protesta - Corsi di Laurea in Informatica Universita' di Padova</title>
+			<description>Pagina di Protesta  del sito delle Lauree in Informatica dell'Universita' di Padova</description>
+			<keywords>
+				<keyword>protesta</keyword>
+			</keywords>
+		</metaTags>
+		<javascript>prepareHomePage</javascript>
+		<pageTitle>Lauree Informatica</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>index2.html</contentsPageFileName>
+	</pageDetails>
+
+<pageDetails isStatic="T">
+		<metaTags>
+			<title>Pagina non trovata - Corsi di Laurea in Informatica Universita' di Padova</title>
+			<description>Pagina d'errore</description>
+			<keywords>
+				<keyword>404</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Errore - Pagina non trovata</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>errore.html</contentsPageFileName>
+</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Crediti - Corsi di Laurea in Informatica Universita' di Padova</title>
+			<description>Pagina dei crediti</description>
+			<keywords>
+				<keyword>autori</keyword>
+				<keyword>crediti</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Crediti</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>crediti.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>CSS - Corsi di Laurea in Informatica Universita' di Padova</title>
+			<description>Pagina di informazione riguardante il CSS</description>
+			<keywords>
+				<keyword>css</keyword>
+				<keyword>validazione</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>CSS</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>css.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Webmaster - Scrivi al webmaster</title>
+			<description>Pagina contattare il webmaster</description>
+			<keywords>
+				<keyword>contatta</keyword>
+				<keyword>scrivi</keyword>
+				<keyword>webmaster</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Scrivi al webmaster</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>scriviwebmaster.html</contentsPageFileName>
+	</pageDetails>
+</pagesDetails>

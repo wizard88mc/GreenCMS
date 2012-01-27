@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/stage_inf_unipd/!svn/ver/85/stage/WebContent/develop/perl/queries
+END
+GetDescription.sql
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/stage_inf_unipd/!svn/ver/78/stage/WebContent/develop/perl/queries/GetDescription.sql
+END
+GetInformation.sql
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/stage_inf_unipd/!svn/ver/78/stage/WebContent/develop/perl/queries/GetInformation.sql
+END
+ScriptRetrieveCoursesLaurea.txt
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/stage_inf_unipd/!svn/ver/78/stage/WebContent/develop/perl/queries/ScriptRetrieveCoursesLaurea.txt
+END
+GetTimeInfo.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/stage_inf_unipd/!svn/ver/78/stage/WebContent/develop/perl/queries/GetTimeInfo.sql
+END
+GetTeacher.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/stage_inf_unipd/!svn/ver/85/stage/WebContent/develop/perl/queries/GetTeacher.sql
+END
+GetCfu.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/stage_inf_unipd/!svn/ver/82/stage/WebContent/develop/perl/queries/GetCfu.sql
+END
+GetTeachingId.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/stage_inf_unipd/!svn/ver/78/stage/WebContent/develop/perl/queries/GetTeachingId.sql
+END
+GetHours.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/stage_inf_unipd/!svn/ver/78/stage/WebContent/develop/perl/queries/GetHours.sql
+END

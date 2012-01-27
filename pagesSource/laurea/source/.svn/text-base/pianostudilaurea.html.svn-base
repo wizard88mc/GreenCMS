@@ -1,0 +1,46 @@
+<div id="contents-right">
+
+<div id="contentsLong">
+<breadcrumb>
+
+<h1>Laurea in Informatica</h1>
+<secondLevelMenu>
+<h2><pageTitleContent></h2>
+    <h3>Scadenze di consegna</h3>
+    <p class="withBorderBottom"><strong>Quest'anno il piano di studi va presentato entro il giorno venerdì 4 Dicembre 2009.</strong><br /> La successiva scadenza sarà nell'autunno 2010. Eventuali modifiche del piano di studi fra queste due scadenze saranno accettate solo in casi particolari debitamente motivati (es. la soppressione di un corso).
+    </p>
+    <h3 id="templatePianoDiStudi"><span lang="en">Template</span> piano di studi e lista codici esami</h3>
+    <p class="withBorderBottom">Sono disponibili in linea il <a href="../../documenti/piano-L.xsl"><span lang="en">template</span> del piano di studi</a>  [XLS - 61KB] e la <a href="../../documenti/Codici_Esami_Informatica.pdf">lista dei codici degli esami</a>  [PDF - 21KB].</p>
+    
+    <h3>Istruzioni generali</h3>
+    <p>Prima di laurearsi gli studenti devono presentare il Piano di Studi così da scegliere gli esami da inserire nei crediti liberi. La presentazione del Piano avviene all'inizio del terzo anno di corso, entro una scadenza stabilita nel primo trimestre di ogni Anno Accademico. Tuttavia, studenti molto indietro con gli esami possono autonomamente decidere di presentarlo gli anni successivi al terzo.</p>
+    <p>Studenti che hanno bisogno oggettivo di tempi più brevi (per esempio perchè si devono laureare prima della prossima scadenza) o che hanno altre particolari necessità, posso indirizzare la loro richiesta tramite un email al referente per i piani di studio (Dott. Claudio Palazzi).</p>
+    <p>Il piano di studi viene prodotto compilando un <a href="../../documenti/piano-L.xsl">template elettronico</a>. La stampa del piano di studi con la firma dello studente e l'eventuale, relativa documentazione (documenti per il riconoscimento crediti) vanno infilati nella casella di posta cartacea del Dott. Palazzi presente al piano terra della Torre A in Torre Archimede, Via Trieste 63.</p>
+    <p>Il file elettronico del piano di studi va inoltre spedito all'indirizzo email pianiLTinf@math.unipd.it.</p>
+    <p>La compilazione del piano di studi è semplice. Nella maggior parte dei casi si tratta solo di compilare la sezione "crediti a libera scelta". Tutti gli esami inseriti nel piano devono riportare il Codice Esame reperibile in <a href="../../documenti/Codici_Esami_Informatica.pdf">questo elenco</a>  [PDF - 21KB].</p>
+    <p>Tipicamente, la maggior parte degli studenti utilizzano gli esami opzionali della laurea triennale: "informatica grafica e multimedialità" e "gestione di imprese informatiche". Tuttavia possono essere scelti anche gli esami opzionali della laurea magistrale, i corsi FSE ed esami attinenti il percorso di studi scelti tra quelli offerti da altri Corsi di Laurea (es. Ingegneria, Matematica, Statistica,...). Possono essere inoltre utilizzati crediti derivanti dal passaggio da altri Corsi di Laurea o avanzati nel passaggio al nuovo ordinamento.</p>
+    <p>I crediti avanzati nel passaggio al nuovo ordinamento vanno elencati separatamente, riga per riga, a seconda dell'esame di provenienza. Vanno inoltre indicati il codice dell'esame di provenienza e il settore scientifico disciplinare (S.S.D.). Ad esempio, "017688 Attività Formativa S.S.D. INF/01" per inidicare due crediti avanzati da un esame del Settore INF/01, il cui Codice Esame è 017688.</p>
+    <p>Riguardo agli esami FSE, occorre ricordare che sebbene lo studente possa inserirli a piacimento nel suo piano di studi è anche vero che, nel caso lo studente inserisca nel piano due corsi FSE offerti nello stesso trimestre (succede per il II trimestre), lo studente potrà FREQUENTARNE solo uno dei due; potrà però sostenere gli esami di entrambi. Questa regola sulla frequentazione è imposta dalla Regione Veneto che finanzia i corsi e non e' possibile per il Corso di Laurea fare deroghe.</p>
+    <p>Alla fine, il totale dei crediti risultante dal piano di studi presentato dovrà essere uguale o maggiore di 180 crediti.</p>
+    <p class="withBorderBottom">Eventuali domande o richieste di consigli possono essere rivolte al docente di riferimento per il passaggio al nuovo ordinamento (Dott. Claudio Palazzi).</p>
+
+    
+    <h3>Regole per la compilazione del piano di studi</h3>
+    <p>
+        Il piano degli studi per la laurea in Informatica deve soddisfare i seguenti requisiti:
+        <ul><li>Il totale dei CFU, inclusi i 15 CFU per lo stage e la preparazione della relazione finale, deve essere maggiore o
+        uguale a 180;</li>
+            <li>Il piano prevede 153 CFU coperti con insegnamenti obbligatori.</li>
+            <li>Il piano deve prevedere degli insegnamenti coerenti a libera scelta per 12 CFU
+                scelti tra tutti gli insegnamenti attivi presso l’Università di Padova.
+                Gli insegnamenti sono:<ul>
+        <li>Informatica grafica e multimedialita (INF/01, 6 CFU)</li>
+        <li>Gestione di imprese informatiche (INF/01, 6 CFU)</li></ul>
+        sono attivi nella Laurea in Informatica e possono essere scelti per coprire i CFU a libera scelta in modo coerente. Il
+        modello di piano degli studi prevede la possibilità di inserire una giustificazione di coerenza per gli insegnamenti
+        con s.s.d. diverso dal s.s.d. INF/01 (Informatica).</li></ul>
+    </p>
+    
+    
+</div>
+

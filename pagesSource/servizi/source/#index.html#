@@ -1,0 +1,31 @@
+<div id="contents-right">
+    
+    <div id="contentsLong">
+        <breadcrumb/>
+            
+            <h1 id="beginContent">Servizi</h1>
+            
+            <h2>Servizi agli studenti</h2>
+            <ul>
+                <li><a href="https://webmail.studenti.math.unipd.it/horde/imp/login.php">Posta elettronica via Web</a></li>
+                <li><a href="http://www.studenti.math.unipd.it/servizi/wifi/istruzioni.html">Accesso Wi-Fi</a></li>
+                <li><a href="https://msdnaa.studenti.math.unipd.it/">Richiesta software Microsoft</a></li>
+                <li><a href="http://www.studenti.math.unipd.it/servizi/main.html#notecorsi">Istruzioni per l'accesso alle macchine per gli esami</a> (Basi di dati, Tecnologie Web, Programmazione ad Oggetti)</li>
+            </ul>
+        <p><a href="http://www.studenti.math.unipd.it/">Visualizza tutti i servizi</a></p>
+        <p class="tornaSu withBorderBottom"><a href="#contentsLong">Torna su &#9650;</a></p> 
+            <h2>Link utili</h2>
+            <ul>
+                <li><a href="http://www.scienze.unipd.it">FacoltÅ‡ di Scienze Matematiche, Fisiche e Naturali</a></li>
+                <li><a href="http://www.math.unipd.it">Diaprtimento di Matematica Pura ed Applicata</a></li>
+   
+             <li><a href="http://www.studenti.math.unipd.it">studenti.math.unipd.it</a></li>
+                <li><a href="https://support.math.unipd.it/">Servizio Calcolo</a></li>
+                <li><a href="http://www.cissm.unipd.it/">C.I.S. Seminario Matematico</a></li>
+                <li><a href="https://uniweb.unipd.it/Start.do">Uniweb</a></li>
+            </ul>
+        <p class="tornaSu"><a href="#contentsLong">Torna su &#9650;</a></p>
+        
+    </div>
+    
+    

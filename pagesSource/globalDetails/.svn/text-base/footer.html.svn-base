@@ -1,0 +1,15 @@
+<div id="footer">
+<p><a class="styleNone" href="http://validator.w3.org/check?uri=referer" class="valid"
+                title="collegamento alla pagina di validazione xhtml del w3c">
+                <img src="../img/xhtml.gif" alt="XHTML 1.0 Strict Valido!" />
+            </a>
+            <a class="styleNone" href="http://jigsaw.w3.org/css-validator/check/referer" class="valid"
+                title="collegamento alla pagina di validazione css del w3c">
+                <img src="../img/css.gif" alt="CSS Valido!" />
+            </a><p>
+<p><a href="http://www.unipd.it">Università degli Studi di
+Padova</a> ~ <a href="http://www.math.unipd.it">Dipartimento di
+Matematica Pura e Applicata</a><br />
+Via Trieste, 63 - 35121 Padova (Italia) ~ Tel: +39 049 8271200 ~ Fax: +39
+049 8271499</p>
+</div>

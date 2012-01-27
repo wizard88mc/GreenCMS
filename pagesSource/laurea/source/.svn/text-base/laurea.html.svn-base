@@ -1,0 +1,75 @@
+<div id="contents-right">
+
+<div id="utilities">
+<div id="today">
+<h3>In primo piano</h3>
+<p>Evento/notizia in primo piano. Evento/notizia in primo piano.
+Evento/notizia in primo piano. Evento/notizia in primo piano.
+Evento/notizia in primo piano. Evento/notizia in primo piano.
+Evento/notizia in primo piano.</p></div>
+<div id="news">
+<h3>News</h3>
+<dl>
+	<dt>Notizia 1</dt>
+	<dd class="newsDate">22 Maggio 2010</dd>
+	<dd class="newsContent">Questa &egrave; la prova di una notizia</dd>
+	<dt>Notizia 2</dt>
+	<dd class="newsDate">22 Maggio 2010</dd>
+	<dd class="newsContent">Questa &egrave; la prova di una notizia</dd>
+	<dt>Notizia 2</dt>
+	<dd class="newsDate">22 Maggio 2010</dd>
+	<dd class="newsContent">Questa &egrave; la prova di una notizia</dd>
+</dl>
+</div>
+
+</div>
+
+<div id="contents">
+<breadcrumb>
+
+<h1>Laurea in Informatica</h1>
+<secondLevelMenu>
+		<p>All'interno dell'Ateneo di Padova questo corso di studi &egrave;
+certamente quello a maggiore contenuto informatico: circa 2/3 dei 3 anni
+&egrave; composto da corsi e attivit&agrave; prettamente informatiche, mentre la parte
+restante riguarda le conoscenze matematiche indispensabili per un
+informatico. Argomenti tradizionali includono: programmazione C++ e
+		    <span lang="en">Java</span>, algoritmi e strutture dati, basi di dati, sistemi operativi e reti
+di elaboratori. Inoltre sono presenti corsi riguardanti le reti
+		    <span lang="en">wireless</span>, Internet e tecnologie <span lang="en">web</span>,  <acronym lang="en" title="Extensible Markup Language">XML</acronym>, multimedialit&agrave; e sicurezza
+informatica. Gli studi posso proseguire, inoltre, con la <a
+	href="../laureamagistrale/laureamagistrale.html">Laurea magistrale di 2&deg; livello in
+    Informatica</a>.</p>
+		    
+		    <h2>Requisiti</h2>
+		    <p>Per potersi iscrivere a tutti i corsi di laurea della Facoltà di Scienze mm.ff.nn. lo studente dovrà essere in possesso
+		        del diploma di maturità quinquennale o di un titolo equivalente e dovrà avere un'adeguata preparazione iniziale.
+		        In particolare dovrà aver maturato abilità analitiche (abilità di ragionamento logico), conoscenze e abilità come nel
+		        seguito specificato nel Syllabus (che nella sua forma più completa è reso noto nel 
+		        <a href="http://www.scienze.unipd.it" target="_blank">sito della facoltà</a> ).<br/>
+		        E' prevista per l'accesso ai corsi di studio una verifica obbligatoria, le cui modalità sono definite nel Regolamento
+		        Didattico del Corso di Studio, nel quale vengono anche previsti gli obblighi formativi aggiuntivi nel caso di verifica
+		        non positiva.</p>
+		    <h2>Syllabus</h2>
+		    <p><ul><li>Matematica: conoscenze irrinunciabili.</li><li>
+		        Conoscere e saper applicare in casi semplici le proprietà:<ul>
+		            <li>delle strutture numeriche (numeri naturali, numeri primi, frazioni numeriche, numeri razionali, elementi dei
+		                numeri reali, disuguaglianze, valore assoluto, potenze, radici);</li>
+		            <li>dell'algebra elementare (calcolo letterale, polinomi e operazioni fra polinomi, identità, equazioni di primo e
+		                secondo grado, sistemi lineari);</li>
+		            <li>di insiemi e funzioni (linguaggi degli insiemi, nozione di funzione, grafici di funzioni notevoli, concetto di
+		                condizione sufficiente, necessaria);</li>
+		            <li>di geometria (geometria euclidea piana, angoli, radianti, aree e figure simili, nozione di luogo geometrico,
+		                proprietà dei triangoli, dei parallelogrammi, dei cerchi, simmetrie, similitudini e trasformazioni nel piano, coordinate
+		                cartesiane ed equazioni di semplici luoghi geometrici, elementi di trigonometria, elementi di geometria euclidea
+		                nello spazio, volumi).</li></ul></li><li>
+		                    Elementi di Fisica.</li><li>
+		                        Conoscere e saper applicare in casi semplici le proprietà:<ul>
+		                            <li>dell'analisi dimensionale (unità di misura delle grandezze più comuni);</li>
+		                            <li>della dinamica (concetto di velocità, accelerazione, forza, lavoro, energia, leggi di <span lang="en">Newton</span>);</li>
+		                            <li>della termodinamica (concetto di temperatura, pressione, volume, calore, lavoro).</li></ul></li>
+		        <li>Avere familiarità con la cultura scientifica e gli elementi di base della Chimica, della Biologia,
+		            dell'Astronomia, delle Scienze della Terra.</li></ul>
+		    </p>
+</div>
+

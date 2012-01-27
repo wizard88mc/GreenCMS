@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pagesDetails xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../globalDetails/PagesDetailsSchema.xsd" firstLevelMenuNotSelected="laureaInformatica" parentPathName="Laurea in Informatica" parentPathLink="laurea.html" >
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Home Page</title>
+			<description>Pagina descrittiva del corso di Laurea in Informatica dell'Universita di Padova</description>
+			<keywords>
+				<keyword>Laurea</keyword>
+				<keyword>Informatica</keyword>
+				<keyword>Padova</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Laurea in Informatica</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>laurea.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="F">
+		<metaTags>
+			<title>Laurea in Informatica - Corsi</title>
+			<description>Pagina con l'elenco dei corsi del Corso di Laurea</description>
+			<keywords>
+				<keyword>Laurea</keyword>
+				<keyword>Informatica</keyword>
+				<keyword>Padova</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Corsi</pageTitle>
+		<secondLevelMenuNotSelected>corsi</secondLevelMenuNotSelected>
+		<contentsPageFileName>corsilaurea.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="F">
+		<metaTags>
+			<title>"nomeCorso"</title>
+			<description>Pagina con la descrizione dettagliata del corso "nomeCorso"</description>
+			<keywords>
+				<keyword>Laurea</keyword>
+				<keyword>Informatica</keyword>
+				<keyword>Padova</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>"nomeCorso"</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Corsi/corsilaurea.html</otherParent>
+		<contentsPageFileName>corsitemplate.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="F">
+		<metaTags>
+			<title>Laurea in Informatica - Appelli d'Esame</title>
+			<description>Pagina contenente le informazioni riguardanti gli appelli d'esame</description>
+			<keywords>
+				<keyword>Laurea</keyword>
+				<keyword>Informatica</keyword>
+				<keyword>Padova</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Appelli Esame</pageTitle>
+		<secondLevelMenuNotSelected>esami</secondLevelMenuNotSelected>
+		<contentsPageFileName>esamilaurea.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Stage</title>
+			<description>Pagina con le informazioni riguardo l'attivita di stage a conclusione del percorso di studi</description>
+			<keywords>
+				<keyword>Laurea</keyword>
+				<keyword>Informatica</keyword>
+				<keyword>Padova</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Stage</pageTitle>
+		<secondLevelMenuNotSelected>stage</secondLevelMenuNotSelected>
+		<contentsPageFileName>stagelaurea.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Piano di Studi</title>
+			<description>Pagina con le informazioni riguardanti la compilazione e la presentazione del piano di studi</description>
+			<keywords>
+				<keyword>Laurea</keyword>
+				<keyword>Informatica</keyword>
+				<keyword>Padova</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Piano di Studi</pageTitle>
+		<secondLevelMenuNotSelected>pianoStudi</secondLevelMenuNotSelected>
+		<contentsPageFileName>pianostudilaurea.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Appelli di Laurea</title>
+			<description>Pagina contenente informazioni riguardo gli Appelli di Laurea</description>
+			<keywords>
+				<keyword>Laurea</keyword>
+				<keyword>Informatica</keyword>
+				<keyword>Padova</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Appelli di Laurea</pageTitle>
+		<secondLevelMenuNotSelected>appelliLaurea</secondLevelMenuNotSelected>
+		<contentsPageFileName>appellilaurea.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Referenti</title>
+			<description>Pagina contenente i contatti dei referenti per il corso di Laurea</description>
+			<keywords>
+				<keyword>Laurea</keyword>
+				<keyword>Informatica</keyword>
+				<keyword>Padova</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Referenti</pageTitle>
+		<secondLevelMenuNotSelected>referenti</secondLevelMenuNotSelected>
+		<contentsPageFileName>referentilaurea.html</contentsPageFileName>
+	</pageDetails>
+</pagesDetails>

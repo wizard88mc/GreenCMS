@@ -1,0 +1,56 @@
+#!/usr/bin/perl
+
+use utf8;
+use XML::LibXML;
+
+binmode STDIN, ":utf8";
+binmode STDOUT, ":utf8";
+binmode STDERR, ":utf8";
+
+require "ExtractXML.pl";
+
+#parametri:
+#    $_[0] - path dove si trova il file XML con il menu di secondo livello
+#    $_[1] - nome del link del menu di secondo livello non selezionato
+#    $_[2] - discriminante italiano - inglese
+
+sub createSecondLevelMenu() {
+	
+	eval {
+		my $sourcePath = $_[0];
+		my $linkMenuNotSelected = $_[1];
+		my $en = $_[2];
+		
+		#estraggo il menu di secondo livello per quella pagina
+		my $secondLevelMenu = &extractXML("$sourcePath/secondLevelMenu$en.xml");
+		
+		my $stringSecondLevelMenu = "<ul id=\"secondLevel\">";
+		
+		foreach $secondLevelMenuEntry ($secondLevelMenu->findnodes('secondLevelMenuEntry')->get_nodelist) {
+		
+			if ($secondLevelMenuEntry->findvalue('linkMenuEntryPageTarget') ne "") {
+				if ($secondLevelMenuEntry->findvalue('linkMenuEntryName') eq $linkMenuNotSelected) {
+					$stringSecondLevelMenu .= "<li id=\"secondLevelSelected\">" . $secondLevelMenuEntry->findvalue('linkMenuEntryText') ."</li>";
+				}
+				else {
+					#estraggo la pagina target del link
+					my $linkMenuEntryPagePageTarget = $secondLevelMenuEntry->findvalue('linkMenuEntryPageTarget');
+					#estratto il testo dell'attributo alt del link
+					my $linkMenuEntryAlt = $secondLevelMenuEntry->findvalue('linkMenuEntryAlt'); 
+					#estraggo la stringa del link
+					my $linkMenuEntryText = $secondLevelMenuEntry->findvalue('linkMenuEntryText'); 
+					$stringSecondLevelMenu .= "<li><a href=\"$linkMenuEntryPagePageTarget\" title=\"$linkMenuEntryAlt\">$linkMenuEntryText</a></li>";
+				}
+			}
+		}
+		
+		$stringSecondLevelMenu .= "</ul>";
+		
+		return $stringSecondLevelMenu;
+	}
+	or do { #nel caso in cui il file non ci sia significa che il menu di secondo livello non c'è e quindi ritorno stringa vuota
+		return "";
+	}
+}
+
+1;

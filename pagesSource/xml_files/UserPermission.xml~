@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TableUserPermission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="databaseDefinition/UserPermission.xsd">
+	<TableUser>
+		<User>
+			<ID>1</ID>
+			<Name>Matteo</Name>
+			<Surname>Ciman</Surname>
+			<UserID>mciman</UserID>
+		</User>
+<User>
+		<ID>2</ID>
+		<Name>Ombretta</Name>
+		<Surname>Gaggi</Surname>
+		<UserID>gaggi</UserID></User></TableUser>
+	<TableUserPermissions>
+	<UserPermission>
+		<IDPermission>Admin</IDPermission>
+		<UserID>1</UserID></UserPermission><UserPermission>
+		<IDPermission>Admin</IDPermission>
+		<UserID>2</UserID></UserPermission></TableUserPermissions>
+	<TablePermission>
+		<Permission>Admin</Permission>
+	</TablePermission>
+</TableUserPermission>

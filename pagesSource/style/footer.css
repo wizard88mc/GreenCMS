@@ -1,0 +1,7 @@
+#footer {
+    clear: both;
+    text-align: center;
+    background: white url('../img/footer.gif') repeat-x top left;
+    margin:0 2% 0 2%;
+    padding: 0.8em 2em 0.8em 2em;
+}

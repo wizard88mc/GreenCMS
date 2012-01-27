@@ -1,0 +1,44 @@
+<div id="contents-right">
+
+
+
+<div id="contentsLong">
+
+<breadcrumb/>
+
+
+
+<h1>Laurea in Informatica</h1>
+<span class="mobile"><a href="#beginContent">Salta il menu di secondo livello</a></span>
+<secondLevelMenu/>
+
+<h2 id="beginContent"><pageTitleContent/></h2>	
+
+
+    <ul>
+
+    <li>17-18 Dicembre 2009, ore 9-18: Laurea Triennale, Laurea Specialistica, Laurea, Laurea Magistrale</li>
+
+    <li>28-29 Gennaio 2010, ore 9-18: Laurea Triennale, Laurea Specialistica, Laurea, Laurea Magistrale</li>
+
+    <li>27-28 Maggio 2010, ore 9-18: Laurea Triennale, Laurea Specialistica, Laurea, Laurea Magistrale</li>
+
+    <li>22-23 Luglio 2010, ore 9-18: Laurea Triennale, Laurea Specialistica, Laurea, Laurea Magistrale</li>
+
+    <li>23-24 Settembre 2010, ore 9-18: Laurea Triennale, Laurea Specialistica, Laurea, Laurea Magistrale. 
+    (<a href="commissione24sett2010.html">Orari e Commissioni</a>)</li>
+
+    <li>16-17 Dicembre 2010, ore 9-18: Laurea Triennale, Laurea Specialistica, Laurea, Laurea Magistrale</li>
+
+    </ul>
+
+    <p class="tornaSu"><a href="#contentsLong">Torna su &#9650;</a></p> 
+
+    
+
+
+
+</div>
+
+
+

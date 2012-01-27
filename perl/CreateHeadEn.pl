@@ -1,0 +1,85 @@
+#!/usr/bin/perl 
+
+use utf8;
+use XML::LibXML;
+
+require "ExtractXML.pl";
+
+sub createHeadEn() {
+	
+	my $xmlNode = $_[0];
+	my $linksPath = "/" . $folderBase;
+	#se la pagina è l'home page, a tutti i link elimino ../, visto che l'home page sta nella root del sito e non in sottocartelle
+	
+	#estraggo il metatag description
+	my $metatagDescription = $xmlNode->findvalue('metaTags/description');
+	#estraggo il metatag title
+	my $metatagTitle = $xmlNode->findvalue('metaTags/title');  
+	#estraggo l'elenco delle keyword aggiuntive per la pagina
+	my $keywordsList = $xmlNode->findnodes('metaTags/keywords/keyword'); 
+	
+	my $keywordsString = "";
+	#creo la stringa di keywords da aggiungere nell'head
+	foreach $keyword ($keywordsList->get_nodelist) {
+		my $keywordValue = $keyword->nodeValue;
+		$keywordsString .= "$keywordValue,";
+	}
+	
+	#definisco delle keyword uguali per tutte le pagine
+	my $basicKeywords = "Laurea, Informatica, Padova"; 
+	#aggiungo keywords di base per completare la stringa di keywords
+	$keywordsString .= "$basicKeywords"; 
+	 
+	#estraggo titolo della pagina
+	my $pageTitle = $xmlNode->findvalue('pageTitle') . " - Lauree in Informatica Universita di Padova"; 
+	
+	#estraggo da globalDetails gli stylesheets delle pagine
+	my $styleSheets = &extractXML("../pagesSource/globalDetails/styleSheets.xml"); 
+	
+	my $output = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
+<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">
+	<head>
+		<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />";
+	
+	$output .= "<title>$pageTitle</title>"; #aggiungo titolo
+	
+	$output .= "<meta name=\"title\" content=\"$metatagTitle\" />"; #aggiungo metatag title
+	$output .= "<meta name=\"author\" content=\"Matteo Ciman, Marco Sbrignadello, Dott.ssa Ombretta Gaggi\" />";#aggiungo metatag author
+	$output .= "<meta name=\"description\" content=\"$metatagDescription\" />"; #aggiungo metatag description
+	$output .= "<meta name=\"keywords\" content=\"$keywordsString\" />"; #aggiungo metatag keywords
+	$output .= "<meta name=\"language\" content=\"english en\" />"; #aggiungo metatag language
+	$output .= "<link rel=\"stylesheet\" type=\"text/css\" href=\"http://fonts.googleapis.com/css?family=Droid+Sans\" />";
+	
+	#aggiungo tutti gli styleSheet alla pagina
+	foreach my $styleSheet ($styleSheets->findnodes('styleSheet')->get_nodelist) {  #creo un hash degli styleSheet, dove la coppia chiave-valore e' nome styleSheet - media
+		
+		my $fileName = $styleSheet->findvalue('fileName');
+		my $styleMedia = $styleSheet->findvalue('media');
+		
+		my $stylePosition = $linksPath . "style/" . $fileName . ".css";
+		$output .= "<link type=\"text/css\" rel=\"stylesheet\" href=\"$stylePosition\" media=\"$styleMedia\" />\n";
+	}
+	
+	#aggiungo foglio di stile addizionale, specifico per quella pagina
+	if ($xmlNode->exists('additionalStylesheet')) {
+		
+		my $stylePosition = $linksPath . "style/" . $xmlNode->findvalue('additionalStylesheet/fileName') . ".css";
+		$output .= "<link type=\"text/css\" rel=\"stylesheet\" href=\"$stylePosition\" media=\"" . $xmlNode->findvalue('additionaStylesheet/media') ."\" />\n";
+	}
+
+	#aggiungo file javascript se sono presenti
+	if ($xmlNode->exists('javascript')) {
+		
+		my $filePosition = $linksPath . "js/" . $xmlNode->findvalue('javascript') . ".js";
+		$output .= "<script type=\"text/javascript\" src=\"$filePosition\"></script>\n";
+	}
+	
+	$output .= "<link rel=\"icon\" href=\"$linksPath" . "img/favicon.ico\" type=\"image/x-icon\" />";
+	$output .= "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"RSS Informatica Unipd: tutte le news\" href=\"http://$address/$folderBase" . "xml_files/rssfeed.xml\" />";
+	
+	$output .= "</head>";  #chiudo head
+	
+	return $output;	
+}
+
+1;

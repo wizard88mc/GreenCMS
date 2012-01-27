@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<siteMenu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="firstLevelMenu.xsd">
+	<firstLevelMenuEntry>
+		<linkMenuEntryText>Home</linkMenuEntryText>
+		<linkMenuEntryName>home</linkMenuEntryName>
+		<linkMenuEntryPageTarget>index.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Home</linkMenuEntryAlt>
+	</firstLevelMenuEntry>
+	<firstLevelMenuEntry>
+		<linkMenuEntryText>Laurea in Informatica</linkMenuEntryText>
+		<linkMenuEntryName>laureaInformatica</linkMenuEntryName>
+		<linkMenuEntryPageTarget>laurea/index.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Laurea</linkMenuEntryAlt>
+	</firstLevelMenuEntry>
+	<firstLevelMenuEntry>
+		<linkMenuEntryText>Laurea Magistrale in Informatica</linkMenuEntryText>
+		<linkMenuEntryName>LaureaMagistrale</linkMenuEntryName>
+		<linkMenuEntryPageTarget>laureamagistrale/index.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Laurea Magistrale Informatica</linkMenuEntryAlt>
+	</firstLevelMenuEntry>
+	<firstLevelMenuEntry>
+		<linkMenuEntryText>Dottorato di Ricerca in Informatica</linkMenuEntryText>
+		<linkMenuEntryName>dottorato</linkMenuEntryName>
+		<linkMenuEntryPageTarget>dottorato/index.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Dottorato Ricerca Informatica</linkMenuEntryAlt>
+	</firstLevelMenuEntry>
+	<firstLevelMenuEntry>
+		<linkMenuEntryText>Organizzazione</linkMenuEntryText>
+		<linkMenuEntryName>organizzazione</linkMenuEntryName>
+		<linkMenuEntryPageTarget>organizzazione/index.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Organizzazione</linkMenuEntryAlt>
+	</firstLevelMenuEntry>
+	<firstLevelMenuEntry>
+		<linkMenuEntryText>News, eventi e seminari</linkMenuEntryText>
+		<linkMenuEntryName>news</linkMenuEntryName>
+		<linkMenuEntryPageTarget>News.cgi</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>News, Eventi</linkMenuEntryAlt>
+	</firstLevelMenuEntry>
+	<firstLevelMenuEntry>
+		<linkMenuEntryText>Studiare all'estero</linkMenuEntryText>
+		<linkMenuEntryName>estero</linkMenuEntryName>
+		<linkMenuEntryPageTarget>estero/index.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Studiare Estero</linkMenuEntryAlt>
+	</firstLevelMenuEntry>
+	<firstLevelMenuEntry>
+		<linkMenuEntryText>Servizi</linkMenuEntryText>
+		<linkMenuEntryName>servizi</linkMenuEntryName>
+		<linkMenuEntryPageTarget>servizi/index.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Servizi</linkMenuEntryAlt>
+	</firstLevelMenuEntry>
+	<firstLevelMenuEntry>
+		<linkMenuEntryText>Strutture</linkMenuEntryText>
+		<linkMenuEntryName>strutture</linkMenuEntryName>
+		<linkMenuEntryPageTarget>strutture/index.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Strutture</linkMenuEntryAlt>
+	</firstLevelMenuEntry>
+	<firstLevelMenuEntry>
+		<linkMenuEntryText>Documenti</linkMenuEntryText>
+		<linkMenuEntryName>documenti</linkMenuEntryName>
+		<linkMenuEntryPageTarget>Documenti.cgi</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>documenti</linkMenuEntryAlt>
+	</firstLevelMenuEntry>
+	<firstLevelMenuEntry>
+		<linkMenuEntryText>Archivio</linkMenuEntryText>
+		<linkMenuEntryName>archivio</linkMenuEntryName>
+		<linkMenuEntryPageTarget>archivio/index.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Archivio</linkMenuEntryAlt>
+	</firstLevelMenuEntry>
+</siteMenu>

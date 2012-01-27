@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TableExpiredNews xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="databaseDefinition/ExpiredNews.xsd"> 
+ 
+ 
+ 
+ 
+ 
+<ExpiredNews>
+	<ID>10</ID>
+	<Title>Inserimento presentazione del corso di Laurea</Title>
+	<Date>2010-10-22</Date>
+	<Time>11:28:00</Time>
+	<Text>Nella sezione Documenti è possibile trovare la presentazione della Laurea in Informatica utilizzata il giorno 11 ottobre 2010</Text>
+	<Publisher>Ombretta Gaggi</Publisher>
+	<Type>L</Type></ExpiredNews><ExpiredNews>
+	<ID>5</ID>
+	<Title>Bando Progetto Leonardo Mobilità (tirocini)</Title>
+	<Date>2010-10-12</Date>
+	<Time>09:57:00</Time>
+	<Text>E' stato pubblicato il bando per la selezione per individuare i partecipanti al Progetto Leonardo Mobilità (tirocini)
+“EUROTRAINING NETWORK” in Francia, Regno Unito, Germania e Spagna.
+Il progetto nasce dalla riflessione sulla possibilità di incrementare l’innovazione sul territorio industriale
+locale fornendo ai laureati in materie economiche e tecniche competenze trasversali e strumenti sempre
+più efficaci per lavorare in un contesto lavorativo “globalizzato” (preparazione interculturale,
+omogeneizzazione delle competenze linguistiche e acquisizione di competenze informatiche), favorendo
+quindi opportunità di crescita professionale.
+Tutte le informazioni sono reperibili al link http://www.cpv.org/files/index.cfm?id_rst=141 .</Text>
+	<Publisher>Ombretta Gaggi</Publisher>
+	<Type>G</Type></ExpiredNews><ExpiredNews>
+	<ID>3</ID>
+	<Title>Test di Idoneità Lingua Inglese</Title>
+	<Date>2010-10-07</Date>
+	<Time>12:22:00</Time>
+	<Text>I test per l'idoneità per la lingua inglese sono stati programmati per i giorni dall'11 al 14.  
+	Data la necessità di superare questo test, si prega gli studenti di iscriversi nel numero maggiore possibile 
+	ai test già programmati, seguendo il link http://claweb.cla.unipd.it/cla/tal_info.html#scienze .</Text>
+	<Publisher>Ombretta Gaggi</Publisher>
+	<Type>L</Type></ExpiredNews><ExpiredNews>
+	<ID>2</ID>
+	<Title>Presentazione dei Corsi di Laurea in Informatica ed Orario per l'A.A. 2010-2011</Title>
+	<Date>2010-10-05</Date>
+	<Time>14:42:00</Time>
+	<Text>Il giorno 11 ottobre alle 14.30 in aula LUM250 si terrà una lezione introduttiva aperta a tutti gli studenti delle lauree in Informatica in cui verrà illustrato l'assetto didattico in relazione al particolare stato di agitazione in cui l'ateneo di trova in quest'anno accademico.<br/>
+In tale occasione verrà presentato anche l'orario dei corsi.<br/>
+Vi preghiamo di partecipare numerosi al fine di chiarire eventuali dubbi relativi all'inizio delle lezioni, numero di corsi attivati, svolgimento esami, lauree, ecc.
+ </Text>
+	<Publisher>Ombretta Gaggi</Publisher>
+	<Type>G</Type></ExpiredNews></TableExpiredNews>

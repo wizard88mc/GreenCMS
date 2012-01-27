@@ -1,0 +1,22 @@
+<div id="contents-right">
+
+<div id="contentsLong">
+
+
+<h1 id="beginContent">Area Riservata</h1>
+<h2>Login</h2>
+<form method="post" action="/cgi-bin/CheckLogin.cgi">
+<fieldset>
+<legend>Inserisci le credenziali</legend>
+<label for="username">Username: </label>
+<input type="text" name="username" id="username" tabindex="1" class="button" /><br />
+<label for="password">Password: </label>
+<input type="password" name="password" id="password" tabindex="2" class="button" /><br />
+</fieldset>
+<fieldset>
+<legend class="hidden">bottoni</legend>
+<input type="submit" class="button" value="Login" name="submit" tabindex="3" /><input class="button" type="reset" value="Reset" tabindex="4" />
+</fieldset>
+</form>
+
+</div>

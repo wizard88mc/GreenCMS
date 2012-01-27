@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CoursesWebsites xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CoursesWebsites.xsd">
+<CourseWebsite>
+	<Course>Tecnologie Web</Course>
+	<LinkDescription>
+		<Link>http://docenti.math.unipd.it/gaggi/tecweb</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Basi di dati</Course>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~baldan/BD</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Architettura degli elaboratori</Course>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~sperduti/architettura1.html</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Sistemi operativi</Course>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~cpalazzi/sistemioperativi.html</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Reti e sicurezza</Course>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~reti/</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Programmazione concorrente e distribuita</Course>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~crafa/prog3/</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Logica</Course>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~maietti</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Matematica discreta e probabilità</Course>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~carla/docs/MatDiscrProb09-10/MatDiscrProb09-10.htm</Link>
+		<Description>Sito per la parte di matematica discreta</Description>
+	</LinkDescription>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~esartori/probabilita.pdf</Link>
+		<Description>Sito per la parte di probabilità</Description>
+	</LinkDescription>
+</CourseWebsite>
+
+</CoursesWebsites>
+
+
+

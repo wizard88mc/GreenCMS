@@ -1,0 +1,2 @@
+MAILTO=webinformatica@math.unipd.it
+12 1 * * * /etc/apache2/informatica_dev/perl/cronjobs.pl

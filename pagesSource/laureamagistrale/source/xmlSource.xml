@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pagesDetails xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../globalDetails/PagesDetailsSchema.xsd" firstLevelMenuNotSelected="LaureaMagistrale" parentPathName="Laurea Magistrale" parentPathLink="index.html">
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea Magistrale in Informatica - Home Page Laurea Magistrale Informatica</title>
+			<description>Pagina descrittiva del corso di Laurea Magistrale in Informatica dell'Università di Padova</description>
+			<keywords>
+				<keyword>Magistrale</keyword>
+				<keyword>Informazioni</keyword>
+			</keywords>
+		</metaTags>
+		<javascript>prepareLaureaMagistrale</javascript>
+		<pageTitle>Laurea Magistrale</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>index.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="F">
+		<metaTags>
+			<title>Laurea Magistrale in Informatica - Corsi</title>
+			<description>Pagina con l'elenco dei corsi della Laurea Magistrale</description>
+			<keywords>
+				<keyword>elenco</keyword>
+				<keyword>corsi</keyword>
+				<keyword>magistrale</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Corsi</pageTitle>
+		<secondLevelMenuNotSelected>corsi</secondLevelMenuNotSelected>
+		<contentsPageFileName>corsimagistrale.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="F">
+		<metaTags>
+			<title>Laurea Magistrale in Informatica - "nomeCorso"</title>
+			<description>Pagina con la descrizione del corso "nomeCorso"</description>
+			<keywords>
+				<keyword>"nomeCorso"</keyword>
+				<keyword>professore</keyword>
+				<keyword>trimestre</keyword>
+				<keyword>anno</keyword>
+				<keyword>curriculum</keyword>
+				<keyword>testi</keyword>
+				<keyword>ore</keyword>
+				<keyword>prerequisiti</keyword>
+				<keyword>propedeuticità</keyword>
+				<keyword>testi</keyword>
+				<keyword>ausili didattici</keyword>
+				<keyword>programma</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>"nomeCorso"</pageTitle>
+		<secondLevelMenuNotSelected />
+		<otherParent>Corsi/corsimagistrale.html</otherParent>
+		<contentsPageFileName>corsitemplate.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea Magistrale in Informatica - Indirizzi Formativi</title>
+			<description>Pagina contenente le informazioni riguardanti i diversi indirizzi della Laurea Magistrale</description>
+			<keywords>
+				<keyword>magistrale</keyword>
+				<keyword>indirizzi</keyword>
+				<keyword>formativi</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Indirizzi</pageTitle>
+		<secondLevelMenuNotSelected>indirizzi</secondLevelMenuNotSelected>
+		<contentsPageFileName>indirizzimagistrale.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea Magistrale in Informatica - Appelli d'Esame</title>
+			<description>Pagina con le informazioni riguardo gli esami</description>
+			<keywords>
+				<keyword>appelli</keyword>
+				<keyword>esami</keyword>
+				<keyword>data</keyword>
+			</keywords>
+		</metaTags>
+		<javascript>exams</javascript>
+		<pageTitle>Appelli d'Esame</pageTitle>
+		<secondLevelMenuNotSelected>esami</secondLevelMenuNotSelected>
+		<contentsPageFileName>esamimagistrale.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea Magistrale in Informatica - Piano di Studi</title>
+			<description>Pagina con le informazioni per la compilazione e la presentazione del piano di studi</description>
+			<keywords>
+				<keyword>Magistrale</keyword>
+				<keyword>piano studi</keyword>
+				<keyword>consegna</keyword>
+				<keyword>compilazione</keyword>
+				<keyword>template</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Piano di Studi</pageTitle>
+		<secondLevelMenuNotSelected>pianoStudi</secondLevelMenuNotSelected>
+		<contentsPageFileName>pianostudimagistrale.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea Magistrale in Informatica - Tesi di Laurea</title>
+			<description>Pagina contenente informazioni riguardo la Tesi di Laurea Magistrale</description>
+			<keywords>
+				<keyword>Magistrale</keyword>
+				<keyword>tesi</keyword>
+				<keyword>Laurea</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Tesi di Laurea</pageTitle>
+		<secondLevelMenuNotSelected>tesi</secondLevelMenuNotSelected>
+		<contentsPageFileName>tesimagistrale.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea Magistrale in Informatica - Appelli di Laurea</title>
+			<description>Pagina contenente informazioni riguardo gli Appelli di Laurea Magistrale</description>
+			<keywords>
+				<keyword>Magistrale</keyword>
+				<keyword>appelli laurea</keyword>
+				<keyword>proclamazione</keyword>
+				<keyword>discussione</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Appelli di Laurea</pageTitle>
+		<secondLevelMenuNotSelected>appelliLaureaMagistrale</secondLevelMenuNotSelected>
+		<contentsPageFileName>appellilaureamagistrale.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea Magistrale in Informatica - Referenti</title>
+			<description>Pagina contenente i contatti dei referenti per il corso di Laurea Magistrale</description>
+			<keywords>
+				<keyword>Magistrale</keyword>
+				<keyword>referenti</keyword>
+				<keyword>contatti</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Referenti</pageTitle>
+		<secondLevelMenuNotSelected>referenti</secondLevelMenuNotSelected>
+		<contentsPageFileName>referentimagistrale.html</contentsPageFileName>
+	</pageDetails>
+<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea Magistrale in Informatica - Orario</title>
+			<description>Pagina contenente gli orari delle lezioni del corso di laurea magistrale</description>
+			<keywords>
+				<keyword>Magistrale</keyword>
+				<keyword>orario</keyword>
+				<keyword>lezioni</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Orario</pageTitle>
+		<secondLevelMenuNotSelected>orario</secondLevelMenuNotSelected>
+		<contentsPageFileName>orario.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea Magistrale in Informatica - Upload tesi</title>
+			<description>Pagina che permette l'upload delle tesi di laurea</description>
+			<keywords>
+				<keyword>Magistrale</keyword>
+				<keyword>upload</keyword>
+				<keyword>tesi</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Upload Tesi</pageTitle>
+		<secondLevelMenuNotSelected>uploadt</secondLevelMenuNotSelected>
+		<contentsPageFileName>uploadtesi.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea Magistrale in Informatica - Archivio tesi</title>
+			<description>Pagina con l'archivio delle tesi degli anni precedenti</description>
+			<keywords>
+				<keyword>Magistrale</keyword>
+				<keyword>tesi</keyword>
+				<keyword>archivio</keyword>
+				<keyword>abstract</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Archivio Tesi</pageTitle>
+		<secondLevelMenuNotSelected>archiviot</secondLevelMenuNotSelected>
+		<contentsPageFileName>archiviotesi.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea Magistrale in Informatica - Upload presentazioni tesi</title>
+			<description>Pagina che permette l'upload delle presentazioni di laurea</description>
+			<keywords>
+				<keyword>Magistrale</keyword>
+				<keyword>upload</keyword>
+				<keyword>presentazioni</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Upload Presentazioni</pageTitle>
+		<secondLevelMenuNotSelected>uploadp</secondLevelMenuNotSelected>
+		<contentsPageFileName>uploadpresentazioni.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea Magistrale in Informatica - Commissioni di laurea, 24 Settembre 2010</title>
+			<description>Pagina che contiene le commissioni di laurea del 24 settembre 2010</description>
+			<keywords>
+				<keyword>Magistrale</keyword>
+				<keyword>Commissioni</keyword>
+				<keyword>tesi</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Commissioni di Laurea, 24 settembre 2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>commissioniMagistrale24sett2010.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea Magistrale in Informatica - Commissioni di laurea, 17 Dicembre 2010</title>
+			<description>Pagina che contiene le commissioni di laurea del 17 Dicembre  2010</description>
+			<keywords>
+				<keyword>Magistrale</keyword>
+				<keyword>Commissioni</keyword>
+				<keyword>tesi</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Commissioni di Laurea, 17 Dicembre  2010</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>commissioniMagistrale17dic2010.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea Magistrale in Informatica - Commissioni di laurea, 3 Febbraio 2011</title>
+			<description>Pagina che contiene le commissioni di laurea del 3 Febbraio 2011</description>
+			<keywords>
+				<keyword>Magistrale</keyword>
+				<keyword>Commissioni</keyword>
+				<keyword>tesi</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Commissioni di Laurea, 3 Febbraio 2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>commissioniMagistrale3feb2011.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea Magistrale in Informatica - Commissioni di laurea, 29 Aprile Febbraio 2011</title>
+			<description>Pagina che contiene le commissioni di laurea del 29 Aprile 2011</description>
+			<keywords>
+				<keyword>Magistrale</keyword>
+				<keyword>Commissioni</keyword>
+				<keyword>tesi</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Commissioni di Laurea, 29 Aprile 2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>commissioniMagistrale28apr2011.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea Magistrale in Informatica - Commissioni di laurea, 22 Luglio 2011</title>
+			<description>Pagina che contiene le commissioni di laurea del 22 Luglio 2011</description>
+			<keywords>
+				<keyword>Magistrale</keyword>
+				<keyword>Commissioni</keyword>
+				<keyword>tesi</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Commissioni di Laurea, 22 Luglio 2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>commissioniMagistrale21lug2011.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea Magistrale in Informatica - Commissioni di laurea, 23 Settembre 2011</title>
+			<description>Pagina che contiene le commissioni di laurea del 23 Settembre 2011</description>
+			<keywords>
+				<keyword>Magistrale</keyword>
+				<keyword>Commissioni</keyword>
+				<keyword>tesi</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Commissioni di Laurea, 23 Settembre 2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>commissioniMagistrale23sett2011.html</contentsPageFileName>
+	</pageDetails>
+</pagesDetails>

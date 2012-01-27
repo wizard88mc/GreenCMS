@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<secondLevelMenu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../globalDetails/secondLevelMenu.xsd">
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Verbali del Consiglio di Corsi di Studio</linkMenuEntryText>
+		<linkMenuEntryName>CCS</linkMenuEntryName>
+		<linkMenuEntryPageTarget>/cgi-bin/CCS.cgi</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>CCS</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Docenti</linkMenuEntryText>
+		<linkMenuEntryName>docenti</linkMenuEntryName>
+		<linkMenuEntryPageTarget>/cgi-bin/Docenti.cgi</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Docenti</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Rappresentati degli Studenti</linkMenuEntryText>
+		<linkMenuEntryName>rappresentantiStudenti</linkMenuEntryName>
+		<linkMenuEntryPageTarget>/cgi-bin/RappStudenti.cgi</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Rappresentanti Studenti</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+</secondLevelMenu>

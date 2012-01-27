@@ -1,0 +1,14 @@
+<div id="contents-right">
+
+<div id="contentsLong">
+<breadcrumb/>
+
+<h1>Documenti</h1>
+<secondLevelMenu/>
+<h2><pageTitleContent/></h2>
+<p>In questa pagina sono presenti tutti i documenti che sono stati inseriti da parte dei docenti all'interno del sito.</p>
+
+<listDocuments>
+
+</div>
+

@@ -1,0 +1,18 @@
+<div id="contents-right">
+
+<div id="contentsLong">
+<breadcrumb/>
+
+<h1>Laurea in Informatica</h1>
+<span class="mobile"><a href="#beginContent">Salta il menu di secondo livello</a></span>
+	<secondLevelMenu/>
+	<h2 id="beginContent"><pageTitleContent/></h2>
+<p>
+Aderendo alla protesta nazionale contro il DDL Gelmini, la larga
+maggioranza dei docenti si dichiara indisponibile a ricoprire gli incarichi
+didattici non obbligatori per legge. Pertanto il CCS ritiene di non essere in
+grado di proporre la copertura dell'assetto didattico per l'anno accademico 201\
+0/2011 <em>(fonte: Verbale del CCS del 27/04/2010)</em>.</p>
+	<p class="tornaSu"><a href="#contentsLong">Torna su &#9650;</a></p> 
+</div>
+

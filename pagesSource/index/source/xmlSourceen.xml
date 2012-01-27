@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pagesDetails xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../globalDetails/PagesDetailsSchema.xsd">
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Home Page - Corsi di Laurea in Informatica Universita' di Padova</title>
+			<description>Home Page del sito delle Lauree in Informatica dell'Universita' di Padova</description>
+			<keywords>
+				<keyword>index</keyword>
+			</keywords>
+		</metaTags>
+		<javascript>prepareHomePage</javascript>
+		<pageTitle>Lauree Informatica</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>indexen.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Crediti - Corsi di Laurea in Informatica Universita' di Padova</title>
+			<description>Pagina dei crediti</description>
+			<keywords>
+				<keyword>autori</keyword>
+				<keyword>crediti</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Crediti</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>creditien.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Webmaster - Write to the webmaster</title>
+			<description>Write to the webmaster</description>
+			<keywords>
+				<keyword>contact</keyword>
+				<keyword>write</keyword>
+				<keyword>webmaster</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Write to webmaster</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>scriviwebmasteren.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>CSS - Corsi di Laurea in Informatica Universita' di Padova</title>
+			<description>Information page about CSS validation</description>
+			<keywords>
+				<keyword>css</keyword>
+				<keyword>validation</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>CSS</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>cssen.html</contentsPageFileName>
+	</pageDetails>
+</pagesDetails>

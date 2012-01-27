@@ -1,0 +1,34 @@
+<div id="contents-right">
+
+<div id="contentsLong">
+<breadcrumb>
+
+<h1>Laurea in Informatica</h1>
+<secondLevelMenu>
+<h2><pageTitleContent> - <numCFU> CFU</h2>
+<h3>Insegnante</h3>
+<p class="withBorderBottom"><teacher></p>
+
+<h3>Periodo</h3>
+<p class="withBorderBottom"><anno> - <trimestre> | <inizio> - <fine></p>
+
+
+<p id="oreCorso" class="withBorderBottom"><strong>Ore: </strong><oreFrontali> Frontali, <oreLaboratorio> Laboratorio, <oreEsercizi> Esercizi</p>
+
+<h3 id="programmaCorso">Programma del Corso</h3>
+<p class="withBorderBottom"><programmaCorso></p>
+
+<p class="withBorderBottom"><strong>Prerequisiti: </strong>
+<prerequisiti></p>
+
+<p class="withBorderBottom"><strong>Propedeuticit&agrave;: </strong>
+<propedeuticita></p>
+
+<p class="withBorderBottom"><strong>Ausili Didattici: </strong>
+<ausiliDidattici></p>
+
+<p class="withBorderBottom"><strong>Testi di Riferimento: </strong>
+<testiRiferimento></p>
+
+</div>
+

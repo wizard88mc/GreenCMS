@@ -1,0 +1,4 @@
+AuthUserFile /etc/apache2/informatica_dev/perl/htaccess/.htpasswd
+AuthType Basic
+AuthName "Password Required"
+Require valid-user

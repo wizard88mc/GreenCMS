@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pagesDetails xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../globalDetails/PagesDetailsSchema.xsd" firstLevelMenuNotSelected="strutture">
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Strutture</title>
+			<description>Pagina descrittiva delle strutture dei corsi di Laurea in Informatica dell'Universita di Padova</description>
+			<keywords>
+				<keyword>Laurea</keyword>
+				<keyword>informazioni</keyword>
+				<keyword>strutture</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Strutture</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>index.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails/>
+</pagesDetails>

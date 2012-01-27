@@ -1,0 +1,16 @@
+<div id="contents-right">
+
+<div id="contentsLong">
+<breadcrumb/>
+
+<h1>Laurea in Informatica</h1>
+<span class="mobile"><a href="#beginContent">Salta il menu di secondo livello</a></span>
+<secondLevelMenu/>
+<h2 id="beginContent"><pageTitleContent/></h2>
+
+	<noscript><p>Per vedere gli esami in questa pagina &egrave; necessario attivare <span xml:lang="en">javascript</span></p>
+	<p>Nel caso in cui tu non voglia attivare <span xml:lang="en">javascript</span> <a href="/cgi-bin/EsamiLaurea.cgi">clicca qui per andare alla pagina senza <span xml:lang="en">javascript</span></a></p></noscript>
+	<img id="preloader" src="/img/progress_bar.gif" alt="Progress Bar" />
+    
+</div>
+

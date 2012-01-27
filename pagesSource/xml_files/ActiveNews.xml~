@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TableActiveNews xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="databaseDefinition/ActiveNews.xsd">
+	
+	<ActiveNews>
+	<ID>5</ID>
+	<Title>Bando Progetto Leonardo Mobilità (tirocini)</Title>
+	<Date>2010-10-12</Date>
+	<Time>09:57:00</Time>
+	<Text>E' stato pubblicato il bando per la selezione per individuare i partecipanti al Progetto Leonardo Mobilità (tirocini)
+“EUROTRAINING NETWORK” in Francia, Regno Unito, Germania e Spagna.
+Il progetto nasce dalla riflessione sulla possibilità di incrementare l’innovazione sul territorio industriale
+locale fornendo ai laureati in materie economiche e tecniche competenze trasversali e strumenti sempre
+più efficaci per lavorare in un contesto lavorativo “globalizzato” (preparazione interculturale,
+omogeneizzazione delle competenze linguistiche e acquisizione di competenze informatiche), favorendo
+quindi opportunità di crescita professionale.
+Tutte le informazioni sono reperibili al link</Text>
+	<Publisher>Ombretta Gaggi</Publisher>
+	<Type>G</Type>
+	<Archive>T</Archive>
+	<ExpirationDate>2010-10-19</ExpirationDate></ActiveNews><ActiveNews>
+	<ID>4</ID>
+	<Title>Modifica Orario Laurea Magistrale</Title>
+	<Date>2010-10-12</Date>
+	<Time>09:55:00</Time>
+	<Text>L'orario della Laurea Magistrale ha subito alcuni aggiornamenti.</Text>
+	<Publisher>Ombretta Gaggi</Publisher>
+	<Type>LM</Type>
+	<Archive>F</Archive>
+	<ExpirationDate>2010-10-19</ExpirationDate></ActiveNews><ActiveNews>
+	<ID>3</ID>
+	<Title>Test di Idoneità Lingua Inglese</Title>
+	<Date>2010-10-07</Date>
+	<Time>12:22:00</Time>
+	<Text>I test per l'idoneità per la lingua inglese sono stati programmati per i giorni dall'11 al 14.  
+	Data la necessità di superare questo test, si prega gli studenti di iscriversi nel numero maggiore possibile 
+	ai test già programmati, seguendo il link &lt;a href="http://claweb.cla.unipd.it/cla/tal_info.html#scienze"&gt; 
+	http://claweb.cla.unipd.it/cla/tal_info.html#scienze &lt;/a&gt;.</Text>
+	<Publisher>Ombretta Gaggi</Publisher>
+	<Type>L</Type>
+	<Archive>T</Archive>
+	<ExpirationDate>2010-10-14</ExpirationDate></ActiveNews><ActiveNews>
+	<ID>2</ID>
+	<Title>Presentazione dei Corsi di Laurea in Informatica ed Orario per l'A.A. 2010-2011</Title>
+	<Date>2010-10-05</Date>
+	<Time>14:42:00</Time>
+	<Text>Il giorno 11 ottobre alle 14.30 in aula LUM250 si terrà una lezione introduttiva aperta a tutti gli studenti delle lauree in Informatica in cui verrà illustrato l'assetto didattico in relazione al particolare stato di agitazione in cui l'ateneo di trova in quest'anno accademico.&lt;br /&gt;
+In tale occasione verrà presentato anche l'orario dei corsi.&lt;br /&gt;
+Vi preghiamo di partecipare numerosi al fine di chiarire eventuali dubbi relativi all'inizio delle lezioni, numero di corsi attivati, svolgimento esami, lauree, ecc.
+ </Text>
+	<Publisher>Ombretta Gaggi</Publisher>
+	<Type>G</Type>
+	<Archive>T</Archive>
+	<ExpirationDate>2010-10-12</ExpirationDate></ActiveNews><ActiveNews>
+	<ID>1</ID>
+	<Title>Comunicato della Facoltà di Scienze MM.FF.NN. dell’Università di Padova circa l’inizio delle attività didattiche dell’A.A. 2010-2011 </Title>
+	<Date>2010-10-05</Date>
+	<Time>13:47:00</Time>
+	<Text>Nella seduta di ieri, 4 ottobre 2010, la Facoltà di Scienze mm.ff.nn. ha deliberato di dare inizio alle attività didattiche dei propri Corsi di Studio a partire da lunedì 18 ottobre 2010. &lt;br /&gt;
+
+Le ragioni di tale deliberazione, assunta con voto a larga maggioranza di tutte le componenti della Facoltà, incluse le rappresentanze degli studenti oltre ai professori e ai ricercatori, sono di due ordini. In primo luogo, si intende mantenere lo stato di agitazione fino a quando la discussione sulla riforma universitaria verrà portata in aula alla Camera, alla luce del rinvio al 14 ottobre dell’inizio di tale discussione. Come recita la mozione approvata dalla Facoltà, si sollecita una risposta a livello parlamentare e governativo alle richieste dell’intero mondo universitario sul DDL Gelmini, sui pesanti tagli al finanziamento dell’università, sulla definizione dello status dei ricercatori universitari e sul blocco stipendiale. &lt;br /&gt;
+
+In secondo luogo, il complesso delle ulteriori iniziative concordate nella Facoltà mira a definire la migliore organizzazione possibile dell’offerta didattica riducendo, per quanto possibile, l’inevitabile peggioramento qualitativo dei corsi anche attraverso il coinvolgimento dei ricercatori universitari nella programmazione dell’organizzazione didattica. &lt;br /&gt;
+
+La Facoltà ha pertanto ritenuto che lo slittamento dell’inizio delle attività didattiche al 18 ottobre, pur recando disagio agli studenti ai quali avrà cura di comunicare tempestivamente tale decisione, contribuirà al migliore svolgimento dell’anno accademico 2010-2011, pur nelle difficili condizioni in cui versa l’università per la chiusura dimostrata dal Governo nei suoi confronti. </Text>
+	<Publisher>Alessandro Sperduti</Publisher>
+	<Type>G</Type>
+	<Archive>F</Archive>
+	<ExpirationDate>2010-10-19</ExpirationDate></ActiveNews></TableActiveNews>

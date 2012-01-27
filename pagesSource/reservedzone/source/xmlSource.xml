@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pagesDetails xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../globalDetails/PagesDetailsSchema.xsd">
+	<pageDetails>
+		<metaTags>
+			<title>Login Area Riservata</title>
+			<description>Pagina per il login all'area riservata</description>
+			<keywords>
+				<keyword>area</keyword>
+				<keyword>riservata</keyword>
+				<keyword>login</keyword>
+				<keyword>password</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Login</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>login.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails>
+		<metaTags>
+			<title>Logout</title>
+			<description>Pagina di conferma di logout dall'area riservata</description>
+			<keywords>
+				<keyword>logout</keyword>
+				<keyword>area</keyword>
+				<keyword>riservata</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Logout</pageTitle>
+		<secondLevelMenuNotSelected></secondLevelMenuNotSelected>
+		<contentsPageFileName>logout.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails>
+		<metaTags>
+			<title>Login Errato</title>
+			<description>Pagina di comunicazione di login incorretto nell'area riservata</description>
+			<keywords>
+				<keyword>incorrect</keyword>
+				<keyword>area</keyword>
+				<keyword>riservata</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Login</pageTitle>
+		<secondLevelMenuNotSelected></secondLevelMenuNotSelected>
+		<contentsPageFileName>loginincorrect.html</contentsPageFileName>
+	</pageDetails>
+</pagesDetails>

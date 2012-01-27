@@ -1,0 +1,47 @@
+<div id="contents-right">
+
+
+
+<div id="contentsLong">
+
+<breadcrumb/>
+
+
+
+<h1>Laurea Magistrale</h1>
+<span class="mobile"><a href="#beginContent">Salta menu di secondo livello</a></span>
+	<secondLevelMenu/>
+
+<h2 id="beginContent"><pageTitleContent/></h2>
+
+<p><strong>Nota:</strong> A causa della protesta contro il DDL Gelmini e contro i tagli ai finanziamenti alle università, 
+l'offerta didattica delle Lauree in Informatica sarà svolta in forma ridotta nell'A.A. 2010-2011. In ciascun caso, il 
+Consiglio dei Corsi di Studi in Informatica garantisce la copertura di tutti gli insegnamenti obbligatori e di un numero 
+di insegnamenti opzionali tale da permettere lo svolgimento regolare degli studi di ciascuno studente. 
+Tuttavia, se la politica del governo nei confronti dell'Università non cambierà in modo radicale, verranno spenti
+diversi insegnamenti opzionali della Laurea Magistrale che negli anni 
+precedenti sono stati tenuti da ricercatori e professori che aderiscono 
+alla protesta.</p>
+	
+	<p>I corsi hanno un colore di sfondo diverso al fine di evidenziare alcune note riguardo la loro copertura. In particolare lo sfondo:</p>
+	
+	<ul>
+	<!--<li><span class="ricercatore">azzurro</span> (Programmazione, Matematica discreta e probabilità , Logica, Sistemi operativi,
+	Ricerca Operativa, Programmazione concorrente e distribuita, Tecnologie web) indica gli insegnamenti obbligatori che possono essere 
+	erogati grazie al contributo volontario di un Ricercatore Universitario;</li>
+	<li><span class="ricercatoredubbio">verde</span> () indica gli insegnamenti che, in seguito alla protesta, non hanno al momento copertura di docenza;</li>
+	--><li><span class="dubbioxprotesta">verde</span> (Linguaggi e modelli per il global computing, Tecnologie web 2,
+	Reti wireless, Information retrieval, Sistemi ipermediali, Linguaggi di programmazione avanzati, Metodi e modelli per l'ottimizzazione combinatoria) indica gli insegnamenti che, in seguito alla protesta, non hanno al momento copertura di docenza. 
+	L'insegnamento tacerà  per l'A.A. 2010/2011 a meno di sostanziali modifiche al DDL Gelmini e alla manovra finanziaria;</li>
+	<li><span class="tacexprotesta">arancio</span> (Algoritmi di Approssimazione) indica gli insegnamenti che tacciono per l'A.A. 2010/2011 a causa della protesta.</li>
+	</ul>  
+
+	<courseTable/>
+<courseTable/>
+
+	   <p class="tornaSu"><a href="#contentsLong">Torna su &#9650;</a></p> 
+
+</div>
+
+
+

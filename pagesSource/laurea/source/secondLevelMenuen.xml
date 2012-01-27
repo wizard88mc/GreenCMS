@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<secondLevelMenu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../globalDetails/secondLevelMenu.xsd">
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Schedule of the courses</linkMenuEntryText>
+		<linkMenuEntryName>timetable</linkMenuEntryName>
+		<linkMenuEntryPageTarget>orarioen.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Timetable</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Courses</linkMenuEntryText>
+		<linkMenuEntryName>courses</linkMenuEntryName>
+		<linkMenuEntryPageTarget>corsilaureaen.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Courses</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Schedule of the exams</linkMenuEntryText>
+		<linkMenuEntryName>exams</linkMenuEntryName>
+		<linkMenuEntryPageTarget>esamilaureaen.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Exams' Date</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Indivudal study program</linkMenuEntryText>
+		<linkMenuEntryName>studyplane</linkMenuEntryName>
+		<linkMenuEntryPageTarget>pianostudilaureaen.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Study Plane</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Tutor</linkMenuEntryText>
+		<linkMenuEntryName>tutor</linkMenuEntryName>
+		<linkMenuEntryPageTarget>tutoren.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Tutor</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Stage</linkMenuEntryText>
+		<linkMenuEntryName>stage</linkMenuEntryName>
+		<linkMenuEntryPageTarget>stagelaureaen.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Stage</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Schedule of the commencements</linkMenuEntryText>
+		<linkMenuEntryName>laureasdates</linkMenuEntryName>
+		<linkMenuEntryPageTarget>appellilaureaen.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Laurea's Dates</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Contacts</linkMenuEntryText>
+		<linkMenuEntryName>contacts</linkMenuEntryName>
+		<linkMenuEntryPageTarget>referentilaureaen.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Contacts</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+</secondLevelMenu>

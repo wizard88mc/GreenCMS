@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<secondLevelMenu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../globalDetails/secondLevelMenu.xsd">
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Curriculum</linkMenuEntryText>
+		<linkMenuEntryName>percorsi</linkMenuEntryName>
+		<linkMenuEntryPageTarget>indirizzimagistraleen.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Indirizzi</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Timetable</linkMenuEntryText>
+		<linkMenuEntryName>orari</linkMenuEntryName>
+		<linkMenuEntryPageTarget>orarioen.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Orari</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Courses</linkMenuEntryText>
+		<linkMenuEntryName>corsi</linkMenuEntryName>
+		<linkMenuEntryPageTarget>corsimagistraleen.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Corsi</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Exams</linkMenuEntryText>
+		<linkMenuEntryName>esami</linkMenuEntryName>
+		<linkMenuEntryPageTarget>esamimagistraleen.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Appelli Esame</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Study Plane</linkMenuEntryText>
+		<linkMenuEntryName>pianoStudi</linkMenuEntryName>
+		<linkMenuEntryPageTarget>pianostudimagistraleen.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Piano di Studi</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+		<secondLevelMenuEntry>
+		<linkMenuEntryText>Thesi</linkMenuEntryText>
+		<linkMenuEntryName>tesi</linkMenuEntryName>
+		<linkMenuEntryPageTarget>tesimagistraleen.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Tesi</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Thesis Archive</linkMenuEntryText>
+		<linkMenuEntryName>archiviot</linkMenuEntryName>
+		<linkMenuEntryPageTarget>archiviotesien.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Thesis Archive</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Laurea's Dates</linkMenuEntryText>
+		<linkMenuEntryName>appelliLaureaMagistrale</linkMenuEntryName>
+		<linkMenuEntryPageTarget>appellilaureamagistraleen.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Appelli di Laurea</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Contacts</linkMenuEntryText>
+		<linkMenuEntryName>referenti</linkMenuEntryName>
+		<linkMenuEntryPageTarget>referentimagistraleen.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Referenti</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+</secondLevelMenu>

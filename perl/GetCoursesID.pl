@@ -1,0 +1,38 @@
+#!/usr/bin/perl
+
+use DBI;
+use DBD::mysql;
+use utf8;
+
+binmode STDIN, ":utf8";
+binmode STDOUT, ":utf8";
+binmode STDERR, ":utf8";
+
+require "WorkWithFiles.pl";
+
+#parametri:
+#    $_[0] - connessione al database
+#    $_[1] - stringa con il tipo degli insegnamenti di cui vogliamo avere l'ID (o L (Laurea) o LM(Laurea Magistrale))
+#    $_[2] - descrizione testuale del corso dell'insegnamento (o INFORMATICA o INFORMATICA2009)
+
+sub getCoursesID() {
+
+	my $DBIConnection = $_[0];
+	my $tipocorso = $_[1];
+	my $descr = $_[2];
+
+	my $coursesQuery = &openFile("queries/GetTeachingId.sql");
+	#print "$coursesQuery";
+	$coursesQuery =~ s/<tipocorso>/$tipocorso/g;   #sostituisco al tag <tipocorso> il tipo del corso (o L o LM)
+	$coursesQuery =~ s/<descrizione>/$descr/g;   #sostituisco  al tag <descrizione> la descrizione del corso di cui voglio avere l'ID dei corsi
+
+	#print $coursesQuery;
+	
+	my $queryHandle = $DBIConnection->prepare($coursesQuery);
+	$queryHandle->execute();
+	
+	return $queryHandle;  #restituisco il risultato ottenuto
+
+}
+
+1;

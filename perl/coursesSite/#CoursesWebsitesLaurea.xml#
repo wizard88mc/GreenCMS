@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CoursesWebsites xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CoursesWebsites.xsd">
+<CourseWebsite>
+	<Course>Tecnologie web</Course>
+	<LinkDescription>
+		<Link>http://docenti.math.unipd.it/gaggi/tecweb</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Basi di dati</Course>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~baldan/BD</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Architettura degli elaboratori</Course>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~sperduti/architettura1.html</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Sistemi operativi</Course>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~cpalazzi/sistemioperativi.html</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Reti e sicurezza</Course>
+	<LinkDescription>
+		<Link>http://corsi.math.unipd.it/reti/</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Programmazione concorrente e distribuita</Course>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~crafa/prog3/</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Logica</Course>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~maietti</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Matematica discreta e probabilitÅ‡</Course>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~carla/docs/MatDiscrProb09-10/MatDiscrProb09-10.htm</Link>
+		<Description>Sito per la parte di matematica discreta</Description>
+	</LinkDescription>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~esartori/probabilita.pdf</Link>
+		<Description>Sito per la parte di probabilitÅ‡</Description>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Automi e linguaggi formali</Course>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~frossi/automi2010-1.html</Link>
+		<Description>Sito per la parte di automi e linguaggi formali</Description>
+	</LinkDescription>
+</CourseWebsite>
+
+<CourseWebsite>
+	<Course>Ingegneria del Software (Mod. A)</Course>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~tullio/IS-1/2010/</Link>
+		<Description>Sito per la parte di Ingegneria del Software (Mod. A)</Description>
+	</LinkDescription>
+</CourseWebsite>
+
+<CourseWebsite>
+  <Course>Ingegneria del Software (Mod. B)</Course>
+  <LinkDescription>
+    <Link>http://www.math.unipd.it/
+</CourseWebsite>
+
+<CourseWebsite>
+	<Course>Lingua inglese</Course>
+	<LinkDescription>
+		<Link>http://corsi.math.unipd.it/inglese/</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+
+
+</CoursesWebsites>
+
+
+

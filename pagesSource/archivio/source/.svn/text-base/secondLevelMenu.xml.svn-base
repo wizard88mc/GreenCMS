@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<secondLevelMenu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../globalDetails/secondLevelMenu.xsd">
+	<secondLevelMenuEntry>
+		<linkMenuEntryText>Anni Passati</linkMenuEntryText>
+		<linkMenuEntryName>passati</linkMenuEntryName>
+		<linkMenuEntryPageTarget>passato.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Passato</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+</secondLevelMenu>

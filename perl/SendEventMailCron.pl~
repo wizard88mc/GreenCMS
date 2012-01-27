@@ -1,0 +1,187 @@
+#!/usr/bin/perl 
+
+use XML::LibXML;
+use Date::Calc qw(Delta_Days);
+use Net::SMTP;
+use utf8;
+use Time::Zone;
+
+require "/etc/apache2/informatica_dev/perl/GlobalVariables.pl";
+
+sub retrieveDate{
+	#recupero giorno, mese, anno e giorno della settimana
+	my ($min, $oggi, $anno, $mese, $stringaData);
+	my (@lt) = ();
+
+	@lt     = localtime();
+
+	# Estrae il minuto attuale
+	$min = @lt[1];
+	# Estrae il giorno della settimana a tre lettere
+	$oggi = (Sun,Tue,Wed,Thu,Fri,Sat)[$lt[6]];
+	# Estrae l'anno
+	$anno = 1900+@lt[5];
+	#Estrae il mese
+	$mese = (Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov, Dec)[$lt[4]];
+
+	$stringaData = $oggi . ", " . $lt[3] . " " . $mese . " " . $anno
+		 . " " . sprintf("%02d:%02d:%02d", $lt[2], $lt[1], $lt[0] )
+		. " +" . sprintf("%02d%02d", (&tz_offset() / 3600), 0);
+
+	return $stringaData;
+}
+
+
+sub sendEmail() {
+	
+	my $emailTo = $_[0];
+	my $seminarTitle = $_[1];
+	my $senderMail = 'crafa@math.unipd.it';
+	
+	$smtp = Net::SMTP->new('smtp.math.unipd.it', 
+				Hello => 'informatica.math.unipd.it',
+				Timeout => 30,
+				Debug => 1,
+				);
+		
+	$smtp->mail("$senderMail");
+	$smtp->to("$emailTo");
+	$smtp->data();
+	$smtp->datasend("MIME-Version: 1.0\n");
+	$smtp->datasend("Content-Type: text/plain; charset=UTF-8\n");
+	
+	$smtp->datasend("From: $senderMail\n");
+	$smtp->datasend("To: $emailTo\n");
+	#$smtp->datasend("Date: " . &retrieveDate() . "\n");
+	$smtp->datasend("Subject: Reminder: $seminarTitle - $eventDate [ $eventSpeaker ] \n\n");
+	
+	$smtp->datasend("$eventStringMail");
+	$smtp->dataend();
+	$smtp->quit;
+
+}
+
+
+#funzione per l'invio del reminder di un seminario
+sub sendEventMailCron() {
+
+	#file con l'elenco degli eventi
+	my $fileXMLEvents = $sitePath . "xml_files/EventMailingListContact.xml";
+
+	my $parser = XML::LibXML->new();
+	
+	my $document = $parser->parse_file($fileXMLEvents) or die "$!";
+	my $root = $document->getDocumentElement;
+	
+	my $tableEvents = $root->find("//TableEvents/Event");
+	
+	#prendo il giorno attuale
+	my $actualYear = localtime->year() + 1900;
+	my $actualMonth = localtime->mon() + 1;
+	if (length($actualMonth) == 1) {
+		$actualMonth = "0$actualMonth";
+	}
+	my $actualDay = localtime->mday();
+	if (length($actualDay) == 1) {
+		$actualDay = "0$actualDay";
+	}
+	
+	foreach my $event ($tableEvents->get_nodelist) {
+		
+		#recupero data evento
+		$eventDate = $event->findvalue('Date');
+		
+		my $eventYear = substr($eventDate, 0, 4);
+		my $eventMonth = substr($eventDate, 5, 2);
+		my $eventDay = substr($eventDate, 8, 2);
+		
+		#calcolo differenza di giorni
+		my $deltaDays = Delta_Days($actualYear, $actualMonth, $actualDay, $eventYear, $eventMonth, $eventDay);
+		
+		#mando mail o giorno prima o tre giorni prima
+		if ($deltaDays == 3 || $deltaDays == 0) {
+			
+			#recupero informazioni dell'evento
+			my $eventTitle = $event->find('Title')->get_node(1)->firstChild->toString;
+			$eventDate = substr($eventDate, 8, 2) . "/" . substr($eventDate, 5, 2) . "/" . substr($eventDate, 0, 4);
+			my $eventPlace = $event->find('Place')->get_node(1)->firstChild->toString;
+			$eventTime = $event->findvalue('Time');
+			$eventTime = substr($eventTime, 0, 5);
+			$eventSpeaker = $event->find('Speaker')->get_node(1)->firstChild->toString;
+			my $eventAbstract  = " - - - ";
+			if ($event->findvalue('Abstract') ne "") {
+				$eventAbstract  = $event->find('Abstract')->get_node(1)->firstChild->toString;
+			}
+			my $eventID =  $event->find('ID')->get_node(1)->firstChild->toString;
+			
+			#informazioni generali della mail
+			my $signature = "
+----------------------------------------------------	
+Seminari di Informatica a Padova
+http://$address/cgi-bin/Seminari.cgi";
+			
+			#costruisco il testo del messaggio componendolo delle informazioni sul seminario
+			$eventStringMail = "
+=================================================
+               AVVISO DI SEMINARIO
+=================================================
+
+Data: $eventDate
+
+Ora: $eventTime
+
+Luogo: $eventPlace
+
+Relatore: $eventSpeaker
+
+Titolo: $eventTitle
+
+Abstract: 
+$eventAbstract 
+
+$signature
+";
+
+			utf8::encode($eventStringMail);
+		
+			#file con l'elenco delle MailingList
+			my $fileXMLMail = $sitePath . "xml_files/MailingListsContactsJoins.xml";
+	
+			#estraggo mailing list
+			my $documentJoins = $parser->parse_file($fileXMLMail);
+			my $rootJoins = $documentJoins->getDocumentElement;
+
+			#estraggo mailing list
+			my $eventMailingLists = $rootJoins->find("TableJoinEventsMailingLists/JoinEventMailingList[EventID=$eventID]/MailingListsIDs/MailingListID");
+	
+			foreach my $eventMailingList ($eventMailingLists->get_nodelist) {
+		
+				my $eventMailingListID = $eventMailingList->findvalue('.');
+	
+				#prendo i contatti
+				my $usersMailing = $rootJoins->find("TableJoinMailingListsContacts/JoinContactMailingList[IDMailingList=$eventMailingListID]");
+		
+				#per ogni utente registrato a quella mailing list
+				foreach my $userMailing ($usersMailing->get_nodelist) {
+			
+					#recupero l'ID dell'utente
+					my $contactID = $userMailing->findvalue('IDContact');
+			
+					#recupero l'email del contatto
+					my $contactEmail = $rootJoins->findvalue("TableContacts/Contact[ID=$contactID]/Email");
+					
+					#invio email
+					&sendEmail($contactEmail, $eventTitle);
+				}
+			}
+			
+			my $listAdditionalEmail = $rootJoins->findvalue("TableJoinEventsMailingLists/JoinEventMailingList[EventID=$eventID]/AdditionalsEmails");
+			if (length($listAdditionalEmail) != 0) {
+				my @mails = split(',', $listAdditionalEmail);
+				foreach my $mail (@mails) {
+					&sendEmail($mail, $eventTitle);
+				}
+			}
+		}
+	}
+}

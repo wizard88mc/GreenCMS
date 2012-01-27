@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<secondLevelMenu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../globalDetails/secondLevelMenu.xsd">
+	<secondLevelMenuEntry>
+	<linkMenuEntryText>2010/2011</linkMenuEntryText>
+	<linkMenuEntryName>2010/2011</linkMenuEntryName>
+	<linkMenuEntryPageTarget>archivio20102011en.html</linkMenuEntryPageTarget>
+	<linkMenuEntryAlt>2010/2011</linkMenuEntryAlt></secondLevelMenuEntry><secondLevelMenuEntry>
+	<linkMenuEntryText>2009/2010</linkMenuEntryText>
+	<linkMenuEntryName>2009/2010</linkMenuEntryName>
+	<linkMenuEntryPageTarget>archivio20092010en.html</linkMenuEntryPageTarget>
+	<linkMenuEntryAlt>2009/2010</linkMenuEntryAlt></secondLevelMenuEntry><secondLevelMenuEntry>
+		<linkMenuEntryText>Old Years</linkMenuEntryText>
+		<linkMenuEntryName>passato</linkMenuEntryName>
+		<linkMenuEntryPageTarget>passatoen.html</linkMenuEntryPageTarget>
+		<linkMenuEntryAlt>Old years</linkMenuEntryAlt>
+	</secondLevelMenuEntry>
+</secondLevelMenu>
