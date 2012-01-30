@@ -4,8 +4,6 @@ use XML::LibXML;
 use Date::Calc qw(Today Delta_Days);
 use Time::localtime;
 
-require "GlobalFunctions.pl";
-
 #questa funzione inserire una news diventata attiva all'interno del file rss feed
 sub moveNewActiveNews() {
     
@@ -35,7 +33,8 @@ sub moveNewActiveNews() {
 	        
 	    my $activationDate = $activeNews->findvalue('Date');
 	    
-	    my ($activationDay, $activationMonth, $activationYear) = &getDateComponentsFromDBDate($activationDate);
+	    my ($activationDay, $activationMonth, $activationYear) = 
+	                                &getDateComponentsFromDBDate($activationDate);
 	    
 	    my $deltaDays = Delta_Days($actualYear, $actualMonth, $actualDay, 
 	                                $activationYear, $activationMonth, $activationDay);
@@ -48,7 +47,7 @@ sub moveNewActiveNews() {
 	        my $newsText = $activeNews->findvalue('Text');
 	        
 	        #creo link alla lettura della news tramite l'ID della nuova news
-            my $link = "http://$address/cgi-bin/ReadNews.cgi?newsID=$newID";
+            my $link = "http://$address/cgi-bin/ReadNews.cgi?newsID=$newsID";
             #come descrizione prendo i primi 50 caratteri della news
             $newsText = substr($newsText, 0, 50) . ". . .";
             

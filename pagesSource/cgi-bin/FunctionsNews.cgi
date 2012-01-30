@@ -5,7 +5,7 @@ use CGI::Carp qw(fatalsToBrowser);
 use XML::LibXML;
 use utf8;
 use Time::localtime;
-use Date::Calc qw(Add_Delta_Days);
+use Date::Calc qw(Add_Delta_Days Delta_Days);
 
 require "GlobalFunctions.cgi";
 
@@ -85,7 +85,8 @@ sub insertNews() {
 		$details{'expirationDay'} = &convertDateFromItalianToDB($details{'expirationDay'});
 		
 		if ($details{'validFrom'} eq $actualDate) {
-		     #come orario della news metto quello attuale
+		     #news valida a partire dal giorno attuale
+		     #orario di inizio validità quello di inserimento della news
 		     my $hour = localtime->hour();
 		     if (length($hour) == 1) {
 		         $hour = "0$hour";
@@ -97,8 +98,9 @@ sub insertNews() {
 		     $details{'time'} = "$hour:$minutes:00";
 		}
 		else {
-		     #mostro una news posticipata nel tempo a partire dalle 08:00
-		     $details{'time'} = "08:00:00";
+		     #mostro una news posticipata nel tempo a partire 
+		     #dalle 00:00 del giorno corretto
+		     $details{'time'} = "00:00:00";
 		}
 		
 		#recupero tabella news attive
@@ -133,41 +135,45 @@ sub insertNews() {
 		print FILE $document->toString();
 		close(FILE);
 		
+		# Solo se la news è valida a partire dal giorno attuale
+		# la inserisco all'interno del file rssfeed, altrimenti ci penserà
+		# il cron al momento opportuno
 		if ($details{'validFrom'} == $actualDate) {
-		#lavoro su file rssfeed
-		$document = $parser->parse_file($feedRSS);
-		$root = $document->getDocumentElement;
-		
-		#creo link alla lettura della news tramite l'ID della nuova news
-		my $link = "http://$address/cgi-bin/ReadNews.cgi?newsID=$newID";
-		#come descrizione prendo i primi 50 caratteri della news
-		my $description = substr($details{'textNews'}, 0, 50) . ". . .";
-		
-		#creo nuovo nodo in formato stringa
-		my $itemString = 
+            $document = $parser->parse_file($feedRSS);
+            $root = $document->getDocumentElement;
+            
+            #creo link alla lettura della news tramite l'ID della nuova news
+            my $link = "http://$address/cgi-bin/ReadNews.cgi?newsID=$newID";
+            #come descrizione prendo i primi 50 caratteri della news
+            my $description = substr($details{'textNews'}, 0, 50) . ". . .";
+            
+            #creo nuovo nodo in formato stringa
+            my $itemString =
 "<item>
 	<title>$details{'title'}</title>
 	<link>$link</link>
 	<description>$description</description>
 	<guid>$link</guid></item>";
 		
-		my $newItemNode = $parser->parse_balanced_chunk($itemString);
-		#recupero radice documento (tag <channel>)
-		my $rootChannel = $root->find("//channel")->get_node(1);
-		
-		#recupero il primo elemento della lista, così metto nuova news in testa
-		if ($rootChannel->exists("//item[1]")) {
-			my $firstItem = $rootChannel->find("//item[1]")->get_node(1);
-		
-			$rootChannel->insertBefore($newItemNode, $firstItem);
-		}
-		else {
-			$rootChannel->addChild($newItemNode);
-		}
-		
-		open(FILE, ">$feedRSS") || die("Non riesco ad aprire il file");
-		print FILE $document->toString();
-		close(FILE);
+            my $newItemNode = $parser->parse_balanced_chunk($itemString);
+            #recupero radice documento (tag <channel>)
+            my $rootChannel = $root->find("//channel")->get_node(1);
+            
+            #recupero il primo elemento della lista, così metto nuova news in testa
+            if ($rootChannel->exists("//item[1]")) {
+                my $firstItem = $rootChannel->find("//item[1]")->get_node(1);
+            
+                $rootChannel->insertBefore($newItemNode, $firstItem);
+            }
+            else {
+                for my $nodeToAdd($newItemNode->childNodes) {
+                    $rootChannel->addChild($nodeToAdd);
+                }
+            }
+            
+            open(FILE, ">$feedRSS") || die("Non riesco ad aprire il file");
+            print FILE $document->toString();
+            close(FILE);
 		}
 		
 		return 1;
@@ -250,7 +256,7 @@ sub getNewsDetails() {
 #modifica le informazioni di una determinata news
 sub editNews() {
 	
-	eval {
+	#eval {
 		#parametri di ingresso: HASH contenente le infromazioni della news
 		my %details = %{$_[0]};
 		my $parser = XML::LibXML->new();
@@ -260,6 +266,9 @@ sub editNews() {
 		
 		#recuper vecchio nodo della news da sostituire
 		my $oldNode = $root->find("//ActiveNews[ID=$details{'idEditNews'}]")->get_node(1);
+		my $oldTitle = $oldNode->findvalue('Title');
+		my $oldText = $oldNode->findvalue('Text');
+		my $oldDate = $oldNode->findvalue('Date');
 		
 		#recupero data, ora e scadenza (che non possono essere modificate)
 		$details{'validFrom'} = &convertDateFromItalianToDB($details{'validFrom'});
@@ -277,16 +286,15 @@ sub editNews() {
 			$actualDay = "0$actualDay";	
 		}
 		
-		my $today = "$actualYear - $actualMonth - $actualDay";
+		my $today = "$actualYear-$actualMonth-$actualDay";
 		my $newsTime = $oldNode->findvalue('Time');
 		
-		if ($today != $details{'validFrom'}) {
-		    $newsTime = "08:00:00";
+		if ($today ne $details{'validFrom'}) {
+		    $newsTime = "00:00:00";
 		}
 		
-		
 		#creo nuovo nodo formato stringa
-		my $newsNode = 
+		my $newsNode =
 "<ActiveNews>
 	<ID>$details{'idEditNews'}</ID>
 	<Title>$details{'title'}</Title>
@@ -307,9 +315,116 @@ sub editNews() {
 		print FILE $document->toString();
 		close(FILE);
 		
+		my ($newsDay, $newsMonth, $newsYear) = getDateComponentsFromDBDate($details{'validFrom'});
+		my ($oldDay, $oldMonth, $oldYear) = getDateComponentsFromDBDate($oldDate);
+		
+		# Se il nuovo giorno di validità è maggiore rispetto a quello attuale 
+		# elimino la news dall'rssfeed
+		if (Delta_Days($actualYear, $actualMonth, $actualDay, 
+		    $newsYear, $newsMonth, $newsDay) > 0 and
+		    Delta_Days($oldYear, $oldMonth, $oldDay, 
+		        $actualYear, $actualMonth, $actualDay) > 0) {
+		    
+		    $document = $parser->parse_file($feedRSS);
+            $root = $document->getDocumentElement;
+            
+            $nodeNews = $root->find("//item[title=\"$oldTitle\"]")->get_node(1);
+            
+            $parentNodeNews = $nodeNews->parentNode;
+            $parentNodeNews->removeChild($nodeNews);
+            
+            open(FILE, ">$feedRSS") || die("Non riesco ad aprire il file");
+            print FILE $document->toString();
+            close(FILE);
+		}
+		# Se non ho cancellato la news, se il titolo o il testo sono cambiati 
+		# aggiorno anche nell'rssfeed
+		else {
+		    
+		    # Se la nuova data è minore di quella di oggi e quella vecchia della 
+		    # news è maggiore di quella di oggi devo aggiungere news nell'rssfeed 
+		    # perchè vuol dire che prima non c'era
+		    if (Delta_Days($newsYear, $newsMonth, $newsDay, 
+		            $actualYear, $actualMonth, $actualDay) >= 0 and 
+		         Delta_Days($actualYear, $actualMonth, $actualDay, 
+		             $oldYear, $oldMonth, $oldDay) > 0) {
+		    
+		        $document = $parser->parse_file($feedRSS);
+                $root = $document->getDocumentElement;
+                
+                $oldNode = $root->find("//item[title=\"$details{'title'}\"]")->get_node(1);
+		        
+		        #creo link alla lettura della news tramite l'ID della nuova news
+		        my $link = "http://$address/cgi-bin/ReadNews.cgi?newsID=$details{'idEditNews'}";
+		        #come descrizione prendo i primi 50 caratteri della news
+                my $description = substr($details{'textNews'}, 0, 50) . ". . .";
+		        
+		        my $newNodeString =
+"<item>
+    <title>$details{'title'}</title>
+    <link>$link</link>
+    <description>$description</description>
+    <guid>$link</guid></item>";
+    
+                my $newNode = $parser->parse_balanced_chunk($newNodeString);
+                
+                #recupero radice documento (tag <channel>)
+                my $rootChannel = $root->find("//channel")->get_node(1);
+                
+                #recupero il primo elemento della lista, così metto nuova news in testa
+                if ($rootChannel->exists("//item[1]")) {
+                    my $firstItem = $rootChannel->find("//item[1]")->get_node(1);
+                
+                    $rootChannel->insertBefore($newNode, $firstItem);
+                }
+                else {
+                    for my $nodeToAdd($newNode->childNodes) {
+                        $rootChannel->addChild($nodeToAdd);
+                    }
+                }
+                
+                open(FILE, ">$feedRSS") || die("Non riesco ad aprire il file");
+                print FILE $document->toString();
+                close(FILE);
+		             }
+		             
+		    else {
+		    if ($details{'title'} ne $oldTitle or 
+		        $details{'textNews'} ne $oldText
+		        ) {
+		    
+                $document = $parser->parse_file($feedRSS);
+                $root = $document->getDocumentElement;
+                
+                $oldNode = $root->find("//item[title=\"$oldTitle\"]")->get_node(1);
+		        
+		        #creo link alla lettura della news tramite l'ID della nuova news
+		        my $link = "http://$address/cgi-bin/ReadNews.cgi?newsID=$details{'idEditNews'}";
+		        #come descrizione prendo i primi 50 caratteri della news
+                my $description = substr($details{'textNews'}, 0, 50) . ". . .";
+		        
+		        my $newNodeString =
+"<item>
+    <title>$details{'title'}</title>
+    <link>$link</link>
+    <description>$description</description>
+    <guid>$link</guid></item>";
+    
+                my $newNodeSubstitute = $parser->parse_balanced_chunk($newNodeString);
+                
+                my $parentNode = $oldNode->parentNode;
+                $parentNode->replaceChild($newNodeSubstitute, $oldNode);
+		    
+                open(FILE, ">$feedRSS") || die("Non riesco ad aprire il file");
+                print FILE $document->toString();
+                close(FILE);
+                }
+            }
+		}
+		
 		return 1;
-	}
-	or do { return 0; }
+	#}
+	#or do { return 0; }
 	
 }
 

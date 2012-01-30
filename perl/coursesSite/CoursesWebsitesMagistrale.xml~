@@ -2,39 +2,73 @@
 <CoursesWebsites xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CoursesWebsites.xsd">
 <CourseWebsite>
 	<Course>Sistemi ipermediali</Course>
-	<Website>http://docenti.math.unipd.it/gaggi</Website>
+	<LinkDescription>
+		<Link>http://docenti.math.unipd.it/gaggi</Link>
+		<Description/>
+	</LinkDescription>
 </CourseWebsite>
 <CourseWebsite>
 	<Course>Computabilità e algoritmi (Mod. A)</Course>
-	<Website>http://www.math.unipd.it/~baldan/Computabilita</Website>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~baldan/Computabilita</Link>
+		<Description/>
+	</LinkDescription>
 </CourseWebsite>
 <CourseWebsite>
 	<Course>Apprendimento automatico</Course>
-	<Website>http://www.math.unipd.it/~sperduti/ml.html</Website>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~sperduti/ml.html</Link>
+		<Description/>
+	</LinkDescription>
 </CourseWebsite>
 <CourseWebsite>
 	<Course>Intelligenza artificiale</Course>
-	<Website>http://www.math.unipd.it/~sperduti/intelligenza-artificiale.html</Website>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~sperduti/intelligenza-artificiale.html</Link>
+		<Description/>
+	</LinkDescription>
 </CourseWebsite>
 <CourseWebsite>
 	<Course>Reti wireless</Course>
-	<Website>http://www.math.unipd.it/~cpalazzi/retiwireless.html</Website>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~cpalazzi/retiwireless.html</Link>
+		<Description/>
+	</LinkDescription>
 </CourseWebsite>
 <CourseWebsite>
 	<Course>Bioinformatica</Course>
-	<Website>http://protein.bio.unipd.it/</Website>
+	<LinkDescription>
+		<Link>http://protein.bio.unipd.it/</Link>
+		<Description/>
+	</LinkDescription>
 </CourseWebsite>
 <CourseWebsite>
 	<Course>Analisi numerica</Course>
-	<Website>http://www.math.unipd.it/~alvise/didattica.html</Website>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~alvise/didattica.html</Link>
+		<Description/>
+	</LinkDescription>
 </CourseWebsite>
 <CourseWebsite>
 	<Course>Tecnologie web 2</Course>
-	<Website>http://www.math.unipd.it/~tecweb2/</Website>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~tecweb2/</Link>
+		<Description/>
+	</LinkDescription>
 </CourseWebsite>
 <CourseWebsite>
 	<Course>Crittografia</Course>
-	<Website>http://www.math.unipd.it/~languasc/Corso-Crittografia0910Ita.html</Website>
+	<LinkDescription>
+		<Link>http://www.math.unipd.it/~languasc/Corso-Crittografia1011Ita.html</Link>
+		<Description/>
+	</LinkDescription>
+</CourseWebsite>
+<CourseWebsite>
+	<Course>Logica 2</Course>
+	<LinkDescription>
+		<Link>http://elearning.scienze.unipd.it/2009-2010/course/view.php?id=448</Link>
+		<Description/>
+	</LinkDescription>
 </CourseWebsite>
 </CoursesWebsites>
 

@@ -140,6 +140,7 @@ sub checkCorrectDate() {
     if (($month == "11" or $month == "04" or $month == "06" or $month == "09") and $day == "31") {
            return false;	
 	}
+	if ($month == "02" && $day > 29) { return false; }
 	else { return true; }
 }
 

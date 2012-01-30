@@ -70,7 +70,9 @@ sub moveNewActiveNews() {
                 $rootChannel->insertBefore($newItemNode, $firstItem);
             }
             else {
-                $rootChannel->addChild($newItemNode);
+                for my $newNode ($newItemNode->childNodes) {
+                    $rootChannel->addChild($newNode);
+                }
             }
             
             open(FILE, ">$fileRSSFeed") || die("Non riesco ad aprire il file");

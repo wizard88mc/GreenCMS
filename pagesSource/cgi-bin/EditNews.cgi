@@ -182,10 +182,10 @@ sub checkInputs() {
 
 $page = new CGI;
 
-#$cookie = $page->cookie("CGISESSIONID") || undef;
-#if (!defined($cookie)) {
-#	print $page->redirect($siteForCGI . $folderBase . "reservedzone/login.html");
-#}
+$cookie = $page->cookie("CGISESSIONID") || undef;
+if (!defined($cookie)) {
+	print $page->redirect($siteForCGI . $folderBase . "reservedzone/login.html");
+}
 
 
 $userFormInput{'submit'} = $page->param('submit');
@@ -193,7 +193,7 @@ $userFormInput{'submit'} = $page->param('submit');
 
 $title = "Modifica News";
 $content = &printfFormChooseNews();
-#$secondLevel = &createSecondLevelMenu();
+$secondLevel = &createSecondLevelMenu();
 
 
 if ($userFormInput{'submit'} eq "Modifica") {

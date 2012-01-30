@@ -191,11 +191,10 @@ sub checkInputs() {
 $page = new CGI;
 $content;
 
-#$cookie = $page->cookie("CGISESSIONID") || undef;
-
-#if (!defined($cookie)) {
-#	print $page->redirect($siteForCGI . $folderBase . "reservedzone/login.html");
-#}
+$cookie = $page->cookie("CGISESSIONID") || undef;
+if (!defined($cookie)) {
+	print $page->redirect($siteForCGI . $folderBase . "reservedzone/login.html");
+}
 
 $userFormInput{'submit'} = $page->param('submit');
 
@@ -220,7 +219,7 @@ if ($userFormInput{'submit'} ne 0) {
 
 $title = "Inserisci Nuova News";
 $content = &printFormInsert("", $page->param('validFrom'), $page->param('expirationDay'));
-#$secondLevel = &createSecondLevelMenu();
+$secondLevel = &createSecondLevelMenu();
 
 
 if ($userFormInput{'submit'} eq "Conferma") {
