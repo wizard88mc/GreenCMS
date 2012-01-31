@@ -51,7 +51,6 @@ sub createReservedTemplate() {
 	<meta name=\"language\" content=\"italian it\" />
 
 	<link type=\"text/css\" rel=\"stylesheet\" href=\"../style/base.css\" media=\"screen\" />
-	<script type=\"text/javascript\" src=\"/js/ReservedFunctions.js\"></script>
 </head>
 <body>";
 

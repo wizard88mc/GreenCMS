@@ -111,7 +111,7 @@ sub printFormEdit() {
 	</fieldset>
 	<fieldset>
 	<legend>Dettagli News</legend>
-	<label for="textNews">Testo News: </label>
+	<label for="textNews">Testo News: </label><input type="button" class="button" value="Aggiungi Link" onClick="addNewLink();" />
 	<textarea name="textNews" id="textNews" rows="8" cols="20" >$newsDetails{'textNews'}</textarea><br />
 	<br /><br />
 	<label for="type">Tipo News: </label>
@@ -182,10 +182,10 @@ sub checkInputs() {
 
 $page = new CGI;
 
-$cookie = $page->cookie("CGISESSIONID") || undef;
-if (!defined($cookie)) {
-	print $page->redirect($siteForCGI . $folderBase . "reservedzone/login.html");
-}
+#$cookie = $page->cookie("CGISESSIONID") || undef;
+#if (!defined($cookie)) {
+#	print $page->redirect($siteForCGI . $folderBase . "reservedzone/login.html");
+#}
 
 
 $userFormInput{'submit'} = $page->param('submit');
@@ -193,7 +193,7 @@ $userFormInput{'submit'} = $page->param('submit');
 
 $title = "Modifica News";
 $content = &printfFormChooseNews();
-$secondLevel = &createSecondLevelMenu();
+#$secondLevel = &createSecondLevelMenu();
 
 
 if ($userFormInput{'submit'} eq "Modifica") {
