@@ -106,6 +106,26 @@ CONTENT
 }
 
 sub printReport() {
+    
+    my $textWithLinks = $userFormInput{'textNews'};
+    
+    my $openTagLink = '[link]';
+    my $closeTagLink = '[/link]';
+    
+    my $positionLink = index($textWithLinks, $openTagLink);
+    
+    while ($positionLink != -1) {
+        
+        #posizione di fine del link
+        my $endLink = index($textWithLinks, $closeTagLink, $positionLink);
+        
+        my $link = substr($textWithLinks, $positionLink + length($openTagLink), $endLink - $positionLink - length($openTagLink));
+        $link =~ s/ //g;
+        $link = "<a href=\"$link\">$link</a>";
+        substr($textWithLinks, $positionLink, $endLink + length($closeTagLink) - $positionLink, $link);
+
+        $positionLink = index($textWithLinks, $openTagLink, $positionLink + length($link));
+    }
 	
 	my $content = <<CONTENT;
 <div id="contents">
@@ -119,7 +139,7 @@ sub printReport() {
 		<p><strong>Da Archiviare: </strong>$userFormInput{'archive'}</p>
 		<p><strong>Valida a partire dal: </strong>$userFormInput{'validFrom'}</p>
 		<p><strong>Fino al: </strong>$userFormInput{'expirationDay'}</p>
-		<p><strong>Testo News: </strong>$userFormInput{'textNews'}</p>
+		<p><strong>Testo News: </strong>$textWithLinks</p>
 		</fieldset>
 		<fieldset>
 		<legend class="hidden">Bottoni</legend>

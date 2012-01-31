@@ -43,7 +43,6 @@ require "GlobalVariables.pl";
 			$informations{'time'} = $time;
 			$informations{'publisher'} = $publisher;
 			$informations{'text'} = $text;
-			
 		
 		}
 		
@@ -67,17 +66,6 @@ require "GlobalVariables.pl";
 				$time = substr($time, 0, 5);
 				my $publisher = $newsNode->findvalue('Publisher');
 				my $text = $newsNode->findvalue('Text');
-				
-				my $positionLink = index($text, "http://");
-				while ($positionLink != -1) {
-				    my $endLink = index($text, " ", $positionLink);
-				    my $link = substr($text, $positionLink, $endLink - $positionLink);
-
-				    $link = "<a href=\"$link\">$link</a>";
-				    substr($text, $positionLink, $endLink - $positionLink, $link);
-
-				    $positionLink = index($text, "http://", $positionLink + length($link));
-				}
 
 				$informations{'date'} = $date;
 				$informations{'time'} = $time;
@@ -102,6 +90,24 @@ require "GlobalVariables.pl";
 	else {
 		$newsHeader = "Scritto da $informations{'publisher'} il giorno $informations{'date'} alle ore $informations{'time'}";
 	}
+	
+	my $openTagLink = '[link]';
+    my $closeTagLink = '[/link]';
+    
+    my $positionLink = index($informations{'text'}, $openTagLink);
+    
+    while ($positionLink != -1) {
+        
+        #posizione di fine del link
+        my $endLink = index($informations{'text'}, $closeTagLink, $positionLink);
+        
+        my $link = substr($informations{'text'}, $positionLink + length($openTagLink), $endLink - $positionLink - length($openTagLink));
+        $link =~ s/ //g;
+        $link = "<a href=\"$link\">$link</a>";
+        substr($informations{'text'}, $positionLink, $endLink + length($closeTagLink) - $positionLink, $link);
+
+        $positionLink = index($informations{'text'}, $openTagLink, $positionLink + length($link));
+    }
 	
 	utf8::encode($informations{'title'});
 	utf8::encode($newsHeader);

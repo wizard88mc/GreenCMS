@@ -81,17 +81,36 @@ require "GlobalVariables.pl";
 	
 	if (!$newsFound) {
 		
-		$informations{'title'} = "Errore";
+		$informations{'title'} = "Error";
 		$informations{'date'} = "";
 		$informations{'time'} = "";
 		$informations{'publisher'} = "";
-		$informations{'text'} = "ID News non trovato";
+		$informations{'text'} = "ID News not found";
 		$newsHeader = "";
 	}
 	else {
 		$newsHeader = "Scritto da $informations{'publisher'} il giorno $informations{'date'} alle ore $informations{'time'}";
 	}
 	
+	my $openTagLink = '[link]';
+    my $closeTagLink = '[/link]';
+    
+    my $positionLink = index($informations{'text'}, $openTagLink);
+    
+    while ($positionLink != -1) {
+        
+        #posizione di fine del link
+        my $endLink = index($informations{'text'}, $closeTagLink, $positionLink);
+        
+        my $link = substr($informations{'text'}, $positionLink + length($openTagLink), $endLink - $positionLink - length($openTagLink));
+        $link =~ s/ //g;
+        $link = "<a href=\"$link\">$link</a>";
+        substr($informations{'text'}, $positionLink, $endLink + length($closeTagLink) - $positionLink, $link);
+
+        $positionLink = index($informations{'text'}, $openTagLink, $positionLink + length($link));
+    }
+	
+    utf8::encode($informations{'title'});
 	utf8::encode($newsHeader);
 	utf8::encode($informations{'text'});
 	

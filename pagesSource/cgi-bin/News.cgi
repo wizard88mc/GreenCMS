@@ -7,6 +7,9 @@ require "GlobalVariables.pl";
 require "WorkWithFiles.pl";
 
 {
+    
+    my $openTagLink = '[link]';
+    my $closeTagLink = '[/link]';
 	
 	my $pageNews = &openFile($siteForCGI . "news/news.html");	
 	
@@ -44,14 +47,21 @@ require "WorkWithFiles.pl";
 			$type = "<abbr title=\"Magistrale\">LM</abbr>";
 		}
 		
-		my $linkPos = index($text, "http://");
-		while ($linkPos != -1) {
-			my $endLink = index($text, " ", $linkPos);
-			my $link = substr($text, $linkPos, $endLink - $linkPos);
-			my $newLink = "<a href=\"$link\">$link</a>";
-			substr($text, $linkPos, $endLink - $linkPos, $newLink);
-			$linkPos = index($text, "http://", $linkPos + length($newLink));
-		}
+		my $positionLink = index($text, $openTagLink);
+    
+        while ($positionLink != -1) {
+            
+            #posizione di fine del link
+            my $endLink = index($text, $closeTagLink, $positionLink);
+            
+            my $link = substr($text, $positionLink + length($openTagLink), $endLink - $positionLink - length($openTagLink));
+            # elimino gli spazi e costruisco link con testo uguale al link
+            $link =~ s/ //g;
+            $link = "<a href=\"$link\">$link</a>";
+            substr($text, $positionLink, $endLink + length($closeTagLink) - $positionLink, $link);
+    
+            $positionLink = index($text, $openTagLink, $positionLink + length($link));
+        }
 		
 		my $stringNews = 
 		"<h4><strong>$title - $type</strong></h4>
@@ -97,14 +107,20 @@ require "WorkWithFiles.pl";
 			$type = "<abbr title=\"Magistrale\">LM</abbr>";
 		}
 		
-		my $linkPos = index($text, "http://");
-		while ($linkPos != -1) {
-			my $endLink = index($text, " ", $linkPos);
-			my $link = substr($text, $linkPos, $endLink - $linkPos);
-			my $newLink = "<a href=\"$link\">$link</a>";
-			substr($text, $linkPos, $endLink - $linkPos, $newLink);
-			$linkPos = index($text, "http://", $linkPos + length($newLink));
-		}
+		my $positionLink = index($text, $openTagLink);
+    
+        while ($positionLink != -1) {
+            
+            #posizione di fine del link
+            my $endLink = index($text, $closeTagLink, $positionLink);
+            
+            my $link = substr($text, $positionLink + length($openTagLink), $endLink - $positionLink - length($openTagLink));
+            $link =~ s/ //g;
+            $link = "<a href=\"$link\">$link</a>";
+            substr($text, $positionLink, $endLink + length($closeTagLink) - $positionLink, $link);
+    
+            $positionLink = index($text, $openTagLink, $positionLink + length($link));
+        }
 		
 		my $stringNews = 
 		"<h3>$title - $type</h3>
