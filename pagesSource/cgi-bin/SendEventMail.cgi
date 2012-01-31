@@ -60,7 +60,7 @@ CONTENT
 	my %messageDetails;
 	
 	$messageDetails{'message'} = $eventStringMail;
-	$messageDetails{'email'} = 'crafa@math.unipd.it';
+	$messageDetails{'email'} = 'seminari_informatica@math.unipd.it';
 	$messageDetails{'subject'} = "Avviso Nuovo Seminario: $eventDate [ $eventSpeaker ]"; 
 	
 	my $count = 0;

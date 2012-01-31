@@ -121,7 +121,7 @@ Seminari di Informatica a Padova
 http://$address/cgi-bin/Seminari.cgi";
 			
 			#costruisco il testo del messaggio componendolo delle informazioni sul seminario
-			$eventStringMail = "
+			$eventStringMail = <<CONTENT;
 =================================================
                AVVISO DI SEMINARIO
 =================================================
@@ -140,7 +140,7 @@ Abstract:
 $eventAbstract 
 
 $signature
-";
+CONTENT
 
 			utf8::encode($eventStringMail);
 		
