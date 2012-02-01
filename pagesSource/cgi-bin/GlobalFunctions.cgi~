@@ -33,11 +33,13 @@ sub getMonthsOptions() {
 
     my $defaultMonth;
     if (!$_[0]) {
-        $defaultMonth = localtime()->mon();
-        $defaultMonth++;
+        $defaultMonth = localtime->mon() + 1;
     }
     else {
         $defaultMonth = $_[0];
+    }
+    if ($defaultMonth == 13) {
+        $defaultMonth = 1;
     }
     
     my @months = ("Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", 
@@ -45,20 +47,20 @@ sub getMonthsOptions() {
     
     my $stringMonthsOptions = "";
     
-    for ($i = 1; $i < 13; $i++) {
-        my $selected = '';
+    for (my $i = 1; $i < 13; $i++) {
+        my $checked;
         my $index = $i;
         
         if (length($index) == 1) {
             $index = "0$index";
         }
         
-        if ($defaultMonth == $i) {
-            $selected = ' selected="selected"';
+        if ($defaultMonth eq $index) {
+            $checked = ' selected="selected"';
         }
         my $arrayIndx = $i - 1;
         
-        $stringMonthsOptions .= "<option value=\"$index\"$selected>$months[$arrayIndx]</option>";
+        $stringMonthsOptions .= "<option value=\"$index\"$checked>@months[$arrayIndx]</option>";
     }
     
     return $stringMonthsOptions;
@@ -142,8 +144,6 @@ sub checkCorrectDate() {
 	else { return true; }
 }
 
-# controlla se due date sono in ordine cronologico corretto, ovvero la seconda 
-# dopo la prima
 sub checkDatesCronologicallyCorrect() {
     my $start = $_[0];
     my $end = $_[1];
@@ -166,53 +166,12 @@ sub checkDatesCronologicallyCorrect() {
         
 }
 
-# restituisce ore, minuti e secondi di un orario in formato hh:mm:ss
 sub getTimeComponents() {
     
-    my $time = $_[0];
+    $time = $_[0];
     
     my @components = (substr($time, 0, 2), substr($time,3, 2), substr($time, 6, 2)); 
     return @components;
-}
-
-# converte i link da segnalink tra parentesi quadre a link html
-sub convertLinks() {
-    
-    my $text = $_[0];
-    my $openTagLink = '[link]';
-    my $closeTagLink = '[/link]';
-    
-    my $positionLink = index($text, $openTagLink);
-    
-    while ($positionLink != -1) {
-        
-        #posizione di fine del link
-        my $endLink = index($text, $closeTagLink, $positionLink);
-        
-        my $link = substr($text, $positionLink + length($openTagLink), $endLink - $positionLink - length($openTagLink));
-        # elimino gli spazi e costruisco link con testo uguale al link
-        $link =~ s/ //g;
-        $link = "<a href=\"$link\">$link</a>";
-        substr($text, $positionLink, $endLink + length($closeTagLink) - $positionLink, $link);
-
-        $positionLink = index($text, $openTagLink, $positionLink + length($link));
-    }
-    
-    return $text;
-}
-
-# elimina da una stringa i tag che identificano un link
-sub removeLinkTags() {
-    
-    my $text = $_[0];
-    my $openTagLink = '\[link\]';
-    my $closeTagLink = '\[/link\]';
-    
-    $text =~ s/$openTagLink//g;
-    $text =~ s/$closeTagLink//g;
-    
-    return $text;
-    
 }
 
 1;

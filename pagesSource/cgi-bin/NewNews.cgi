@@ -24,7 +24,7 @@ sub printFormInsert() {
 	my $monthsOptionsValid;
 	my $yearsOptionsValid;
 	
-	if ($_[1]) {
+	if ($validDate) {
 	    my ($day, $month, $year) = &getDateComponentsFromItalianDate($_[1]);
 	    $daysOptionsValid = &getDaysOptions($day);
 	    $monthsOptionsValid = &getMonthsOptions($month);
@@ -231,6 +231,7 @@ if ($userFormInput{'submit'} ne 0) {
 			$userFormInput{$userInput} = "";
 		}
 		utf8::decode($userFormInput{$userInput});
+		$userFormInput{$userInput} =~ s/\"/''/g;
 		$userFormInput{$userInput} =~ s/\&/\&amp<\;/g;
 		$userFormInput{$userInput} =~ s/</\&lt\;/g;
 		$userFormInput{$userInput} =~ s/>/\&gt\;/g;

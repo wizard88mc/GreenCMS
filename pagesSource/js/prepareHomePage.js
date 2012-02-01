@@ -47,6 +47,7 @@ window.onload = function() {
 				
 				//prendo testo news e ne recupero i primi 100 caratteri
 				var text = activeNews[i].getElementsByTagName("Text")[0].firstChild.nodeValue;
+				text = text.replace("[link]", "").replace("[/link]", "");
 				text = text.substr(0, 100) + ". . .";
 				
 				//inserisco un elemento html <dt>, con all'interno un link alla news
