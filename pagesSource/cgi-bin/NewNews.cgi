@@ -109,23 +109,7 @@ sub printReport() {
     
     my $textWithLinks = $userFormInput{'textNews'};
     
-    my $openTagLink = '[link]';
-    my $closeTagLink = '[/link]';
-    
-    my $positionLink = index($textWithLinks, $openTagLink);
-    
-    while ($positionLink != -1) {
-        
-        #posizione di fine del link
-        my $endLink = index($textWithLinks, $closeTagLink, $positionLink);
-        
-        my $link = substr($textWithLinks, $positionLink + length($openTagLink), $endLink - $positionLink - length($openTagLink));
-        $link =~ s/ //g;
-        $link = "<a href=\"$link\">$link</a>";
-        substr($textWithLinks, $positionLink, $endLink + length($closeTagLink) - $positionLink, $link);
-
-        $positionLink = index($textWithLinks, $openTagLink, $positionLink + length($link));
-    }
+    $textWithLinks = &removeLinkTags($textWithLinks);
 	
 	my $content = <<CONTENT;
 <div id="contents">
@@ -240,7 +224,7 @@ if ($userFormInput{'submit'} ne 0) {
 
 $title = "Inserisci Nuova News";
 $content = &printFormInsert("", $page->param('validFrom'), $page->param('expirationDay'));
-#$secondLevel = &createSecondLevelMenu();
+$secondLevel = &createSecondLevelMenu();
 
 
 if ($userFormInput{'submit'} eq "Conferma") {

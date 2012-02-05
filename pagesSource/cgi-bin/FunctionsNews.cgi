@@ -65,26 +65,16 @@ sub insertNews() {
 		my $root = $document->getDocumentElement;
 		
 		#recupero anno, mese e giorno attuali
-		my $actualYear = localtime->year() + 1900;
-		my $actualMonth = localtime->mon() + 1;
-		my $actualDay = localtime->mday();
-		
-		#se il mese restituito è a una cifra, ci aggiungo in testa lo 0 permetterlo nel formato XML corretto
-		if (length($actualMonth) == 1) {
-			$actualMonth = "0$actualMonth";	
-		}
-		if (length($actualDay) == 1) {
-			$actualDay = "0$actualDay";	
-		}
+		my ($currentYear, $currentMonth, $currentDay) = &getCurrentDate();
 		
 		#creo data attuale in formato corretto per il confronto con quella inserita
-		$actualDate = "$actualYear-$actualMonth-$actualDay";
+		my $currentDate = "$currentYear-$currentMonth-$currentDay";
 		
 		#modifico data di validità e di scadenza nel formato aaaa-mm-gg
 		$details{'validFrom'} = &convertDateFromItalianToDB($details{'validFrom'});
 		$details{'expirationDay'} = &convertDateFromItalianToDB($details{'expirationDay'});
 		
-		if ($details{'validFrom'} eq $actualDate) {
+		if ($details{'validFrom'} eq $currentDate) {
 		     #news valida a partire dal giorno attuale
 		     #orario di inizio validità quello di inserimento della news
 		     my $hour = localtime->hour();
@@ -138,14 +128,16 @@ sub insertNews() {
 		# Solo se la news è valida a partire dal giorno attuale
 		# la inserisco all'interno del file rssfeed, altrimenti ci penserà
 		# il cron al momento opportuno
-		if ($details{'validFrom'} == $actualDate) {
+		
+		if (&checkDatesCronologicallyCorrect(
+		    &convertDateFromDBToItalian($details{'validFrom'}), &convertDateFromDBToItalian($currentDate)) eq true) {
             $document = $parser->parse_file($feedRSS);
             $root = $document->getDocumentElement;
             
             #creo link alla lettura della news tramite l'ID della nuova news
             my $link = "http://$address/cgi-bin/ReadNews.cgi?newsID=$newID";
             #come descrizione prendo i primi 50 caratteri della news
-            my $description = substr($details{'textNews'}, 0, 50) . ". . .";
+            my $description = substr(removeLinkTags($details{'textNews'}), 0, 50) . ". . .";
             
             #creo nuovo nodo in formato stringa
             my $itemString =
@@ -185,7 +177,7 @@ sub insertNews() {
 #elimina news da file XML
 sub deleteNews() {
 	
-	eval {
+	#eval {
 		#parametro di ingresso: ID della news
 		$newsID	= $_[0];
 		
@@ -198,6 +190,7 @@ sub deleteNews() {
 		my $newsNode = $root->find("//TableActiveNews/ActiveNews[ID=$newsID]")->get_node(1);
 		
 		my $newsTitle = $newsNode->findvalue('Title');
+		my $newsActivationDate = $newsNode->findvalue('Date');
 		
 		my $parent = $newsNode->parentNode;
 		$parent->removeChild($newsNode);
@@ -206,21 +199,28 @@ sub deleteNews() {
 		print FILE $document->toString();
 		close(FILE);
 		
-		$document = $parser->parse_file($feedRSS);
-		$root = $document->getDocumentElement;
+		my ($currentYear, $currentMonth, $currentDay) = &getCurrentDate();
+		my $currentDate = "$currentDay-$currentMonth-$currentYear";
 		
-		my $feedNode = $root->find("//item[title=\"$newsTitle\"]")->get_node(1);
+		if (&checkDatesCronologicallyCorrect(
+		    &convertDateFromDBToItalian($newsActivationDate), $currentDate) eq true) {
 		
-		$parent = $feedNode->parentNode;
-		$parent->removeChild($feedNode);
-		
-		open(FILE, ">$feedRSS") || die("Non riesco ad aprire il file");
-		print FILE $document->toString();
-		close(FILE);
+            my $documentRSS = $parser->parse_file($feedRSS);
+            my $rootRSS = $documentRSS->getDocumentElement;
+            
+            my $feedNode = $rootRSS->find("//item[title=\"$newsTitle\"]")->get_node(1);
+            
+            my $parent = $feedNode->parentNode;
+            $parent->removeChild($feedNode);
+            
+            open(FILE, ">$feedRSS") || die("Non riesco ad aprire il file");
+            print FILE $documentRSS->toString();
+            close(FILE);
+		    }
 		
 		return 1;
-	}
-	or do { return 0; }
+	#}
+	#or do { return 0; }
 	
 }
 
@@ -256,7 +256,7 @@ sub getNewsDetails() {
 #modifica le informazioni di una determinata news
 sub editNews() {
 	
-	#eval {
+	eval {
 		#parametri di ingresso: HASH contenente le infromazioni della news
 		my %details = %{$_[0]};
 		my $parser = XML::LibXML->new();
@@ -274,19 +274,9 @@ sub editNews() {
 		$details{'validFrom'} = &convertDateFromItalianToDB($details{'validFrom'});
 		$details{'expirationDay'} = &convertDateFromItalianToDB($details{'expirationDay'});
 		
-		my $actualYear = localtime->year() + 1900;
-		my $actualMonth = localtime->mon() + 1;
-		my $actualDay = localtime->mday();
+		my ($currentYear, $currentMonth, $currentDay) = &getCurrentDate();
 		
-		#se il mese restituito è a una cifra, ci aggiungo in testa lo 0 permetterlo nel formato XML corretto
-		if (length($actualMonth) == 1) {
-			$actualMonth = "0$actualMonth";	
-		}
-		if (length($actualDay) == 1) {
-			$actualDay = "0$actualDay";	
-		}
-		
-		my $today = "$actualYear-$actualMonth-$actualDay";
+		my $today = "$currentYear-$currentMonth-$currentDay";
 		my $newsTime = $oldNode->findvalue('Time');
 		
 		if ($today ne $details{'validFrom'}) {
@@ -320,10 +310,10 @@ sub editNews() {
 		
 		# Se il nuovo giorno di validità è maggiore rispetto a quello attuale 
 		# elimino la news dall'rssfeed
-		if (Delta_Days($actualYear, $actualMonth, $actualDay, 
+		if (Delta_Days($currentYear, $currentMonth, $currentDay, 
 		    $newsYear, $newsMonth, $newsDay) > 0 and
 		    Delta_Days($oldYear, $oldMonth, $oldDay, 
-		        $actualYear, $actualMonth, $actualDay) > 0) {
+		        $currentYear, $currentMonth, $currentDay) > 0) {
 		    
 		    $document = $parser->parse_file($feedRSS);
             $root = $document->getDocumentElement;
@@ -345,8 +335,8 @@ sub editNews() {
 		    # news è maggiore di quella di oggi devo aggiungere news nell'rssfeed 
 		    # perchè vuol dire che prima non c'era
 		    if (Delta_Days($newsYear, $newsMonth, $newsDay, 
-		            $actualYear, $actualMonth, $actualDay) >= 0 and 
-		         Delta_Days($actualYear, $actualMonth, $actualDay, 
+		            $currentYear, $currentMonth, $currentDay) >= 0 and 
+		         Delta_Days($currentYear, $currentMonth, $currentDay, 
 		             $oldYear, $oldMonth, $oldDay) > 0) {
 		    
 		        $document = $parser->parse_file($feedRSS);
@@ -357,7 +347,7 @@ sub editNews() {
 		        #creo link alla lettura della news tramite l'ID della nuova news
 		        my $link = "http://$address/cgi-bin/ReadNews.cgi?newsID=$details{'idEditNews'}";
 		        #come descrizione prendo i primi 50 caratteri della news
-                my $description = substr($details{'textNews'}, 0, 50) . ". . .";
+                my $description = substr(removeLinkTags($details{'textNews'}), 0, 50) . ". . .";
 		        
 		        my $newNodeString =
 "<item>
@@ -401,7 +391,7 @@ sub editNews() {
 		        #creo link alla lettura della news tramite l'ID della nuova news
 		        my $link = "http://$address/cgi-bin/ReadNews.cgi?newsID=$details{'idEditNews'}";
 		        #come descrizione prendo i primi 50 caratteri della news
-                my $description = substr($details{'textNews'}, 0, 50) . ". . .";
+                my $description = substr(removeLinkTags($details{'textNews'}), 0, 50) . ". . .";
 		        
 		        my $newNodeString =
 "<item>
@@ -423,8 +413,8 @@ sub editNews() {
 		}
 		
 		return 1;
-	#}
-	#or do { return 0; }
+	}
+	or do { return 0; }
 	
 }
 

@@ -130,6 +130,25 @@ sub convertDateFromDBToItalian() {
     return $day . "/" . $month . "/" . $year;
 }
 
+# restituisce la data attuale nel formato YYYY-MM-DD
+sub getCurrentDate() {
+    
+    my $currentYear = localtime->year() + 1900;
+	my $currentMonth = localtime->mon();
+	$currentMonth++;
+	my $currentDay = localtime->mday();
+    
+	if (length($currentMonth) == 1) {
+        $currentMonth = "0$currentMonth";	
+    }
+    if (length($currentDay) == 1) {
+        $currentDay = "0$currentDay";	
+    }
+    
+    my @currentDate = ($currentYear, $currentMonth, $currentDay);
+    return @currentDate;
+}
+
 #verifica se la data inserita è corretta
 sub checkCorrectDate() {
     
@@ -143,7 +162,7 @@ sub checkCorrectDate() {
 }
 
 # controlla se due date sono in ordine cronologico corretto, ovvero la seconda 
-# dopo la prima
+# dopo la prima, con formato delle date in GG-MM-AAAA
 sub checkDatesCronologicallyCorrect() {
     my $start = $_[0];
     my $end = $_[1];

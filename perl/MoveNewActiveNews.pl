@@ -19,28 +19,21 @@ sub moveNewActiveNews() {
     
     my $tableActiveNews = $rootActive->find("//TableActiveNews/ActiveNews");
 	
-	my $actualYear = localtime->year() + 1900;
-	my $actualMonth = localtime->mon() + 1;
-	if (length($actualMonth) == 1) {
-		$actualMonth = "0$actualMonth";
-	}
-	my $actualDay = localtime->mday();
-	if (length($actualDay) == 1) {
-		$actualDay = "0$actualDay";
-	}
+	my ($currentYear, $currentMonth, $currentDay) = &getCurrentDate();
     
 	foreach my $activeNews ($tableActiveNews->get_nodelist) {
 	        
 	    my $activationDate = $activeNews->findvalue('Date');
+	    my $newsTime = $activeNews->findvalue('Time');
 	    
 	    my ($activationDay, $activationMonth, $activationYear) = 
 	                                &getDateComponentsFromDBDate($activationDate);
 	    
-	    my $deltaDays = Delta_Days($actualYear, $actualMonth, $actualDay, 
+	    my $deltaDays = Delta_Days($currentYear, $currentMonth, $currentDay, 
 	                                $activationYear, $activationMonth, $activationDay);
 	    
 	    #la news da oggi inizia ad essere attiva, inserisco nuovo nodo rss feed
-	    if ($deltaDays == 0) {
+	    if ($deltaDays == 0 && $newsTime eq "00:00:00") {
 	        
 	        my $newsTitle = $activeNews->findvalue('Title');
 	        my $newsID = $activeNews->findvalue('ID');
@@ -49,7 +42,7 @@ sub moveNewActiveNews() {
 	        #creo link alla lettura della news tramite l'ID della nuova news
             my $link = "http://$address/cgi-bin/ReadNews.cgi?newsID=$newsID";
             #come descrizione prendo i primi 50 caratteri della news
-            $newsText = substr($newsText, 0, 50) . ". . .";
+            $newsText = substr(&removeLinkTags($newsText), 0, 50) . ". . .";
             
             #creo nuovo nodo in formato stringa
             my $itemString = 

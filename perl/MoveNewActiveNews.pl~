@@ -20,7 +20,8 @@ sub moveNewActiveNews() {
     my $tableActiveNews = $rootActive->find("//TableActiveNews/ActiveNews");
 	
 	my $actualYear = localtime->year() + 1900;
-	my $actualMonth = localtime->mon() + 1;
+	my $actualMonth = localtime->mon();
+	$actualMonth++;
 	if (length($actualMonth) == 1) {
 		$actualMonth = "0$actualMonth";
 	}
@@ -28,6 +29,9 @@ sub moveNewActiveNews() {
 	if (length($actualDay) == 1) {
 		$actualDay = "0$actualDay";
 	}
+	
+	my ($actualDay, $actualMonth, $actualYear) = 
+	    &getDateComponentsFromItalianDate(&getActualDateItalianFormat());
     
 	foreach my $activeNews ($tableActiveNews->get_nodelist) {
 	        
@@ -49,7 +53,7 @@ sub moveNewActiveNews() {
 	        #creo link alla lettura della news tramite l'ID della nuova news
             my $link = "http://$address/cgi-bin/ReadNews.cgi?newsID=$newsID";
             #come descrizione prendo i primi 50 caratteri della news
-            $newsText = substr($newsText, 0, 50) . ". . .";
+            $newsText = substr(&removeLinkTags($newsText), 0, 50) . ". . .";
             
             #creo nuovo nodo in formato stringa
             my $itemString = 
@@ -70,7 +74,9 @@ sub moveNewActiveNews() {
                 $rootChannel->insertBefore($newItemNode, $firstItem);
             }
             else {
-                $rootChannel->addChild($newItemNode);
+                for my $newNode ($newItemNode->childNodes) {
+                    $rootChannel->addChild($newNode);
+                }
             }
             
             open(FILE, ">$fileRSSFeed") || die("Non riesco ad aprire il file");

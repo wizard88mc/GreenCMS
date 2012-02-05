@@ -211,10 +211,10 @@ sub checkInputs() {
 $page = new CGI;
 $content;
 
-#$cookie = $page->cookie("CGISESSIONID") || undef;
-#if (!defined($cookie)) {
-#	print $page->redirect($siteForCGI . $folderBase . "reservedzone/login.html");
-#}
+$cookie = $page->cookie("CGISESSIONID") || undef;
+if (!defined($cookie)) {
+	print $page->redirect($siteForCGI . $folderBase . "reservedzone/login.html");
+}
 
 $userFormInput{'submit'} = $page->param('submit');
 

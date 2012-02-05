@@ -174,22 +174,41 @@ sub getTimeComponents() {
 }
 
 # restituisce la data attuale nel formato YYYY-MM-DD
-sub getCurrentDate() {
+sub getActualDateDBFormat() {
     
-    my $currentYear = localtime->year() + 1900;
-	my $currentMonth = localtime->mon();
-	$currentMonth++;
-	my $currentDay = localtime->mday();
+    my $actualYear = localtime->year() + 1900;
+	my $actualMonth = localtime->mon();
+	$actualMonth++;
+	my $actualDay = localtime->mday();
     
-	if (length($currentMonth) == 1) {
-        $currentMonth = "0$currentMonth";	
+	if (length($actualMonth) == 1) {
+        $actualMonth = "0$actualMonth";	
     }
-    if (length($currentDay) == 1) {
-        $currentDay = "0$currentDay";	
+    if (length($actualDay) == 1) {
+        $actualDay = "0$actualDay";	
     }
     
-    my @currentDate = ($currentYear, $currentMonth, $currentDay);
-    return @currentDate;
+    my $actualDate = "$actualYear-$actualMonth-$actualDay";
+    return $actualDate;
+}
+
+# restituisce la data attuale nel formato GG-MM-AAAA
+sub getActualDateItalianFormat() {
+    
+    my $actualYear = localtime->year() + 1900;
+	my $actualMonth = localtime->mon();
+	$actualMonth++;
+	my $actualDay = localtime->mday();
+    
+	if (length($actualMonth) == 1) {
+        $actualMonth = "0$actualMonth";	
+    }
+    if (length($actualDay) == 1) {
+        $actualDay = "0$actualDay";	
+    }
+    
+    my $actualDate = "$actualDay-$actualMonth-$actualYear";
+    return $actualDate;
 }
 
 sub convertLinks() {
