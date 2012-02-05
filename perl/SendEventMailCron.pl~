@@ -36,7 +36,7 @@ sub sendEmail() {
 	
 	my $emailTo = $_[0];
 	my $seminarTitle = $_[1];
-	my $senderMail = 'crafa@math.unipd.it';
+	my $senderMail = 'seminari_informatica@math.unipd.it';
 	
 	$smtp = Net::SMTP->new('smtp.math.unipd.it', 
 				Hello => 'informatica.math.unipd.it',
@@ -99,7 +99,7 @@ sub sendEventMailCron() {
 		my $deltaDays = Delta_Days($actualYear, $actualMonth, $actualDay, $eventYear, $eventMonth, $eventDay);
 		
 		#mando mail o giorno prima o tre giorni prima
-		if ($deltaDays == 3 || $deltaDays == 0) {
+		if ($deltaDays == 0) {
 			
 			#recupero informazioni dell'evento
 			my $eventTitle = $event->find('Title')->get_node(1)->firstChild->toString;

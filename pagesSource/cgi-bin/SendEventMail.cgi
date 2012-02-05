@@ -6,6 +6,7 @@ use XML::LibXML;
 use utf8;
 
 require "SendMail.cgi";
+require "GlobalFunctions.cgi";
 
 sub sendEventMail() {
 	
@@ -26,12 +27,13 @@ http://$address/cgi-bin/Seminari.cgi";
 	#estraggo informazioni dels eminario
 	my $eventTitle = $event->find('Title')->get_node(1)->firstChild->toString;
 	my $eventDate = $event->findvalue('Date');
-	$eventDate = substr($eventDate, 8, 2) . "/" . substr($eventDate, 5, 2) . "/" . substr($eventDate, 0, 4);
+	$eventDate = &convertDateFromDBToItalianFormat($eventDate);
 	my $eventPlace = $event->find('Place')->get_node(1)->firstChild->toString;
 	my $eventTime = $event->findvalue('Time');
 	$eventTime = substr($eventTime, 0, 5);
 	$eventSpeaker = $event->find('Speaker')->get_node(1)->firstChild->toString;
 	my $eventAbstract = $event->findvalue('Abstract');
+	$eventAbstract = &removeLinkTags($eventAbstract);
 	
 	#costruisco il tempo del messaggio componendolo delle informazioni sul seminario
 	my $eventStringMail = <<CONTENT;
@@ -110,16 +112,11 @@ CONTENT
     		
     		if ($result eq "") {
 				$count = $count + 1;
-		}
+			}
     	}
-    	
     }
-    
     return $count;
 }
 
 1;
-
-
-
 

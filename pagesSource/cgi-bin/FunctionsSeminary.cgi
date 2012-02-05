@@ -5,6 +5,7 @@ use CGI::Carp qw(fatalsToBrowser);
 use XML::LibXML;
 use utf8;
 
+require "GlobalFunctions.cgi";
 
 #insieme delle funzioni per la gestione dei seminari
 
@@ -164,15 +165,12 @@ sub getSeminarOption() {
 			my $eventSpeaker = $event->findvalue('Speaker');
 			
 			#metto data nel formato gg/mm/aaaa
-			my $eventDate = substr($eventDate, 8, 2) . "/" . substr($eventDate, 5, 2) . "/" . substr($eventDate, 0, 4);
+			my $eventDate = &convertDateFromDBToItalian($eventDate);
 			
 			#creo <option>, dove in value inserisco l'ID del seminario
 			$selectOptionHTML .= "<option value=\"$eventID\">$eventDate - $eventTitle - $eventSpeaker</option>";
 			
-			
-		}
-		
-		
+		}		
 		return $selectOptionHTML;
 	}
 	or do { return ""; }
@@ -238,7 +236,7 @@ sub insertNewSeminary() {
 		
 		my $title = $details{'title'};
 		#converte data nel formato XML aaaa-mm-gg
-		my $date = substr($details{'date'}, 6) . "-" . substr($details{'date'}, 3, 2) . "-" . substr($details{'date'}, 0, 2);
+		my $date = &convertDateFromItalianToDB($details{'date'});
 		#converte orario nel formato XML hh:mm:ss
 		my $time = $details{'time'} . ":00";
 		my $place = $details{'place'};

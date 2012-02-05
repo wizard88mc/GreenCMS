@@ -5,6 +5,7 @@ use utf8;
 
 require "GlobalVariables.pl";
 require "WorkWithFiles.pl";
+require "GlobalFunctions.cgi";
 
 {
 
@@ -43,25 +44,10 @@ require "WorkWithFiles.pl";
 		if ($seminar->findvalue('SpeakerCV') ne "") {
 			$speakerCV = $seminar->find('SpeakerCV')->get_node(1)->firstChild->toString;
 		}
+		$speakerCV = &convertLinks($speakerCV);
+		
 		my $abstract = $seminar->find('Abstract')->get_node(1)->firstChild->toString;
-		
-		#verifico se all'interno dell'abstract è stato inserito un link
-		my $positionLink = index($abstract, "http://");
-		
-		while ($positionLink != -1) {
-		
-			my $endLink = index($abstract, " ", $positionLink);
-
-			my $link = substr($abstract, $positionLink, $endLink - $positionLink);
-			
-			$link = "<a href=\"$link\">$link</a>";
-			my $lengthLink = length($link);
-			
-			substr($abstract, $positionLink, $endLink - $positionLink, $link);
-			
-			$positionLink = index($abstract, "http://", $positionLink + $lengthLink);
-			
-		}
+		$abstract = &convertLinks($abstract);
 
 		#se la lingua specificata è l'inglese, aggiungo xml:lang ai tag testuali
 		if ($language eq "it") {

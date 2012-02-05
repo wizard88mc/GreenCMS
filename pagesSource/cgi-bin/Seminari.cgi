@@ -5,6 +5,7 @@ use utf8;
 
 require "GlobalVariables.pl";
 require "WorkWithFiles.pl";
+require "GlobalFunctions.cgi";
 
 {
 
@@ -30,7 +31,7 @@ require "WorkWithFiles.pl";
 		my $language = $seminar->findvalue('@language');
 		my $title = $seminar->find('Title')->get_node(1)->firstChild->toString;
 		my $date = $seminar->findvalue('Date');
-		$date = substr($date, 8, 2) . "/" . substr($date, 5, 2) . "/" . substr($date, 0, 4);
+		$date = &convertDateFromDBToItalian($date);
 		my $time = $seminar->findvalue('Time');
 		$time = substr($time, 0, 5);
 		my $place = $seminar->find('Place')->get_node(1)->firstChild->toString;
@@ -43,30 +44,14 @@ require "WorkWithFiles.pl";
 		if ($seminar->findvalue('SpeakerCV') ne "") {
 			$speakerCV = $seminar->find('SpeakerCV')->get_node(1)->firstChild->toString;
 		}
+		$speakerCV = &convertLinks($speakerCV);
 		my $abstract = " - - - ";
 		if ($seminar->findvalue('Abstract') ne "") {
 			$abstract = $seminar->find('Abstract')->get_node(1)->firstChild->toString;
 		}
-		
-		#verifico se all'interno dell'abstract è stato inserito un link
-		my $positionLink = index($abstract, "http://");
-		
-		while ($positionLink != -1) {
-		
-			my $endLink = index($abstract, " ", $positionLink);
+		$abstract = &convertLinks($abstract);
 
-			my $link = substr($abstract, $positionLink, $endLink - $positionLink);
-			
-			$link = "<a href=\"$link\">$link</a>";
-			my $lengthLink = length($link);
-		
-			substr($abstract, $positionLink, $endLink - $positionLink, $link);
-			
-			$positionLink = index($abstract, "http://", $positionLink + $lengthLink);
-			
-		}
-
-		#se la lingua specificata Ã¨ l'inglese, aggiungo xml:lang ai tag testuali
+		#se la lingua specificata è l'inglese, aggiungo xml:lang ai tag testuali
 		if ($language eq "en") {
 			$title = "<h3 xml:lang=\"en\">$title</h3>";
 			$abstract = "<span xml:lang=\"en\">$abstract</span>";
@@ -76,7 +61,7 @@ require "WorkWithFiles.pl";
 			$title = "<h3>$title</h3>";
 		}
 		
-		#se c'Ã¨ affiliazione del relatore la aggiungo
+		#se c'è affiliazione del relatore la aggiungo
 		if ($from ne "") {
 			$from = "<strong>($from)</strong>";
 		}
