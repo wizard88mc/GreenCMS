@@ -7,6 +7,7 @@ use CGI::Cookie;
 use utf8;
 
 require "GlobalVariables.pl";
+require "GlobalFunctions.cgi";
 require "WorkWithFiles.pl";
 require "CreateSecondLevelMenu.cgi";
 require "FunctionsNews.cgi";

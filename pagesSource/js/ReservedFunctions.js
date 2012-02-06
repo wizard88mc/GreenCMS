@@ -1,8 +1,7 @@
 // JavaScript Document
 
-function addNewLink() {
+function addNewLink(nomeTextArea) {
 
-    var textArea = document.getElementById("textNews");
-    textArea.value += "[link][/link]";
-    
+    var textArea = document.getElementById(nomeTextArea);
+    textArea.value += "[link][/link]";   
 }

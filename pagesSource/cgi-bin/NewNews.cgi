@@ -7,6 +7,7 @@ use CGI::Cookie;
 use utf8;
 
 require "GlobalVariables.pl";
+require "GlobalFunctions.cgi";
 require "WorkWithFiles.pl";
 require "CreateSecondLevelMenu.cgi";
 require "FunctionsNews.cgi";
@@ -20,12 +21,11 @@ sub printFormInsert() {
 	my $validDate = $_[1];
 	my $expirationDate = $_[2];
 	
-	my $daysOptionsValid;
-	my $monthsOptionsValid;
-	my $yearsOptionsValid;
+	my $daysOptionsValid, $monthsOptionsValid, $yearsOptionsValid;
+	my $daysOptionsExpired, $monthsOptionsExpired, $yearsOptionsExpired;
 	
 	if ($validDate) {
-	    my ($day, $month, $year) = &getDateComponentsFromItalianDate($_[1]);
+	    my ($day, $month, $year) = &getDateComponentsFromItalianDate($validDate);
 	    $daysOptionsValid = &getDaysOptions($day);
 	    $monthsOptionsValid = &getMonthsOptions($month);
 	    $yearsOptionsValid = &getYearsOptions($year);
@@ -35,10 +35,6 @@ sub printFormInsert() {
 	    $monthsOptionsValid = &getMonthsOptions();
 	    $yearsOptionsValid = &getYearsOptions();
 	}
-	
-	my $daysOptionsExpired;
-	my $monthsOptionsExpired;
-	my $yearsOptionsExpired;
 	
 	if ($expirationDate) {
 	    my ($day, $month, $year) = &getDateComponentsFromItalianDate($expirationDate);
@@ -67,7 +63,7 @@ sub printFormInsert() {
 	</fieldset>
 	<fieldset>
 	<legend>Dettagli News</legend>
-	<label for="textNews">Testo News: </label><input type="button" class="button" value="Aggiungi link" onClick="addNewLink();" />
+	<label for="textNews">Testo News: </label><input type="button" class="button" value="Aggiungi link" onClick="addNewLink('textNews');" />
 	<textarea name="textNews" id="textNews" rows="8" cols="20" >$userFormInput{'textNews'}</textarea>
 	<br /><br />
 	<label for="type">Tipo News: </label>
@@ -82,7 +78,7 @@ sub printFormInsert() {
 	<label for="archiveNo"><strong>Non</strong> Archiviare</label>
 	<input type="radio" checked="checked" name="archive" id="archiveNo" value="F" /></div>
 	<br /><br />
-	<label for="validityDay">News a partire da:</label>
+	<label for="validDay">News a partire da:</label>
 	<select name="validDay" id="validDay">$daysOptionsValid</select>
 	<select name="validMonth" id="validMonth">$monthsOptionsValid</select>
 	<select name="validYear" id="validYear">$yearsOptionsValid</select><br />
@@ -108,8 +104,7 @@ CONTENT
 sub printReport() {
     
     my $textWithLinks = $userFormInput{'textNews'};
-    
-    $textWithLinks = &removeLinkTags($textWithLinks);
+    $textWithLinks = &convertLinks($textWithLinks);
 	
 	my $content = <<CONTENT;
 <div id="contents">
@@ -173,7 +168,7 @@ sub checkInputs() {
     }
     
     my $startDateCorrect = &checkCorrectDate($userFormInput{'validFrom'});
-    if ( $startDateCorrect ne true) {
+    if ($startDateCorrect ne true) {
         $errors .= "Data di inizio validità non corretta <br />";   
     }
     
@@ -182,7 +177,7 @@ sub checkInputs() {
         $errors .= "Data di fine validità non corretta <br />";   
     }
     
-    if ($startDateCorrect and $endDateCorrect) {
+    if ($startDateCorrect eq true && $endDateCorrect eq true) {
         if (&checkDatesCronologicallyCorrect($userFormInput{'validFrom'}, $userFormInput{'expirationDay'}) ne true) {
             $errors .= "Data di scadenza minore di quella di inizio validità <br />";      
         }
@@ -223,7 +218,7 @@ if ($userFormInput{'submit'} ne 0) {
 }
 
 $title = "Inserisci Nuova News";
-$content = &printFormInsert("", $page->param('validFrom'), $page->param('expirationDay'));
+$content = &printFormInsert();
 $secondLevel = &createSecondLevelMenu();
 
 
@@ -264,7 +259,8 @@ if ($userFormInput{'submit'} eq "Inserisci") {
 	}
 	else {
 		
-		$content = &printFormInsert($errors);			
+		$content = &printFormInsert($errors, 
+		    $userFormInput{'validFrom'}, $userFormInput{'expirationDay'});			
 	}
 	
 }

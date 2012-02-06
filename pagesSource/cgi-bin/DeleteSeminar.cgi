@@ -5,6 +5,7 @@ use CGI::Carp qw(fatalsToBrowser);
 use utf8;
 
 require "GlobalVariables.pl";
+require "GlobalFunctions.cgi";
 require "WorkWithFiles.pl";
 require "CreateSecondLevelMenu.cgi";
 require "FunctionsSeminary.cgi";

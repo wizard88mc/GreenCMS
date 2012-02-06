@@ -1,11 +1,15 @@
 #!/usr/bin/perl
 
+
+
 #creates a list oh HTML options for a select element that needs days
 sub getDaysOptions() {
 
+    my @lt = localtime();
+    
     my $defaultDay;
     if (!$_[0]) {
-        $defaultDay = localtime->mday();
+        $defaultDay = $lt[3];
     }
     else {
         $defaultDay = $_[0];
@@ -31,9 +35,10 @@ sub getDaysOptions() {
 #creates a list oh HTML options for a select element that needs months
 sub getMonthsOptions() {
 
+    my @lt = localtime();
     my $defaultMonth;
     if (!$_[0]) {
-        $defaultMonth = localtime()->mon();
+        $defaultMonth = $lt[4];
         $defaultMonth++;
     }
     else {
@@ -68,15 +73,17 @@ sub getMonthsOptions() {
 #creates a list oh HTML options for a select element that needs years
 sub getYearsOptions() {
     
+    my @lt = localtime();
     my $defaultYear;
     if (!$_[0]) {
-        $defaultYear = localtime->year() + 1900;
+        $defaultYear = $lt[5];
+        $defaultYear = $defaultYear + 1900;
     }
     else {
         $defaultYear = $_[0];
     }
     my $stringYearsOptions = "";
-    my $actualYear = localtime->year() + 1900;
+    my $actualYear = $lt[5] + 1900;
     
     for ($i = 0; $i <= 3; $i++) {
         my $year = $actualYear + $i;
@@ -133,10 +140,12 @@ sub convertDateFromDBToItalian() {
 # restituisce la data attuale nel formato YYYY-MM-DD
 sub getCurrentDate() {
     
-    my $currentYear = localtime->year() + 1900;
-	my $currentMonth = localtime->mon();
+    my @lt = localtime();
+    my $currentYear = $lt[5];
+    $currentYear = $currentYear + 1900;
+	my $currentMonth = $lt[4];
 	$currentMonth++;
-	my $currentDay = localtime->mday();
+	my $currentDay = $lt[3];
     
 	if (length($currentMonth) == 1) {
         $currentMonth = "0$currentMonth";	
@@ -164,25 +173,21 @@ sub checkCorrectDate() {
 # controlla se due date sono in ordine cronologico corretto, ovvero la seconda 
 # dopo la prima, con formato delle date in GG-MM-AAAA
 sub checkDatesCronologicallyCorrect() {
+    eval {
     my $start = $_[0];
     my $end = $_[1];
     
     my ($startDay, $startMonth, $startYear) = &getDateComponentsFromItalianDate($start);
     my ($endDay, $endMonth, $endYear) = &getDateComponentsFromItalianDate($end);
     
-    my $differenceYear = $endYear - $startYear;
-    my $differenceMonth = $endMonth - $startMonth;
-    my $differenceDay = $endDay - $startDay;
-    
-    if (($differenceYear > 0) || 
-        ($differenceYear == 0 && $differenceMonth > 0) ||
-        ($differenceYear == 0 && $differenceMonth == 0 && ($differenceDay > 0 || $differenceDay == 0))) {
+    if (Delta_Days($startYear, $startMonth, $startDay, $endYear, $endMonth, $endDay) >= 0) {
     return true;
         }
         else {
             return false;
         }
-        
+    }
+    or do { return false; }
 }
 
 # restituisce ore, minuti e secondi di un orario in formato hh:mm:ss

@@ -6,9 +6,9 @@ use HTML::Entities;
 use XML::LibXML;
 use utf8;
 
-require "WorkWithFiles.pl";
 require "GlobalVariables.pl";
 require "GlobalFunctions.cgi";
+require "WorkWithFiles.pl";
 
 {
 	$page = new CGI;
@@ -17,7 +17,7 @@ require "GlobalFunctions.cgi";
 	my $parser = XML::LibXML->new();
 	
 	my $activeNewsXML = $fileXML . "ActiveNews.xml";
-	my $espiredNewsXML = $fileXML . "ExpiredNews.xml";
+	my $expiredNewsXML = $fileXML . "ExpiredNews.xml";
 	
 	my $document = $parser->parse_file($activeNewsXML);
 	my $root = $document->getDocumentElement;
@@ -34,11 +34,12 @@ require "GlobalFunctions.cgi";
 			my $newsNode = $root->find("//TableActiveNews/ActiveNews[ID=$newsID]")->get_node(1);
 			
 			my $date = $newsNode->findvalue('Date');
-			$date = substr($date, 8, 2) . "/" . substr($date, 5, 2) . "/" . substr($date, 0, 4);
+			$date = &convertDateFromDBToItalian($date);
 			my $time = $newsNode->findvalue('Time');
 			$time = substr($time, 0, 5);
 			my $publisher = $newsNode->findvalue('Publisher');
 			my $text = $newsNode->findvalue('Text');
+			$text = &convertLinks($text);
 			
 			$informations{'date'} = $date;
 			$informations{'time'} = $time;
@@ -47,26 +48,27 @@ require "GlobalFunctions.cgi";
 		
 		}
 		
-		if (!$newsFound) {
+		if ($newsFound == 0) {
 			
-			$document = $parser->parse_file($espiredNewsXML);
+			$document = $parser->parse_file($expiredNewsXML);
 			$root = $document->getDocumentElement;
 		
-			$title = $root->findvalue("TableExpiredNews/ExpiredNews[ID=$newsID]");
+			$title = $root->findvalue("//TableExpiredNews/ExpiredNews[ID=$newsID]/Title");
 			
 			if ($title ne "") {
 				
 				$newsFound = 1;
 				
-				$newsNode = $root->find("//TableExpiredNews/ExpiredNews[ID=$newID]")->get_node(1);
+				$newsNode = $root->find("//TableExpiredNews/ExpiredNews[ID=$newsID]")->get_node(1);
 				
 				$informations{'title'} = $title;
 				my $date = $newsNode->findvalue('Date');
-				$date = substr($date, 8, 2) . "/" . substr($date, 5, 2) . "/" . substr($date, 0, 4);
+				$date = &convertDateFromDBToItalian($date);
 				my $time = $newsNode->findvalue('Time');
 				$time = substr($time, 0, 5);
 				my $publisher = $newsNode->findvalue('Publisher');
 				my $text = $newsNode->findvalue('Text');
+				$text = &convertLinks($text);
 
 				$informations{'date'} = $date;
 				$informations{'time'} = $time;
@@ -79,7 +81,7 @@ require "GlobalFunctions.cgi";
 	
 	my $newsHeader;
 	
-	if (!$newsFound) {
+	if ($newsFound == 0) {
 		
 		$informations{'title'} = "Errore";
 		$informations{'date'} = "";
@@ -90,7 +92,6 @@ require "GlobalFunctions.cgi";
 	}
 	else {
 		$newsHeader = "Scritto da $informations{'publisher'} il giorno $informations{'date'} alle ore $informations{'time'}";
-		$informations{'text'} = convertLinks($informations{'text'});
 	}
 	
 	utf8::encode($informations{'title'});
@@ -107,12 +108,9 @@ require "GlobalFunctions.cgi";
 	$newsPage =~ s/$srcPath/$newSRC/g; 
 	$newsPage =~ s/$hrefPath/$newHREF/g;
 	
-	
-	
 	$newsPage =~ s/"nomeNews"/$informations{'title'}/g;
 	$newsPage =~ s/<newsHeader\/>/$newsHeader/g;
 	$newsPage =~ s/<textNews\/>/$informations{'text'}/g;
-	
 	
 print <<PAGE;
 Content-type: text/html\n\n

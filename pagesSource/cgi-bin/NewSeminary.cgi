@@ -5,6 +5,7 @@ use CGI::Carp qw(fatalsToBrowser);
 use utf8;
 
 require "GlobalVariables.pl";
+require "GlobalFunctions.cgi";
 require "WorkWithFiles.pl";
 require "CreateSecondLevelMenu.cgi";
 require "FunctionsSeminary.cgi";
@@ -20,7 +21,7 @@ sub printReport() {
 	}
 	
 	my $textWithLinks = $userFormInput{'abstract'};
-	$textWithLinks = &removeLinkTags($textWithLinks);
+	$textWithLinks = &convertLinks($textWithLinks);
 	
 	
 	my $content = <<CONTENT;
@@ -96,9 +97,9 @@ sub printForm() {
 	<label for="title">Titolo: </label>
 	<input type="text" name="title" id="title" value="$userFormInput{'title'}" /><br />
 	<label for="dateDay">Data: </label>
-	<input type="text" name="dateDay" id="dateDay" value="$seminarDayOptions" />
-	<input type="text" name="dateMonth" id="dateMonth" value="$seminarMonthOptions" />
-	<input type="text" name="dateYear" id="dateYear" value="$seminarYearOptions" />
+	<select name="dateDay" id="dateDay">$seminarDayOptions</select>
+	<select name="dateMonth" id="dateMonth">$seminarMonthOptions</select>
+	<select name="dateYear" id="dateYear">$seminarYearOptions</select>
 	<br />
 	<label for="time">Ora: (hh:mm)</label>
 	<input type="text" name="time" id="time" value="$userFormInput{'time'}" /><br />
@@ -111,9 +112,9 @@ sub printForm() {
 	<input type="text" name="speaker" id="speaker" value="$userFormInput{'speaker'}" /><br />
 	<label for="affiliazione">Affiliazione: </label>
 	<input type="text" name="affiliazione" id="affiliazione" value="$userFormInput{'affiliazione'}" /><br />
-	<label class="block" for="abstract">Abstract: </label><input type="button" class="button" value="Aggiungi link" onClick="addNewLinkSeminary()" />
+	<label class="block" for="abstract">Abstract: </label><input type="button" class="button" value="Aggiungi link" onClick="addNewLink('abstract');" />
 	<textarea id="abstract" name="abstract" cols="50" rows="5" >$userFormInput{'abstract'}</textarea><br />
-	<label for="speakerCV">CV Relatore: </label>
+	<label for="speakerCV">CV Relatore: </label><input type="button" class="button" value="Aggiungi link" onClick="addNewLink('speakerCV');" />
 	<textarea id="speakerCV" name="speakerCV" cols="50" rows="5" >$userFormInput{'speakerCV'}</textarea><br />
 	<input type="checkbox" name="lang" id="lang" value="en" />
 	<label for="lang">Campi compilati in inglese</label><br /><br />
@@ -212,10 +213,10 @@ sub checkInputs() {
 
 $page = new CGI;
 
-#$cookie = $page->cookie("CGISESSIONID") || undef;
-#if (!defined($cookie)) {
-#	print $page->redirect($siteForCGI . $folderBase . "reservedzone/login.html");
-#}
+$cookie = $page->cookie("CGISESSIONID") || undef;
+if (!defined($cookie)) {
+	print $page->redirect($siteForCGI . $folderBase . "reservedzone/login.html");
+}
 
 $userFormInput{'submit'} = $page->param('submit');
 
@@ -248,7 +249,7 @@ if ($userFormInput{'submit'} ne 0) {
 
 $title = "Nuovo Seminario";
 $content = &printForm();
-#$secondLevel = &createSecondLevelMenu();
+$secondLevel = &createSecondLevelMenu();
 
 if ($userFormInput{'submit'} eq "Conferma") {
     

@@ -7,8 +7,6 @@ use utf8;
 use Time::localtime;
 use Date::Calc qw(Add_Delta_Days Delta_Days);
 
-require "GlobalFunctions.cgi";
-
 #insieme di funzioni per la gestione delle news e del feedRSS
 
 $feedRSS = $fileXML . "rssfeed.xml";
@@ -137,7 +135,7 @@ sub insertNews() {
             #creo link alla lettura della news tramite l'ID della nuova news
             my $link = "http://$address/cgi-bin/ReadNews.cgi?newsID=$newID";
             #come descrizione prendo i primi 50 caratteri della news
-            my $description = substr(removeLinkTags($details{'textNews'}), 0, 50) . ". . .";
+            my $description = substr(&removeLinkTags($details{'textNews'}), 0, 50) . ". . .";
             
             #creo nuovo nodo in formato stringa
             my $itemString =
@@ -191,6 +189,7 @@ sub deleteNews() {
 		
 		my $newsTitle = $newsNode->findvalue('Title');
 		my $newsActivationDate = $newsNode->findvalue('Date');
+		$newsActivationDate = &convertDateFromDBToItalian($newsActivationDate);
 		
 		my $parent = $newsNode->parentNode;
 		$parent->removeChild($newsNode);
@@ -202,8 +201,7 @@ sub deleteNews() {
 		my ($currentYear, $currentMonth, $currentDay) = &getCurrentDate();
 		my $currentDate = "$currentDay-$currentMonth-$currentYear";
 		
-		if (&checkDatesCronologicallyCorrect(
-		    &convertDateFromDBToItalian($newsActivationDate), $currentDate) eq true) {
+		if (&checkDatesCronologicallyCorrect($newsActivationDate, $currentDate) eq true) {
 		
             my $documentRSS = $parser->parse_file($feedRSS);
             my $rootRSS = $documentRSS->getDocumentElement;
@@ -305,15 +303,15 @@ sub editNews() {
 		print FILE $document->toString();
 		close(FILE);
 		
-		my ($newsDay, $newsMonth, $newsYear) = getDateComponentsFromDBDate($details{'validFrom'});
-		my ($oldDay, $oldMonth, $oldYear) = getDateComponentsFromDBDate($oldDate);
+		my ($newsDay, $newsMonth, $newsYear) = &getDateComponentsFromDBDate($details{'validFrom'});
+		my ($oldDay, $oldMonth, $oldYear) = &getDateComponentsFromDBDate($oldDate);
 		
 		# Se il nuovo giorno di validità è maggiore rispetto a quello attuale 
 		# elimino la news dall'rssfeed
 		if (Delta_Days($currentYear, $currentMonth, $currentDay, 
 		    $newsYear, $newsMonth, $newsDay) > 0 and
 		    Delta_Days($oldYear, $oldMonth, $oldDay, 
-		        $currentYear, $currentMonth, $currentDay) > 0) {
+		        $currentYear, $currentMonth, $currentDay) >= 0) {
 		    
 		    $document = $parser->parse_file($feedRSS);
             $root = $document->getDocumentElement;
@@ -347,7 +345,7 @@ sub editNews() {
 		        #creo link alla lettura della news tramite l'ID della nuova news
 		        my $link = "http://$address/cgi-bin/ReadNews.cgi?newsID=$details{'idEditNews'}";
 		        #come descrizione prendo i primi 50 caratteri della news
-                my $description = substr(removeLinkTags($details{'textNews'}), 0, 50) . ". . .";
+                my $description = substr(&removeLinkTags($details{'textNews'}), 0, 50) . ". . .";
 		        
 		        my $newNodeString =
 "<item>
@@ -391,7 +389,7 @@ sub editNews() {
 		        #creo link alla lettura della news tramite l'ID della nuova news
 		        my $link = "http://$address/cgi-bin/ReadNews.cgi?newsID=$details{'idEditNews'}";
 		        #come descrizione prendo i primi 50 caratteri della news
-                my $description = substr(removeLinkTags($details{'textNews'}), 0, 50) . ". . .";
+                my $description = substr(&removeLinkTags($details{'textNews'}), 0, 50) . ". . .";
 		        
 		        my $newNodeString =
 "<item>

@@ -7,6 +7,7 @@ use CGI::Cookie;
 use utf8;
 
 require "GlobalVariables.pl";
+require "GlobalFunctions.cgi";
 require "WorkWithFiles.pl";
 require "CreateSecondLevelMenu.cgi";
 require "FunctionsNews.cgi";
@@ -169,7 +170,7 @@ sub checkInputs() {
         $errors .= "Data di fine validità non corretta <br />";   
     }
     
-    if ($startDateCorrect and $endDateCorrect) {
+    if ($startDateCorrect eq true && $endDateCorrect eq true) {
         if (&checkDatesCronologicallyCorrect($userFormInput{'validFrom'}, $userFormInput{'expirationDay'}) ne true) {
             $errors .= "Data di scadenza minore di quella di inizio validità <br />";      
         }
@@ -216,6 +217,7 @@ if ($userFormInput{'submit'} eq "Modifica") {
 			$userFormInput{$userInput} = "";
 		}
 		utf8::decode($userFormInput{$userInput});
+		$userFormInput{$userInput} =~ s/\"/''/g;
 		$userFormInput{$userInput} =~ s/\&/\&amp\;/g;
 		$userFormInput{$userInput} =~ s/</\&lt\;/g;
 		$userFormInput{$userInput} =~ s/>/\&gt\;/g;

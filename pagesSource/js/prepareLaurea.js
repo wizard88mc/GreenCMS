@@ -35,12 +35,15 @@ window.onload = function() {
 				
 				if (activeNews[i].getElementsByTagName("Type")[0].firstChild.nodeValue == "L") {
 					
-					count = count + 1;
-					
 					//prendo id news
 					var id = activeNews[i].getElementsByTagName("ID")[0].firstChild.nodeValue;
 					//prendo data news
 					var date = activeNews[i].getElementsByTagName("Date")[0].firstChild.nodeValue;
+					var dateNews = new Date();
+					dateNews.setFullYear(date.substring(0, 4),date.substring(5, 7) - 1,date.substring(8, 10));
+					var today = new Date();
+					if (today > dateNews) {
+				    count = count + 1;
 					//prendo data e la correggo per metterla nel formato gg/mm/aaaa
 					var dateCorrect = date.substring(8, 10) + "/" + date.substring(5, 7) + "/" + date.substring(0, 4);
 					//prendo titolo news
@@ -76,6 +79,7 @@ window.onload = function() {
 					dlNews.appendChild(dtElementTitle);
 					dlNews.appendChild(ddElementDate);
 					dlNews.appendChild(ddElementText);
+				}
 				}
 			}
 			

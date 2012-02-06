@@ -19,6 +19,9 @@ sub printReport() {
 		$mailingListName .= &getMailingListName($id) . ", ";
 	}
 	
+	my $textWithLinks = $userFormInput{'abstract'};
+	$textWithLinks = &removeLinkTags($textWithLinks);
+	
 	
 	my $content = <<CONTENT;
 <div id="contents">
@@ -32,7 +35,7 @@ sub printReport() {
 		<p><strong>Luogo: </strong>$userFormInput{'place'}</p>
 		<p><strong>Relatore: </strong>$userFormInput{'speaker'} ($userFormInput{'affiliazione'})</p>
 		<p><strong>CV Relatore: </strong>$userFormInput{'speakerCV'}</p>
-		<p><strong>Abstract: </strong>$userFormInput{'abstract'}</p>
+		<p><strong>Abstract: </strong>$textWithLinks</p>
 		<p><strong>Mailing List: </strong>$mailingListName</p>
 		<p><strong>Indirizzi Addizionali: </strong>$userFormInput{'additionalMails'}</p>
 		</fieldset>
@@ -68,6 +71,21 @@ sub printForm() {
 	}
 	my $mailingList = &getMailingListCheckbox();
 	
+	my $seminarDate = $_[1];
+	my $seminarDayOptions, $seminarMonthOptions, $seminarYearOptions;
+	
+	if ($seminarDate) {
+	     my ($day, $month, $year) = &getDateComponentsFromItalianDate($seminarDate);
+	     $seminarDayOptions = &getDaysOptions($day);
+	     $seminarMonthOptions = &getMonthsOptions($month);
+	     $seminarYearOptions = &getYearsOptions($year);
+	}
+	else {
+	    $seminarDayOptions = &getDaysOptions();
+	    $seminarMonthOptions = &getMonthsOptions();
+	    $seminarYearOptions = &getYearsOptions();
+	}
+	
 	my $content = <<CONTENT;
 <div id="contents">
 	<h1>Inserisci nuovo seminario</h1>
@@ -77,8 +95,11 @@ sub printForm() {
 	<legend>Informazioni Generali</legend>
 	<label for="title">Titolo: </label>
 	<input type="text" name="title" id="title" value="$userFormInput{'title'}" /><br />
-	<label for="date">Data: (dd/mm/yyyy)</label>
-	<input type="text" name="date" id="date" value="$userFormInput{'date'}" /><br />
+	<label for="dateDay">Data: </label>
+	<input type="text" name="dateDay" id="dateDay" value="$seminarDayOptions" />
+	<input type="text" name="dateMonth" id="dateMonth" value="$seminarMonthOptions" />
+	<input type="text" name="dateYear" id="dateYear" value="$seminarYearOptions" />
+	<br />
 	<label for="time">Ora: (hh:mm)</label>
 	<input type="text" name="time" id="time" value="$userFormInput{'time'}" /><br />
 	<label for="place">Luogo: </label>
@@ -90,7 +111,7 @@ sub printForm() {
 	<input type="text" name="speaker" id="speaker" value="$userFormInput{'speaker'}" /><br />
 	<label for="affiliazione">Affiliazione: </label>
 	<input type="text" name="affiliazione" id="affiliazione" value="$userFormInput{'affiliazione'}" /><br />
-	<label class="block" for="abstract">Abstract: </label>
+	<label class="block" for="abstract">Abstract: </label><input type="button" class="button" value="Aggiungi link" onClick="addNewLinkSeminary()" />
 	<textarea id="abstract" name="abstract" cols="50" rows="5" >$userFormInput{'abstract'}</textarea><br />
 	<label for="speakerCV">CV Relatore: </label>
 	<textarea id="speakerCV" name="speakerCV" cols="50" rows="5" >$userFormInput{'speakerCV'}</textarea><br />
@@ -119,10 +140,11 @@ CONTENT
 
 sub printThanks() {
 
+	my $count = $_[0];
 	my $content = <<CONTENT;
 <div id="contents">
 	<h1>Seminario Inserito Correttamente</h1>
-	<p>Il seminario è stato inserito correttamente</p>
+	<p>Il seminario è stato inserito correttamente - $count email inviate</p>
 </div>
 CONTENT
 
@@ -136,21 +158,10 @@ sub checkInputs() {
 	if ($userFormInput{'title'} eq "") {
     	$errors .= "Titolo non corretto<br />";
     }
-	
-	if ($userFormInput{'date'} =~ m/^\d{2}\/\d{2}\/\d{4}$/) {
-		my $day = substr($userFormInput{'date'}, 0, 2);
-		my $month = substr($userFormInput{'date'}, 3, 2);
-		my $year = substr($userFormInput{'date'}, 6);
-		if ($month == "02" and $day > "28") {
-			$errors .= "Giorno di seminario errato<br />";
-		}
-		if (($month == "11" or $month == "04" or $month == "06" or $month == "09") and $day == "31") {
-			$errori .= "Giorno di seminario errato<br />";	
-		}
-	}
-	else {
-		$errors .= "Formato data non corretto (gg/mm/aaaa)<br />";
-	}
+    
+    if (&checkCorrectDate($userFormInput{'date'}) ne true) {
+        $errori .= 'Giorno di seminario errato<br />';   
+    }
 	
 	if ($userFormInput{'time'} =~ m/^\d{2}\:\d{2}$/) {
     	my $hour = substr($userFormInput{'time'}, 0, 2);
@@ -201,17 +212,16 @@ sub checkInputs() {
 
 $page = new CGI;
 
-$cookie = $page->cookie("CGISESSIONID") || undef;
-if (!defined($cookie)) {
-	print $page->redirect($siteForCGI . $folderBase . "reservedzone/login.html");
-}
+#$cookie = $page->cookie("CGISESSIONID") || undef;
+#if (!defined($cookie)) {
+#	print $page->redirect($siteForCGI . $folderBase . "reservedzone/login.html");
+#}
 
 $userFormInput{'submit'} = $page->param('submit');
 
 if ($userFormInput{'submit'} ne 0) {
 	
 	$userFormInput{'title'} = $page->param('title');
-	$userFormInput{'date'} = $page->param('date');
 	$userFormInput{'time'} = $page->param('time');
 	$userFormInput{'place'} = $page->param('place');
 	$userFormInput{'speaker'} = $page->param('speaker');
@@ -228,6 +238,7 @@ if ($userFormInput{'submit'} ne 0) {
 			$userFormInput{$userInput} = "";
 		}
 		utf8::decode($userFormInput{$userInput});
+		$userFormInput{$userInput} =~ s/\"/''/g;
 		$userFormInput{$userInput} =~ s/\&/\&amp\;/g;
 		$userFormInput{$userInput} =~ s/</\&lt\;/g;
 		$userFormInput{$userInput} =~ s/>/\&gt\;/g;
@@ -237,16 +248,18 @@ if ($userFormInput{'submit'} ne 0) {
 
 $title = "Nuovo Seminario";
 $content = &printForm();
-$secondLevel = &createSecondLevelMenu();
+#$secondLevel = &createSecondLevelMenu();
 
 if ($userFormInput{'submit'} eq "Conferma") {
+    
+    $userFormInput{'date'} = $page->param('date');
 	
-	my $eventID = &insertNewSeminary();
+	my $eventID = &insertNewSeminary(\%userFormInput);
 	
 	if ($eventID != 0) {
+		my $count = &sendEventMail($eventID);
 		$title = "Inserimento Avvenuto";
-		$content = &printThanks();
-		&sendEventMail($eventID);
+		$content = &printThanks($count);
 	}
 	else {
 		$title = "Errore nell'inserimento";
@@ -256,6 +269,9 @@ if ($userFormInput{'submit'} eq "Conferma") {
 }
 if ($userFormInput{'submit'} eq "Inserisci") {
 		
+    $userFormInput{'date'} = $page->param('dateDay') . '/' . $page->param('dateMonth') .'/' .
+        $page->param('dateYear');
+    
 	my $errors = &checkInputs();
 	
 	if ($errors eq "") {
@@ -264,7 +280,7 @@ if ($userFormInput{'submit'} eq "Inserisci") {
 	
 	}
 	else {
-		$content = &printForm($errors);
+		$content = &printForm($errors, $userFormInput{'date'});
 		
 	}
 }

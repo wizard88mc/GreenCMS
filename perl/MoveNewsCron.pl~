@@ -40,9 +40,8 @@ sub moveNewsCron() {
 		my $title = $activeNews->findvalue('Title');
 		my $expirationDate = $activeNews->findvalue('ExpirationDate');
 		
-		my $expirationYear = substr($expirationDate, 0, 4);
-		my $expirationMonth = substr($expirationDate, 5, 2);
-		my $expirationDay = substr($expirationDate, 8, 2);
+		my ($expirationDay, $expirationMonth, $expirationYear) = 
+		            &getDateComponentsFromDBDate($expirationDate);
 		
 		my $delta = Delta_Days($actualYear, $actualMonth, $actualDay, $expirationYear, $expirationMonth, $expirationDay);
 		

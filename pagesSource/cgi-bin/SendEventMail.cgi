@@ -6,7 +6,6 @@ use XML::LibXML;
 use utf8;
 
 require "SendMail.cgi";
-require "GlobalFunctions.cgi";
 
 sub sendEventMail() {
 	

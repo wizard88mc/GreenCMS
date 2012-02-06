@@ -6,9 +6,6 @@ use Net::SMTP;
 use utf8;
 use Time::Zone;
 
-require "/etc/apache2/informatica_dev/perl/GlobalVariables.pl";
-require "/etc/apache2/informatica_dev/perl/GlobalFunctions.pl";
-
 sub retrieveDate{
 	#recupero giorno, mese, anno e giorno della settimana
 	my ($min, $oggi, $anno, $mese, $stringaData);

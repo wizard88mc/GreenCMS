@@ -7,6 +7,7 @@ use utf8;
 use Time::Zone;
 
 require "/etc/apache2/informatica_dev/perl/GlobalVariables.pl";
+require "/etc/apache2/informatica_dev/perl/GlobalFunctions.pl";
 
 sub retrieveDate{
 	#recupero giorno, mese, anno e giorno della settimana
@@ -76,34 +77,24 @@ sub sendEventMailCron() {
 	my $tableEvents = $root->find("//TableEvents/Event");
 	
 	#prendo il giorno attuale
-	my $actualYear = localtime->year() + 1900;
-	my $actualMonth = localtime->mon() + 1;
-	if (length($actualMonth) == 1) {
-		$actualMonth = "0$actualMonth";
-	}
-	my $actualDay = localtime->mday();
-	if (length($actualDay) == 1) {
-		$actualDay = "0$actualDay";
-	}
+	my ($currentYear, $currentMonth, $currentDay) = &getCurrentDate();
 	
 	foreach my $event ($tableEvents->get_nodelist) {
 		
 		#recupero data evento
 		$eventDate = $event->findvalue('Date');
-		
-		my $eventYear = substr($eventDate, 0, 4);
-		my $eventMonth = substr($eventDate, 5, 2);
-		my $eventDay = substr($eventDate, 8, 2);
+		my ($eventDay, $eventMonth, $eventYear) = &getDateComponentsFromDBDate($eventDate);
 		
 		#calcolo differenza di giorni
-		my $deltaDays = Delta_Days($actualYear, $actualMonth, $actualDay, $eventYear, $eventMonth, $eventDay);
+		my $deltaDays = Delta_Days($currentYear, $currentMonth, $currentDay, 
+		    $eventYear, $eventMonth, $eventDay);
 		
 		#mando mail o giorno prima o tre giorni prima
 		if ($deltaDays == 0) {
 			
 			#recupero informazioni dell'evento
 			my $eventTitle = $event->find('Title')->get_node(1)->firstChild->toString;
-			$eventDate = substr($eventDate, 8, 2) . "/" . substr($eventDate, 5, 2) . "/" . substr($eventDate, 0, 4);
+			$eventDate = &convertDateFromDBToItalianDate($eventDate);
 			my $eventPlace = $event->find('Place')->get_node(1)->firstChild->toString;
 			$eventTime = $event->findvalue('Time');
 			$eventTime = substr($eventTime, 0, 5);
@@ -112,6 +103,7 @@ sub sendEventMailCron() {
 			if ($event->findvalue('Abstract') ne "") {
 				$eventAbstract  = $event->find('Abstract')->get_node(1)->firstChild->toString;
 			}
+			$eventAbstract = &removeLinkTags($eventAbstract);
 			my $eventID =  $event->find('ID')->get_node(1)->firstChild->toString;
 			
 			#informazioni generali della mail

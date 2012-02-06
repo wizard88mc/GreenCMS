@@ -34,7 +34,7 @@ require "GlobalFunctions.cgi";
 			my $newsNode = $root->find("//TableActiveNews/ActiveNews[ID=$newsID]")->get_node(1);
 			
 			my $date = $newsNode->findvalue('Date');
-			$date = substr($date, 8, 2) . "/" . substr($date, 5, 2) . "/" . substr($date, 0, 4);
+			#$date = substr($date, 8, 2) . "/" . substr($date, 5, 2) . "/" . substr($date, 0, 4);
 			my $time = $newsNode->findvalue('Time');
 			$time = substr($time, 0, 5);
 			my $publisher = $newsNode->findvalue('Publisher');
@@ -48,12 +48,12 @@ require "GlobalFunctions.cgi";
 		
 		}
 		
-		if (!$newsFound) {
+		if ($newsFound == 0) {
 			
 			$document = $parser->parse_file($espiredNewsXML);
 			$root = $document->getDocumentElement;
 		
-			$title = $root->findvalue("TableExpiredNews/ExpiredNews[ID=$newsID]");
+			$title = $root->findvalue("TableExpiredNews/ExpiredNews[ID=$newsID]/Title");
 			
 			if ($title ne "") {
 				
@@ -63,7 +63,7 @@ require "GlobalFunctions.cgi";
 				
 				$informations{'title'} = $title;
 				my $date = $newsNode->findvalue('Date');
-				$date = substr($date, 8, 2) . "/" . substr($date, 5, 2) . "/" . substr($date, 0, 4);
+				#$date = substr($date, 8, 2) . "/" . substr($date, 5, 2) . "/" . substr($date, 0, 4);
 				my $time = $newsNode->findvalue('Time');
 				$time = substr($time, 0, 5);
 				my $publisher = $newsNode->findvalue('Publisher');
@@ -80,7 +80,7 @@ require "GlobalFunctions.cgi";
 	
 	my $newsHeader;
 	
-	if (!$newsFound) {
+	if ($newsFound == 0) {
 		
 		$informations{'title'} = "Error";
 		$informations{'date'} = "";
@@ -91,14 +91,14 @@ require "GlobalFunctions.cgi";
 	}
 	else {
 		$newsHeader = "Scritto da $informations{'publisher'} il giorno $informations{'date'} alle ore $informations{'time'}";
-		$informations{'text'} = convertLinks($informations{'text'});
+		$informations{'text'} = &convertLinks($informations{'text'});
 	}
 	
     utf8::encode($informations{'title'});
 	utf8::encode($newsHeader);
 	utf8::encode($informations{'text'});
 	
-	my $newsPage = &openFile($siteForCGI . "news/readnews.html");
+	my $newsPage = &openFile($siteForCGI . "news/readnewsen.html");
 	
 	my $srcPath = "src=\"../";
 	my $hrefPath = "href=\"../";

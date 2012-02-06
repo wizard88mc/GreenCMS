@@ -8,7 +8,7 @@ require "/etc/apache2/informatica_dev/perl/GlobalFunctions.pl";
 {
 
     moveNewActiveNews();	
-	#moveNewsCron();
-	#sendEventMailCron();
+	moveNewsCron();
+	sendEventMailCron();
 	
 }

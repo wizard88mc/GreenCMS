@@ -4,8 +4,8 @@ use XML::LibXML;
 use utf8;
 
 require "GlobalVariables.pl";
-require "WorkWithFiles.pl";
 require "GlobalFunctions.cgi";
+require "WorkWithFiles.pl";
 
 {
 

@@ -4,9 +4,7 @@ use XML::LibXML;
 use Date::Calc qw(Today Delta_Days);
 use Time::localtime;
 
-require "/etc/apache2/informatica_dev/perl/GlobalVariables.pl";
 require "/etc/apache2/informatica_dev/perl/ExtractXML.pl";
-
 
 #metodo che sposta news scadute nell'apposito file e le elimina da ActiveNews.xml
 sub moveNewsCron() {

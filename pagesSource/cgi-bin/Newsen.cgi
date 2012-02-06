@@ -2,10 +2,11 @@
 
 use XML::LibXML;
 use utf8;
+use Date::Calc qw(Delta_Days);
 
 require "GlobalVariables.pl";
-require "WorkWithFiles.pl";
 require "GlobalFunctions.cgi";
+require "WorkWithFiles.pl";
 
 {
 	
@@ -27,7 +28,7 @@ require "GlobalFunctions.cgi";
 		
 		my $newsID = $activeNews->findvalue('ID');
 		my $date = $activeNews->findvalue('Date');
-		$date = substr($date, 8, 2) . "/" . substr($date, 5, 2) . "/" . substr($date, 0, 4);
+		$date = &convertDateFromDBToItalian($date);
 		my $time = $activeNews->findvalue('Time');
 		$time = substr($time, 0, 5);
 		my $title = $activeNews->find('Title')->get_node(1)->firstChild->toString;
@@ -45,7 +46,7 @@ require "GlobalFunctions.cgi";
 			$type = "<abbr title=\"Magistrale\">LM</abbr>";
 		}
 		
-		$text = convertLinks($text);
+		$text = &convertLinks($text);
 		
 		my $stringNews = 
 		"<h4><strong><span xml:lang=\"it\">$title</span> - $type</strong></h4>
@@ -73,32 +74,37 @@ require "GlobalFunctions.cgi";
 		
 		my $newsID = $expiredNews->findvalue('ID');
 		my $date = $expiredNews->findvalue('Date');
-		$date = substr($date, 8, 2) . "/" . substr($date, 5, 2) . "/" . substr($date, 0, 4);
-		my $time = $expiredNews->findvalue('Time');
-		$time = substr($time, 0, 5);
-		my $title = $expiredNews->findvalue('Title');
-		my $publisher = $expiredNews->findvalue('Publisher');
-		my $type = $expiredNews->findvalue('Type');
-		my $text = $expiredNews->findvalue('Text');
+		$date = &convertDateFromDBToItalian($date);
+		my ($currentYear, $currentMonth, $currentDay) = &getCurrentDate();
+		if (&checkDatesCronologicallyCorrect(
+		    $date, "$currentDay-$currentMonth-$currentYear") eq true) {
 		
-		if ($type eq "G") {
-			$type = "<abbr title=\"General\">G</abbr>";
-		}
-		if ($type eq "L") {
-			$type = "<abbr title=\"Laurea\">L</abbr>";
-		}
-		if ($type eq "LM") {
-			$type = "<abbr title=\"Magistrale\">LM</abbr>";
-		}
-		
-		$text = convertLinks($text);
-		
-		my $stringNews = 
-		"<h3>$title - $type</h3>
-		<p>$publisher - $date $time</p>
-		<p class=\"withBorderBottom\">$text</p>";
-		
-		$listExpiredNews .= $stringNews;
+            my $time = $expiredNews->findvalue('Time');
+            $time = substr($time, 0, 5);
+            my $title = $expiredNews->findvalue('Title');
+            my $publisher = $expiredNews->findvalue('Publisher');
+            my $type = $expiredNews->findvalue('Type');
+            my $text = $expiredNews->findvalue('Text');
+            
+            if ($type eq "G") {
+                $type = "<abbr title=\"General\">G</abbr>";
+            }
+            if ($type eq "L") {
+                $type = "<abbr title=\"Laurea\">L</abbr>";
+            }
+            if ($type eq "LM") {
+                $type = "<abbr title=\"Magistrale\">LM</abbr>";
+            }
+            
+            $text = &convertLinks($text);
+            
+            my $stringNews = 
+            "<h3>$title - $type</h3>
+            <p>$publisher - $date $time</p>
+            <p class=\"withBorderBottom\">$text</p>";
+            
+            $listExpiredNews .= $stringNews;
+            }
 		
 	}
 		

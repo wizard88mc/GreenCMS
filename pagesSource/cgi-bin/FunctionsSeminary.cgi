@@ -5,8 +5,6 @@ use CGI::Carp qw(fatalsToBrowser);
 use XML::LibXML;
 use utf8;
 
-require "GlobalFunctions.cgi";
-
 #insieme delle funzioni per la gestione dei seminari
 
 $fileEvents = $fileXML . "EventMailingListContact.xml";
@@ -161,6 +159,7 @@ sub getSeminarOption() {
 			#recupero ID, Titolo, Data e Relatore
 			my $eventID = $event->findvalue('ID');
 			my $eventTitle = $event->findvalue('Title');
+			$eventTitle = substr($eventTitle, 0, 50) . '...';
 			my $eventDate = $event->findvalue('Date');
 			my $eventSpeaker = $event->findvalue('Speaker');
 			
