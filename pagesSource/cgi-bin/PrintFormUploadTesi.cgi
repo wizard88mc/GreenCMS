@@ -16,6 +16,8 @@ $CGI::POST_MAX = 1024 * 10000000;
 
 #costruisco la stringa per la form di upload di una tesi
 sub formInsertTesi() {
+    
+    my $optionsRelatore = &getOptionsRelatore();
 	
 	my $formString = <<CONTENT;
 <form method="post" action="PrintFormUploadTesi.cgi" enctype="multipart/form-data">
@@ -30,7 +32,7 @@ sub formInsertTesi() {
 	<label for="surname">Cognome: </label>
 	<input type="text" name="surname" id="surname" value="$userFormInput{'surname'}" />
 	<label for="matricola">Matricola: </label>
-	<input type="text" name="matricola" id="matricola" value="$userFormInput{'matricola'}" />
+	<input type="text" name="matricola" id="matricola" value="$userFormInput{'matricola'}" /><br />
 	</fieldset>
 	<fieldset>
 	<legend>Informazioni Tesi</legend>
@@ -41,6 +43,10 @@ sub formInsertTesi() {
 	<p>Abstract: breve riassunto della tesi proposta</p>
 	<p class="last">Specifica se appartieni alla Laurea Magistrale o alla Laurea Specialistica</p>
 	</div>
+	<label for="relatore">Relatore: </label>
+	<select name="relatore" id="relatore">
+	    $optionsRelatore
+	</select>
 	<label for="titleTesi">Titolo della Tesi: </label>
 	<input type="text" name="titleTesi" id="titleTesi" value="$userFormInput{'titleTesi'}" />
 	<label for="fileTesi">File della Tesi: </label>
@@ -95,7 +101,7 @@ sub checkInputs() {
     	$errors .= "Cognome inserito non corretto<br />";
     }
     #matricola deve essere di sei numeri e basta
-    if ($userFormInput{'matricola'} !~  /^\d{6}$/ || (&checkBadContent($userFormInput{'matricola'}) ne "")) {
+    if (($userFormInput{'matricola'} !~  /^\d{6}$/ && $userFormInput{'matricola'} !~  /^\d{7}$/) || (&checkBadContent($userFormInput{'matricola'}) ne "")) {
     	$errors .= "Numero matricola errato<br />";
     }
     if (defined($userFormInput{'titleTesi'}) && (length($userFormInput{'titleTesi'}) < 5 || &checkBadContent($userFormInput{'titleTesi'}))) {
@@ -205,7 +211,6 @@ sub uploadFile {
 
 		$userFormInput{'submit'} = $page->param('submit');
 		
-		
 		my $form = &formInsertTesi();
 		
 		#utente ha cliccato sul bottone submit
@@ -214,6 +219,7 @@ sub uploadFile {
 			$userFormInput{'name'} = $page->param('name');
 			$userFormInput{'surname'} = $page->param('surname');
 			$userFormInput{'matricola'} = $page->param('matricola');
+			$userFormInput{'relatore'} = $page->param('relatore');
 			$userFormInput{'titleTesi'} = $page->param('titleTesi');
 			$userFormInput{'fileTesi'} = $page->param('fileTesi');
 			$userFormInput{'abstract'} = $page->param('abstract');
@@ -225,6 +231,7 @@ sub uploadFile {
 					$userFormInput{$userInput} = "";
 				}
 				utf8::decode($userFormInput{$userInput});
+				$userFormInput{$userInput} =~ s/\"/''/g;
 				$userFormInput{$userInput} =~ s/\&/\&amp;/g;
 				$userFormInput{$userInput} =~ s/</\&lt\;/g;
 				$userFormInput{$userInput} =~ s/>/\&gt\;/g;

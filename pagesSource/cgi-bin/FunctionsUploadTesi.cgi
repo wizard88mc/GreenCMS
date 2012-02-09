@@ -1,10 +1,17 @@
 #!/usr/bin/perl
 
+
+use DBI;
+use DBD::mysql;
 use XML::LibXML;
+use HTML::Entities;
 use File::Basename;
 use utf8;
 
 require "InsertThesisPageArchive.cgi";
+require "ConnectDatabase.pl";
+require "GetTeachersID.pl";
+require "GetTeacherInformations.pl";
 
 $archiveXML = $fileXML . "ArchiveThesis.xml";
 $fileXML .= "Thesis.xml";
@@ -42,6 +49,7 @@ sub insertNewTesi() {
     <Name>$input{'name'}</Name>
     <Surname>$input{'surname'}</Surname>
     <Matricola>$input{'matricola'}</Matricola>
+    <Relatore>$input{'relatore'}</Relatore>
     <Title>$input{'titleTesi'}</Title>
     <FileName>$input{'fileTesi'}</FileName>
     <Abstract>$input{'abstract'}</Abstract>
@@ -51,7 +59,9 @@ sub insertNewTesi() {
 	my $newNode = $parser->parse_balanced_chunk($newThesisString) or die "$!";
 	
 	#aggiungo nuovo nodo
-	$tableThesis->addChild($newNode);
+	for my $nodeToAdd($newNode->childNodes) {
+	    $tableThesis->addChild($nodeToAdd);
+	}
 	
 	#scrivo file XML
 	open(FILE, ">$fileXML") or die("Non riesco ad aprire il file");
@@ -150,6 +160,7 @@ sub archiveThesis() {
 		my $title = $thesis->find('Title')->get_node(1)->firstChild->toString;
 		my $abstract = $thesis->find('Abstract')->get_node(1)->firstChild->toString;
 		my $matricola = $thesis->findvalue('Matricola');
+		my $relatore = $thesis->find('Relatore')->get_node(1)->firstChild->toString;
 		my $lang = $thesis->findvalue('@lang');
 		
 		my $newNodeString = "
@@ -157,6 +168,7 @@ sub archiveThesis() {
 		<Name>$name</Name>
 		<Surname>$surname</Surname>
 		<Matricola>$matricola</Matricola>
+		<Relatore>$relatore</Relatore>
 		<Title>$title</Title>
 		<Abstract>$abstract</Abstract></Thesis>";
 		
@@ -168,12 +180,12 @@ sub archiveThesis() {
 		
 		if ($lang eq "it") {
 			
-			$stringIt .= "<h4>$title - $name $surname - $matricola</h4><p class=\"withBorderBottom\">$abstract</p>";
-			$stringEn .= "<h4 xml:lang=\"it\">$title - $name $surname - $matricola</h4><p class=\"withBorderBottom\" xml:lang=\"it\">$abstract</p>";
+			$stringIt .= "<h4>$title - $name $surname - $matricola - Relatore: $relatore</h4><p class=\"withBorderBottom\">$abstract</p>";
+			$stringEn .= "<h4 xml:lang=\"it\">$title - $name $surname - $matricola - Relatore $relatore</h4><p class=\"withBorderBottom\" xml:lang=\"it\">$abstract</p>";
 		}
 		else {
-			$stringIt .= "<h4><span xml:lang=\"en\">$title</span> - $name $surname- $matricola</h4><p class=\"withBorderBottom\" xml:lang=\"en\">$abstract</p>";
-			$stringEn .= "<h4>$title - <span xml:lang=\"it\">$name $surname</span> - $matricola</h4><p class=\"withBorderBottom\">$abstract</p>";
+			$stringIt .= "<h4><span xml:lang=\"en\">$title</span> - $name $surname- $matricola - Relatore: $relatore </h4><p class=\"withBorderBottom\" xml:lang=\"en\">$abstract</p>";
+			$stringEn .= "<h4>$title - <span xml:lang=\"it\">$name $surname</span> - $matricola - Supervisor: $relatore</h4><p class=\"withBorderBottom\">$abstract</p>";
 		}
 	}
 	
@@ -196,10 +208,78 @@ sub archiveThesis() {
 	print FILE $documentArchive->toString();
 	close(FILE);
 	
+	utf8::encode($stringIt);
+	utf8::encode($stringEn);
+	
 	&insertThesisPageArchive($stringIt, $stringEn);
 	
 	return "ok";
 	
+}
+
+sub getOptionsRelatore() {
+    
+    my $optionsSelect = '<optgroup label="Docenti Interni">';
+    
+    my $DBIConnection = &connectDatabase("www") or die "$!";
+
+    # identificativi per docente interno
+    my $idTP = "2";
+    my $idTG = "121";
+
+    my $teachersID = &getTeachersID($DBIConnection, $idTP, $idTG) or die "$!";
+    
+    while (my $teacher = $teachersID->fetchrow_hashref()) {
+        
+        my $teacherID = $teacher->{'ID'};
+        my $nameSurnameQuery = "SELECT Persona.VARCHAR02 as Cognome, Persona.VARCHAR03 as Nome
+FROM Persona
+WHERE Persona.ID = $teacherID; ";
+        
+       my $queryHandle = $DBIConnection->prepare($nameSurnameQuery);
+        $queryHandle->execute();
+	
+        my ($surname, $name) = $queryHandle->fetchrow_array();
+        
+        my $teacherName = $surname . ' ' . $name;
+        my $teacherValue = $name . ' ' . $surname;
+        
+        $optionsSelect .= "<option value=\"$teacherValue\">$teacherName</option>";
+        
+    }
+    
+    $optionsSelect .= '</optgroup>';
+    
+    $optionsSelect .= '<optgroup label="Docenti Esterni">';
+    #identificativi per docente esterno
+    $idTP = "10";
+	$idTG = "121";
+	
+	$teachersID = &getTeachersID($DBIConnection, $idTP, $idTG) or die "$!";
+    
+    while (my $teacher = $teachersID->fetchrow_hashref()) {
+        
+        my $teacherID = $teacher->{'ID'};
+        my $nameSurnameQuery = "SELECT Persona.VARCHAR02 as Cognome, Persona.VARCHAR03 as Nome
+FROM Persona
+WHERE Persona.ID = $teacherID; ";
+        
+       my $queryHandle = $DBIConnection->prepare($nameSurnameQuery);
+        $queryHandle->execute();
+	
+        my ($surname, $name) = $queryHandle->fetchrow_array();
+        
+        my $teacherName = $surname . ' ' . $name;
+        
+        $optionsSelect .= "<option value=\"$teacherName\">$teacherName</option>";
+        
+    }
+	
+    $optionsSelect .= '</optgroup>';
+    
+    $DBIConnection->disconnect();
+    
+    return $optionsSelect;
 }
 
 1;

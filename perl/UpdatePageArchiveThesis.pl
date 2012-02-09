@@ -34,17 +34,18 @@ sub updatePageArchiveThesis() {
 			my $surname = $thesis->find('Surname')->get_node(1)->firstChild->toString;
 			my $abstract = $thesis->find('Abstract')->get_node(1)->firstChild->toString;
 			my $title = $thesis->find('Title')->get_node(1)->firstChild->toString;
+			my $relatore = $thesis->findvalue('Relatore');
 			my $matricola = $thesis->findvalue('Matricola');
 			my $lang = $thesis->findvalue('@lang');
 			
 			if ($lang eq "it") {
 			
-				$stringIt .= "<h4>$title - $name $surname - $matricola</h4><p class=\"withBorderBottom\">$abstract</p>";
-				$stringEn .= "<h4 xml:lang=\"it\">$title - $name $surname - $matricola</h4><p class=\"withBorderBottom\" xml:lang=\"it\">$abstract</p>";
+				$stringIt .= "<h4>$title - $name $surname - $matricola - Relatore: $relatore</h4><p class=\"withBorderBottom\">$abstract</p>";
+				$stringEn .= "<h4 xml:lang=\"it\">$title - $name $surname - $matricola - Relatore: $relatore</h4><p class=\"withBorderBottom\" xml:lang=\"it\">$abstract</p>";
 			}
 			else {
-				$stringIt .= "<h4><span xml:lang=\"en\">$title</span> - $name $surname - $matricola</h4><p class=\"withBorderBottom\" xml:lang=\"en\">$abstract</p>";
-				$stringEn .= "<h4>$title - <span xml:lang=\"it\">$name $surname - $matricola</span></h4><p class=\"withBorderBottom\">$abstract</p>";
+				$stringIt .= "<h4><span xml:lang=\"en\">$title</span> - $name $surname - $matricola - Relatore: $relatore</h4><p class=\"withBorderBottom\" xml:lang=\"en\">$abstract</p>";
+				$stringEn .= "<h4>$title - <span xml:lang=\"it\">$name $surname - $matricola</span> - Supervisor: $relatore</h4><p class=\"withBorderBottom\">$abstract</p>";
 			}
 		}
 	
