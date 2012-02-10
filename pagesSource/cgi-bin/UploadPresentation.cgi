@@ -63,7 +63,7 @@ sub checkInputs() {
     	$errors .= "Cognome inserito non corretto<br />";
     }
     #matricola deve essere di sei numeri e basta
-    if ($userFormInput{'matricola'} !~  /^\d{6}$/ || (&checkBadContent($userFormInput{'matricola'}) ne "")) {
+    if (($userFormInput{'matricola'} !~  /^\d{6}$/ && $userFormInput{'matricola'} !~  /^\d{7}$/) || (&checkBadContent($userFormInput{'matricola'}) ne "")) {
     	$errors .= "Numero matricola errato<br />";
     }
     

@@ -39,11 +39,10 @@ sub printFormCloseSession() {
 		<option value="09">Settembre</option>
 		<option value="10">Ottobre </option>
 		<option value="11">Novembre</option>
-		<option value="12">Dicembbre</option>
+		<option value="12">Dicembre</option>
 	</select><br /><br />
 	<label for="year">Anno Sessione Laurea: </label>
 	<select name="year" id="year">
-		<option value="2010">2010</option>
 		<option value="2011">2011</option>
 		<option value="2012">2012</option>
 		<option value="2013">2013</option>
@@ -91,16 +90,34 @@ if ($userFormInput{'submit'} eq "Archivia") {
 	if ($result eq "ok") {
 		
 		#creo archivio file e lo sposto in cartella dedicata
-		my $archiveThesis = "Tesi_$userFormInput{'year'}_$userFormInput{'month'}.tgz";
-		my $archivePresentation = "Presentazioni_$userFormInput{'year'}_$userFormInput{'month'}.tgz";
+		#my $archiveThesis = "Tesi_$userFormInput{'year'}_$userFormInput{'month'}.tgz";
+		#my $archivePresentation = "Presentazioni_$userFormInput{'year'}_$userFormInput{'month'}.tgz";
 		
-		my $cmd = "tar -cvzf " . $siteForCGI . "private/archivio/$archiveThesis -C $siteForCGI" . "private/tesimagistrale/ . 1>/dev/null";
+		#my $cmd = "tar -cvzf " . $siteForCGI . "private/archivio/$archiveThesis -C $siteForCGI" . "private/tesimagistrale/ . 1>/dev/null";
+		#system($cmd);
+		
+		#$cmd = "tar -cvzf " . $siteForCGI . "private/archivio/$archivePresentation -C $siteForCGI" . "private/presentazionimagistrale/ . 1>/dev/null";
+		#system($cmd);	
+		
+		#$cmd = "rm " . $siteForCGI . "private/tesimagistrale/*.* $siteForCGI" . "private/presentazionimagistrale/*.*";
+		#system($cmd);
+		
+		# creo due cartelle, una per le tesi e una per le presentazioni
+		my $thesisFolder = $siteForCGI . "private/archivio/Tesi_$userFormInput{'year'}_$userFormInput{'month'}/";
+		my $presentationsFolder = $siteForCGI . "private/archivio/Presentazioni_$userFormInput{'year'}_$userFormInput{'month'}/";
+		
+		# sposto i file contenuti dentro le cartelle nelle nuove cartelle di archivio
+		my $cmd = "cp -r $siteForCGI" . "private/tesimagistrale/ $thesisFolder"; 
 		system($cmd);
 		
-		$cmd = "tar -cvzf " . $siteForCGI . "private/archivio/$archivePresentation -C $siteForCGI" . "private/presentazionimagistrale/ . 1>/dev/null";
-		system($cmd);	
+		$cmd = "cp -r $siteForCGI" . "private/tesimagistrale/ $presentationsFolder";
+		system($cmd);
 		
-		$cmd = "rm " . $siteForCGI . "private/tesimagistrale/*.* $siteForCGI" . "private/presentazionimagistrale/*.*";
+		# rimuovo tutti i file all'interno delle cartelle tesimagistrale e presentazionimagistrale
+		$cmd = "rm -rf $siteForCGI" . 'private/tesimagistrale/*';
+		system($cmd);
+		
+		$cmd = "rm -rf $siteForCGI" . 'private/presentazionimagistrale/*';
 		system($cmd);
 		
 		$content = &printFormCloseSession("Operazione Avvenuta");
