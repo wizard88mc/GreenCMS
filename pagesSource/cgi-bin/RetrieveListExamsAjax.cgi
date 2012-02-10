@@ -79,6 +79,20 @@ $DBIConnection->disconnect();
 print "$completeList";
 }
 or do {
+    
+    my %emailInformations;
+	    
+    $emailInformations{'email'} = 'webinformatica@math.unipd.it';
+    $emailInformations{'emailTo'} = 'support@math.unipd.it';
+    $emailInformations{'message'} = " Buongiorno. 
+    Messaggio automatico proveniente da informatica.math.unipd.it per segnalare 
+    problemi nel raggiungimento del DB per il recupero degli esami. Vi preghiamo di 
+    controllare al piu' presto e ristabilire la connessione. Grazie e Arrivederci";
+    
+    $emailInformations{'subject'} = "Problemi collegamento DB esami informatica.math.unipd.it";
+    
+    &sendMail(%emailInformations);
+    
 	$completeList = "<ul><li>DB non raggiungibile. Problemi Tecnici. Ci scusiamo per il disagio. </li></ul>";
 	
 	print "$completeList";

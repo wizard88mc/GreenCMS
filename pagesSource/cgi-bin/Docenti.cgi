@@ -10,6 +10,7 @@ require "GlobalVariables.pl";
 require "ConnectDatabase.pl";
 require "GetTeachersID.pl";
 require "GetTeacherInformations.pl";
+require "SendMail.cgi";
 
 #funzione che genera testo a caso
 sub generateRandomString() {
@@ -105,7 +106,6 @@ sub createMaskedEmail() {
 			my %informations = %{&getTeacherInformations($DBIConnection, $teacherID)};
 
 			my $teacherName = $informations{"Cognome"} . " " . $informations{"Nome"};
-			
 			my $teacherEmail = $informations{"Email"};
 			my $teacherPhone = $informations{"Telefono"};
 			my $teacherOffice = $informations{"Ufficio"};
@@ -196,7 +196,13 @@ sub createMaskedEmail() {
 			my $teacherName = $informations{"Cognome"} . " " . $informations{"Nome"};
 			my $teacherEmail = $informations{"Email"};
 			my $teacherPhone = $informations{"Telefono"};
+			if ($teacherPhone eq "") {
+			     $teacherPhone = "Non assegnato";   
+			}
 			my $teacherOffice = $informations{"Ufficio"};
+			if ($teacherOffice eq '-NN-') {
+			    $teacherOffice = "Non assegnato";
+			}
 			my $teacherSite = $informations{"Sito"};
 			my $teacherCollapsed = $informations{"Nome"}.$informations{"Cognome"};
 			$teacherCollapsed =~ s/ //g;
@@ -266,6 +272,19 @@ $pageTeachers
 PAGE
 	}
 	or do {
+	    
+	    my %emailInformations;
+	    
+	    $emailInformations{'email'} = 'webinformatica@math.unipd.it';
+	    $emailInformations{'emailTo'} = 'support@math.unipd.it';
+	    $emailInformations{'message'} = " Buongiorno. 
+	    Messaggio automatico proveniente da informatica.math.unipd.it per segnalare 
+	    problemi nel raggiungimento del DB per il recupero dei docenti. Vi preghiamo di 
+	    controllare al piu' presto e ristabilire la connessione. Grazie e Arrivederci";
+	    
+	    $emailInformations{'subject'} = "Problemi collegamento DB docenti informatica.math.unipd.it";
+	    
+	    &sendMail(%emailInformations);
 		
 		$tableInternalTeachers = "DB non raggiungbile. Problemi tecnici";
 		$tableExternalTeachers = "DB non raggiungbile. Problemi tecnici";

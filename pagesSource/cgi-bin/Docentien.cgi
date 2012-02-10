@@ -58,6 +58,22 @@ sub createMaskedEmail() {
 
 {
 	my $pageTeachers = &openFile($siteForCGI . "organizzazione/docentien.html") or die "$!";
+	
+	my $srcPath = "src=\"../";
+	my $hrefPath = "href=\"../";
+	my $newSRC = "src=\"/$folderBase";
+	my $newHREF = "href=\"/$folderBase";
+	my $linkOrg = "href=\"/$folderBase" . "organizzazione/indexen.html\"";
+	my $oldLinkOrg = "href=\"indexen.html\"";
+	
+	$pageTeachers =~ s/$oldLinkOrg/$linkOrg/g; 
+	$pageTeachers =~ s/$srcPath/$newSRC/g; 
+	$pageTeachers =~ s/$hrefPath/$newHREF/g; 
+	
+	$pageTeachers =~ s/docenti.html/Docenti.cgi/s;
+	
+	eval {
+	
 	my $DBIConnection = &connectDatabase("www") or die "$!";
 
 	my $idTP = "2";
@@ -180,7 +196,13 @@ sub createMaskedEmail() {
 		my $teacherName = $informations{"Cognome"} . " " . $informations{"Nome"};
 		my $teacherEmail = $informations{"Email"};
 		my $teacherPhone = $informations{"Telefono"};
+		if ($teacherPhone eq "") {
+		    $teacherPhone = "Not assigned";
+		}
 		my $teacherOffice = $informations{"Ufficio"};
+		if ($teacherOffice eq '-NN-') {
+		    $teacherOffice = "Not assigned";
+		}
 		my $teacherSite = $informations{"Sito"};
 		my $teacherCollapsed = $informations{"Nome"}.$informations{"Cognome"};
 		$teacherCollapsed =~ s/ //g;
@@ -237,20 +259,8 @@ sub createMaskedEmail() {
 	
 	$DBIConnection->disconnect();
 
-	my $srcPath = "src=\"../";
-	my $hrefPath = "href=\"../";
-	my $newSRC = "src=\"/$folderBase";
-	my $newHREF = "href=\"/$folderBase";
-	my $linkOrg = "href=\"/$folderBase" . "organizzazione/indexen.html\"";
-	my $oldLinkOrg = "href=\"indexen.html\"";
-	
-	$pageTeachers =~ s/$oldLinkOrg/$linkOrg/g; 
-	$pageTeachers =~ s/$srcPath/$newSRC/g; 
-	$pageTeachers =~ s/$hrefPath/$newHREF/g; 
 	$pageTeachers =~ s/<teachersTable\/>/$tableInternalTeachers/;
 	$pageTeachers =~ s/<externalTeachersTable\/>/$tableExternalTeachers/;
-	
-	$pageTeachers =~ s/docenti.html/Docenti.cgi/s;
 
 print <<PAGE;
 Content-type: text/html\n\n
@@ -258,4 +268,34 @@ $pageTeachers
 
 PAGE
 
+    }
+    or do {
+        
+        my %emailInformations;
+	    
+	    $emailInformations{'email'} = 'webinformatica@math.unipd.it';
+	    $emailInformations{'emailTo'} = 'support@math.unipd.it';
+	    $emailInformations{'message'} = " Buongiorno. 
+	    Messaggio automatico proveniente da informatica.math.unipd.it per segnalare 
+	    problemi nel raggiungimento del DB per il recupero dei docenti. Vi preghiamo di 
+	    controllare al piu' presto e ristabilire la connessione. Grazie e Arrivederci";
+	    
+	    $emailInformations{'subject'} = "Problemi collegamento DB docenti informatica.math.unipd.it";
+	    
+	    &sendMail(%emailInformations);
+		
+		$tableInternalTeachers = "DB non raggiungbile. Problemi tecnici";
+		$tableExternalTeachers = "DB non raggiungbile. Problemi tecnici";
+		
+		$pageTeachers =~ s/<teachersTable\/>/$tableInternalTeachers/;
+		$pageTeachers =~ s/<externalTeachersTable\/>/$tableExternalTeachers/;
+		
+		print <<PAGE;
+Content-type: text/html\n\n
+$pageTeachers
+
+PAGE
+        
+        
+    }
 }
