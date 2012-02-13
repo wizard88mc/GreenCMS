@@ -68,9 +68,18 @@ sub createPageCoursesLaureaEn() {
 		$courseDetails{"informations"} = &getInformationsCourse($DBIConnection, $courseID, 2);
 		
 		#recupero trimestre e anno del corso
-		my %periodInformations = %{$courseDetails{"period"}};
-		my $period = $periodInformations{"trimestre"}; 
-		my $year = $periodInformations{"anno"};
+		my %periodInformations;
+		if ($courseDetails{'period'}) {
+		    %periodInformations = %{$courseDetails{'period'}};
+		}
+		my $period = "";
+		if ($periodInformations{'trimestre'}) {
+		    $period = $periodInformations{'trimestre'};
+		}
+		my $year = "";
+		if ($periodInformations{'anno'}) {
+		    $year = $periodInformations{'anno'};
+		}
 		
 		#creo pagina del corso, mi viene restituito il nome del file a cui far linkare il collegamento
 		my $linkFileName = &createCourseDetailsPageLaurea(\%courseDetails, "en"); 

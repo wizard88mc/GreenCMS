@@ -21,15 +21,9 @@ sub createBreadcrumb() {
 	my $stringBreadcrumb = "<span id=\"path\"><a href=\"../index$en.html\" xml:lang=\"en\">Home</a> &#187; ";
 	
 	#nome della pagina padre
-	my $parentPathName = "";
-	if ($parentLinksBreadcrumb{'linkName'}) {
-	    $parentPathName = $parentLinksBreadcrumb{'linkName'};
-	}
+	my $parentPathName = $parentLinksBreadcrumb{"linkName"};
 	#link alla pagina padre
-	my $parentPathLink = "";
-	if ($parentLinksBreadcrumb{'linkFile'}) {
-	    $parentPathLink = $parentLinksBreadcrumb{"linkFile"};
-	}
+	my $parentPathLink = $parentLinksBreadcrumb{"linkFile"};
 	
 	#se la pagina padre è diversa da quella che sto creando aggiungo il link
 	if ($pageName ne $parentPathName && $parentPathName ne "") {

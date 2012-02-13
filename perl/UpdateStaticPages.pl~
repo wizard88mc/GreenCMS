@@ -15,9 +15,11 @@ require "UpdatePHDStudent.pl";
 require "UpdatePHDStudentEn.pl";
 require "UpdatePageArchiveThesis.pl";
 require "CreateReservedTemplate.pl";
+require "UpdateFormsTags.pl";
 
 {
 	&createIndex();
+	&updateFormTags();
 	
 	foreach $folder (@folders) {
 	

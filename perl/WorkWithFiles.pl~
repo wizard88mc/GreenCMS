@@ -17,8 +17,7 @@ sub openFile() {
 	
 	my $fileText = "";
 	
-	#fintanto che c'è da leggere qualcosa all'interno del file leggo e aggiungo alla stringa
-	while (<MYFILE>) { 
+	while (<MYFILE>) { #fintanto che c'è da leggere qualcosa all'interno del file leggo e aggiungo alla stringa
 		chomp;
 		$fileText .= "$_\n";
 	}

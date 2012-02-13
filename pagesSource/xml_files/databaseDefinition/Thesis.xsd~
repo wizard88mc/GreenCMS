@@ -22,5 +22,6 @@
 			<xs:element name="Abstract" type="xs:string" />
 			<xs:element name="TipoLaurea" type="xs:string" />
 		</xs:sequence>
+		<xs:attribute name="lang" type="xs:string" />
 	</xs:complexType>
 </xs:schema>

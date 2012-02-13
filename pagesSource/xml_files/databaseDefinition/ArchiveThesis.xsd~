@@ -21,6 +21,7 @@
 		<xs:sequence>
 			<xs:element name="Name" type="xs:string"/>
 			<xs:element name="Surname" type="xs:string"/>
+			<xs:element name="Matricola" type="xs:string" />
 			<xs:element name="Title" type="xs:string"/>
 			<xs:element name="Abstract" type="xs:integer"/>
 		</xs:sequence>

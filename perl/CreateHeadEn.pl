@@ -21,7 +21,7 @@ sub createHeadEn() {
 	my $keywordsString = "";
 	#creo la stringa di keywords da aggiungere nell'head
 	foreach $keyword ($keywordsList->get_nodelist) {
-		my $keywordValue = $keyword->nodeValue;
+		my $keywordValue = $keyword->firstChild->toString;
 		$keywordsString .= "$keywordValue,";
 	}
 	

@@ -18,7 +18,7 @@ require "GetCourseHours.pl";
 require "GetCourseInformations.pl";
 
 #recupera informazioni per ogni corso, crea la tabella di tutti i corsi della Laurea
-#sub createPageCoursesLaurea() {
+sub createPageCoursesLaurea() {
 
 	my @courseNotLink = ("Stage", "Prova finale");
 
@@ -132,8 +132,7 @@ require "GetCourseInformations.pl";
 		#aggiungo alla tabella in costruzione la nuova riga
 		$tableCourses .= $stringEntry;  
 
-		$i = $i + 1;
-		print "$i\n";
+		$i = $i + 1; 
 		
 	}
 	
@@ -155,6 +154,6 @@ require "GetCourseInformations.pl";
 	&createFile($sitePath . "laurea/corsilaurea.html", $pageCoursesLaurea);  
 	
 
-#}
+}
 
-#1;
+1;

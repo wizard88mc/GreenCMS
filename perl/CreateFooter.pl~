@@ -13,7 +13,7 @@ binmode STDERR, ":utf8";
 sub createFooter() {
 	
 	my $en = "";
-	if ($_[1]) { $en = $_[1]; }
+	if ($_[1] { $en = $_[1]; }
 	
 	my $footerText = '<div id="contatore"><script type="text/javascript">document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));</script>
 <a href="http://www.histats.com" title="contatore utenti connessi"><script  type="text/javascript" >

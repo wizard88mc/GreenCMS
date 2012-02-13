@@ -25,10 +25,8 @@ sub createSinglePage() {
 	my $xmlNode = $_[1];
 	my $sourcePath = $_[2];
 	my $isHomePage = $_[3];
-	my %parentLinksBreadcrumb; 
-	if ($_[4]) { %parentLinksBreadcrumb = %{$_[4]}; }
-	my $en = "";
-	if ($_[5]) { $en = $_[5]; }
+	my %parentLinksBreadcrumb = %{$_[4]};
+	my $en = $_[5];
 	
 	my $secondMenuNotSelected = $xmlNode->findvalue('secondLevelMenuNotSelected');  #prendo dal nodo XML il link del menu di secondo livello che non deve essere selezionato
 	my $pageFile = $xmlNode->findvalue('contentsPageFileName'); #prendo il nome del file dove si trova il contenuto per quella pagina

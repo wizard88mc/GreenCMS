@@ -35,8 +35,8 @@ sub insertThesisPageArchive() {
 
 	}
 	
-	utf8::encode($pageArchiveIt);
-	utf8::encode($pageArchiveEn);
+	#utf8::decode($pageArchiveIt);
+	#utf8::decode($pageArchiveEn);
 
 	&createFile($siteForCGI . "laureamagistrale/archiviotesi.html", $pageArchiveIt);
 	&createFile($siteForCGI . "laureamagistrale/archiviotesien.html", $pageArchiveEn);

@@ -5,6 +5,7 @@ use DBD::mysql;
 use HTML::Entities;
 use utf8;
 
+
 require "ConnectDatabase.pl";
 require "WorkWithFiles.pl";
 require "GlobalVariables.pl";
@@ -17,8 +18,7 @@ require "GetCourseTimeInfo.pl";
 require "GetCourseHours.pl";
 require "GetCourseInformations.pl";
 
-#recupera informazioni per ogni corso, crea la tabella di tutti i corsi della Laurea
-sub createPageCoursesLaurea() {
+sub createPageCoursesLaureaEn() {
 
 	my @courseNotLink = ("Stage", "Prova finale");
 
@@ -26,7 +26,7 @@ sub createPageCoursesLaurea() {
 	my $DBIConnection = &connectDatabase();  
 
 	#parametri per l'esecuzione della query per ottenere gli ID dei corsi della Laurea
-	my $descr = "INFORMATICA%";
+	my $descr = "INFORMATICA";
 	my $tipocorso = "L";
 	
 	#ottengo l'elenco degli ID dei corsi
@@ -40,10 +40,10 @@ sub createPageCoursesLaurea() {
 	$tableCourses .= 
 	"<thead>
 		<tr>
-		<th id=\"c1\" abbr=\"Corso\" scope=\"col\">Corso</th>
-		<th id=\"c2\" abbr=\"Prof\" scope=\"col\">Insegnante</th>
-		<th id=\"c3\" abbr=\"Trimestre\" scope=\"col\">Trimestre</th>
-		<th id=\"c4\" abbr=\"Anno\" scope=\"col\">Anno</th>
+		<th id=\"c1\" abbr=\"Course\" scope=\"col\">Course</th>
+		<th id=\"c2\" abbr=\"Teacher\" scope=\"col\">Teacher</th>
+		<th id=\"c3\" abbr=\"Period\" scope=\"col\">Period</th>
+		<th id=\"c4\" abbr=\"Year\" scope=\"col\">Year</th>
 		</tr>
 	</thead>
 	<tbody>";
@@ -65,24 +65,15 @@ sub createPageCoursesLaurea() {
 		$courseDetails{"CFU"} = &getCourseCFU($DBIConnection, $courseID);
 		$courseDetails{"period"} = &getTimeInfo($DBIConnection, $courseID);
 		$courseDetails{"hours"} = &getCourseHours($DBIConnection, $courseID);
-		$courseDetails{"informations"} = &getInformationsCourse($DBIConnection, $courseID, 1);
+		$courseDetails{"informations"} = &getInformationsCourse($DBIConnection, $courseID, 2);
 		
 		#recupero trimestre e anno del corso
-		my %periodInformations;
-		if ($courseDetails{'period'}) {
-		    %periodInformations = %{$courseDetails{'period'}};
-		}
-		my $period = "";
-		if ($periodInformations{'trimestre'}) {
-		    $period = $periodInformations{'trimestre'};
-		}
-		my $year = "";
-		if ($periodInformations{'anno'}) {
-		    $year = $periodInformations{'anno'};
-		}
+		my %periodInformations = %{$courseDetails{"period"}};
+		my $period = $periodInformations{"trimestre"}; 
+		my $year = $periodInformations{"anno"};
 		
 		#creo pagina del corso, mi viene restituito il nome del file a cui far linkare il collegamento
-		my $linkFileName = &createCourseDetailsPageLaurea(\%courseDetails); 
+		my $linkFileName = &createCourseDetailsPageLaurea(\%courseDetails, "en"); 
 
 		my $notToLink = 0;
 		foreach my $course (@courseNotLink) {
@@ -141,7 +132,7 @@ sub createPageCoursesLaurea() {
 		#aggiungo alla tabella in costruzione la nuova riga
 		$tableCourses .= $stringEntry;  
 
-		$i = $i + 1; 
+		$i = $i + 1;
 		
 	}
 	
@@ -155,12 +146,12 @@ sub createPageCoursesLaurea() {
 	#mi disconnetto dal database
 	$DBIConnection->disconnect();  
 	
-	my $pageCoursesLaurea = &openFile($sitePath . "laurea/corsilaurea.html") or die "$!"; 
+	my $pageCoursesLaurea = &openFile($sitePath . "laurea/corsilaureaen.html") or die "$!"; 
 	#sostituisco, nella pagina corsilaurea.html, il tag <courseTable/> la tabella appena creata
-	$pageCoursesLaurea =~ s/<courseTable\/>/$tableCourses/; 
+	$pageCoursesLaurea =~ s/<courseTable\/>/$tableCourses/;  
 	
 	#creo il nuovo file
-	&createFile($sitePath . "laurea/corsilaurea.html", $pageCoursesLaurea);  
+	&createFile($sitePath . "laurea/corsilaureaen.html", $pageCoursesLaurea);  
 	
 
 }

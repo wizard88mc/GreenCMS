@@ -20,9 +20,10 @@ sub createFirstLevelMenu() {
 	my $isHomePage = $_[1];
 	my $pageName = $_[2];
 	my $linkPath = "/" . $folderBase;
-	
-	my $en = "";
-	if ($_[3]) { $en = $_[3]; }
+	#if ($isHomePage) {  #se e' home page elimino ../ dal path dei vari link
+	#	$linkPath = "";
+	#}
+	my $en = $_[3];
 	
 	#estraggo le informazioni riguardo il menu di primo livello
 	my $fileXMLMenu = &extractXML("../pagesSource/globalDetails/FirstLevelMenu$en.xml"); 

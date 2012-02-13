@@ -37,7 +37,7 @@ require "CreateSinglePage.pl";
 			if ($pageDetails->findvalue('@isStatic') eq "F") {
 				
 				#invoco funzione per creare una singola pagina
-				my $pageCreated = &createSinglePage($menuFirstLevelNotSelected, $pageDetails, $sourcePath, 0, \%parentLinksBreadcrumb);
+				my $pageCreated = &createSinglePage($menuFirstLevelNotSelected, $pageDetails, $sourcePath, 0, \%parentLinksBreadcrumb, "");
 				
 				#prendo il nome del file che andrà generato
 				my $pageName = $pageDetails->findvalue('contentsPageFileName');

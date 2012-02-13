@@ -14,9 +14,7 @@ require "WorkWithFiles.pl";
 
 sub createHeaderPage() {
 	
-	my $en = "";
-	if ($_[1]) { $en = $_[1]; }
-	
+	my $en = $_[1];
 	my $headerPageText = "";
 	my $pathSRC = "src=\"../";  #path di default per i link indicati da src
 	my $pathHREF = "href=\"../"; #path di default per i link indicati da href 

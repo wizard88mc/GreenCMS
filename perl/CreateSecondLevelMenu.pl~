@@ -19,8 +19,7 @@ sub createSecondLevelMenu() {
 	eval {
 		my $sourcePath = $_[0];
 		my $linkMenuNotSelected = $_[1];
-		my $en = "";
-		if ($_[2]) { $en = $_[2]; }
+		my $en = $_[2];
 		
 		#estraggo il menu di secondo livello per quella pagina
 		my $secondLevelMenu = &extractXML("$sourcePath/secondLevelMenu$en.xml");

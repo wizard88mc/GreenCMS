@@ -1,28 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TableThesis xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="databaseDefinition/Thesis.xsd">
 
-<Thesis lang="it">
-    <Name>Mattia</Name>
-    <Surname>Barbieri</Surname>
-    <Matricola>606173</Matricola>
-    <Title>Un algoritmo branch-and-price per l'assegnamento dei veicoli sui piazzali aeroportuali</Title>
-    <FileName>606173Barbieri.pdf</FileName>
-    <Abstract>L’incremento del traffico aereo negli ultimi anni ha sensibilmente aumentato la densità di aereoplani nello spazio aereo e ha causato una forte congestione nei maggiori aeroporti. A questi problemi viene data sempre maggiore attenzione, come testimoniato, ad esempio, dal progetto europeo “Integrated Airport Apron Safety Fleet Management – AAS”. Facendo riferimento a questo progetto, questa tesi cerca di risolvere in maniera efficiente il problema dell’assegnamento dei mezzi di supporto alle operazioni che si svolgono nell’apron (Ground Service-support Equipment, GSE) alle varie operazioni richieste da ciascun velivolo in sosta nell’apron (task). Viene proposto un approccio esatto al problema basato su una formulazione di Programmazione Lineare Intera. Questa tecnica si basa sulla definizione di un modello matematico e sull’applicazione di appositi algoritmi di ottimizzazione. Per raggiungere l’obiettivo consideriamo un modello a partizione basato su variabili di cammino e applichiamo una strategia risolutiva basata sulla generazione di colonne. L'algoritmo di branch-and-price così sviluppato si appoggia sul framework SCIP (Solving Constraint Integer Programs) per la sua implementazione.</Abstract>
-    <TipoLaurea>LM</TipoLaurea></Thesis><Thesis lang="en">
-    <Name>Manuel</Name>
-    <Surname>Giollo</Surname>
-    <Matricola>602866</Matricola>
-    <Title>Paleographic document analysis and writer identification</Title>
-    <FileName>602866Giollo.pdf</FileName>
-    <Abstract>Through centuries, mankind produced a huge amount of handwritings, which describe the whole history and our past. In order to recover all this precious information and place them in the right years and countries, paleographers analyze the morphology of writing in ancient scripts and try to guess important relationship among documents. Unfortunately, but very important, experts' analysis can be highly subjective, due to their personal experience and culture, so it is very important to help such work with objective metrics. Computer science can be an helpful instrument in this sense, so the thesis goal is the study of state-of-art techniques useful in document images analysis and their application in historical texts.
-The task is quite complex, since few efforts have been done over this kind of scripts and lots of issues make the purpose rather ambitious, so the results of the thesis have to be considered just the first step toward a reliable, robust and effective system which could really help paleographers.</Abstract>
-    <TipoLaurea>LM</TipoLaurea></Thesis><Thesis lang="en">
-    <Name>Andrea</Name>
-    <Surname>Baldovin</Surname>
-    <Matricola>565909</Matricola>
-    <Title>A critique of service orientation: from promises to practices</Title>
-    <FileName>565909Baldovin.pdf</FileName>
-    <Abstract>The service-oriented architecture (SOA) is a recent paradigm for software architecture design and implementation. In this work we first review the object-oriented and the component-based development paradigms, which can be considered the ancestors of service orientation. This allows to make a comparison and to identify common traits among the mentioned architectural styles.
-We then proceed to analyze service orientation, both from a conceptual and from a technical point of view, to verify whether the founding principles of this paradigm can be actually implemented in practice, and what is the effort required to achieve this goal.
-Finally, a case study is presented to demonstrate some of the considerations produced along this work.</Abstract>
-    <TipoLaurea>LS</TipoLaurea></Thesis></TableThesis>
+</TableThesis>
