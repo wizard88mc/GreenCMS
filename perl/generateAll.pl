@@ -35,8 +35,8 @@ require "UpdatePageArchiveThesis.pl";
 	&createReservedTemplate();
 	
 	#my @commands = ("chgrp -R", "www-data", "/var/www");
-	my $command = "chgrp -R www-data /var/www/";
-	system($commands);
+	#my $command = "chgrp -R www-data /var/www/";
+	#system($command);
 	
 	my $commands = "chmod -R 777 /var/www";
 	system($commands);

@@ -1,20 +1,400 @@
-Name "main::folders" used only once: possible typo at UpdateDynamicPages.pl line 20.
-Name "main::sitePath" used only once: possible typo at UpdateDynamicPages.pl line 25.
 Unquoted string "false" may clash with future reserved word at GlobalFunctions.pl line 158.
 Unquoted string "true" may clash with future reserved word at GlobalFunctions.pl line 160.
 Unquoted string "true" may clash with future reserved word at GlobalFunctions.pl line 177.
 Unquoted string "false" may clash with future reserved word at GlobalFunctions.pl line 180.
-Page Updated: corsilaurea.html 
-Page Updated: corsitemplate.html 
-Page Updated: corsilaureaen.html 
-Page Updated: corsitemplateen.html 
-Page Updated: corsimagistrale.html 
-Page Updated: corsitemplate.html 
-Page Updated: corsimagistraleen.html 
-Page Updated: corsitemplateen.html 
-Page Updated: documenti.html 
-Page Updated: documentien.html 
-Page Course Created Laurea: algebraegeometria.html
+Copy part
+chgrp: changing group of `/var/www/img': Operation not permitted
+chgrp: changing group of `/var/www/style': Operation not permitted
+chgrp: changing group of `/var/www/js': Operation not permitted
+chgrp: changing group of `/var/www/cgi-bin': Operation not permitted
+chgrp: changing group of `/var/www/documenti': Operation not permitted
+chgrp: changing group of `/var/www/xml_files/ArchiveThesis.xml': Operation not permitted
+chgrp: changing group of `/var/www/xml_files/ArchiveThesis.xml~': Operation not permitted
+chgrp: changing group of `/var/www/xml_files/rssfeed.xml': Operation not permitted
+Page created: index.html 
+Page created: errore.html 
+Page created: crediti.html 
+Page created: css.html 
+Page created: scriviwebmaster.html 
+Page created: indexen.html 
+Page created: creditien.html 
+Page created: scriviwebmasteren.html 
+Page created: cssen.html 
+chgrp: changing group of `/var/www/laurea': Operation not permitted
+[Mon Feb 13 23:50:16 2012] generateAll.pl: readline() on closed filehandle MYFILE at WorkWithFiles.pl line 21, <MYFILE> line 21.
+[Mon Feb 13 23:50:16 2012] generateAll.pl: readline() on closed filehandle MYFILE at WorkWithFiles.pl line 21, <MYFILE> line 21.
+FOLDER: laurea 
+Page created: index.html 
+Page created: corsilaurea.html 
+Page created: corsitemplate.html 
+Page created: esamilaurea.html 
+Page created: stagelaurea.html 
+Page created: stageit.html 
+Page created: stageit2010.html 
+Page created: pianostudilaurea.html 
+Page created: appellilaurea.html 
+Page created: referentilaurea.html 
+Page created: orario.html 
+Page created: tutor.html 
+Page created: commissioni24sett2010.html 
+Page created: commissioni17dic2010.html 
+Page created: commissioni3feb2011.html 
+Page created: commissioni28apr2011.html 
+Page created: commissioni28apr2011.html 
+Page created: commissioni21lug2011.html 
+Page created: commissioni23sett2011.html 
+Page created: indexen.html 
+Page created: corsilaureaen.html 
+Page created: corsitemplateen.html 
+Page created: esamilaureaen.html 
+Page created: stagelaureaen.html 
+Page created: stagelaureaen.html 
+Page created: stageiten2010.html 
+Page created: pianostudilaureaen.html 
+Page created: appellilaureaen.html 
+Page created: tutoren.html 
+Page created: referentilaureaen.html 
+Page created: orarioen.html 
+Page created: commissioni24sett2010en.html 
+Page created: commissioniMagistrale17dic2010en.html 
+Page created: commissioni28apr2011en.html 
+Page created: commissioni21lug2011en.html 
+chgrp: changing group of `/var/www/laureamagistrale': Operation not permitted
+[Mon Feb 13 23:50:16 2012] generateAll.pl: readline() on closed filehandle MYFILE at WorkWithFiles.pl line 21, <MYFILE> line 21.
+FOLDER: laureamagistrale 
+Page created: index.html 
+Page created: corsimagistrale.html 
+Page created: corsitemplate.html 
+Page created: indirizzimagistrale.html 
+Page created: esamimagistrale.html 
+Page created: pianostudimagistrale.html 
+Page created: tesimagistrale.html 
+Page created: appellilaureamagistrale.html 
+Page created: referentimagistrale.html 
+Page created: orario.html 
+Page created: uploadtesi.html 
+Page created: archiviotesi.html 
+Page created: uploadpresentazioni.html 
+Page created: commissioniMagistrale24sett2010.html 
+Page created: commissioniMagistrale17dic2010.html 
+Page created: commissioniMagistrale3feb2011.html 
+Page created: commissioniMagistrale28apr2011.html 
+Page created: commissioniMagistrale21lug2011.html 
+Page created: commissioniMagistrale23sett2011.html 
+Page created: indexen.html 
+Page created: corsimagistraleen.html 
+Page created: corsitemplateen.html 
+Page created: indirizzimagistraleen.html 
+Page created: esamimagistraleen.html 
+Page created: pianostudimagistraleen.html 
+Page created: tesimagistraleen.html 
+Page created: appellilaureamagistraleen.html 
+Page created: referentimagistraleen.html 
+Page created: orarioen.html 
+Page created: uploadtesien.html 
+Page created: archiviotesien.html 
+Page created: uploadpresentazionien.html 
+Page created: commissioniMagistrale24sett2010en.html 
+Page created: commissioniMagistrale17dic2010en.html 
+Page created: commissioniMagistrale3feb2011en.html 
+Page created: commissioniMagistrale28apr2011en.html 
+Page created: commissioniMagistrale28apr2011en.html 
+Page created: commissioniMagistrale28apr2011en.html 
+Page created: commissioniMagistrale28apr2011en.html 
+Page created: commissioniMagistrale22lug2011en.html 
+chgrp: changing group of `/var/www/dottorato': Operation not permitted
+[Mon Feb 13 23:50:16 2012] generateAll.pl: print() on closed filehandle MYFILE at WorkWithFiles.pl line 40, <MYFILE> line 53.
+[Mon Feb 13 23:50:16 2012] generateAll.pl: print() on closed filehandle MYFILE at WorkWithFiles.pl line 40, <MYFILE> line 30.
+FOLDER: dottorato 
+Page created: index.html 
+Page created:  
+Page created: indexen.html 
+Page created:  
+chgrp: changing group of `/var/www/organizzazione': Operation not permitted
+FOLDER: organizzazione 
+Page created: index.html 
+Page created: ccs.html 
+Page created: docenti.html 
+Page created: rappresentantistudenti.html 
+Page created: indexen.html 
+Page created: ccsen.html 
+Page created: docentien.html 
+Page created: rappresentantistudentien.html 
+chgrp: changing group of `/var/www/news': Operation not permitted
+FOLDER: news 
+Page created: news.html 
+Page created: readnews.html 
+Page created: seminari.html 
+Page created: newsen.html 
+Page created: readnewsen.html 
+Page created: seminarien.html 
+chgrp: changing group of `/var/www/servizi': Operation not permitted
+[Mon Feb 13 23:50:16 2012] generateAll.pl: print() on closed filehandle MYFILE at WorkWithFiles.pl line 40, <MYFILE> line 53.
+[Mon Feb 13 23:50:16 2012] generateAll.pl: print() on closed filehandle MYFILE at WorkWithFiles.pl line 40, <MYFILE> line 30.
+FOLDER: servizi 
+Page created: index.html 
+Page created:  
+Page created: indexen.html 
+Page created:  
+chgrp: changing group of `/var/www/documenti': Operation not permitted
+[Mon Feb 13 23:50:16 2012] generateAll.pl: print() on closed filehandle MYFILE at WorkWithFiles.pl line 40, <MYFILE> line 53.
+[Mon Feb 13 23:50:16 2012] generateAll.pl: print() on closed filehandle MYFILE at WorkWithFiles.pl line 40, <MYFILE> line 30.
+FOLDER: documenti 
+Page created: documenti.html 
+Page created:  
+Page created: documentien.html 
+Page created:  
+chgrp: changing group of `/var/www/strutture': Operation not permitted
+[Mon Feb 13 23:50:16 2012] generateAll.pl: print() on closed filehandle MYFILE at WorkWithFiles.pl line 40, <MYFILE> line 53.
+[Mon Feb 13 23:50:16 2012] generateAll.pl: print() on closed filehandle MYFILE at WorkWithFiles.pl line 40, <MYFILE> line 30.
+FOLDER: strutture 
+Page created: index.html 
+Page created:  
+Page created: indexen.html 
+Page created:  
+chgrp: changing group of `/var/www/reservedzone': Operation not permitted
+[Mon Feb 13 23:50:16 2012] generateAll.pl: print() on closed filehandle MYFILE at WorkWithFiles.pl line 40, <MYFILE> line 30.
+[Mon Feb 13 23:50:16 2012] generateAll.pl: print() on closed filehandle MYFILE at WorkWithFiles.pl line 40, <MYFILE> line 30.
+FOLDER: reservedzone 
+Page created: login.html 
+Page created: logout.html 
+Page created: loginincorrect.html 
+Page created:  
+Page created:  
+chgrp: changing group of `/var/www/archivio': Operation not permitted
+FOLDER: archivio 
+Page created: index.html 
+Page created: passato.html 
+Page created: archivio20092010.html 
+Page created: algebraegeometria20092010.html 
+Page created: architetturadeglielaboratori20092010.html 
+Page created: analisimatematica20092010.html 
+Page created: programmazione20092010.html 
+Page created: matematicadiscretaeprobabilita20092010.html 
+Page created: logica20092010.html 
+Page created: sistemioperativi20092010.html 
+Page created: programmazioneadoggetti20092010.html 
+Page created: algoritmiestrutturedati20092010.html 
+Page created: automielinguaggiformali20092010.html 
+Page created: retiesicurezza20092010.html 
+Page created: fisica20092010.html 
+Page created: calcolonumerico20092010.html 
+Page created: basididati20092010.html 
+Page created: ingegneriadelsoftware(mod.b)20092010.html 
+Page created: ingegneriadelsoftware(mod.a)20092010.html 
+Page created: ricercaoperativa20092010.html 
+Page created: programmazioneconcorrenteedistribuita20092010.html 
+Page created: tecnologieweb20092010.html 
+Page created: informaticagraficaemultimedialita20092010.html 
+Page created: gestionediimpreseinformatiche20092010.html 
+Page created: sviluppoegestionediprogetti20092010.html 
+Page created: linguainglese20092010.html 
+Page created: linguaggidiprogrammazione20092010.html 
+Page created: computabilitaealgoritmi(mod.a)20092010.html 
+Page created: computabilitaealgoritmi(mod.b)20092010.html 
+Page created: semanticadeilinguaggidiprogrammazione20092010.html 
+Page created: intelligenzaartificiale20092010.html 
+Page created: sistemiconcorrentiedistribuiti20092010.html 
+Page created: amministrazionedisistema20092010.html 
+Page created: metodiformaliperlaconcorrenza20092010.html 
+Page created: sistemiconvincoli20092010.html 
+Page created: tecnologieopen-source20092010.html 
+Page created: tecnologieweb220092010.html 
+Page created: datamining20092010.html 
+Page created: retiwireless20092010.html 
+Page created: elaborazionedelleimmagini20092010.html 
+Page created: analisistaticaeverificaautomatica20092010.html 
+Page created: apprendimentoautomatico20092010.html 
+Page created: algoritmidiapprossimazione20092010.html 
+Page created: informationretrieval20092010.html 
+Page created: sicurezza20092010.html 
+Page created: sistemireal-time20092010.html 
+Page created: ragionamentotemporale20092010.html 
+Page created: sistemiipermediali20092010.html 
+Page created: sistemiperlagestionedelterritorio20092010.html 
+Page created: logica220092010.html 
+Page created: analisinumerica20092010.html 
+Page created: bioinformatica20092010.html 
+Page created: metodiemodelliperlottimizzazionecombinatoria20092010.html 
+Page created: fondamentilogicideilinguaggifunzionali20092010.html 
+Page created: crittografia20092010.html 
+Page created: archivio20102011.html 
+Page created: algebraegeometria20102011.html 
+Page created: architetturadeglielaboratori20102011.html 
+Page created: analisimatematica20102011.html 
+Page created: programmazione20102011.html 
+Page created: matematicadiscretaeprobabilita20102011.html 
+Page created: logica20102011.html 
+Page created: sistemioperativi20102011.html 
+Page created: automielinguaggiformali20102011.html 
+Page created: algoritmiestrutturedati20102011.html 
+Page created: programmazioneadoggetti20102011.html 
+Page created: retiesicurezza20102011.html 
+Page created: fisica20102011.html 
+Page created: calcolonumerico20102011.html 
+Page created: basididati20102011.html 
+Page created: ingegneriadelsoftware(mod.b)20102011.html 
+Page created: ingegneriadelsoftware(mod.a)20102011.html 
+Page created: ricercaoperativa20102011.html 
+Page created: programmazioneconcorrenteedistribuita20102011.html 
+Page created: tecnologieweb20102011.html 
+Page created: sviluppoegestionediprogetti20102011.html 
+Page created: informaticagraficaemultimedialita20102011.html 
+Page created: gestionediimpreseinformatiche20102011.html 
+Page created: linguainglese20102011.html 
+Page created: linguaggidiprogrammazione20102011.html 
+Page created: computabilitaealgoritmi(mod.a)20102011.html 
+Page created: computabilitaealgoritmi(mod.b)20102011.html 
+Page created: sistemiconcorrentiedistribuiti20102011.html 
+Page created: analisistaticaeverificadelsoftware20102011.html 
+Page created: intelligenzaartificiale20102011.html 
+Page created: sistemiconvincoli20102011.html 
+Page created: tecnologieopen-source20102011.html 
+Page created: retiwireless20102011.html 
+Page created: elaborazionedelleimmagini20102011.html 
+Page created: sistemiipermediali20102011.html 
+Page created: linguaggidiprogrammazioneavanzati20102011.html 
+Page created: tecnologieweb220102011.html 
+Page created: apprendimentoautomatico20102011.html 
+Page created: informationretrieval20102011.html 
+Page created: amministrazionedisistema20102011.html 
+Page created: sicurezza20102011.html 
+Page created: algoritmidiapprossimazione20102011.html 
+Page created: sistemireal-time20102011.html 
+Page created: ragionamentotemporale20102011.html 
+Page created: datamining20102011.html 
+Page created: linguaggiemodelliperilglobalcomputing20102011.html 
+Page created: sistemiperlagestionedelterritorio20102011.html 
+Page created: logica220102011.html 
+Page created: analisinumerica20102011.html 
+Page created: bioinformatica20102011.html 
+Page created: metodiemodelliperlottimizzazionecombinatoria20102011.html 
+Page created: fondamentilogicideilinguaggifunzionali20102011.html 
+Page created: crittografia20102011.html 
+Page created: indexen.html 
+Page created: passatoen.html 
+Page created: archivio20092010en.html 
+Page created: algebraegeometria20092010en.html 
+Page created: architetturadeglielaboratori20092010en.html 
+Page created: analisimatematica20092010en.html 
+Page created: programmazione20092010en.html 
+Page created: matematicadiscretaeprobabilita20092010en.html 
+Page created: logica20092010en.html 
+Page created: sistemioperativi20092010en.html 
+Page created: programmazioneadoggetti20092010en.html 
+Page created: algoritmiestrutturedati20092010en.html 
+Page created: automielinguaggiformali20092010en.html 
+Page created: retiesicurezza20092010en.html 
+Page created: fisica20092010en.html 
+Page created: calcolonumerico20092010en.html 
+Page created: basididati20092010en.html 
+Page created: ingegneriadelsoftware(mod.b)20092010en.html 
+Page created: ingegneriadelsoftware(mod.a)20092010en.html 
+Page created: ricercaoperativa20092010en.html 
+Page created: programmazioneconcorrenteedistribuita20092010en.html 
+Page created: tecnologieweb20092010en.html 
+Page created: informaticagraficaemultimedialita20092010en.html 
+Page created: gestionediimpreseinformatiche20092010en.html 
+Page created: sviluppoegestionediprogetti20092010en.html 
+Page created: linguainglese20092010en.html 
+Page created: linguaggidiprogrammazione20092010en.html 
+Page created: computabilitaealgoritmi(mod.a)20092010en.html 
+Page created: computabilitaealgoritmi(mod.b)20092010en.html 
+Page created: semanticadeilinguaggidiprogrammazione20092010en.html 
+Page created: intelligenzaartificiale20092010en.html 
+Page created: sistemiconcorrentiedistribuiti20092010en.html 
+Page created: amministrazionedisistema20092010en.html 
+Page created: metodiformaliperlaconcorrenza20092010en.html 
+Page created: sistemiconvincoli20092010en.html 
+Page created: tecnologieopen-source20092010en.html 
+Page created: tecnologieweb220092010en.html 
+Page created: datamining20092010en.html 
+Page created: retiwireless20092010en.html 
+Page created: elaborazionedelleimmagini20092010en.html 
+Page created: analisistaticaeverificaautomatica20092010en.html 
+Page created: apprendimentoautomatico20092010en.html 
+Page created: algoritmidiapprossimazione20092010en.html 
+Page created: informationretrieval20092010en.html 
+Page created: sicurezza20092010en.html 
+Page created: sistemireal-time20092010en.html 
+Page created: ragionamentotemporale20092010en.html 
+Page created: sistemiipermediali20092010en.html 
+Page created: sistemiperlagestionedelterritorio20092010en.html 
+Page created: logica220092010en.html 
+Page created: analisinumerica20092010en.html 
+Page created: bioinformatica20092010en.html 
+Page created: metodiemodelliperlottimizzazionecombinatoria20092010en.html 
+Page created: fondamentilogicideilinguaggifunzionali20092010en.html 
+Page created: crittografia20092010en.html 
+Page created: archivio20102011en.html 
+Page created: algebraegeometria20102011en.html 
+Page created: architetturadeglielaboratori20102011en.html 
+Page created: analisimatematica20102011en.html 
+Page created: programmazione20102011en.html 
+Page created: matematicadiscretaeprobabilita20102011en.html 
+Page created: logica20102011en.html 
+Page created: sistemioperativi20102011en.html 
+Page created: automielinguaggiformali20102011en.html 
+Page created: algoritmiestrutturedati20102011en.html 
+Page created: programmazioneadoggetti20102011en.html 
+Page created: retiesicurezza20102011en.html 
+Page created: fisica20102011en.html 
+Page created: calcolonumerico20102011en.html 
+Page created: basididati20102011en.html 
+Page created: ingegneriadelsoftware(mod.b)20102011en.html 
+Page created: ingegneriadelsoftware(mod.a)20102011en.html 
+Page created: ricercaoperativa20102011en.html 
+Page created: programmazioneconcorrenteedistribuita20102011en.html 
+Page created: tecnologieweb20102011en.html 
+Page created: sviluppoegestionediprogetti20102011en.html 
+Page created: informaticagraficaemultimedialita20102011en.html 
+Page created: gestionediimpreseinformatiche20102011en.html 
+Page created: linguainglese20102011en.html 
+Page created: linguaggidiprogrammazione20102011en.html 
+Page created: computabilitaealgoritmi(mod.a)20102011en.html 
+Page created: computabilitaealgoritmi(mod.b)20102011en.html 
+Page created: intelligenzaartificiale20102011en.html 
+Page created: sistemiconcorrentiedistribuiti20102011en.html 
+Page created: analisistaticaeverificadelsoftware20102011en.html 
+Page created: sistemireal-time20102011en.html 
+Page created: ragionamentotemporale20102011en.html 
+Page created: datamining20102011en.html 
+Page created: linguaggiemodelliperilglobalcomputing20102011en.html 
+Page created: sistemiperlagestionedelterritorio20102011en.html 
+Page created: sistemiconvincoli20102011en.html 
+Page created: tecnologieopen-source20102011en.html 
+Page created: retiwireless20102011en.html 
+Page created: elaborazionedelleimmagini20102011en.html 
+Page created: sistemiipermediali20102011en.html 
+Page created: linguaggidiprogrammazioneavanzati20102011en.html 
+Page created: tecnologieweb220102011en.html 
+Page created: apprendimentoautomatico20102011en.html 
+Page created: informationretrieval20102011en.html 
+Page created: amministrazionedisistema20102011en.html 
+Page created: sicurezza20102011en.html 
+Page created: algoritmidiapprossimazione20102011en.html 
+Page created: fondamentilogicideilinguaggifunzionali20102011en.html 
+Page created: crittografia20102011en.html 
+Page created: bioinformaticastrutturale20102011en.html 
+Page created: logica220102011en.html 
+Page created: analisinumerica20102011en.html 
+Page created: bioinformatica20102011en.html 
+Page created: metodiemodelliperlottimizzazionecombinatoria20102011en.html 
+chgrp: changing group of `/var/www/estero': Operation not permitted
+[Mon Feb 13 23:50:17 2012] generateAll.pl: print() on closed filehandle MYFILE at WorkWithFiles.pl line 40, <MYFILE> line 53.
+[Mon Feb 13 23:50:17 2012] generateAll.pl: print() on closed filehandle MYFILE at WorkWithFiles.pl line 40, <MYFILE> line 30.
+FOLDER: estero 
+Page created: index.html 
+Page created:  
+Page created: indexen.html 
+Page created:  
+chgrp: changing group of `/var/www/laureamagistrale/uploadtesi.html': Operation not permitted
+chgrp: changing group of `/var/www/laureamagistrale/uploadpresentazioni.html': Operation not permitted
+chgrp: changing group of `/var/www/dottorato/index.html': Operation not permitted
+chgrp: changing group of `/var/www/dottorato/indexen.html': Operation not permitted
+chgrp: changing group of `/var/www/laureamagistrale/archiviotesi.html': Operation not permitted
+chgrp: changing group of `/var/www/laureamagistrale/archiviotesien.html': Operation not permitted
+Pages CreatedPage Course Created Laurea: algebraegeometria.html
 Page Course Created Laurea: architetturadeglielaboratori.html
 Page Course Created Laurea: analisimatematica.html
 Page Course Created Laurea: programmazione.html
@@ -106,3 +486,9 @@ Page Course Created Magistrale: bioinformaticastrutturaleen.html
 Page Course Created Magistrale: fondamentilogicideilinguaggifunzionalien.html
 Page Course Created Magistrale: altreattivitautiliperillavoro(otirocinio)en.html
 Page Course Created Magistrale: provafinaleen.html
+chgrp: changing group of `/var/www/dottorato/index.html': Operation not permitted
+chgrp: changing group of `/var/www/dottorato/indexen.html': Operation not permitted
+[Mon Feb 13 23:50:17 2012] generateAll.pl: Wide character in print at WorkWithFiles.pl line 40, <MYFILE> line 323.
+[Mon Feb 13 23:50:17 2012] generateAll.pl: Wide character in print at WorkWithFiles.pl line 40.
+ReservedTemplate
+ Script Completed 

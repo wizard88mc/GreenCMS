@@ -12,8 +12,7 @@ require "CreateSinglePage.pl";
 sub createPagesOfFolder() {
 	
 	my $folderName = $_[0];
-	my $en = "";
-	if ($_[1]) { $en = $_[1]; }
+	my $en = $_[1];
 	
 	#path dove sono collocati i file con il contenuto che andra' inserito nel file html
 	my $sourcePath = "../pagesSource/$folderName/source";
