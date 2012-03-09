@@ -7,10 +7,10 @@ require "WorkWithFiles.pl";
 require "ExtractXML.pl";
 
 #funzione che permette l'aggioranmento della pagina dei dottorandi
-sub updatePHDStudentEn() {
-
+sub updatePHDStudent() {
+	
 	#recupero testo della pagina di template
-	my $pageTemplatePHDStudents = &openFile($sitePath . "dottorato/dottoratotemplateen.html") or die "$!";
+	my $pageTemplatePHDStudents = &openFile($sitePath . "dottorato/index.html") or die "$!";
 	
 	my $fileXMLPHD = $sitePath . "xml_files/PHDStudentSupervisor.xml";
 	
@@ -19,7 +19,7 @@ sub updatePHDStudentEn() {
 	#recupero dal file XML le tabelle dei dottorandi, dei supervisori e dei cicli di dottorato
 	my $tablePHD = $root->find("//TablePHDStudent")->get_node(1);
 	my $tableSupervisor = $root->find("//TableSupervisor")->get_node(1);
-	my $tableCycle = $root->findnodes("//TableCycle/Cycle");
+	my $tableCycle = $root->find("//TableCycle/Cycle");
 	
 	my $stringPHDStudents = "";
 	
@@ -36,7 +36,7 @@ sub updatePHDStudentEn() {
 		my $stringCycle = "<h3>$cycleName ($bYear &rarr; $eYear)</h3><dl>";
 		
 		#recupero dottorandi che appartengono a quel ciclo
-		my $phdCorrect = $tablePHD->findnodes("//PHDStudent[Cycle=$cycleID]");
+		my $phdCorrect = $tablePHD->find("//PHDStudent[Cycle=$cycleID]");
 		
 		foreach my $phd ($phdCorrect->get_nodelist) {
 			
@@ -57,29 +57,29 @@ sub updatePHDStudentEn() {
 			
 			#creo stringa del dottorando, distinguendo se ho il sito internet memorizzato o meno
 			if ($supWebsite ne "") {
-				$stringSup .= "<span><a href=\"http://$supWebsite\" xml:lang=\"it\">$supName $supSurname</a></span>";
+				$stringSup .= "<span><a href=\"http://$supWebsite\">$supName $supSurname</a></span>";
 			}
 			else {
-				$stringSup .= "<span xml:lang=\"it\">$supName $supSurname</span>";
+				$stringSup .= "<span>$supName $supSurname</span>";
 			}
 			
 			my $phdString; 
 			#differenzio caso se è presente sito del dottorando o meno
 			if ($phdWebsite ne "") {
-				$phdString .= "<dt><span><a href=\"http://$phdWebsite\" xml:lang=\"it\">$phdName $phdSurname</a></span></dt>";	
+				$phdString .= "<dt><span><a href=\"http://$phdWebsite\">$phdName $phdSurname</a></span></dt>";	
 			}
 			else {
-				$phdString .= "<dt xml:lang=\"it\">$phdName $phdSurname</dt>";
+				$phdString .= "<dt>$phdName $phdSurname</dt>";
 			}
 			
 			if ($lang eq "it") {
-				$phdString .= "<dd><span><strong>ResearchArea: </strong><span xml:lang=\"it\">$phdResearch</span></span></dd>";
+				$phdString .= "<dd><span><strong>Area di Ricerca: </strong>$phdResearch</span></dd>";
 			}
 			else {
-				$phdString .= "<dd><span><strong>ResearchArea: </strong>$phdResearch</span></dd>";
+				$phdString .= "<dd><span><strong>Area di Ricerca: </strong><span xml:lang=\"en\">$phdResearch</span></span></dd>";
 			}
 			
-			$phdString .= "<dd><span><strong>Supervisor: </strong><span xml:lang=\"it\">$stringSup</span></span></dd>";
+			$phdString .= "<dd><span><strong>Supervisore: </strong>$stringSup</span></dd>";
 			 
 			 #aggiungo stringa del dottorato alla stringa del ciclo
 			 $stringCycle .= $phdString;
@@ -93,15 +93,22 @@ sub updatePHDStudentEn() {
 	}
 	
 	#sostituisco al tag fittizio la stringa creata
-	$pageTemplatePHDStudents =~ s/<listPHDStudents\/>/$stringPHDStudents/g; 
+	$pageTemplatePHDStudents =~ s/<listPHDStudents\/>/$stringPHDStudents/g;
 	
 	#unlink("../dottorato/dottorato.html");
-	my $page = $sitePath . "dottorato/indexen.html";
+	my $page = $sitePath . "dottorato/index.html";
 	
-	&createFile($page, $pageTemplatePHDStudents);
+	rename("$page", $sitePath . "dottorato/dottoratotemplate.html") or die "$!";
+	
+	open FILE, ">$page" or die "$!";
+	print FILE "$pageTemplatePHDStudents";
+	close (FILE);
+	
+	chmod(0775, $page);
 	
 	my $cmd = "chgrp www-data $page";
 	system($cmd);
+	
 }
 
 1;

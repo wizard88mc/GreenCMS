@@ -94,19 +94,19 @@ require "UpdateFormsTags.pl";
 	my @commands = ("chgrp", "www-data", "$sitePath" . "laureamagistrale/uploadtesi.html");
 	system(@commands);
 	
-	my @commands = ("chgrp", "www-data", "$sitePath" . "laureamagistrale/uploadpresentazioni.html");
+	@commands = ("chgrp", "www-data", "$sitePath" . "laureamagistrale/uploadpresentazioni.html");
 	system(@commands);
 	
-	my @commands = ("chgrp", "www-data", "$sitePath" . "dottorato/index.html");
+	@commands = ("chgrp", "www-data", "$sitePath" . "dottorato/index.html");
 	system(@commands);
 
-	my @commands = ("chgrp", "www-data", "$sitePath" . "dottorato/indexen.html");
+	@commands = ("chgrp", "www-data", "$sitePath" . "dottorato/indexen.html");
 	system(@commands);
 	
-	my @commands = ("chgrp", "www-data", "$sitePath" . "laureamagistrale/archiviotesi.html");
+	@commands = ("chgrp", "www-data", "$sitePath" . "laureamagistrale/archiviotesi.html");
 	system(@commands);
 	
-	my @commands = ("chgrp", "www-data", "$sitePath" . "laureamagistrale/archiviotesien.html");
+	@commands = ("chgrp", "www-data", "$sitePath" . "laureamagistrale/archiviotesien.html");
 	system(@commands);
 	
 	&updatePHDStudent();

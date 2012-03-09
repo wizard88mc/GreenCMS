@@ -60,7 +60,7 @@ sub getMonthsOptions() {
         }
         my $arrayIndx = $i - 1;
         
-        $stringMonthsOptions .= "<option value=\"$index\"$checked>@months[$arrayIndx]</option>";
+        $stringMonthsOptions .= "<option value=\"$index\"$checked>$months[$arrayIndx]</option>";
     }
     
     return $stringMonthsOptions;
@@ -96,18 +96,26 @@ sub getYearsOptions() {
 
 #prende una data nel formato yyyy-mm-dd e restituisce le componenti (dd, mm, yyyy)
 sub getDateComponentsFromDBDate() {
-    my $date = $_[0];
     
-    my @components = (substr($date, 8, 2), substr($date, 5, 2), substr($date, 0, 4));
+    my $date = "";
+    my @components = ('', '', '');
+    if ($_[0]) {
+        $date = $_[0];
+        @components = (substr($date, 8, 2), substr($date, 5, 2), substr($date, 0, 4));    
+    }
     
     return @components;
 }
 
 #prende una data nel formato dd/mm/yyyy e restituisce le componenti (dd, mm, yyyy)
 sub getDateComponentsFromItalianDate() {
-    my $date = $_[0];
     
-    my @components = (substr($date, 0, 2), substr($date, 3, 2), substr($date, 6, 4));
+    my $date = "";
+    my @components = ('', '', '');
+    if ($_[0]) { 
+        $date = $_[0]; 
+        @components = (substr($date, 0, 2), substr($date, 3, 2), substr($date, 6, 4));
+    }
     
     return @components;
 }
@@ -115,21 +123,30 @@ sub getDateComponentsFromItalianDate() {
 #dates converter from format dd/mm/yyyy to format yyyy-mm-dd
 sub convertDateFromItalianToDB() {
     
-    my $date = $_[0];
+    my $date = "";
+    my ($day, $month, $year) = ('', '', '');
+    if ($_[0]) {
+        $date = $_[0];
+        ($day, $month, $year) = &getDateComponentsFromItalianDate($date);
+    }
     
-    my ($day, $month, $year) = &getDateComponentsFromItalianDate($date);
-    
-    return $year . "-" . $month . "-" . $day;
+    return $year . '-' . $month . '-' . $day;
     
 }
 
 #dates converter from format yyyy-mm-dd to format dd/mm/yyyy
 sub convertDateFromDBToItalian() {
     
-    my $date = $_[0];
+    my $date = "";
+    my $day = '';
+    my $month = '';
+    my $year = '';
+    if ($_[0]) {
+        $date = $_[0];
+        ($day, $month, $year) = &getDateComponentsFromDBDate($date);
+    }
     
-    my ($day, $month, $year) = &getDateComponentsFromDBDate($date);
-    return $day . "/" . $month . "/" . $year;
+    return $day . '/' . $month . '/' . $year;
 }
 
 #verifica se la data inserita è corretta

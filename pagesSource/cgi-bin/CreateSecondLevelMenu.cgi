@@ -92,7 +92,10 @@ sub createSecondLevelMenu {
 	if ($stringPermission eq "Admin") {
 		$stringMenu .= "
 		<li><a href=\"ManageUploadTesi.cgi\">Gestione form upload</a></li>
-		<li><a href=\"ArchiveLaureaSession.cgi\">Archivia Sessiona Laurea</a></li>";
+		<li><a href=\"ArchiveLaureaSession.cgi\">Archivia Sessiona Laurea</a></li>
+		<li><a href=\"NuovaCommissione.cgi\">Nuova Commissione Laurea</a></li>
+		<li><a href=\"NuovaProclamazione.cgi\">Nuova Proclamazione Laurea</a></li>
+		<li><a href=\"NuovaCommissioneMagistrale.cgi\">Nuova Commissione Laurea Magistrale</a></li>";
 	}
 		$stringMenu .= "<li><a href=\"DownloadThesis.cgi\">Download Tesi</a></li>
 	</ul>";

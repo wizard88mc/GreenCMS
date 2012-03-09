@@ -281,4 +281,32 @@
 		<secondLevelMenuNotSelected/>
 		<contentsPageFileName>commissioniMagistrale23sett2011.html</contentsPageFileName>
 	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea Magistrale in Informatica - Commissioni di laurea, 16 Dicembre 2011</title>
+			<description>Pagina che contiene le commissioni di laurea del 16 Dicembre 2011</description>
+			<keywords>
+				<keyword>Magistrale</keyword>
+				<keyword>Commissioni</keyword>
+				<keyword>tesi</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Commissioni di Laurea, 16 Dicembre 2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>commissioniMagistrale16dic2011.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea Magistrale in Informatica - Commissioni di laurea, 3 Febbraio 2012</title>
+			<description>Pagina che contiene le commissioni di laurea del 3 Febbraio 2012</description>
+			<keywords>
+				<keyword>Magistrale</keyword>
+				<keyword>Commissioni</keyword>
+				<keyword>tesi</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Commissioni di Laurea, 3 Febbraio 2012</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>commissioniMagistrale3feb2012.html</contentsPageFileName>
+	</pageDetails>
 </pagesDetails>

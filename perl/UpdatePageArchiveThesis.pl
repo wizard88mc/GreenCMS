@@ -51,8 +51,8 @@ sub updatePageArchiveThesis() {
 	
 	}
 	
-	#utf8::encode($stringIt);
-	#utf8::encode($stringEn);
+	utf8::encode($stringIt);
+	utf8::encode($stringEn);
 	
 	if (index($stringIt, '<h3>') != -1) {
 

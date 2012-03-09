@@ -104,8 +104,8 @@
 	</pageDetails>
 	<pageDetails isStatic="T">
 		<metaTags>
-			<title>Laurea in Informatica - StageIT 2010</title>
-			<description>Pagina con le informazioni riguardo l'incontro aziende - studenti StageIT per le attivita' di stage</description>
+			<title>Laurea in Informatica - StageIT 2011</title>
+			<description>Pagina con le informazioni riguardo l'incontro aziende - studenti StageIT 2011 per le attivita' di stage</description>
 			<keywords>
 				<keyword>stage</keyword>
 				<keyword>stageIT</keyword>
@@ -116,7 +116,24 @@
 		</metaTags>
 		<pageTitle>StageIT</pageTitle>
 		<secondLevelMenuNotSelected/>
-		<otherParent>Stage/stagelaurea.html</otherParent>
+		<otherParent>Stage/stageit.html</otherParent>
+		<contentsPageFileName>stageit2011.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - StageIT 2010</title>
+			<description>Pagina con le informazioni riguardo l'incontro aziende - studenti StageIT 2010 per le attivita' di stage</description>
+			<keywords>
+				<keyword>stage</keyword>
+				<keyword>stageIT</keyword>
+				<keyword>incontro</keyword>
+				<keyword>aziende</keyword>
+				<keyword>studenti</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>StageIT</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<otherParent>Stage/stageit.html</otherParent>
 		<contentsPageFileName>stageit2010.html</contentsPageFileName>
 	</pageDetails>
 	<pageDetails isStatic="T">
@@ -286,5 +303,31 @@
 		<pageTitle>Commissioni di Laurea, 23 Settembre 2011</pageTitle>
 		<secondLevelMenuNotSelected/>
 		<contentsPageFileName>commissioni23sett2011.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Commissioni di laurea, 16 Dicembre 2011</title>
+			<description>Pagina che contiene le commissioni di laurea del 16 Dicembre 2011</description>
+			<keywords>
+				<keyword>Commissioni</keyword>
+				<keyword>laurea</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Commissioni di Laurea, 16 Dicembre 2011</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>commissioni16dic2011.html</contentsPageFileName>
+	</pageDetails>
+	<pageDetails isStatic="T">
+		<metaTags>
+			<title>Laurea in Informatica - Commissioni di laurea, 3 Febbraio 2012</title>
+			<description>Pagina che contiene le commissioni di laurea del 3 Febbraio 2012</description>
+			<keywords>
+				<keyword>Commissioni</keyword>
+				<keyword>laurea</keyword>
+			</keywords>
+		</metaTags>
+		<pageTitle>Commissioni di Laurea, 3 Febbraio 2012</pageTitle>
+		<secondLevelMenuNotSelected/>
+		<contentsPageFileName>commissioni3feb2012.html</contentsPageFileName>
 	</pageDetails>
 </pagesDetails>

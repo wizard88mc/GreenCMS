@@ -15,6 +15,7 @@ require "GetTeacherInformations.pl";
 
 $archiveXML = $fileXML . "ArchiveThesis.xml";
 $fileXML .= "Thesis.xml";
+$fileForRecovery = $sourcePath . 'pagesSource/xml_files/ArchiveThesis.xml';
 
 
 #funzione per l'inserimento di una nuova tesi
@@ -207,6 +208,12 @@ sub archiveThesis() {
 	open(FILE, ">$archiveXML") or die "$!";
 	print FILE $documentArchive->toString();
 	close(FILE);
+	
+	my $command = "cp --preserve $archiveXML $fileForRecovery";
+	system($command);
+	
+	$command = "chmod 777 $fileForRecovery";
+	system($command);
 	
 	utf8::encode($stringIt);
 	utf8::encode($stringEn);

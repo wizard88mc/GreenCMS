@@ -4,6 +4,7 @@ use utf8;
 use XML::LibXML;
 
 sub updatePHDStudent() {
+
 	
 	my $pageTemplatePHDStudents = &openFile($siteForCGI . "dottorato/dottoratotemplate.html") or die "$!";
 	
@@ -44,7 +45,7 @@ sub updatePHDStudent() {
 			my $supSurname = $tableSupervisor->findvalue("//Supervisor[ID=$phdSupervisor]/Surname");
 			my $supWebsite = $tableSupervisor->findvalue("//Supervisor[ID=$phdSupervisor]/Website");
 			
-			my $stringSup;
+			my $stringSup = "";
 			
 			if ($supWebsite ne "") {
 				$stringSup .= "<span><a href=\"http://$supWebsite\">$supName $supSurname</a></span>";
@@ -53,7 +54,7 @@ sub updatePHDStudent() {
 				$stringSup .= "$supName $supSurname";
 			}
 			
-			my $phdString;
+			my $phdString = "";
 			if ($phdWebsite ne "") {
 				$phdString .= "<dt><span><a href=\"http://$phdWebsite\">$phdName $phdSurname</a></span></dt>";	
 			}
@@ -77,19 +78,18 @@ sub updatePHDStudent() {
 		$stringCycle .= "</dl>";
 		$stringPHDStudents .= $stringCycle;
 		
-		
 	}
 	
 	utf8::encode($stringPHDStudents);
 	
-	$pageTemplatePHDStudents =~ s/<listPHDStudents\/>/$stringPHDStudents/g; 
+	$pageTemplatePHDStudents =~ s/<listPHDStudents\/>/$stringPHDStudents/;
 	
 	#unlink("../dottorato/dottorato.html");
 	my $page = $siteForCGI . "dottorato/index.html";
+	unlink($page);
 	
-	open FILE, ">$page" or die "$!";
-	print FILE "$pageTemplatePHDStudents";
-	close (FILE);
+	&createFile($page, $pageTemplatePHDStudents);
+	system("chgrp www-data $page");
 	
 }
 

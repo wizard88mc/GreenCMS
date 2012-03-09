@@ -7,7 +7,8 @@ use utf8;
 
 #insieme di funzioni per la gestione dei Dottorandi
 
-$fileXML .= "PHDStudentSupervisor.xml";
+$fileXMLPHD = $fileXML . "PHDStudentSupervisor.xml";
+$fileForRecovery = $sourcePath . 'pagesSource/xml_files/PHDStudentSupervisor.xml';
 
 #resistuisce elenco supervisori sotto forma di lista <option> HTML
 sub getSupervisorList() {
@@ -15,7 +16,7 @@ sub getSupervisorList() {
 	eval {
 		my $parser = XML::LibXML->new();
 		
-		my $document = $parser->parse_file($fileXML);
+		my $document = $parser->parse_file($fileXMLPHD);
 		my $root = $document->getDocumentElement;
 		my $selectOptionHTML = "";
 		
@@ -46,7 +47,7 @@ sub getCyclesList() {
 	eval {
 		my $parser = XML::LibXML->new();
 		
-		my $document = $parser->parse_file($fileXML);
+		my $document = $parser->parse_file($fileXMLPHD);
 		my $root = $document->getDocumentElement;
 		my $selectOptionHTML = "";
 		
@@ -78,7 +79,7 @@ sub getPHDList() {
 	eval {
 		my $parser = XML::LibXML->new();
 		
-		my $document = $parser->parse_file($fileXML);
+		my $document = $parser->parse_file($fileXMLPHD);
 		my $root = $document->getDocumentElement;
 		my $selectOptionHTML = "";
 		
@@ -114,7 +115,7 @@ sub getSupervisorName() {
 
 		my $parser = XML::LibXML->new();
 		
-		my $document = $parser->parse_file($fileXML);
+		my $document = $parser->parse_file($fileXMLPHD);
 		my $root = $document->getDocumentElement;
 		
 		#recupero informazioni e restituisco nome e cognome
@@ -142,7 +143,7 @@ sub getCycle() {
 		
 		my $parser = XML::LibXML->new();
 		
-		my $document = $parser->parse_file($fileXML);
+		my $document = $parser->parse_file($fileXMLPHD);
 		my $root = $document->getDocumentElement;
 		
 		#recupero nodo ciclo
@@ -171,7 +172,7 @@ sub getUserDetails() {
 	my $studentID = $_[0];	
 	my $parser = XML::LibXML->new();
 		
-	my $document = $parser->parse_file($fileXML);
+	my $document = $parser->parse_file($fileXMLPHD);
 	my $root = $document->getDocumentElement;
 	
 	#recupero nodo dottorando
@@ -199,7 +200,7 @@ sub getCycleDetails() {
 	my $cycleID = $_[0];
 	my $parser = XML::LibXML->new();
 	
-	my $document = $parser->parse_file($fileXML);
+	my $document = $parser->parse_file($fileXMLPHD);
 	my $root = $document->getDocumentElement;
 	
 	#recupero nodo ciclo
@@ -222,7 +223,7 @@ sub getSupervisorDetails() {
 	my $supervisorID = $_[0];
 	my $parser = XML::LibXML->new();
 	
-	my $document = $parser->parse_file($fileXML);
+	my $document = $parser->parse_file($fileXMLPHD);
 	my $root = $document->getDocumentElement;
 	
 	#recupero nodo supervisore
@@ -244,7 +245,7 @@ sub getSupervisorHash() {
 
 	my $parser = XML::LibXML->new();
 		
-	my $document = $parser->parse_file($fileXML);
+	my $document = $parser->parse_file($fileXMLPHD);
 	my $root = $document->getDocumentElement;
 
 	#recupero insieme supervisori
@@ -274,7 +275,7 @@ sub getCycleHash() {
 
 	my $parser = XML::LibXML->new();
 		
-	my $document = $parser->parse_file($fileXML);
+	my $document = $parser->parse_file($fileXMLPHD);
 	my $root = $document->getDocumentElement;
 
 	#recupero insieme cicli
@@ -310,7 +311,7 @@ sub insertNewPHDStudent() {
 		
 		my $parser = XML::LibXML->new();
 		
-		my $document = $parser->parse_file($fileXML);
+		my $document = $parser->parse_file($fileXMLPHD);
 		my $root = $document->getDocumentElement;
 		
 		#creo ID per il nuovo nodo
@@ -350,7 +351,7 @@ sub insertNewPHDStudent() {
 		my $newNode = $parser->parse_balanced_chunk($newStringNode);
 		$tablePHD->addChild($newNode);
 		
-		open(FILE, ">$fileXML") || die ("Non riesco ad aprire il file");
+		open(FILE, ">$fileXMLPHD") || die ("Non riesco ad aprire il file");
 		print FILE $document->toString();
 		close(FILE);
 	
@@ -368,7 +369,7 @@ sub insertNewSupervisor() {
 		
 		my $parser = XML::LibXML->new();
 		
-		my $document = $parser->parse_file($fileXML);
+		my $document = $parser->parse_file($fileXMLPHD);
 		my $root = $document->getDocumentElement;
 	
 		#creo ID nuovo supervisore	
@@ -392,7 +393,7 @@ sub insertNewSupervisor() {
 		
 		$tableSupervisor->addChild($newNode);
 		
-		open(FILE, ">$fileXML") || die("Non riesco ad aprire il file");
+		open(FILE, ">$fileXMLPHD") || die("Non riesco ad aprire il file");
 		print FILE $document->toString();
 		close(FILE);
 		
@@ -411,7 +412,7 @@ sub insertNewCycle() {
 		
 		my $parser = XML::LibXML->new();
 		
-		my $document = $parser->parse_file($fileXML);
+		my $document = $parser->parse_file($fileXMLPHD);
 		my $root = $document->getDocumentElement;
 		
 		#creo ID nuovo nodo
@@ -434,7 +435,7 @@ sub insertNewCycle() {
 		
 		$tableCycle->addChild($newNode);
 		
-		open(FILE, ">$fileXML") || die("Non riesco ad aprire il file");
+		open(FILE, ">$fileXMLPHD") || die("Non riesco ad aprire il file");
 		print FILE $document->toString();
 		close(FILE);
 		
@@ -453,7 +454,7 @@ sub modifyPHDStudent() {
 		
 		my $parser = XML::LibXML->new();
 		
-		my $document = $parser->parse_file($fileXML);
+		my $document = $parser->parse_file($fileXMLPHD);
 		my $root = $document->getDocumentElement;
 		
 		#pongo a 0 ID del supervisore nel caso sia assente pe compatibilità con file XML
@@ -491,7 +492,7 @@ sub modifyPHDStudent() {
 		#sostituisce nodo
 		$parent->replaceChild($newNode, $oldNode);
 		
-		open(FILE, ">$fileXML") || die("Non riesco ad aprire il file");
+		open(FILE, ">$fileXMLPHD") || die("Non riesco ad aprire il file");
 		print FILE $document->toString();
 		close(FILE);
 		
@@ -510,7 +511,7 @@ sub editCycle() {
 	
 		my $parser = XML::LibXML->new();
 		
-		my $document = $parser->parse_file($fileXML);
+		my $document = $parser->parse_file($fileXMLPHD);
 		my $root = $document->getDocumentElement;
 		
 		my $oldNode = $root->find("//TableCycle/Cycle[ID=$details{'cycleID'}]")->get_node(1) or die "$!";
@@ -527,7 +528,7 @@ sub editCycle() {
 		
 		$parent->replaceChild($newNode, $oldNode);
 	
-		open(FILE, ">$fileXML") || die("Non riesco ad aprire il file");
+		open(FILE, ">$fileXMLPHD") || die("Non riesco ad aprire il file");
 		print FILE $document->toString();
 		close(FILE);
 		
@@ -546,7 +547,7 @@ sub editSupervisor() {
 		
 		my $parser = XML::LibXML->new();
 		
-		my $document = $parser->parse_file($fileXML);
+		my $document = $parser->parse_file($fileXMLPHD);
 		my $root = $document->getDocumentElement;
 		
 		my $oldNode = $root->find("//TableSupervisor/Supervisor[ID=$details{'supervisorID'}]")->get_node(1);
@@ -563,7 +564,7 @@ sub editSupervisor() {
 		
 		$parent->replaceChild($newNode, $oldNode);
 	
-		open(FILE, ">$fileXML") || die("Non riesco ad aprire il file");
+		open(FILE, ">$fileXMLPHD") || die("Non riesco ad aprire il file");
 		print FILE $document->toString();
 		close(FILE);
 	
@@ -583,7 +584,7 @@ sub deletePHDStudent() {
 	
 		my $parser = XML::LibXML->new();
 		
-		my $document = $parser->parse_file($fileXML);
+		my $document = $parser->parse_file($fileXMLPHD);
 		my $root = $document->getDocumentElement;
 		
 		#recupera nodo del dottorando
@@ -592,7 +593,7 @@ sub deletePHDStudent() {
 		
 		$parent->removeChild($nodePHD);
 		
-		open(FILE, ">$fileXML") || die("Non riesco ad aprire il file");
+		open(FILE, ">$fileXMLPHD") || die("Non riesco ad aprire il file");
 		print FILE $document->toString();
 		close(FILE);
 		
@@ -600,4 +601,14 @@ sub deletePHDStudent() {
 	}
 	or do { return 0; }
 	
+}
+
+sub moveXMLFile() {
+ 
+    my $command = "cp --preserve $fileXMLPHD $fileForRecovery";
+	system($command);
+	
+	$command = "chmod 777 $fileForRecovery";
+	system($command);
+    
 }

@@ -87,10 +87,10 @@ sub updatePHDStudentEn() {
 	
 	#unlink("../dottorato/dottorato.html");
 	my $page = $siteForCGI . "dottorato/indexen.html";
+	unlink($page);
 	
-	open FILE, ">$page" or die "$!";
-	print FILE "$pageTemplatePHDStudents";
-	close (FILE);
+	&createFile($page, $pageTemplatePHDStudents);
+	system("chgrp www-data $page");
 	
 }
 

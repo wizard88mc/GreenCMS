@@ -11,6 +11,7 @@ require "CreateSecondLevelMenu.cgi";
 require "UpdatePHDStudent.cgi";
 require "WorkWithFiles.pl";
 require "UpdatePHDStudentEn.cgi";
+require "FunctionsPHDStudents.cgi";
 
 sub printFormUpdatePage() {
 
@@ -50,6 +51,7 @@ $secondLevel = &createSecondLevelMenu();
 
 if ($input{'submit'} eq "Aggiorna") {
 	
+    &moveXMLFile();
 	&updatePHDStudent();
 	&updatePHDStudentEn();
 	$content = &printFormUpdatePage("Aggiornamento eseguito");

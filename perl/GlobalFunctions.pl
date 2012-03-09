@@ -193,10 +193,12 @@ sub getTimeComponents() {
 # restituisce la data attuale nel formato YYYY-MM-DD
 sub getCurrentDate() {
     
-    my $currentYear = localtime->year() + 1900;
-	my $currentMonth = localtime->mon();
+    my @currentDate = localtime();
+    my $currentYear = $currentDate[5];
+    $currentYear += 1900;
+	my $currentMonth = $currentDate[4];
 	$currentMonth++;
-	my $currentDay = localtime->mday();
+	my $currentDay = $currentDate[3];
     
 	if (length($currentMonth) == 1) {
         $currentMonth = "0$currentMonth";	

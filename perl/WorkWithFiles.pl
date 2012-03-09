@@ -37,7 +37,7 @@ sub createFile() {
 	my $fileText = $_[1];
 	
 	open (MYFILE, '>', $filePosition);
-	print MYFILE "$fileText";
+	print MYFILE $fileText;
 	close (MYFILE);
 	
 	chmod(0775, $filePosition);

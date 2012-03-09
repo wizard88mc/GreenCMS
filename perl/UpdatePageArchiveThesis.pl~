@@ -34,7 +34,7 @@ sub updatePageArchiveThesis() {
 			my $surname = $thesis->find('Surname')->get_node(1)->firstChild->toString;
 			my $abstract = $thesis->find('Abstract')->get_node(1)->firstChild->toString;
 			my $title = $thesis->find('Title')->get_node(1)->firstChild->toString;
-			my $relatore = $thesis->find('Relatore')->get_node(1)->firstChild->toString;
+			my $relatore = $thesis->findvalue('Relatore');
 			my $matricola = $thesis->findvalue('Matricola');
 			my $lang = $thesis->findvalue('@lang');
 			
