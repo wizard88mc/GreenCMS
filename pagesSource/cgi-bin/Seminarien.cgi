@@ -113,6 +113,7 @@ require "WorkWithFiles.pl";
 	$pageSeminars =~ s/<seminarsList\/>/$stringSeminars/g;
 	
 	$pageSeminars =~ s/seminari.html/Seminari.cgi/g;
+	$pageSeminars =~ s/News.cgi/Newsen.cgi/g;
 	
 print <<PAGE;
 Content-type: text/html\n\n

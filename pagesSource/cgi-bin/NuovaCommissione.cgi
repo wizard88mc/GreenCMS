@@ -38,7 +38,7 @@ sub printFormNuovaCommissione() {
 <div id="contents">
 	<h1>Inserisci Nuova Commissione</h1>
 	$message
-	<form method="post" action="NuovaCommissione.cgi">
+	<form method="post" action="NuovaCommissione.cgi" accept-charset="UTF-8">
 	<fieldset>
 	<legend>Informazioni Generali</legend>
 	<label for="giorno">Giorno: </label>

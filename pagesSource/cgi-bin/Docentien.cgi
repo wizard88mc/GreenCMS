@@ -71,6 +71,9 @@ sub createMaskedEmail() {
 	$pageTeachers =~ s/$hrefPath/$newHREF/g; 
 	
 	$pageTeachers =~ s/docenti.html/Docenti.cgi/s;
+	$pageTeachers =~ s/RappStudenti.cgi/RappStudentien.cgi/s;
+	$pageTeachers =~ s/CCS.cgi/CCSen.cgi/s;
+	
 	
 	eval {
 	
@@ -284,8 +287,8 @@ PAGE
 	    
 	    &sendMail(%emailInformations);
 		
-		$tableInternalTeachers = "DB non raggiungbile. Problemi tecnici";
-		$tableExternalTeachers = "DB non raggiungbile. Problemi tecnici";
+		$tableInternalTeachers = "DB not reachable. We have some problems.";
+		$tableExternalTeachers = "DB not reachable. We have some problems.";
 		
 		$pageTeachers =~ s/<teachersTable\/>/$tableInternalTeachers/;
 		$pageTeachers =~ s/<externalTeachersTable\/>/$tableExternalTeachers/;

@@ -166,6 +166,8 @@ sub createMaskedEmail() {
 	$pageRappStud =~ s/<rappStudentsTable\/>/$tableRapp/;  
 	
 	$pageRappStud =~ s/rappresentantistudenti.html/RappStudenti.cgi/g;
+	$pageRappStud =~ s/Docenti.cgi/Docentien.cgi/g;
+	$pageRappStud =~ s/CCS.cgi/CCSen.cgi/g;
 
 print <<PAGE;
 Content-type: text/html\n\n

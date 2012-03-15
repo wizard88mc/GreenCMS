@@ -144,6 +144,7 @@ require "WorkWithFiles.pl";
 	$pageNews =~ s/<tableExpiredNews\/>/$listExpiredNews/g;
 	
 	$pageNews =~ s/news.html/News.cgi/g;
+	$pageNews =~ s/Seminari.cgi/Seminarien.cgi/g;
 	
 print <<PAGE;
 Content-type: text/html\n\n

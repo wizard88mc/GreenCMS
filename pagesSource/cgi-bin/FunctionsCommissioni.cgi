@@ -492,7 +492,8 @@ sub creaSingolaCommissione() {
     my $stringCandidati = '<strong>Candidati: </strong>';
     
     foreach my $candidato (@candidati) {
-        my $nomeCandidato = $candidato->firstChild->toString;
+        my $nomeCandidato = $candidato->findvalue('.');
+        utf8::encode($nomeCandidato);
         $stringCandidati .= ", $nomeCandidato";    
     }
     $stringCandidati =~ s/,//;
@@ -550,6 +551,7 @@ sub creaProclamazione() {
         my $ora = substr($ora, 0, 5);
         $ora =~ s/:/./;
         my $candidati = $turno->findvalue('Candidati');
+        utf8::encode($candidati);
         
         my $numeroTurno = &getNumeroRomano($counter);
         
@@ -626,6 +628,12 @@ sub deleteXMLFileContent() {
 	open(FILE, ">$fileXML") || die("File not opened deleteXMLFileContent()");
     print FILE $document->toString();
     close(FILE);
+}
+
+sub rigeneraSito() {
+ 
+    my $command = "perl $sourcePath" . "perl/UpdateStaticPages.pl";
+    system($command);
 }
 
 1;

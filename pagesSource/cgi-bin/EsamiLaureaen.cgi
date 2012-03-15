@@ -17,6 +17,7 @@ require "RetrieveExamSource.cgi";
 
 {
 
+    eval {
 	#prendo file html degli esami
 	my $pageExams = &openFile($siteForCGI . "laurea/esamilaureaen.html");
 	
@@ -131,6 +132,63 @@ require "RetrieveExamSource.cgi";
 print "Content-type:text/html\n\n";
 print "$pageExams";
 	
+    }
+    
+    or do {
+        
+        my %emailInformations;
+	    
+	    $emailInformations{'email'} = 'webinformatica@math.unipd.it';
+	    $emailInformations{'emailTo'} = 'support@math.unipd.it';
+	    $emailInformations{'message'} = " Buongiorno. 
+	    Messaggio automatico proveniente da informatica.math.unipd.it per segnalare 
+	    problemi nel raggiungimento del DB per il recupero degli esami. Vi preghiamo di 
+	    controllare al piu' presto e ristabilire la connessione. Grazie e Arrivederci";
+	    
+	    $emailInformations{'subject'} = "Problemi collegamento DB esami informatica.math.unipd.it";
+	    
+	    $completeList = "DB non raggiungbile. Problemi tecnici";
+	    
+	    #variabili necessarie per il cambio di indirizzi nella pagina
+	my $srcPath = "src=\"../";
+	my $hrefPath = "href=\"../";
+	my $newSRC = "src=\"/$folderBase";
+	my $newHREF = "href=\"/$folderBase";
+	my $folder = "laurea/";
+	
+	my $ulSecond = index($pageExams, "div id=\"contents");
+	my $endSecond = index($pageExams, "/ul", $ulSecond);
+	my $href = index($pageExams, "href=\"", $ulSecond);
+	
+	
+	while ($href != -1 && $href < $endSecond) {
+		
+		my $endLink = index($pageExams, "\"", $href + length("href=\""));
+		my $link = substr($pageExams, $href, $endLink - $href);
+		if (index($link, '.cgi') == -1) {
+			substr($pageExams, $href, length("href=\""), "href=\"/$folderBase" . $folder);
+		}
+		
+		$href = index($pageExams, "href=\"", $href + length("href=\"") + 5);
+		
+	}
+	
+	$pageExams =~ s/$srcPath/$newSRC/g; 
+	$pageExams =~ s/$hrefPath/$newHREF/g;
+	
+	#sotituisco il tag <noscript> presente nella pagina esamilaurea con l'elenco degli esami appena creato
+	substr($pageExams, index($pageExams, "<noscript>"), index($pageExams, "</noscript>") + length("</noscript>") - index($pageExams, "<noscript>"), $completeList);
+		
+	#elimino immagine preloader
+	substr($pageExams, index($pageExams, "<img", index($pageExams, "contentsLong")), index($pageExams, "/>", index($pageExams, "<img")) - index($pageExams, "<img"), "");
+	
+	$pageExams =~ s/esamilaureaen.html/EsamiLaureaen.cgi/g;
+	
+#stampo pagina
+print "Content-type:text/html\n\n";
+print "$pageExams";
+        
+    }
 	
 
 }

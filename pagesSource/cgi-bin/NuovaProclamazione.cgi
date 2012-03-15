@@ -115,7 +115,7 @@ sub printFormCommissioneCompleta() {
 	my $content = <<CONTENT;
 <div id="contents">
 	<h1>Riepilogo News</h1>
-	<form method="post" action="NuovaProclamazione.cgi">
+	<form method="post" action="NuovaProclamazione.cgi" accept-charset="UTF-8">
 	<fieldset>
 	<legend>Informazioni generali</legend>
 	<p><strong>Data: </strong>$userFormInput{'giorno'}</p>
@@ -158,11 +158,12 @@ sub printEnd() {
     
     my $content = <<CONTENT;
 <div id="contents">
-	<h1>Operazione completata</h1>
-	<p>Commissione di Laurea inserita correttamente</p>
-	<p>La pagina creata si chiama $nomePagina</p> 
+	<h1>Operazione Completata</h1>
+	<p>Proclamazione di Laurea inserita correttamente</p>
+	<p>La pagina creata si chiama $nomePagina</p>
 </div>
 CONTENT
+
 
 	return $content;
 }

@@ -103,6 +103,8 @@ require "GlobalVariables.pl";
 	$pageCCS =~ s/<reportCCS\/>/$stringGlobalPage/g;
 	
 	$pageCCS =~ s/ccs.html/CCS.cgi/g;
+	$pageCCS =~ s/Docenti.cgi/Docentien.cgi/g;
+	$pageCCS =~ s/RappStudenti.cgi/RappStudentien.cgi/g;
 	
 	
 print <<PAGE;
