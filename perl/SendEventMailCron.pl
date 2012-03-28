@@ -91,7 +91,7 @@ sub sendEventMailCron() {
 			
 			#recupero informazioni dell'evento
 			my $eventTitle = $event->find('Title')->get_node(1)->firstChild->toString;
-			$eventDate = &convertDateFromDBToItalianDate($eventDate);
+			$eventDate = &convertDateFromDBToItalian($eventDate);
 			my $eventPlace = $event->find('Place')->get_node(1)->firstChild->toString;
 			$eventTime = $event->findvalue('Time');
 			$eventTime = substr($eventTime, 0, 5);
