@@ -200,6 +200,8 @@ sub createCourseDetailsPageMagistrale() {
 	$textPage =~ s/<testiRiferimento\/>/$books/;
 	$textPage =~ s/<linkAlSito\/>/$siteLink/;
 	
+	$textPage =~ s/\\\'/\'/g;
+	
 	my $fileName = $informations{"teachingName"};
 	$fileName = encode_entities($fileName);
 	#elimino accenti o eventuali altre entità html per costruire il nome della pagina

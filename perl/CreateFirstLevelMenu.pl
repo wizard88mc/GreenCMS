@@ -62,6 +62,7 @@ sub createFirstLevelMenu() {
 		</ul>
 	</div>";
 	
+	utf8::encode($textFirstLevelMenu);
 	return $textFirstLevelMenu;
 	
 }

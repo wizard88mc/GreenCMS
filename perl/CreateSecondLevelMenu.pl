@@ -47,6 +47,7 @@ sub createSecondLevelMenu() {
 		
 		$stringSecondLevelMenu .= "</ul>";
 		
+		utf8::encode($stringSecondLevelMenu);
 		return $stringSecondLevelMenu;
 	}
 	or do { #nel caso in cui il file non ci sia significa che il menu di secondo livello non c'è e quindi ritorno stringa vuota

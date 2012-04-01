@@ -76,7 +76,7 @@ sub updatePHDStudentEn() {
 		}
 		
 		$stringCycle .= "</dl>";
-		$stringPHDStudents .= $stringCycle;
+		$stringPHDStudents = $stringCycle . $stringPHDStudents;
 		
 		
 	}

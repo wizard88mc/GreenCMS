@@ -135,9 +135,9 @@ window.onload = function() {
 				
 				//recuperto data dell'evento
 				var eventDateXML = eventsList[i].getElementsByTagName("Date")[0].firstChild.nodeValue;
-				var year = eventDateXML.substring(0, 4);
-				var month = eventDateXML.substring(5, 7) - 1;
-				var day = eventDateXML.substring(8, 10);
+				var year = parseInt(eventDateXML.substring(0, 4));
+				var month = parseInt(eventDateXML.substring(5, 7)) - 1;
+				var day = parseInt(eventDateXML.substring(8, 10)) + 1;
 				var eventDate = new Date(year, month, day);
 				
 				//se la data dell'evento è maggiore rispetto a quella attuale significa che l'evento è da visualizzare

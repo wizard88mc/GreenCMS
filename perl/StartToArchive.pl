@@ -4,10 +4,6 @@ use Time::localtime;
 use XML::LibXML;
 use utf8;
 
-binmode STDIN, ":utf8";
-binmode STDOUT, ":utf8";
-binmode STDERR, ":utf8";
-
 require "AddYearArchive.pl";
 require "ExtractCourses.pl";
 require "ArchiveSeminars.pl";
@@ -15,6 +11,8 @@ require "WorkWithFiles.pl";
 
 
 {
+    my $slash = "/";
+    
 	my $year = localtime->year() + 1900;
 	my $yearBack = $year - 1;
 	
@@ -37,7 +35,6 @@ require "WorkWithFiles.pl";
 	$pageTemplate =~ s/<listCoursesMagistrale\/>/$coursesIt[1]/;
 	$pageTemplate =~ s/<listSeminars\/>/$seminars[0]/g;
 	
-	my $slash = "/";
 	$stringAA =~ s/$slash//g;
 	
 	&createFile("../pagesSource/archivio/source/archivio$stringAA.html", $pageTemplate);
@@ -48,9 +45,6 @@ require "WorkWithFiles.pl";
 	$pageTemplate =~ s/<listCoursesLaurea\/>/$coursesEn[0]/;
 	$pageTemplate =~ s/<listCoursesMagistrale\/>/$coursesEn[1]/;
 	$pageTemplate =~ s/<listSeminars\/>/$seminars[1]/g;
-	
-	my $slash = "/";
-	$stringAA =~ s/$slash//g;
 	
 	&createFile("../pagesSource/archivio/source/archivio$stringAA" . "en.html", $pageTemplate);
 	

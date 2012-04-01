@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+
+<channel>
+<title>Lauree Informatica Università di Padova</title>
+<link>http://informatica.math.unipd.it</link>
+<description>Ultime news dal sito delle Lauree Informatica UniPD</description>
+<copyright>2010 - Lauree in Informatica Università di Padova</copyright>
+<language>it-it</language>
+<atom:link href="http://informatica.math.unipd.it/xml_files/rssfeed.xml" rel="self" type="application/rss+xml"/>
+<item>
+	<title>Prova cron</title>
+	<link>http://informatica.math.unipd.it/cgi-bin/ReadNews.cgi?newsID=32</link>
+	<description>news di prova per cron. . .</description>
+	<guid>http://informatica.math.unipd.it/cgi-bin/ReadNews.cgi?newsID=32</guid></item><item>
+	<title>Prova cron</title>
+	<link>http://informatica.math.unipd.it/cgi-bin/ReadNews.cgi?newsID=32</link>
+	<description>news di prova per cron. . .</description>
+	<guid>http://informatica.math.unipd.it/cgi-bin/ReadNews.cgi?newsID=32</guid></item><item>
+	<title>News di prova</title>
+	<link>http://informatica.math.unipd.it/cgi-bin/ReadNews.cgi?newsID=29</link>
+	<description>sakhflaksflasldahdlf. . .</description>
+	<guid>http://informatica.math.unipd.it/cgi-bin/ReadNews.cgi?newsID=29</guid></item><item>
+	<title>Inserimento presentazione del corso di Laurea</title>
+	<link>http://informatica.math.unipd.it/cgi-bin/ReadNews.cgi?newsID=10</link>
+	<description>Nella sezione Documenti è possibile trovare la pre. . .</description>
+	<guid>http://informatica.math.unipd.it/cgi-bin/ReadNews.cgi?newsID=10</guid></item><item>
+	<title>Bando Progetto Leonardo Mobilità (tirocini)</title>
+	<link>http://informatica.math.unipd.it/cgi-bin/ReadNews.cgi?newsID=5</link>
+	<description>E' stato pubblicato il bando per la selezione per . . .</description>
+	<guid>http://informatica.math.unipd.it/cgi-bin/ReadNews.cgi?newsID=5</guid></item><item>
+	<title>Test di Idoneità Lingua Inglese</title>
+	<link>http://informatica.math.unipd.it/cgi-bin/ReadNews.cgi?newsID=3</link>
+	<description>I test per l'idoneità per la lingua inglese sono s. . .</description>
+	<guid>http://informatica.math.unipd.it/cgi-bin/ReadNews.cgi?newsID=3</guid></item><item>
+	<title>Presentazione dei Corsi di Laurea in Informatica ed Orario per l'A.A. 2010-2011</title>
+	<link>http://informatica.math.unipd.it/cgi-bin/ReadNews.cgi?newsID=2</link>
+	<description>Il giorno 11 ottobre alle 14.30 in aula LUM250 si . . .</description>
+	<guid>http://informatica.math.unipd.it/cgi-bin/ReadNews.cgi?newsID=2</guid></item>
+</channel>
+</rss>

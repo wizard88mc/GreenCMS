@@ -1,0 +1,33 @@
+#!/usr/bin/perl -w
+
+sub getDateComponentsFromItalianDate() {
+    my $date = $_[0];
+    
+    my @components = (substr($date, 0, 2), substr($date, 3, 2), substr($date, 6, 4));
+    
+    return @components;
+}
+
+sub checkDatesCronologicallyCorrect() {
+    my $start = $_[0];
+    my $end = $_[1];
+    
+    my ($startDay, $startMonth, $startYear) = &getDateComponentsFromItalianDate($start);
+    my ($endDay, $endMonth, $endYear) = &getDateComponentsFromItalianDate($end);
+    
+    my $differenceYear = $endYear - $startYear;
+    my $differenceMonth = $endMonth - $startMonth;
+    my $differenceDay = $endDay - $startDay;
+    
+    if (($differenceYear > 0) || 
+        ($differenceYear == 0 && $differenceMonth > 0) ||
+        ($differenceYear == 0 && $differenceMonth == 0 && ($differenceDay > 0 || $differenceDay == 0))) {
+    return 1;
+        }
+        else {
+            return 0;
+        }
+        
+}
+
+print &checkDatesCronologicallyCorrect('13-02-2012', '12-02-2012');

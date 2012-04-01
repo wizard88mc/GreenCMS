@@ -81,13 +81,13 @@ sub createCourseDetailsPageLaurea() {
 	if ($periodInformations{'fine'}) {
 	    $end = $periodInformations{'fine'};
 	    #trasformo la stringa del periodo in gg/mm/aaaa
-	    $end = &convertDateFromDBToItalian($beginning);
+	    $end = &convertDateFromDBToItalian($end);
 	}
 	
 	
 	my %courseDescription;
 	if ($informations{'informations'}) {
-	    %courseDescriptio = %{$informations{'informations'}};
+	    %courseDescription = %{$informations{'informations'}};
 	}
 	
 	#programma del corso
@@ -200,6 +200,8 @@ sub createCourseDetailsPageLaurea() {
 	$textPage =~ s/<ausiliDidattici\/>/$didatticHelps/;
 	$textPage =~ s/<testiRiferimento\/>/$books/;
 	$textPage =~ s/<linkAlSito\/>/$siteLink/;
+	
+	$textPage =~ s/\\\'/\'/g;
 	
 	my $fileName = $informations{"teachingName"};
 	$fileName = encode_entities($fileName);

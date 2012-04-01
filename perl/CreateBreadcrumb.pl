@@ -48,6 +48,7 @@ sub createBreadcrumb() {
 	#aggiungo la pagina attual al breadcrumb
 	$stringBreadcrumb .= "<span id=\"pathSelected\">$pageName</span></span>";
 
+	utf8::encode($stringBreadcrumb);
 	return $stringBreadcrumb;
 
 }

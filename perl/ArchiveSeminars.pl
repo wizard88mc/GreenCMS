@@ -6,6 +6,7 @@ use utf8;
 
 require "GlobalVariables.pl";
 require "ExtractXML.pl";
+require "GlobalFunctions.pl";
 
 #recupera i seminari svolti in un anno accademico
 sub archiveSeminars() {
@@ -27,7 +28,7 @@ sub archiveSeminars() {
 		my $language = $seminar->findvalue('@language');
 		my $title = $seminar->find('Title')->get_node(1)->firstChild->toString;
 		my $date = $seminar->findvalue('Date');
-		my $dateIt = substr($date, 8, 2) . "/" . substr($date, 5, 2) . "/" . substr($date, 0, 4);
+		my $dateIt = &convertDateFromDBToItalian($date);
 		my $speaker = $seminar->find('Speaker')->get_node(1)->firstChild->toString;
 		my $from = "";
 		#se affiliazione è stata inserita allora recupero anche affiliazione
@@ -37,29 +38,15 @@ sub archiveSeminars() {
 		my $abstract = $seminar->find('Abstract')->get_node(1)->firstChild->toString;
 		
 		#sostituisco eventuali link inseriti nell'abstract in link veri e propri, con tag <a>
-		my $positionLink = index($abstract, "http://");
 		
-		while ($positionLink != -1) {
+		$abstract = &convertLinks($abstract);
 		
-			my $endLink = index($abstract, " ", $positionLink);
-
-			my $link = substr($abstract, $positionLink, $endLink - $positionLink);
-			
-			$link = "<a href=\"$link\">$link</a>";
-			my $lengthLink = length($link);
-		
-			substr($abstract, $positionLink, $endLink - $positionLink, $link);
-			
-			$positionLink = index($abstract, "http://", $positionLink + $lengthLink);
-			
-		}
-		
-		my $titleIT = $title;
+		my $titleIT = "<strong>$title</strong>";
 		my $abstractIT = $abstract;
 		
 		if ($language eq "en") {
-			$titleIT = "<strong xml:lang=\"en\">$titleIT</strong>";
-			$abstractIT = "<span xml:lang=\"en\">$abstractIT</span>";
+			$titleIT = "<strong xml:lang=\"en\">$title</strong>";
+			$abstractIT = "<span xml:lang=\"en\">$abstract</span>";
 		}
 		
 		#se c'è affiliazione del relatore la aggiungo

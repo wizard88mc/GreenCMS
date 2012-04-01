@@ -158,6 +158,9 @@ sub createPageCoursesMagistrale() {
 	</tbody>	
 	</table>";
 	
+	#elimino eventuali \ per la presenza di eventuali '
+	$tableCourses =~ s/\\\'/\'/g;
+	
 	utf8::encode($tableCourses);
 	
 	#mi disconnetto dal database

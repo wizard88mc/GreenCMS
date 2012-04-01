@@ -1,0 +1,41 @@
+#headImg {
+    width: 19%;
+    padding: 0.4em 1% 0.4em 0;
+    float: left;
+    background: #30343B url('../img/css1-bkg.gif') repeat-x top left;
+}
+#headerUtility {
+    text-align: right;
+    float: right;
+    width: 40%;
+    padding-right: 0.8em;
+    line-height: 1.8em;
+}
+#headerUtility form {
+    padding-top: 0.8em;
+}
+#headerUtility form label , #headerUtility form legend {
+    display:none;
+}
+#textInput {
+    width: 40%;
+}
+#headerText {
+    margin-top:0.8em;
+    padding-left: 1.5em;
+    z-index: 1;
+    margin-left: 20%;
+    background-color: #EEEEEE;
+    color: #30343b;
+    padding-bottom: 3.4em;
+}
+#header h1 {
+    font-size: 2.5em;
+    font-variant:small-caps;
+    padding:0.3em 0 0.3em 0;
+}
+#header h2 {
+    font-size: 1.2em;
+    font-style:oblique;
+    padding:0.3em 0 0.3em 0;
+}

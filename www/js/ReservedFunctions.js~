@@ -1,0 +1,13 @@
+// JavaScript Document
+
+function addNewLink() {
+
+    var textArea = document.getElementById("textNews");
+    textArea.value += "[link][/link]";   
+}
+
+function addNewLinkSeminary() {
+ 
+    var textArea = document.getElementById("absract");
+    textArea.value += "[link][/link]";
+}

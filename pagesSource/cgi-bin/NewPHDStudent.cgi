@@ -8,10 +8,10 @@ use utf8;
 #binmode STDOUT, ":utf8";
 #binmode STDERR, ":utf8";
 
+require "GlobalVariables.pl";
+require "WorkWithFiles.pl";
 require "CreateSecondLevelMenu.cgi";
 require "FunctionsPHDStudents.cgi";
-require "WorkWithFiles.pl";
-require "GlobalVariables.pl";
 
 sub printFormNewPHDStudent() {
 	

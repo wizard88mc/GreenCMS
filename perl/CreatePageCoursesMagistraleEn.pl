@@ -158,6 +158,8 @@ sub createPageCoursesMagistraleEn() {
 	</tbody>	
 	</table>";
 	
+	$tableCourses =~ s/\\\'/\'/g;
+	
 	utf8::encode($tableCourses);
 	
 	#mi disconnetto dal database

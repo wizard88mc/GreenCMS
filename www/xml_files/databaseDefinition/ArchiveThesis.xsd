@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="TableArchiveThesis" type="TTableArchiveThesis">
+		<xs:annotation>
+			<xs:documentation>Definizione della tabella di archivio delle tesi magistrale proposte</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="TTableArchiveThesis">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ArchiveThesis" type="TArchiveThesis"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TArchiveThesis">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="Thesis" type="TThesis"/>
+		</xs:sequence>
+		<xs:attribute name="MonthSession" type="xs:integer"/>
+		<xs:attribute name="Year" type="xs:gYear"/>
+	</xs:complexType>
+	<xs:complexType name="TThesis">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="Surname" type="xs:string"/>
+			<xs:element name="Matricola" type="xs:string" />
+			<xs:element name="Relatore" type="xs:string" />
+			<xs:element name="Title" type="xs:string"/>
+			<xs:element name="Abstract" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:attribute name="lang" type="xs:string" />
+</xs:schema>

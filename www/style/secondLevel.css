@@ -1,0 +1,25 @@
+#secondLevel {
+    background-color: #F7F7F7;
+}
+#secondLevel li {
+    margin-left:0;
+    list-style-position:outside;
+    display: inline;
+    border: none;
+}
+#secondLevel a, #secondLevel a:visited {
+    padding: 0.7em 1% 0.8em 1%;
+    border-bottom-width: 0;
+    border-style: none;
+}
+#secondLevelSelected {
+    font-weight: bold;
+    color: #003366;
+    background-color: white;
+    padding: 0.7em 1% 0.8em 1%;
+}
+#secondLevel a:hover {
+    border: none;
+    background-color: #fafafa;
+    color: #003366;
+}

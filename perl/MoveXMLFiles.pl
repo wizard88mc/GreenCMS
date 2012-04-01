@@ -33,6 +33,23 @@ sub deleteEvents() {
 	print FILE $document->toString();
 	close(FILE);
 
+	# devo ora eliminare anche le associazioni tra seminari e mailing list / email
+	# presenti nell'altro file
+	my $fileAssociazioni = $sitePath . 'xml_files/MailingListsContactsJoins.xml';
+	
+	my $documentAssociazioni = $parser->parse_file($fileAssociazioni);
+	my $rootAssociazioni = $documentAssociazioni->getDocumentElement;
+	
+	my $associazioni = $rootAssociazioni->findnodes('TableJoinEventsMailingLists/JoinEventMailingList');
+	
+	foreach $associazione ($associazioni->get_nodelist) {
+	    my $parent = $associazione->parentNode;
+	    $parent->removeChild($associazione);
+	}
+	
+	open(FILE, ">$fileAssociazioni") || die("Non riesco ad aprire il file");
+	print FILE $documentAssociazioni->toString();
+	close(FILE);
 
 }
 

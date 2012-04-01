@@ -87,7 +87,7 @@ sub updatePHDStudent() {
 		
 		$stringCycle .= "</dl>";
 		#aggiungo stringa ciclo a stringa globale
-		$stringPHDStudents .= $stringCycle;
+		$stringPHDStudents = $stringCycle . $stringPHDStudents;
 		
 		
 	}

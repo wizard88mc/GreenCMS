@@ -207,8 +207,8 @@ sub getCurrentDate() {
         $currentDay = "0$currentDay";	
     }
     
-    my @currentDate = ($currentYear, $currentMonth, $currentDay);
-    return @currentDate;
+    my @completeDate = ($currentYear, $currentMonth, $currentDay);
+    return @completeDate;
 }
 
 sub convertLinks() {

@@ -10,7 +10,7 @@ require "ExtractXML.pl";
 sub updatePHDStudentEn() {
 
 	#recupero testo della pagina di template
-	my $pageTemplatePHDStudents = &openFile($sitePath . "dottorato/indexen.html") or die "$!";
+	my $pageTemplatePHDStudents = &openFile($sitePath . "dottorato/dottoratotemplateen.html") or die "$!";
 	
 	my $fileXMLPHD = $sitePath . "xml_files/PHDStudentSupervisor.xml";
 	
@@ -98,13 +98,7 @@ sub updatePHDStudentEn() {
 	#unlink("../dottorato/dottorato.html");
 	my $page = $sitePath . "dottorato/indexen.html";
 	
-	rename("$page", $sitePath . "dottorato/dottoratotemplateen.html");
-	
-	open FILE, ">$page" or die "$!";
-	print FILE "$pageTemplatePHDStudents";
-	close (FILE);
-	
-	chmod(0775, $page);
+	&createFile($page, $pageTemplatePHDStudents);
 	
 	my $cmd = "chgrp www-data $page";
 	system($cmd);

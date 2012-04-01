@@ -5,6 +5,7 @@ use utf8;
 binmode STDERR, ":utf8";
 
 require "GetCourseSite.pl";
+require "GlobalFunctions.pl";
 
 #parametri:
 #    $_[0] - hash contenente le informazioni riguardanti quel particolare corso
@@ -13,7 +14,8 @@ require "GetCourseSite.pl";
 sub createCourseDetailsPageLaurea() {
 	
 	my %informations = %{$_[0]};
-	my $en = $_[1];
+	my $en = "";
+	if ($_[1]) { $en = $_[1]; }
 	my $break = "<br />";
 	my $goDown = "\n";
 	my $slash = "/";
@@ -48,52 +50,83 @@ sub createCourseDetailsPageLaurea() {
 	utf8::encode($teacher);
 	
 	# numero CFU del corso
-	my $CFU = $informations{"CFU"};
+	my $CFU = "";
+	if ($informations{'CFU'}) {
+	    $CFU = $informations{'CFU'};
+	}
 	
 	#recupero informazioni sul periodo di svolgimento del corso
-	my %periodInformations = %{$informations{"period"}};
-	my $year = $periodInformations{"anno"};
-	my $period = $periodInformations{"trimestre"};
+	my %periodInformations;
+	if ($informations{'period'}) {
+	    %periodInformations = %{$informations{'period'}};
+	}
+	my $year = "";
+	if ($periodInformations{'anno'}) {
+	    $year = $periodInformations{'anno'};
+	}
+	my $period = "";
+	if ($periodInformations{'trimestre'}) {
+	    $period = $periodInformations{'trimestre'};
+	}
 	
-	my $beginning = $periodInformations{"inizio"};
-	#trasformo la stringa del periodo in gg/mm/aaaa
-	$beginning = substr($beginning, 8, 2) . "/" . substr($beginning, 5, 2) . "/" . substr($beginning, 0, 4);
+	my $beginning = "";
+	if ($periodInformations{'inizio'}) {
+	    $beginning = $periodInformations{'inizio'};
+	    #trasformo la stringa del periodo in gg/mm/aaaa
+	    $beginning = &convertDateFromDBToItalian($beginning);
+	}
 	
-	my $end = $periodInformations{"fine"};
-	#trasformo la stringa del periodo in gg/mm/aaaa
-	$end = substr($end, 8, 2) . "/" . substr($end, 5, 2) . "/" . substr($end, 0, 4);
 	
-	my %courseDescription = %{$informations{"informations"}};
+	my $end = "";
+	if ($periodInformations{'fine'}) {
+	    $end = $periodInformations{'fine'};
+	    #trasformo la stringa del periodo in gg/mm/aaaa
+	    $end = &convertDateFromDBToItalian($beginning);
+	}
+	
+	
+	my %courseDescription;
+	if ($informations{'informations'}) {
+	    %courseDescriptio = %{$informations{'informations'}};
+	}
 	
 	#programma del corso
-	my $courseProgram = $courseDescription{"programmacorso"};
-	$courseProgram =~ s/\&/\&amp;/g;
-	$courseProgram =~ s/</\&lt\;/g;
-	$courseProgram =~ s/>/\&gt\;/g;
-	#sostituisco eventuali \n con tag html <br />
-	$courseProgram =~ s/$goDown/$break/g;
+	my $courseProgram = "";
+	if ($courseDescription{'programmacorso'}) {
+	    $courseProgram = $courseDescription{'programmacorso'};
+	    $courseProgram =~ s/\&/\&amp;/g;
+        $courseProgram =~ s/</\&lt\;/g;
+        $courseProgram =~ s/>/\&gt\;/g;
+        #sostituisco eventuali \n con tag html <br />
+        $courseProgram =~ s/$goDown/$break/g;
+	}
 	utf8::encode($courseProgram);
 	
 	                    
-	my $prerequisites = $courseDescription{"prerequisiti"};
-	$prerequisites =~ s/\&/\&amp;/g;
-	$prerequisites =~ s/</\&lt\;/g;
-	$prerequisites =~ s/>/\&gt\;/g;
-	#sostituisco eventuali \n con tag html <br />
-	$prerequisites =~ s/$goDown/$break/g;
+	my $prerequisites = "";
+	if ($courseDescription{'prerequisiti'}) {
+	    $prerequisites = $courseDescription{'prerequisiti'};
+	    $prerequisites =~ s/\&/\&amp;/g;
+        $prerequisites =~ s/</\&lt\;/g;
+        $prerequisites =~ s/>/\&gt\;/g;
+        #sostituisco eventuali \n con tag html <br />
+        $prerequisites =~ s/$goDown/$break/g;
+	}
 	#se non c'e' scritto nulla o se la stringa inserita e' --, uniformo per tutti a - -
 	if (($prerequisites eq "") || ($prerequisites eq "--")) {
 		$prerequisites = "- -";   
 	}
 	utf8::encode($prerequisites);
 	
-	
-        my $propedeuticities = $courseDescription{"propedeuticita"};
-	$propedeuticities =~ s/\&/\&amp;/g;
-	$propedeuticities =~ s/</\&lt\;/g;
-	$propedeuticities =~ s/>/\&gt\;/g;
-	#sostituisco eventuali \n con tag html <br />
-	$propedeuticities =~ s/$goDown/$break/g;
+    my $propedeuticities = "";
+    if ($courseDescription{'propedeuticita'}) {
+        $propedeuticities = $courseDescription{'propedeuticita'};
+        $propedeuticities =~ s/\&/\&amp;/g;
+        $propedeuticities =~ s/</\&lt\;/g;
+        $propedeuticities =~ s/>/\&gt\;/g;
+        #sostituisco eventuali \n con tag html <br />
+        $propedeuticities =~ s/$goDown/$break/g;
+    }
 	#se non c'e' scritto nulla o se la stringa inserita e' --, uniformo per tutti a - -
 	if (($propedeuticities eq "") || ($propedeuticities eq "--")) {
 		$propedeuticities = "- -";   
@@ -101,12 +134,15 @@ sub createCourseDetailsPageLaurea() {
 	utf8::encode($propedeuticities);
 	
 	
-	my $didatticHelps = $courseDescription{"ausilididattici"};
-	$didatticHelps =~ s/\&/\&amp;/g;
-	$didatticHelps =~ s/</\&lt\;/g;
-	$didatticHelps =~ s/>/\&gt\;/g;
-	#sostituisco eventuali \n con tag html <br />
-	$didatticHelps =~ s/$goDown/$break/g;
+	my $didatticHelps = "";
+	if ($courseDescription{'ausilididattici'}) {
+	    $didatticHelps = $courseDescription{'ausilididattici'};
+	    $didatticHelps =~ s/\&/\&amp;/g;
+        $didatticHelps =~ s/</\&lt\;/g;
+        $didatticHelps =~ s/>/\&gt\;/g;
+        #sostituisco eventuali \n con tag html <br />
+        $didatticHelps =~ s/$goDown/$break/g;
+	}
 	#se non c'e' scritto nulla o se la stringa inserita e' --, uniformo per tutti a - -
 	if (($didatticHelps eq "") || ($didatticHelps eq "--")) {
 		$didatticHelps = "- -";   
@@ -114,20 +150,32 @@ sub createCourseDetailsPageLaurea() {
 	utf8::encode($didatticHelps);
 	
 	
-	my $books = $courseDescription{"testididattici"};
-	$books =~ s/\&/\&amp;/g;
-	$books =~ s/</\&lt\;/g;
-	$books =~ s/>/\&gt\;/g;
-	#sostituisco eventuali \n con tag html <br />
-	$books =~ s/$goDown/$break/g;
+	my $books = "";
+	if ($courseDescription{'testididattici'}) {
+	    $books = $courseDescription{'testididattici'};
+	    $books =~ s/\&/\&amp;/g;
+        $books =~ s/</\&lt\;/g;
+        $books =~ s/>/\&gt\;/g;
+        #sostituisco eventuali \n con tag html <br />
+        $books =~ s/$goDown/$break/g;
+	}
 	utf8::encode($books);
 	
 	
 	#estraggo ore del corso
-	my %hours = %{$informations{"hours"}};
-	my $frontalHour = $hours{"ore_frontali"};
-	my $laboratoryHour = $hours{"ore_lab"};
-	my $exerciseHour = $hours{"ore_esercizi"};
+	my %hours = %{$informations{'hours'}};
+	my $frontalHour = "";
+	if ($hours{'ore_frontali'}) {
+	  $frontalHour = $hours{'ore_frontali'};
+	}
+	my $laboratoryHour = "";
+	if ($hours{'ore_lab'}) {
+	    $laboratoryHour = $hours{'ore_lab'};
+	}
+	my $exerciseHour = "";
+	if ($hours{'ore_esercizi'}) {
+	    $exerciseHour = $hours{'ore_esercizi'};
+	}
 	
 	my $siteLink = &getCourseSiteLaurea($course);
 	
@@ -152,6 +200,8 @@ sub createCourseDetailsPageLaurea() {
 	$textPage =~ s/<ausiliDidattici\/>/$didatticHelps/;
 	$textPage =~ s/<testiRiferimento\/>/$books/;
 	$textPage =~ s/<linkAlSito\/>/$siteLink/;
+	
+	$textPage =~ s/\\\'/\'/g;
 	
 	my $fileName = $informations{"teachingName"};
 	$fileName = encode_entities($fileName);

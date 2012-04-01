@@ -1,0 +1,65 @@
+html body {
+    margin:0;
+    padding:0;
+    font-family:arial, helvetica, sans-serif;
+    font-size:0.7em;
+    background-color:white;
+    color:black;
+}
+#utilities, #footer, #headImg ,#headerUtility,#header a, #navigation, #secondLevel, #path, #webmaster, #contatore, .tornaSu {
+    display:none;
+}
+#stampa {
+    float:right;
+    width:35%;
+}
+#header {
+    padding-bottom:50px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+}
+#contents, #contentsLong {
+    width:100%;
+    margin-top:4em;
+}
+#contents table,#contentsLong table {
+    border:none;
+    width:70%;
+}
+#contents td, #contentsLong td {
+    border: 1px solid black;
+}
+a {
+    color:#520;
+    font-weight:bold;
+    text-decoration:underline;
+}
+a:link:after, a:visited:after {
+    content: " [" attr(href) "] ";
+    font-size:90%;
+}
+#leftImg {
+    float: left;
+    width: 20%;
+    min-width:10em;
+    margin:1em 0 0.8em 0;
+    padding-right: 0.8em;
+}
+#rightImg {
+    float: right;
+    width: 30%;
+    min-width:10em;
+    margin:3em 0 0.8em 0;
+    padding-left: 0.8em;
+}
+
+.vuota {}
+
+.parteToTrash {
+	display: none;
+}
+
+.aural, .mobile, .hidden {
+	display: none;
+}

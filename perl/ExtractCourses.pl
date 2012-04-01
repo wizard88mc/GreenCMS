@@ -21,37 +21,45 @@ sub extractCourses() {
 	
 	my $listLaurea = "<ul>";
 	
-	my $offset = index($coursePage, "<tbody>");
+	my $offset = index($coursePage, '<tbody>');
 	
 	#recupero posizione della prima riga contenente un corso
-	my $trPosition = index($coursePage, "<tr", $offset);
+	my $trPosition = index($coursePage, '<tr', $offset);
 	
 	#fino a quando non finiscono le righe che contengono un corso
 	while ($trPosition != -1) {
 		
 		#recupero l'indice dove finisce la riga che contiene il corso
-		my $endTr = index($coursePage, "</tr>", $trPosition);
+		my $endTr = index($coursePage, '</tr>', $trPosition);
 		
 		#prendo la riga selezionata come sottostringa
 		my $substringRow = substr($coursePage, $trPosition, $endTr - $trPosition);
 		
 		#recupero il link che contiene la pagina del corso ed il suo nome
-		my $stringInformations = substr($substringRow, index($substringRow, "<a"), index($substringRow, "</a>") - index($substringRow, "<a"));
+		my $inizioLink = index($substringRow, '<a');
+		my $fineLink = index($substringRow, '</a>', $inizioLink);
+		my $stringInformations = substr($substringRow, $inizioLink, 
+		    $fineLink - $inizioLink);
 		
 		#recupero il nome del corso, compreso tra "> e </a>
-		my $courseName = substr($stringInformations, index($stringInformations, "\">") + 2);
+		my $courseName = "";
+		
+		if ($stringInformations ne "") {
+		    $courseName = substr($stringInformations, 
+		        index($stringInformations, '">') + 2);
+		}
 		
 		if ($courseName ne "") {
 			
 			#recupero nome della pagina che contiene le informazioni del corso (posizione di ef=" + 4 (arrivo all'inizio del nome) -> posizione di "> (fine link)
-			my $pageLinkStart = index($stringInformations, "ef=\"") + 4;
+			my $pageLinkStart = index($stringInformations, 'ef="') + 4;
 			
 			my $pageName = substr($stringInformations, $pageLinkStart, index($stringInformations, ".html\"") + 5 - $pageLinkStart);
 			
 			print "$pageName\n";
-			my $startCellName = index($substringRow, "<td>", index($substringRow, "<td>" + 2));
+			my $startCellName = index($substringRow, '<td>', index($substringRow, '<td>') + 2);
 			
-			my $startName = index($substringRow, "<abbr", $startCellName);
+			my $startName = index($substringRow, '<abbr', $startCellName);
 			
 			my $stringTeacherName = substr($substringRow, $startName, index($substringRow, "</td>", $startName) - $startName);
 			
@@ -72,42 +80,56 @@ sub extractCourses() {
 	$coursePage = &openFile($sitePath . "laureamagistrale/corsimagistrale$en.html");
 	my $listMagistrale = "<ul>";
 	
-	$offset = index($coursePage, "<tbody>");
+	$offset = index($coursePage, '<tbody>');
 	
 	#recupero posizione della prima riga contenente un corso
-	$trPosition = index($coursePage, "<tr", $offset);
+	$trPosition = index($coursePage, '<tr', $offset);
 	
 	#fino a quando non finiscono le righe che contengono un corso
 	while ($trPosition != -1) {
 		
 		#recupero l'indice dove finisce la riga che contiene il corso
-		my $endTr = index($coursePage, "</tr>", $trPosition);
+		my $endTr = index($coursePage, '</tr>', $trPosition);
 		
 		#prendo la riga selezionata come sottostringa
 		my $substringRow = substr($coursePage, $trPosition, $endTr - $trPosition);
 
 		#recupero il link che contiene la pagina del corso ed il suo nome
-		my $stringInformations = substr($substringRow, index($substringRow, "<a"), index($substringRow, "</a>") - index($substringRow, "<a"));
+		my $inizioLink = index($substringRow, '<a');
+		my $fineLink = index($substringRow, '</a>', $inizioLink);
+		my $stringInformations = substr($substringRow, $inizioLink, 
+		    $fineLink - $inizioLink);
 		
 		#recupero il nome del corso, compreso tra "> e </a>
-		my $courseName = substr($stringInformations, index($stringInformations, "\">") + 2);
+		my $courseName = "";
+		
+		if ($stringInformations ne "") {
+		    $courseName = substr($stringInformations, 
+		        index($stringInformations, "\">") + 2);
+		}
 		
 		if ($courseName ne "") {
 			
 			#recupero nome della pagina che contiene le informazioni del corso (posizione di ef=" + 4 (arrivo all'inizio del nome) -> posizione di "> (fine link)
-			my $pageLinkStart = index($stringInformations, "ef=\"") + 4;
+			my $pageLinkStart = index($stringInformations, 'ef="') + 4;
 			
-			my $pageName = substr($stringInformations, $pageLinkStart, index($stringInformations, ".html\"") + 5 - $pageLinkStart);
+			my $pageName = substr($stringInformations, $pageLinkStart, 
+			    index($stringInformations, '.html"') + 5 - $pageLinkStart);
+			
 			print "$pageName\n";
-			my $startCellName = index($substringRow, "<td>", index($substringRow, "<td>" + 2));
+			my $startCellName = index($substringRow, '<td>', 
+			    index($substringRow, '<td>') + 2);
 			
-			my $startName = index($substringRow, "<abbr", $startCellName);
+			my $startName = index($substringRow, '<abbr', $startCellName);
 			
-			my $stringTeacherName = substr($substringRow, $startName, index($substringRow, "</td>", $startName) - $startName);
+			my $stringTeacherName = substr($substringRow, $startName, 
+			    index($substringRow, '</td>', $startName) - $startName);
 			
-			my $finalPageName = &createPageArchiveCourse($pageName, $stringAA, "laureamagistrale", $en);
+			my $finalPageName = &createPageArchiveCourse($pageName, $stringAA, 
+			    "laureamagistrale", $en);
 			
-			&addPageSourceArchive($finalPageName, $courseName . " - $stringAA", $stringAA, $en);
+			&addPageSourceArchive($finalPageName, $courseName . " - $stringAA", 
+			    $stringAA, $en);
 			
 			my $link = "<li><a href=\"$finalPageName\">$courseName</a> - $stringTeacherName</li>";
 			

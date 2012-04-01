@@ -23,7 +23,9 @@ sub createPages() {
 		
 		#assegno gruppo
 		my @commands = ("chgrp", "www-data", "$sitePath" . "$folder");
+		print "PRIMA\n";
 		system(@commands);
+		print "DOPO\n";
 		
 		print "FOLDER: $folder \n";
 		&createPagesOfFolder($folder);  #invoco metodo per creare tutte le pagine apparteneneti a quella cartella

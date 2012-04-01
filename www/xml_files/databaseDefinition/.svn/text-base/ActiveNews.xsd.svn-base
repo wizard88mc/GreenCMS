@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="TableActiveNews" type="TTableActiveNews">
+		<xs:annotation>
+			<xs:documentation>Definizione della tabella ActiveNews</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	
+	<xs:complexType name="TTableActiveNews">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ActiveNews" type="TActiveNews" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="TActiveNews">
+		<xs:sequence minOccurs="1" maxOccurs="1">
+			<xs:element name="ID" type="xs:integer" />
+			<xs:element name="Title" type="xs:string" />
+			<xs:element name="Date" type="xs:date" />
+			<xs:element name="Time" type="xs:time" />
+			<xs:element name="Text" type="xs:string" />
+			<xs:element name="Publisher" type="xs:string" />
+			<xs:element name="Type" type="xs:string" />
+			<xs:element name="Archive" type="xs:string" />
+			<xs:element name="ExpirationDate" type="xs:date" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

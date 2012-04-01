@@ -7,14 +7,14 @@
 	<ResearchArea language="en">process mining, data mining, business process management</ResearchArea>
 	<Website>www.math.unipd.it/~burattin</Website>
 	<Supervisor>1</Supervisor>
-	<Cycle>1</Cycle></PHDStudent><PHDStudent>
-		<ID>2</ID>
-		<Name>Lino</Name>
-		<Surname>Possamai</Surname>
-		<ResearchArea language="en">systems, networks, world wide web</ResearchArea>
-		<Website/>
-		<Supervisor>2</Supervisor>
-		<Cycle>1</Cycle></PHDStudent><PHDStudent>
+	<Cycle>3</Cycle></PHDStudent><PHDStudent>
+	<ID>2</ID>
+	<Name>Lino</Name>
+	<Surname>Possamai</Surname>
+	<ResearchArea language="en">systems, networks, world wide web</ResearchArea>
+	<Website>www.possamai.it/lino</Website>
+	<Supervisor>2</Supervisor>
+	<Cycle>3</Cycle></PHDStudent><PHDStudent>
 		<ID>3</ID>
 		<Name>Enrico</Name>
 		<Surname>Mezzetti</Surname>
@@ -30,7 +30,7 @@
 </ResearchArea>
 		<Website/>
 		<Supervisor>4</Supervisor>
-		<Cycle>3</Cycle></PHDStudent><PHDStudent>
+		<Cycle>1</Cycle></PHDStudent><PHDStudent>
 		<ID>5</ID>
 		<Name>Alessandro</Name>
 		<Surname>Maccagnan</Surname>
@@ -38,7 +38,7 @@
 </ResearchArea>
 		<Website/>
 		<Supervisor>3</Supervisor>
-		<Cycle>3</Cycle></PHDStudent><PHDStudent>
+		<Cycle>1</Cycle></PHDStudent><PHDStudent>
 		<ID>6</ID>
 		<Name>Marco</Name>
 		<Surname>Panunzio</Surname>
@@ -46,21 +46,21 @@
 </ResearchArea>
 		<Website/>
 		<Supervisor>3</Supervisor>
-		<Cycle>3</Cycle></PHDStudent></TablePHDStudent>
+		<Cycle>1</Cycle></PHDStudent></TablePHDStudent>
 	<TableCycle><Cycle>
 			<ID>1</ID>
+			<Name>XXIII Ciclo</Name>
+			<BeginningYear>2008</BeginningYear>
+			<EndYear>2010</EndYear></Cycle><Cycle>
+			<ID>2</ID>
+			<Name>XXIV Ciclo</Name>
+			<BeginningYear>2009</BeginningYear>
+			<EndYear>2011</EndYear></Cycle><Cycle>
+			<ID>3</ID>
 			<Name>XXV Ciclo</Name>
 			<BeginningYear>2010</BeginningYear>
-			<EndYear>2012</EndYear></Cycle><Cycle>
-		<ID>2</ID>
-		<Name>XXIV</Name>
-		<BeginningYear>2009</BeginningYear>
-		<EndYear>2011</EndYear></Cycle><Cycle>
-		<ID>3</ID>
-		<Name>XXIII</Name>
-		<BeginningYear>2008</BeginningYear>
-		<EndYear>2010</EndYear></Cycle>
-	</TableCycle>
+			<EndYear>2012</EndYear></Cycle>
+	  </TableCycle>
 	<TableSupervisor><Supervisor>
 		<ID>1</ID>
 		<Name>Alessandro</Name>

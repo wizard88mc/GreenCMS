@@ -2,10 +2,6 @@
 
 use utf8;
 
-binmode STDIN, ":utf8";
-binmode STDOUT, ":utf8";
-binmode STDERR, ":utf8";
-
 require "CreatePages.pl";
 require "CreatePageCoursesLaurea.pl";
 require "CreatePageCoursesMagistrale.pl";

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <secondLevelMenu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../globalDetails/secondLevelMenu.xsd">
 	<secondLevelMenuEntry>
+	<linkMenuEntryText>2011/2012</linkMenuEntryText>
+	<linkMenuEntryName>2011/2012</linkMenuEntryName>
+	<linkMenuEntryPageTarget>archivio20112012en.html</linkMenuEntryPageTarget>
+	<linkMenuEntryAlt>2011/2012</linkMenuEntryAlt></secondLevelMenuEntry><secondLevelMenuEntry>
 	<linkMenuEntryText>2010/2011</linkMenuEntryText>
 	<linkMenuEntryName>2010/2011</linkMenuEntryName>
 	<linkMenuEntryPageTarget>archivio20102011en.html</linkMenuEntryPageTarget>

@@ -68,12 +68,27 @@ sub createPageCoursesMagistrale() {
 		$courseDetails{"informations"} = &getInformationsCourse($DBIConnection, $courseID, 1);
 		
 		#recupero trimestre e anno del corso
-		my %periodInformations = %{$courseDetails{"period"}};
-		my $period = $periodInformations{"trimestre"};
-		my $year = $periodInformations{"anno"};
+		my %periodInformations;
+		if ($courseDetails{'period'}) {
+		    %periodInformations = %{$courseDetails{'period'}};
+		}
+		my $period = "";
+		if ($periodInformations{'trimestre'}) {
+		    $period = $periodInformations{'trimestre'};
+		}
+		my $year = "";
+		if ($periodInformations{'anno'}) {
+		    $year = $periodInformations{'anno'};
+		}
 		
-		my %informations = %{$courseDetails{"informations"}};
-		my $curriculum = $informations{"nr_esame"};
+		my %informations;
+		if ($courseDetails{'informations'}) {
+		    %informations = %{$courseDetails{'informations'}};
+		}
+		my $curriculum = "";
+		if ($informations{'nr_esame'}) {
+		    $curriculum = $informations{'nr_esame'};
+		}
 		#creo pagina del corso, mi viene restituito il nome del file a cui far linkare il collegamento
 		my $linkFileName = &createCourseDetailsPageMagistrale(\%courseDetails);
 
@@ -142,6 +157,9 @@ sub createPageCoursesMagistrale() {
 	$tableCourses .= "
 	</tbody>	
 	</table>";
+	
+	#elimino eventuali \ per la presenza di eventuali '
+	$tableCourses =~ s/\\//g;
 	
 	utf8::encode($tableCourses);
 	

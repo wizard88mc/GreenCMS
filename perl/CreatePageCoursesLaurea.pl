@@ -150,6 +150,9 @@ sub createPageCoursesLaurea() {
 	</tbody>
 	</table>";
 	
+	# elimino eventuali \' e li sostituisco '
+	$tableCourses =~ s/\\\'/\'/g;
+	
 	utf8::encode($tableCourses);
 	
 	#mi disconnetto dal database

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="TablePHDStudentCycleSupervisor" type="TTablePHDStudentCycleSupervisor">
+		<xs:annotation>
+			<xs:documentation>Definizione delle tabelle PHDStudent, Cycle e Supervisor</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	
+	<xs:complexType name="TTablePHDStudentCycleSupervisor">
+		<xs:sequence minOccurs="1" maxOccurs="1">
+			<xs:element name="TablePHDStudent" type="TTablePHDStudent" />
+			<xs:element name="TableCycle" type="TTableCycle" />
+			<xs:element name="TableSupervisor" type="TTableSupervisor" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="TTablePHDStudent">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="PHDStudent" type="TPHDStudent" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="TPHDStudent">
+		<xs:sequence minOccurs="1" maxOccurs="1">
+			<xs:element name="ID" type="xs:integer" />
+			<xs:element name="Name" type="xs:string" />
+			<xs:element name="Surname" type="xs:string" />
+			<xs:element name="ResearchArea" type="TResearchArea" />
+			<xs:element name="Website" type="xs:string" />
+			<xs:element name="Supervisor" type="xs:integer" />
+			<xs:element name="Cycle" type="xs:integer" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="TResearchArea">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+			<xs:attribute name="language" default="it" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="TTableCycle">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Cycle" type="TCycle" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="TCycle">
+		<xs:sequence minOccurs="1" maxOccurs="1">
+			<xs:element name="ID" type="xs:integer" />
+			<xs:element name="Name" type="xs:string" />
+			<xs:element name="BeginningYear" type="xs:string" />
+			<xs:element name="EndYear" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="TTableSupervisor" >
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Supervisor" type="TSupervisor" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="TSupervisor">
+		<xs:sequence minOccurs="1" maxOccurs="1">
+			<xs:element name="ID" type="xs:integer" />
+			<xs:element name="Name" type="xs:string" />
+			<xs:element name="Surname" type="xs:string" />
+			<xs:element name="Website" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

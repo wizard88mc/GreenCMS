@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TableCCSAttachedFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="databaseDefinition/CCSAttachedFile.xsd">
+	<TableCCS>
+	<CCS>
+	<ID>10</ID>
+	<Date>2010-09-29</Date>
+	<Agenda>Comunicazioni
+Approvazione verbale seduta del 17 Settembre
+Assetto Didattico 2010/2011</Agenda>
+	<FileReport>Verbale290910.pdf</FileReport>
+	<Approved>T</Approved></CCS><CCS>
+	<ID>8</ID>
+	<Date>2010-09-17</Date>
+	<Agenda> Comunicazioni
+Approvazione verbale del 19 Maggio
+Assetto Didattico 2010/2011</Agenda>
+	<FileReport>Verbale170910.pdf</FileReport>
+	<Approved>T</Approved></CCS><CCS>
+	<ID>7</ID>
+	<Date>2010-05-19</Date>
+	<Agenda>Comunicazioni
+Approvazione verbali seduta precedente
+Appelli d'esame
+Perfezionamento Commissione di Vigilanza per Test d'ingresso
+Nomina Nuova Commissione Didattica e Programmazione delle relative attività
+Insegnamenti in Inglese per aa. 2010/2011
+Nulla osta per insegnamento a titolo retribuito fuori Facoltà</Agenda>
+	<FileReport>Verbale190510.pdf</FileReport>
+	<Approved>T</Approved></CCS><CCS>
+	<ID>6</ID>
+	<Date>2010-04-27</Date>
+	<Agenda>Comunicazioni
+Approvazione verbali seduta precedente
+Appelli d'esame
+Nomina Commissione di Vigilanza e di Valutazione per il Test di Ingresso
+Commissione Didattica
+Pratiche Assetto Didattico (A.A. 2009/2010 e A.A. 2010/2011)
+Valutazione della Didattica a.a. 2008/9 e proposte per le valutazioni future</Agenda>
+	<FileReport>Verbale270410.pdf</FileReport>
+	<Approved>T</Approved></CCS><CCS>
+	<ID>5</ID>
+	<Date>2010-03-22</Date>
+	<Agenda>Comunicazioni
+Approvazione verbali sedute precedenti
+Pratiche Assetto Didattico
+Orario III Trimestre
+Valutazione Insegnamenti Magistrale II Trimestre
+Valutazione della Didattica a.a. 2008/2009
+Richiesta Appello Straordinario di Calcolo Numerico
+Nomina Membro Commissione di Facoltà per il Test di Ingresso
+Offerta formativa a.a. 2010/2011
+Richieste di Congedo
+Parere sull’attività didattica ai fini della conferma</Agenda>
+	<FileReport>Verbale220310.pdf</FileReport>
+	<Approved>T</Approved></CCS><CCS>
+	<ID>4</ID>
+	<Date>2010-02-22</Date>
+	<Agenda>Comunicazioni
+Pratiche Assetto Didattico
+Test di Ingresso
+Nomina Referente Erasmus
+Numeri Programmati e Adempimenti Offerta Formativa 2010-2011
+Parere su Proposta di Regolamento per Attività di Tirocinio di Ricerca</Agenda>
+	<FileReport>Verbale220210.pdf</FileReport>
+	<Approved>T</Approved></CCS><CCS>
+	<ID>3</ID>
+	<Date>2010-01-18</Date>
+	<Agenda>Comunicazioni
+Piani di Studi
+Assetto didattico (Didattica di supporto, Insegnamenti)
+Richiesta Nulla Osta (prof. T. Vardanega, prof. A. Sperduti
+Parere sull’attività didattica ai fini della conferma (prof. P. Baldan)</Agenda>
+	<FileReport>Verbale180110.pdf</FileReport>
+	<Approved>T</Approved></CCS><CCS>
+	<ID>2</ID>
+	<Date>2009-11-23</Date>
+	<Agenda>Comunicazioni
+Piano di Studi
+Passaggi alla 270
+Appelli di Laurea
+Discussione sulla preparazione matematica di base degli studenti</Agenda>
+	<FileReport>Verbale231109.pdf</FileReport>
+	<Approved>T</Approved></CCS><CCS>
+	<ID>1</ID>
+	<Date>2009-10-26</Date>
+	<Agenda>Comunicazioni
+Assetto Didattico
+Requisiti Minimi
+Date sessioni di laurea AA. 2009/2010
+Discussione sulla preparazione matematica di  base degli studenti
+Parere sull’attività didattica ai fini della conferma</Agenda>
+	<FileReport>Verbale261009.pdf</FileReport>
+	<Approved>T</Approved></CCS></TableCCS>
+	<TableAttachedFiles>
+	<AttachedFile>
+	<ID>1</ID>
+	<FileName>Testo Nota Gelmini</FileName>
+	<File>Allegato_1-TestoGelmini4settembre09.pdf</File>
+	<CCSAssociated>1</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Lettera prof. Vianello</FileName>
+	<File>Allegato_2-lettera-Vianello.pdf</File>
+	<CCSAssociated>1</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Lettera prof. Languasco</FileName>
+	<File>Allegato_3-lettera-Languasco.pdf</File>
+	<CCSAssociated>1</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Relazione per la conferma in ruolo del  prof. Languasco</FileName>
+	<File>Allegato_4-Relazione-conferma-Languasco.pdf</File>
+	<CCSAssociated>1</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Proposte per il test d'ingresso</FileName>
+	<File>AllegatoA-test_ingresso.pdf</File>
+	<CCSAssociated>2</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Allocazione aule per lezioni ed esami</FileName>
+	<File>AllegatoB-propostapresidentiCCL.pdf</File>
+	<CCSAssociated>2</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Piano di Studi di Mattia Barbiero</FileName>
+	<File>AllegatoC-Barbiero_Mattia_piano-L.pdf</File>
+	<CCSAssociated>2</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Programma del corso di Teoria della Letteratura</FileName>
+	<File>AllegatoD-Programma_Teoria_Letteratura.pdf</File>
+	<CCSAssociated>2</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Discussione sulla preparazione di base in Matematica degli studenti</FileName>
+	<File>AllegatoE-preparazione_matematica.pdf</File>
+	<CCSAssociated>2</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Bando di concorso per posti scambio per studenti presso la Boston University (USA)</FileName>
+	<File>AllegatoA.pdf</File>
+	<CCSAssociated>3</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Bando di concorso per posti scambio per studenti presso University of New South Wales, Sidney (Australia)</FileName>
+	<File>AllegatoB.pdf</File>
+	<CCSAssociated>3</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Circolare del 18/12/2009, prot. 71223 avente per oggetto "Scambio di docenti e ricercatori con le Università convenzionate. Anno 2010"</FileName>
+	<File>AllegatoC.pdf</File>
+	<CCSAssociated>3</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Modulo di richiesta per lo scambio docenti</FileName>
+	<File>AllegatoD.doc</File>
+	<CCSAssociated>3</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Didattica estiva a Bressanone</FileName>
+	<File>Allegato_E.pdf</File>
+	<CCSAssociated>3</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Verbale Commissione test di ingresso</FileName>
+	<File>AllegatoF.pdf</File>
+	<CCSAssociated>3</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Proposte Commissione test di ingresso (ppt)</FileName>
+	<File>AllegatoG.ppt</File>
+	<CCSAssociated>3</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Relazione per conferma in ruolo prof. P. Baldan</FileName>
+	<File>AllegatoH.pdf</File>
+	<CCSAssociated>3</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Delibera del senato accademico relativamente alla istituzione della figura del Ricercatore a Tempo Determinato</FileName>
+	<File>Allegato_A.pdf</File>
+	<CCSAssociated>4</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Delibera del senato accademico relativa alle differenze fra didattica integrativa e di supporto</FileName>
+	<File>Allegato_B.pdf</File>
+	<CCSAssociated>4</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Tirocinio di ricerca (in Matematica Applicata o Informatica) Graduate Students Research Program (GSRP)</FileName>
+	<File>Allegato_C.pdf</File>
+	<CCSAssociated>4</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Orario Laurea in Informatica</FileName>
+	<File>Allegato_A.pdf</File>
+	<CCSAssociated>5</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Orario Laurea Magistrale in Informatica</FileName>
+	<File>Allegato_B.pdf</File>
+	<CCSAssociated>5</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Proposta di modifica del curriculum Fondamenti</FileName>
+	<File>Allegato_C.pdf</File>
+	<CCSAssociated>5</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Domanda di congedo per motivi di studio del prof. Silvio Valentini</FileName>
+	<File>Allegato_D.pdf</File>
+	<CCSAssociated>5</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Relazione per la conferma in ruolo di Ombretta Gaggi</FileName>
+	<File>Allegato_E.pdf</File>
+	<CCSAssociated>5</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Relazione sulla Didattica degli Insegnamenti di Corsi di Laurea in Informatica per A.A. 2008/2009</FileName>
+	<File>RelazioneDid_AA0809-INFORMATICA-finale.pdf</File>
+	<CCSAssociated>6</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Mozione sui Ricercatori e sull'attuale stato di agitazione</FileName>
+	<File>Allegato_A-Mozione_ricercatori_Conf_11_05_2010.pdf</File>
+	<CCSAssociated>7</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Modulo e linee guida corsi integrativi</FileName>
+	<File>Modulo_e_linee_guida_corsi_integrativi.pdf</File>
+	<CCSAssociated>8</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Lettera Ricercatori Chimica</FileName>
+	<File>Lettera_Ricercatori.pdf</File>
+	<CCSAssociated>9</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Richiesta al Preside</FileName>
+	<File>Richiesta_al_Preside_29sett2010.pdf</File>
+	<CCSAssociated>9</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Allegato A: Lettera Ricercatori Chimica </FileName>
+	<File>Lettera_Ricercatori.pdf</File>
+	<CCSAssociated>10</CCSAssociated></AttachedFile><AttachedFile>
+	<ID>1</ID>
+	<FileName>Richiesta al Preside</FileName>
+	<File>Richiesta_al_Preside_29sett2010.pdf</File>
+	<CCSAssociated>10</CCSAssociated></AttachedFile></TableAttachedFiles>
+</TableCCSAttachedFile>
