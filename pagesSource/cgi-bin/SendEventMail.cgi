@@ -31,6 +31,12 @@ http://$address/cgi-bin/Seminari.cgi";
 	my $eventTime = $event->findvalue('Time');
 	$eventTime = substr($eventTime, 0, 5);
 	$eventSpeaker = $event->find('Speaker')->get_node(1)->firstChild->toString;
+	
+	my $speakerFrom = "";
+	if ($event->findvalue('From') ne "") {
+	    $speakerFrom = $event->find('From')->get_node(1)->firstChild->toString;
+	}
+	
 	my $eventAbstract = $event->findvalue('Abstract');
 	$eventAbstract = &removeLinkTags($eventAbstract);
 	
@@ -46,7 +52,7 @@ Ora: $eventTime
 
 Luogo: $eventPlace
 
-Relatore: $eventSpeaker
+Relatore: $eventSpeaker $speakerFrom
 
 Titolo: $eventTitle
 

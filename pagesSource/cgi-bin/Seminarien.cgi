@@ -20,7 +20,7 @@ require "WorkWithFiles.pl";
 	my $document = $parser->parse_file($seminarsXML);
 	my $root = $document->getDocumentElement;
 
-	my $seminarsList = $root->find("//TableEvent/Event");
+	my $seminarsList = $root->find("//TableEvents/Event");
 
 	my $stringSeminars =  "";
 
@@ -39,6 +39,7 @@ require "WorkWithFiles.pl";
 		my $from = "";
 		if ($seminar->findvalue('From') ne "") {
 			$from = $seminar->find('From')->get_node(1)->firstChild->toString;
+			$from = "<strong>($from)</strong>";
 		}
 		my $speakerCV = " - - - ";
 		if ($seminar->findvalue('SpeakerCV') ne "") {
@@ -57,11 +58,6 @@ require "WorkWithFiles.pl";
 		}
 		else {
 			$title = "<h3>$title</h3>";
-		}
-		
-		#se c'è affiliazione del relatore la aggiungo
-		if ($from ne "") {
-			$from = "<strong>($from)</strong>";
 		}
 		
 		#creo stringa del seminario

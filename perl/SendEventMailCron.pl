@@ -86,7 +86,7 @@ sub sendEventMailCron() {
 		my $deltaDays = Delta_Days($currentYear, $currentMonth, $currentDay, 
 		    $eventYear, $eventMonth, $eventDay);
 		
-		#mando mail o giorno prima o tre giorni prima
+		#mando mail giorno stesso del seminario
 		if ($deltaDays == 0) {
 			
 			#recupero informazioni dell'evento
@@ -96,11 +96,19 @@ sub sendEventMailCron() {
 			$eventTime = $event->findvalue('Time');
 			$eventTime = substr($eventTime, 0, 5);
 			$eventSpeaker = $event->find('Speaker')->get_node(1)->firstChild->toString;
+			
+			my $speakerFrom = "";
+			if ($event->findvalue('From') ne "") {
+			    $speakerFrom = $event->find('From')->get_node(1)->firstChild->toString;
+			    $speakerFrom = "($speakerFrom)";
+			}
+			
 			my $eventAbstract  = " - - - ";
 			if ($event->findvalue('Abstract') ne "") {
 				$eventAbstract  = $event->find('Abstract')->get_node(1)->firstChild->toString;
 			}
 			$eventAbstract = &removeLinkTags($eventAbstract);
+			
 			my $eventID =  $event->find('ID')->get_node(1)->firstChild->toString;
 			
 			#informazioni generali della mail
@@ -121,7 +129,7 @@ Ora: $eventTime
 
 Luogo: $eventPlace
 
-Relatore: $eventSpeaker
+Relatore: $eventSpeaker $speakerFrom
 
 Titolo: $eventTitle
 
